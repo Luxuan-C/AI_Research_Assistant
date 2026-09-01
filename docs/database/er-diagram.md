@@ -10,6 +10,10 @@ erDiagram
     research_paper  |{--|{ faculty : has
     research_paper  |{--|{ academic : has
     academic        |{--|{ research_paper : contributed_to
+    research_paper  ||--|| score : has_score
+    academic        ||--o{ score : contributes_to
+    publisher       ||--o{ score : contributes_to
+    journal         ||--o{ score : contributes_to
 
     university {
         uuid id PK
@@ -69,4 +73,18 @@ erDiagram
         varchar profile_url
         uuid[] research_paper_ids FK
     }
+
+    score {
+        uuid id PK
+        uuid research_paper_id FK
+        uuid academic_id FK
+        uuid publisher_id FK
+        uuid journal_id FK
+        float paper_authority_score
+        float academic_authority_score
+        float publisher_authority_score
+        float journal_authenticity_score
+    }
+
+
 ```

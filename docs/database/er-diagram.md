@@ -1,7 +1,8 @@
 ```mermaid
 erDiagram
 
-    faculty         |{--|{ discipline : has
+    discipline      |{--}| faculty : belongs_to
+    field           |{--}| discipline : belongs_to
     journal         |{--|{ publisher : has
     research_paper  |{--|{ research_paper : references
     research_paper  |{--|{ publisher : published_by
@@ -9,26 +10,38 @@ erDiagram
     research_paper  |{--|{ university : has
     research_paper  |{--|{ faculty : has
     research_paper  |{--|{ academic : has
-    academic        |{--|{ research_paper : contributed_to
     research_paper  ||--|| score : has_score
-    academic        ||--o{ score : contributes_to
-    publisher       ||--o{ score : contributes_to
-    journal         ||--o{ score : contributes_to
+    academic        |{--|{ research_paper : contributed_to
+    academic        |{--|{ university : works_for
+    academic        |{--|{ discipline : works_for
+    academic        |{--|{ field : works_for
+    score           o{--|| academic : associated_with
+    score           o{--|| publisher : associated_with
+    score           o{--|| journal : associated_with
 
     university {
         uuid id PK
         varchar name
+        varchar country_code
+        varchar ror_url
+        varchar type
     }
 
     faculty {
         uuid id PK
         varchar name
-        uuid[] discipline_ids FK
     }
 
     discipline {
         uuid id PK
         varchar name
+        uuid faculty_id FK
+    }
+
+    field {
+        uuid id PK
+        varchar name
+        uuid discipline_id FK
     }
 
     publisher {
@@ -39,8 +52,9 @@ erDiagram
     journal {
         uuid id PK
         varchar name
-        uuid publisher_id FK
+        varchar type
         varchar issn
+        uuid publisher_id FK
     }
 
     research_paper {
@@ -51,7 +65,9 @@ erDiagram
         int issue
         varchar page_numbers
         varchar doi
-        varchar url
+        bool is_open_access
+        varchar open_access_url
+        varchar primary_url
         varchar publication_type
         int incoming_citation_count
         varchar[] keywords
@@ -71,19 +87,23 @@ erDiagram
         text[] research_interests
         text[] areas_of_expertise
         varchar profile_url
+        varchar orcid_url
         uuid[] research_paper_ids FK
+        uuid[] university_ids FK
+        uuid[] discipline_ids FK            %% areas of expertise
+        uuid[] field_ids FK                 %% research interests
     }
 
     score {
         uuid id PK
-        uuid research_paper_id FK
-        uuid academic_id FK
-        uuid publisher_id FK
-        uuid journal_id FK
         float paper_authority_score
         float academic_authority_score
         float publisher_authority_score
         float journal_authenticity_score
+        uuid research_paper_id FK
+        uuid[] academic_ids FK
+        uuid publisher_id FK
+        uuid journal_id FK
     }
 
 

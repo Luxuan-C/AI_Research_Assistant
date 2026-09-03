@@ -1,0 +1,31 @@
+┌──────────────────────────────┐
+│ 1. Query Understanding       │
+│                              │
+│ Natural Language → LLM       │
+│ → Intent / Topic / Filters   │
+└──────────────┬───────────────┘
+               ↓
+┌──────────────────────────────┐
+│ 2. Retrieval + GraphRAG      │
+│                              │
+│ BM25 / Vector → DB           │
+│ → Seed Candidates            │
+│ → Graph Expansion            │
+│ → Evidence + Metadata        │
+└──────────────┬───────────────┘
+               ↓
+┌──────────────────────────────┐
+│ 3. Ranking & Evidence        │
+│                              │
+│ Semantic / Graph / Citation  │
+│ Recency / Venue / Topic      │
+│ → Final Score → Top-K        │
+└──────────────┬───────────────┘
+               ↓
+┌──────────────────────────────┐
+│ 4. Answer Generation         │
+│                              │
+│ Top Evidence → LLM           │
+│ → Summary / Explanation      │
+│ → Deterministic Citations    │
+└──────────────────────────────┘

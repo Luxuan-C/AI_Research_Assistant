@@ -6,3 +6,4 @@ __pycache__/
 build/
 dist/
 
+src/data_collector/data/    # data_collector .json/.csv files

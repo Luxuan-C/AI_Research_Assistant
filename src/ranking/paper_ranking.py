@@ -14,16 +14,21 @@ Pipeline:
       -> final score S=(w_R)​R+(w_Q)​Q+(w_I)​I+(w_T)​T+(w_N)​Q*N+(w_A)​A
       -> evidence-backed explanation
 
-The mock GraphRAG result is represented by CandidatePaper objects.
-In the real system, replace MOCK_CANDIDATES with the JSON returned by
-the GraphRAG/retrieval teammate.
+GraphRAG RetrievalResponse objects can be converted with
+``candidates_from_retrieval_response`` and ranked with
+``rank_retrieval_response``.
 """
 
 from dataclasses import dataclass, asdict
 from datetime import date
 from math import exp
-from typing import List, Optional, Dict, Any
+from typing import List, Optional, Dict, Any, TYPE_CHECKING
 import json
+
+if TYPE_CHECKING:
+    from academic_graphrag.interfaces import AcademicGraphRepository
+    from academic_graphrag.models import RetrievalQuery, RetrievalResponse
+    from academic_graphrag.pipeline import GraphRAGEngine
 
 TODAY = date(2026, 9, 4)
 RRF_K = 60
@@ -64,6 +69,98 @@ class CandidatePaper:
     citation_influence: float
     innovation: float
     author_authority: float
+
+
+def candidates_from_retrieval_response(response: "RetrievalResponse") -> List[CandidatePaper]:
+    """Convert GraphRAG publication results into ranking candidates.
+
+    Researcher results are intentionally ignored because this stage ranks
+    papers. Missing metadata uses conservative defaults so the adapter remains
+    compatible with partial provider records.
+    """
+    candidates = []
+    for result in response.results:
+        # This stage currently ranks publications; researcher results are
+        # reserved for a future researcher-ranking stage.
+        if result.entity.entity_type != "Publication":
+            continue
+
+        metadata = result.entity.metadata
+        evidence = [
+            Evidence(
+                evidence_id=item.evidence.id,
+                source_type=item.source.provider,
+                confidence=item.evidence.confidence,
+                supports=item.evidence.excerpt,
+            )
+            for item in result.evidence
+        ]
+        year = metadata.get("year", metadata.get("latest_publication_year"))
+        if year is None:
+            raise ValueError(f"Publication {result.entity.id} is missing year metadata")
+
+        candidates.append(
+            CandidatePaper(
+                paper_id=result.entity.id,
+                title=result.entity.label,
+                bm25_rank=result.rank,
+                dense_rank=result.rank,
+                evidence=evidence,
+                publication_date=f"{int(year):04d}-01-01",
+                publication_type=str(metadata.get("publication_type", "journal-article")),
+                status=str(metadata.get("status", "valid")),
+                venue_prior=_number01(metadata.get("venue_quality"), 0.5),
+                venue_count=_nonnegative_int(metadata.get("venue_count"), 0),
+                document_prior=_number01(metadata.get("document_prior"), 0.5),
+                quality_confidence=_number01(metadata.get("quality_confidence"), 0.5),
+                citation_influence=_number01(
+                    result.score.components.get("citation_influence"), 0.0
+                ),
+                innovation=_number01(metadata.get("innovation"), 0.0),
+                author_authority=_number01(metadata.get("author_authority"), 0.0),
+            )
+        )
+    return candidates
+
+
+def rank_retrieval_response(response: "RetrievalResponse") -> List[Dict[str, Any]]:
+    """Rank the publication candidates contained in a GraphRAG response."""
+    # The ranking profile is selected by the upstream RetrievalQuery.
+    selected_profile = _profile_from_response(response)
+    return rank_candidates(candidates_from_retrieval_response(response), selected_profile)
+
+
+def retrieve_and_rank(
+    engine: "GraphRAGEngine", query: "RetrievalQuery"
+) -> List[Dict[str, Any]]:
+    """Call GraphRAG and rank papers returned in its RetrievalResponse.
+
+    The caller owns the engine and query. This function only connects the RAG
+    retrieval result to the paper-ranking output. The candidates are taken from
+    ``response.results``; the local ``MOCK`` data is not used.
+    """
+    response = engine.retrieve(query)
+    print_ranking(response)
+    return rank_retrieval_response(response)
+
+
+def _profile_from_response(response: "RetrievalResponse") -> str:
+    profile = response.query.ranking_profile
+    if profile not in PROFILES:
+        raise ValueError(f"Unknown profile: {profile}")
+    return profile
+
+
+def _number01(value: object, default: float) -> float:
+    if isinstance(value, bool) or not isinstance(value, (int, float)):
+        return default
+    return max(0.0, min(1.0, float(value)))
+
+
+def _nonnegative_int(value: object, default: int) -> int:
+    if isinstance(value, bool) or not isinstance(value, (int, float)):
+        return default
+    return max(0, int(value))
 
 def validate01(x: float, name: str):
     if not 0 <= x <= 1:
@@ -196,63 +293,48 @@ def rank_candidates(candidates: List[CandidatePaper], profile="GENERAL") -> List
 
 
 
-MOCK = [
-    CandidatePaper(
-        "P001", "Deep Learning for Medical Image Analysis", 1, 2,
-        [Evidence("EV001", "OpenAlex", .98, "metadata"),
-         Evidence("EV002", "abstract", .95, "medical imaging relevance")],
-        "2024-05-20", "journal-article", "valid",
-        .78, 120, .92, .93, .72, .58, .70
-    ),
-    CandidatePaper(
-        "P002", "A Survey of Artificial Intelligence in Healthcare", 3, 4,
-        [Evidence("EV003", "Crossref", .97, "bibliographic metadata"),
-         Evidence("EV004", "abstract", .91, "AI and healthcare scope")],
-        "2019-08-10", "review-article", "valid",
-        .85, 300, .95, .96, .96, .15, .82
-    ),
-    CandidatePaper(
-        "P003", "Graph Neural Networks for Drug Discovery", 8, 3,
-        [Evidence("EV005", "abstract", .88, "AI and healthcare context")],
-        "2025-02-15", "journal-article", "valid",
-        .70, 40, .90, .85, .42, .80, .55
-    ),
-    CandidatePaper(
-        "P004", "A Highly Cited Paper About Classical Cryptography", 55, 60,
-        [Evidence("EV006", "Crossref", .80, "paper metadata")],
-        "2010-03-12", "journal-article", "valid",
-        .92, 500, .95, .95, .99, .05, .99
-    ),
-    CandidatePaper(
-        "P005", "AI Methods for Health Data", 5, 5,
-        [Evidence("EV007", "weak_unverified_source", .55, "weak support")],
-        "2025-10-01", "preprint", "valid",
-        .50, 2, .65, .40, .10, .60, .30
-    ),
-    CandidatePaper(
-        "P006", "Medical Imaging Methods - Retracted Study", 2, 2,
-        [Evidence("EV008", "Crossref", .99, "retraction/publication record")],
-        "2023-06-01", "journal-article", "retracted",
-        .80, 100, .90, .90, .80, .40, .70
-    ),
-]
+def print_ranking(response: "RetrievalResponse") -> None:
+    """Print readable paper-ranking output for an existing RAG response."""
+    results = rank_retrieval_response(response)
+    query = response.query.text
+
+    print("=" * 78)
+    print("Academic GraphRAG -> Paper Ranking")
+    print("=" * 78)
+    print(f"Query: {query}")
+    print(f"Papers returned: {len(results)}")
+    print()
+
+    for result in results:
+        breakdown = result["score_breakdown"]
+        status = "ELIGIBLE" if result["eligible"] else "REJECTED"
+        evidence_ids = result["evidence"]["ids"]
+
+        print("-" * 78)
+        print(f"Rank {result['rank']}: {result['title']}")
+        print(f"Paper ID: {result['paper_id']}")
+        print(f"Status: {status}")
+        print(f"Final score: {result['final_score']:.4f}")
+        print("Score breakdown:")
+        print(f"  Hybrid relevance (H): {breakdown['H_hybrid_relevance']:.3f}")
+        print(f"  Quality (Q):          {breakdown['Q_quality']:.3f}")
+        print(f"  Citation influence (I): {breakdown['I_citation_influence']:.3f}")
+        print(f"  Temporal validity (T):  {breakdown['T_temporal_validity']:.3f}")
+        print(f"  Innovation (N):       {breakdown['N_innovation']:.3f}")
+        print(f"  Author authority (A): {breakdown['A_author_authority']:.3f}")
+        print(f"Evidence confidence: {result['evidence']['confidence']:.3f}")
+        print(f"Evidence IDs: {', '.join(evidence_ids) or 'none'}")
+        if result["eligibility_reasons"]:
+            print("Eligibility reasons: " + "; ".join(result["eligibility_reasons"]))
+        print(f"Explanation: {result['explanation']}")
+
+    print("-" * 78)
+
+
+def main(response: "RetrievalResponse") -> None:
+    """Print ranking output for a RetrievalResponse supplied by RAG."""
+    print_ranking(response)
+
 
 if __name__ == "__main__":
-    for profile in ["GENERAL", "RECENT", "FOUNDATIONAL", "EMERGING"]:
-        print("\n" + "="*90)
-        print(profile)
-        print("="*90)
-        results = rank_candidates(MOCK, profile)
-        for r in results:
-            print(f"#{r['rank']} {r['paper_id']} | {r['title']}")
-            print(f"  eligible={r['eligible']}  score={r['final_score']:.4f}")
-            print("  " + " | ".join(
-                f"{k.split('_')[0]}={v:.3f}" for k, v in r["score_breakdown"].items()
-            ))
-            print(f"  evidence={r['evidence']}")
-            if r["eligibility_reasons"]:
-                print("  gate:", "; ".join(r["eligibility_reasons"]))
-            print("  why:", r["explanation"])
-
-    print("\nExample JSON:")
-    print(json.dumps(rank_candidates(MOCK, "GENERAL")[0], indent=2))
+    main()

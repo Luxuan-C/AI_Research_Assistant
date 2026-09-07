@@ -74,6 +74,7 @@ class RetrievalQuery:
     limit: int = 5
     entity_types: tuple[str, ...] = ("Researcher", "Publication")
     filters: Metadata = field(default_factory=dict)
+    ranking_profile: str = "GENERAL"
 
 
 @dataclass(frozen=True, slots=True)
@@ -138,7 +139,7 @@ class RankedResult:
 
 @dataclass(frozen=True, slots=True)
 class RetrievalResponse:
-    status: RetrievalStatus
+    status: RetrievalStatus  # ok or insufficient_information
     query: RetrievalQuery
     results: tuple[RankedResult, ...]
     relationships_used: tuple[Relationship, ...]

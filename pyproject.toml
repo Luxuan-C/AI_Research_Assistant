@@ -9,7 +9,12 @@ description = "Standalone, provider-neutral GraphRAG retrieval core for the SOFT
 readme = "README.md"
 requires-python = ">=3.11"
 authors = [{ name = "SOFT3888 Project Team" }]
-dependencies = []
+dependencies = [
+	"pandas",
+	"python-dotenv",
+	"requests",
+	"supabase",
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]

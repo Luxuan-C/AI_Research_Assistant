@@ -1,25 +1,18 @@
 import time
-import requests
+import re
+import json
+
 from bs4 import BeautifulSoup
-from urllib.parse import urljoin
+from playwright.sync_api import sync_playwright
 
-
-DIRECTORY_URL = "https://cis.unimelb.edu.au/people"
 
 UNIVERSITY_NAME = "University of Melbourne"
 
-REQUEST_DELAY = 1
-TIMEOUT = 20
+DIRECTORY_URLS = [
+    "https://cis.unimelb.edu.au/people/academic"
+]
 
-HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 "
-        "(Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 "
-        "(KHTML, like Gecko) "
-        "Chrome/120.0 Safari/537.36"
-    )
-}
+REQUEST_DELAY = 1
 
 
 def clean_text(value):
@@ -29,251 +22,567 @@ def clean_text(value):
     return " ".join(value.split())
 
 
-def collect_profile_links():
+def extract_research_interests(bio):
     """
-    Collects profile links from the UniMelb School of Computing
-    and Information Systems people page.
+    Extract explicitly stated research interests
+    from the profile biography.
     """
 
-    response = requests.get(
-        DIRECTORY_URL,
-        headers=HEADERS,
-        timeout=TIMEOUT
-    )
-
-    response.raise_for_status()
+    if not bio:
+        return []
 
     soup = BeautifulSoup(
-        response.text,
+        bio,
         "html.parser"
     )
 
-    links = set()
-
-    for link in soup.find_all("a", href=True):
-        href = link["href"]
-
-        # We only want likely staff/profile links.
-        if (
-            "findanexpert.unimelb.edu.au" in href
-            or "/people/" in href
-        ):
-            full_url = urljoin(
-                DIRECTORY_URL,
-                href
-            )
-
-            if full_url != DIRECTORY_URL:
-                links.add(full_url)
-
-    return sorted(links)
-
-
-def extract_orcid(soup):
-    """
-    Finds an ORCID URL if one exists on the page.
-    """
-
-    for link in soup.find_all("a", href=True):
-        href = link["href"]
-
-        if "orcid.org/" in href:
-            return href
-
-    return None
-
-
-def extract_name(soup):
-    heading = soup.find("h1")
-
-    if heading:
-        return clean_text(
-            heading.get_text(" ", strip=True)
-        )
-
-    return None
-
-
-def extract_position(soup):
-    """
-    Attempts to find a person's academic position.
-    """
-
-    possible_labels = [
-        "Professor",
-        "Associate Professor",
-        "Senior Lecturer",
-        "Lecturer",
-        "Research Fellow",
-        "Senior Research Fellow",
-        "Academic"
-    ]
-
-    page_text = soup.get_text(
+    text = soup.get_text(
         " ",
         strip=True
     )
 
-    for label in possible_labels:
-        if label.lower() in page_text.lower():
-            return label
+    patterns = [
+        r"research interests include\s+(.+?)(?:\.|$)",
+        r"research interests are\s+(.+?)(?:\.|$)",
+        r"research interests lie in\s+(.+?)(?:\.|$)",
+        r"research interests lie at\s+(.+?)(?:\.|$)",
+        r"research focuses on\s+(.+?)(?:\.|$)",
+        r"research focus is\s+(.+?)(?:\.|$)",
+    ]
 
-    return None
-
-
-def extract_section(soup, heading_terms):
-    """
-    Extracts text underneath headings such as
-    Research Interests or Areas of Expertise.
-    """
-
-    results = []
-
-    for heading in soup.find_all(
-        ["h2", "h3", "h4"]
-    ):
-        heading_text = clean_text(
-            heading.get_text(" ", strip=True)
+    for pattern in patterns:
+        match = re.search(
+            pattern,
+            text,
+            flags=re.IGNORECASE
         )
 
-        if not heading_text:
+        if not match:
+            continue
+
+        interests_text = match.group(1)
+
+        interests_text = interests_text.replace(
+            " and ",
+            ", "
+        )
+
+        interests = []
+
+        for item in interests_text.split(","):
+            item = item.strip(
+                " .;:-"
+            )
+
+            if not item:
+                continue
+
+            if any(
+                item.lower()
+                == existing.lower()
+                for existing in interests
+            ):
+                continue
+
+            interests.append(
+                item
+            )
+
+        return interests
+
+    return []
+
+
+def clean_expertise(keywords):
+    """
+    Clean UniMelb research/publication keywords.
+    """
+
+    if not keywords:
+        return []
+
+    cleaned = []
+
+    for item in keywords:
+        if not item:
+            continue
+
+        # Some entries may unexpectedly not be strings
+        if not isinstance(item, str):
+            continue
+
+        item = clean_text(item)
+
+        if not item:
+            continue
+
+        # Remove SDG-style labels such as:
+        # "7 Affordable and Clean Energy"
+        if re.match(
+            r"^\d+\s+",
+            item
+        ):
             continue
 
         if any(
-            term.lower() in heading_text.lower()
-            for term in heading_terms
+            item.lower()
+            == existing.lower()
+            for existing in cleaned
         ):
-            element = heading.find_next_sibling()
+            continue
 
-            while element:
-                if element.name in [
-                    "h2",
-                    "h3",
-                    "h4"
-                ]:
-                    break
+        cleaned.append(
+            item
+        )
 
-                text = clean_text(
-                    element.get_text(
+    return cleaned
+
+
+def collect_directory_people():
+    """
+    Load the UniMelb CIS academic directory
+    using Playwright and extract basic staff data.
+    """
+
+    people = []
+    seen_urls = set()
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(
+            headless=False
+        )
+
+        page = browser.new_page()
+
+        for directory_url in DIRECTORY_URLS:
+            print(
+                f"UniMelb directory: "
+                f"{directory_url}"
+            )
+
+            try:
+                page.goto(
+                    directory_url,
+                    wait_until="domcontentloaded",
+                    timeout=60000
+                )
+
+                page.wait_for_timeout(2000)
+
+            except Exception as error:
+                print(
+                    f"UniMelb directory failed: "
+                    f"{error}"
+                )
+                continue
+
+            soup = BeautifulSoup(
+                page.content(),
+                "html.parser"
+            )
+
+            for link in soup.find_all(
+                "a",
+                href=True
+            ):
+                href = link["href"]
+
+                if (
+                    "findanexpert.unimelb.edu.au/profile/"
+                    not in href
+                ):
+                    continue
+
+                profile_url = href.split("?")[0]
+
+                if profile_url in seen_urls:
+                    continue
+
+                name = clean_text(
+                    link.get_text(
                         " ",
                         strip=True
                     )
                 )
 
-                if text:
-                    results.append(text)
+                if not name:
+                    continue
 
-                element = element.find_next_sibling()
+                position = None
 
-    return results
+                # Walk upwards through parent containers
+                # until we find the staff card text.
+                container = link
+
+                for _ in range(5):
+                    container = container.parent
+
+                    if not container:
+                        break
+
+                    card_text = clean_text(
+                        container.get_text(
+                            " ",
+                            strip=True
+                        )
+                    ) or ""
+
+                    possible_positions = [
+                        "Professor and Head of School",
+                        "Associate Professor",
+                        "Senior Lecturer",
+                        "Lecturer",
+                        "Professor",
+                        "Senior Research Fellow",
+                        "Research Fellow",
+                        "Academic Specialist",
+                        "Online Educator",
+                    ]
+
+                    for possible in possible_positions:
+                        if (
+                            possible.lower()
+                            in card_text.lower()
+                        ):
+                            position = possible
+                            break
+
+                    if position:
+                        break
+
+                people.append(
+                    {
+                        "name": name,
+                        "academic_position": position,
+                        "profile_url": profile_url,
+                    }
+                )
+
+                seen_urls.add(profile_url)
+
+        browser.close()
+
+    return people
 
 
-def scrape_profile(profile_url):
+def extract_profile_data(page, profile_url):
     """
-    Scrapes one UniMelb profile.
+    Enrich one UniMelb Find an Expert profile
+    using window.__DATA__ from the browser.
+
+    If structured data is unavailable,
+    return None so directory data is preserved.
     """
 
     try:
-        response = requests.get(
+        page.goto(
             profile_url,
-            headers=HEADERS,
-            timeout=TIMEOUT
+            wait_until="domcontentloaded",
+            timeout=60000
         )
 
-        response.raise_for_status()
+        page.wait_for_timeout(2500)
 
-    except requests.RequestException as error:
+    except Exception as error:
         print(
             f"UniMelb profile failed: "
             f"{profile_url} - {error}"
         )
-
         return None
 
-    soup = BeautifulSoup(
-        response.text,
-        "html.parser"
+    # Detect interruption/block page
+    title = page.title() or ""
+
+    if "Pardon Our Interruption" in title:
+        print(
+            f"UniMelb blocked/interrupted: "
+            f"{profile_url}"
+        )
+        return None
+
+    # Read the actual JS object directly
+    try:
+        data = page.evaluate(
+            "() => window.__DATA__ || null"
+        )
+
+    except Exception as error:
+        print(
+            f"UniMelb: could not read window.__DATA__ "
+            f"for {profile_url} - {error}"
+        )
+        return None
+
+    if not data:
+        print(
+            f"UniMelb: no structured data for "
+            f"{profile_url}"
+        )
+        return None
+
+    profile_data = None
+
+    components = data.get(
+        "components",
+        []
     )
 
-    name = extract_name(soup)
+    for component in components:
+        if not isinstance(
+            component,
+            dict
+        ):
+            continue
 
-    if not name:
+        profile = component.get(
+            "profile"
+        )
+
+        if isinstance(
+            profile,
+            dict
+        ):
+            profile_data = profile
+            break
+
+    if not profile_data:
+        print(
+            f"UniMelb: no profile object for "
+            f"{profile_url}"
+        )
         return None
+
+    name = profile_data.get(
+        "display_name"
+    )
+
+    position = profile_data.get(
+        "position"
+    )
+
+    if not position:
+        organisation_objects = (
+            profile_data.get(
+                "organisation_objects",
+                []
+            )
+        )
+
+        for organisation in organisation_objects:
+            if not isinstance(
+                organisation,
+                dict
+            ):
+                continue
+
+            possible_position = (
+                organisation.get(
+                    "organisation_position_title"
+                )
+            )
+
+            if possible_position:
+                position = possible_position
+                break
+
+    orcid = profile_data.get(
+        "orc_id"
+    )
+
+    bio = profile_data.get(
+        "bio",
+        ""
+    )
+
+    keywords = []
+
+    publication_keywords = (
+        profile_data.get(
+            "publication_keywords",
+            []
+        )
+    )
+
+    if isinstance(
+        publication_keywords,
+        list
+    ):
+        keywords.extend(
+            publication_keywords
+        )
+
+    workcloud_keywords = (
+        profile_data.get(
+            "workcloud_keywords",
+            []
+        )
+    )
+
+    if isinstance(
+        workcloud_keywords,
+        list
+    ):
+        keywords.extend(
+            workcloud_keywords
+        )
 
     return {
         "name": name,
-        "gender": None,
-        "academic_position": extract_position(
-            soup
+
+        "academic_position": (
+            position
         ),
-        "research_interests": extract_section(
-            soup,
-            [
-                "research interests",
-                "research"
-            ]
+
+        "research_interests": (
+            extract_research_interests(
+                bio
+            )
         ),
-        "areas_of_expertise": extract_section(
-            soup,
-            [
-                "expertise",
-                "fields of research"
-            ]
+
+        "areas_of_expertise": (
+            clean_expertise(
+                keywords
+            )
         ),
-        "profile_url": profile_url,
-        "orcid_url": extract_orcid(soup),
-        "university_name": UNIVERSITY_NAME
+
+        "orcid_url": (
+            f"https://orcid.org/{orcid}"
+            if orcid
+            else None
+        )
     }
 
 
 def collect_unimelb():
     """
-    Collects UniMelb Computing and Information Systems academics.
+    Collect UniMelb Computing and
+    Information Systems academics.
+
+    Directory data is always preserved.
+    Profile enrichment is optional.
     """
 
-    print("\nCollecting University of Melbourne...")
-
-    try:
-        profile_links = collect_profile_links()
-
-    except requests.RequestException as error:
-        print(
-            f"UniMelb directory failed: "
-            f"{error}"
-        )
-        return []
-
     print(
-        f"UniMelb profile links found: "
-        f"{len(profile_links)}"
+        "\nCollecting University of Melbourne..."
     )
 
     academics = []
 
-    for index, profile_url in enumerate(
-        profile_links,
-        start=1
-    ):
-        print(
-            f"UniMelb: {index}/"
-            f"{len(profile_links)}"
+    people = collect_directory_people()
+
+    print(
+        f"UniMelb directory people found: "
+        f"{len(people)}"
+    )
+
+    # TEMPORARY TEST
+    # Only process first 3 profiles for now
+    people_to_process = people
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(
+            headless=False
         )
 
-        academic = scrape_profile(
-            profile_url
-        )
+        page = browser.new_page()
 
-        if academic:
+        for index, person in enumerate(
+            people_to_process,
+            start=1
+        ):
+            print(
+                f"\nUniMelb: processing "
+                f"{index}/"
+                f"{len(people_to_process)}"
+            )
+
+            academic = {
+                "name": person["name"],
+                "gender": None,
+
+                "academic_position": (
+                    person[
+                        "academic_position"
+                    ]
+                ),
+
+                "research_interests": [],
+
+                "areas_of_expertise": [],
+
+                "profile_url": (
+                    person[
+                        "profile_url"
+                    ]
+                ),
+
+                "orcid_url": None,
+
+                "university_name": (
+                    UNIVERSITY_NAME
+                )
+            }
+
+            enriched = extract_profile_data(
+                page,
+                person[
+                    "profile_url"
+                ]
+            )
+
+            if enriched:
+                if enriched.get(
+                    "name"
+                ):
+                    academic[
+                        "name"
+                    ] = enriched[
+                        "name"
+                    ]
+
+                if enriched.get(
+                    "academic_position"
+                ):
+                    academic[
+                        "academic_position"
+                    ] = enriched[
+                        "academic_position"
+                    ]
+
+                academic[
+                    "research_interests"
+                ] = enriched.get(
+                    "research_interests",
+                    []
+                )
+
+                academic[
+                    "areas_of_expertise"
+                ] = enriched.get(
+                    "areas_of_expertise",
+                    []
+                )
+
+                academic[
+                    "orcid_url"
+                ] = enriched.get(
+                    "orcid_url"
+                )
+
+            # Always keep directory data,
+            # even if enrichment fails.
             academics.append(
                 academic
             )
 
-        time.sleep(
-            REQUEST_DELAY
-        )
+            time.sleep(
+                REQUEST_DELAY
+            )
+
+        browser.close()
 
     print(
-        f"UniMelb collected: "
+        f"\nUniMelb collected: "
         f"{len(academics)}"
     )
 
@@ -283,5 +592,12 @@ def collect_unimelb():
 if __name__ == "__main__":
     results = collect_unimelb()
 
-    for result in results[:5]:
+    print(
+        "\nSAMPLE RESULTS"
+    )
+    print(
+        "=" * 80
+    )
+
+    for result in results:
         print(result)

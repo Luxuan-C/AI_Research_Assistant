@@ -1,183 +1,51 @@
+from playwright.sync_api import sync_playwright
+from urllib.parse import urlencode
 import time
+import re
 import requests
+from bs4 import BeautifulSoup
 
 
-API_URL = (
-    "https://unsw-search.funnelback.squiz.cloud/"
-    "s/search.html"
+UNSW_PAGE_URL = (
+    "https://www.unsw.edu.au/engineering/about-us/our-people"
+    "#search=&filters=f.School%257CstaffSchool%3A"
+    "Computer%2BScience%2Band%2BEngineering"
+    "&sort=metastaffLastName"
+    "&startRank=1"
+    "&numRanks=12"
 )
 
-DIRECTORY_URL = (
-    "https://www.unsw.edu.au/engineering/"
-    "about-us/our-people"
-)
-
-REQUEST_DELAY = 1
 RESULTS_PER_PAGE = 12
-TIMEOUT = 20
+REQUEST_DELAY = 1
 
 
-HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/152.0.0.0 Safari/537.36"
-    ),
-    "Accept": "application/json, text/plain, */*",
-    "Accept-Language": "en-AU,en;q=0.9",
-    "Referer": DIRECTORY_URL,
-    "Origin": "https://www.unsw.edu.au"
-}
-
-
-def build_params(start_rank):
+def normalise_result(result):
     """
-    Builds the UNSW Funnelback query for Computer Science
-    and Engineering staff.
+    Converts one UNSW Funnelback result into our
+    common academic format.
     """
 
-    return {
-        "form": "json",
-        "collection": "unsw~unsw-search",
-        "profile": "profiles",
-        "query": "!padrenull",
+    metadata = result.get(
+        "metaData",
+        {}
+    )
 
-        "start_rank": start_rank,
-        "num_ranks": RESULTS_PER_PAGE,
+    name = (
+        metadata.get("staffFullName")
+        or result.get("title")
+    )
 
-        "sort": "metastaffLastName",
+    position = metadata.get(
+        "staffRole"
+    )
 
-        "f.School|staffSchool": (
-            "Computer Science and Engineering"
-        ),
+    profile_url = (
+        result.get("liveUrl")
+        or result.get("displayUrl")
+    )
 
-        "gscope1": "engineeringStaff",
-
-        "meta_staffRole_not": (
-            "casual adjunct visiting honorary"
-        )
-    }
-
-
-def find_results(data):
-    """
-    Finds Funnelback result records.
-
-    Funnelback responses normally contain result collections
-    inside nested response/result structures, so this searches
-    recursively for likely result lists.
-    """
-
-    if isinstance(data, list):
-
-        # A result list should normally contain dictionaries.
-
-        if (
-            data
-            and isinstance(data[0], dict)
-        ):
-            return data
-
-        return []
-
-    if not isinstance(data, dict):
-        return []
-
-    preferred_keys = [
-        "results",
-        "result",
-        "documents"
-    ]
-
-    for key in preferred_keys:
-
-        value = data.get(key)
-
-        if isinstance(value, list):
-            return value
-
-        if isinstance(value, dict):
-
-            result = find_results(
-                value
-            )
-
-            if result:
-                return result
-
-    for value in data.values():
-
-        if isinstance(
-            value,
-            (dict, list)
-        ):
-
-            result = find_results(
-                value
-            )
-
-            if result:
-                return result
-
-    return []
-
-
-def get_value(record, possible_keys):
-    """
-    Retrieves the first available field.
-    """
-
-    for key in possible_keys:
-
-        value = record.get(key)
-
-        if value not in (
-            None,
-            "",
-            []
-        ):
-            return value
-
-    return None
-
-
-def normalise_result(record):
-    """
-    Converts a UNSW Funnelback result into our common format.
-    """
-
-    if not isinstance(record, dict):
+    if not name:
         return None
-
-    name = get_value(
-        record,
-        [
-            "title",
-            "name",
-            "displayName",
-            "staffName"
-        ]
-    )
-
-    profile_url = get_value(
-        record,
-        [
-            "liveUrl",
-            "url",
-            "profileUrl",
-            "clickTrackingUrl"
-        ]
-    )
-
-    position = get_value(
-        record,
-        [
-            "staffRole",
-            "position",
-            "jobTitle",
-            "role"
-        ]
-    )
 
     return {
         "name": name,
@@ -190,102 +58,234 @@ def normalise_result(record):
         "university_name": "UNSW Sydney"
     }
 
+def clean_text(value):
+    if not value:
+        return ""
+
+    return " ".join(value.split())
+
+
+def extract_research_interests_from_text(text):
+    """
+    Extracts research interests only when the biography
+    explicitly describes them.
+    """
+
+    if not text:
+        return []
+
+    patterns = [
+        r"research interests lie at\s+(.+?)(?:\.|$)",
+        r"research interests include\s+(.+?)(?:\.|$)",
+        r"research interests are\s+(.+?)(?:\.|$)",
+        r"research focuses on\s+(.+?)(?:\.|$)",
+        r"research focus is\s+(.+?)(?:\.|$)",
+        r"research areas include\s+(.+?)(?:\.|$)",
+        r"interested in\s+(.+?)(?:\.|$)",
+    ]
+
+    for pattern in patterns:
+        match = re.search(
+            pattern,
+            text,
+            flags=re.IGNORECASE
+        )
+
+        if match:
+            interests_text = match.group(1)
+
+            # Remove introductory wording
+            interests_text = re.sub(
+                r"^(?:in\s+)?(?:the\s+)?intersection\s+of\s+",
+                "",
+                interests_text,
+                flags=re.IGNORECASE
+            )
+
+            interests_text = re.sub(
+                r"^in\s+",
+                "",
+                interests_text,
+                flags=re.IGNORECASE
+            )
+
+            interests_text = interests_text.replace(
+                " and ",
+                ", "
+            )
+
+            interests_text = interests_text.replace(
+                " especially ",
+                ", "
+            )
+
+            return [
+                item.strip(" .—-")
+                for item in interests_text.split(",")
+                if item.strip()
+            ]
+
+
+def enrich_unsw_profile(academic):
+    """
+    Visits the UNSW staff profile and extracts explicit
+    research interests from the biography/about text.
+    """
+
+    profile_url = academic.get("profile_url")
+
+    if not profile_url:
+        return academic
+
+    try:
+        response = requests.get(
+            profile_url,
+            headers={
+                "User-Agent": "Mozilla/5.0"
+            },
+            timeout=20
+        )
+
+        response.raise_for_status()
+
+    except requests.RequestException as error:
+        print(
+            f"UNSW profile enrichment failed: "
+            f"{profile_url} - {error}"
+        )
+
+        return academic
+
+    soup = BeautifulSoup(
+        response.text,
+        "html.parser"
+    )
+
+    page_text = clean_text(
+        soup.get_text(
+            " ",
+            strip=True
+        )
+    )
+
+    academic["research_interests"] = (
+        extract_research_interests_from_text(
+            page_text
+        )
+    )
+
+    # Leave these empty unless explicitly available.
+    academic["areas_of_expertise"] = []
+    academic["orcid_url"] = None
+
+    return academic
+
 
 def collect_unsw():
     """
-    Collects UNSW Computer Science and Engineering academics
-    through the UNSW Funnelback search endpoint.
+    Collects UNSW Computer Science and Engineering staff
+    using Playwright because the Funnelback API is protected
+    by Cloudflare.
     """
 
     print("\nCollecting UNSW...")
 
     academics = []
 
-    session = requests.Session()
-    session.headers.update(HEADERS)
-
-    # Visit the UNSW directory first so the session can receive
-    # any cookies used by the website before calling Funnelback.
-    try:
-        session.get(
-            DIRECTORY_URL,
-            timeout=TIMEOUT
-        )
-
-    except requests.RequestException as error:
-        print(
-            f"UNSW directory session failed: "
-            f"{error}"
-        )
-
     start_rank = 1
 
-    while True:
-
-        print(
-            f"UNSW: requesting from rank "
-            f"{start_rank}"
+    with sync_playwright() as p:
+        browser = p.chromium.launch(
+            headless=False
         )
 
-        params = build_params(
-            start_rank
-        )
+        page = browser.new_page()
 
-        try:
-            response = session.get(
-                API_URL,
-                params=params,
-                timeout=TIMEOUT
+        while True:
+            page_url = (
+                "https://www.unsw.edu.au/engineering/about-us/our-people"
+                "#search=&filters=f.School%257CstaffSchool%3A"
+                "Computer%2BScience%2Band%2BEngineering"
+                "&sort=metastaffLastName"
+                f"&startRank={start_rank}"
+                "&numRanks=12"
             )
 
-            response.raise_for_status()
-
-        except requests.RequestException as error:
             print(
-                f"UNSW request failed: "
-                f"{error}"
+                f"UNSW: requesting ranks "
+                f"{start_rank}-"
+                f"{start_rank + RESULTS_PER_PAGE - 1}"
             )
 
-            break
+            try:
+                with page.expect_response(
+                    lambda response: (
+                        "search.html" in response.url
+                        and "form=json" in response.url
+                        and f"start_rank={start_rank}" in response.url
+                    ),
+                    timeout=30000
+                ) as response_info:
 
-        try:
-            data = response.json()
+                    page.goto(
+                        page_url,
+                        wait_until="domcontentloaded"
+                    )
 
-        except ValueError:
-            print(
-                "UNSW returned invalid JSON."
-            )
-            break
+                response = response_info.value
 
-        results = find_results(
-            data
-        )
+                data = response.json()
 
-        if not results:
-            print(
-                "UNSW: no more results."
-            )
-            break
-
-        for record in results:
-
-            academic = normalise_result(
-                record
-            )
-
-            if academic:
-                academics.append(
-                    academic
+                results = (
+                    data
+                    .get("response", {})
+                    .get("resultPacket", {})
+                    .get("results", [])
                 )
 
-        if len(results) < RESULTS_PER_PAGE:
-            break
+            except Exception as error:
+                print(
+                    f"UNSW page failed at rank "
+                    f"{start_rank}: {error}"
+                )
+                break
 
-        start_rank += RESULTS_PER_PAGE
+            print(
+                f"UNSW results returned: "
+                f"{len(results)}"
+            )
 
-        time.sleep(
-            REQUEST_DELAY
-        )
+            if not results:
+                break
+
+            for result in results:
+                academic = normalise_result(
+                    result
+                )
+
+                if academic:
+                    academic = enrich_unsw_profile(
+                        academic
+                    )
+
+                    academics.append(
+                        academic
+                    )
+
+                    time.sleep(
+                        REQUEST_DELAY
+                    )
+
+            if len(results) < RESULTS_PER_PAGE:
+                break
+
+            start_rank += RESULTS_PER_PAGE
+
+            time.sleep(
+                REQUEST_DELAY
+            )
+
+        browser.close()
 
     print(
         f"UNSW collected: "
@@ -293,7 +293,6 @@ def collect_unsw():
     )
 
     return academics
-
 
 if __name__ == "__main__":
 

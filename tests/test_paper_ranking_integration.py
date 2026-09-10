@@ -1,7 +1,7 @@
 import unittest
 
 from academic_graphrag import RetrievalQuery
-from ranking.application import search_papers
+from application import search_papers
 from academic_graphrag.mock_data import build_mock_backend
 from ranking.paper_ranking import (
     candidates_from_retrieval_response,

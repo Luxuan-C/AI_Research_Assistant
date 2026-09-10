@@ -2,6 +2,7 @@ import unittest
 
 from academic_graphrag import AcademicProfileService
 from academic_graphrag.mock_data import build_mock_backend
+from application import search_academic_profiles
 
 
 class AcademicProfileTests(unittest.TestCase):
@@ -33,6 +34,13 @@ class AcademicProfileTests(unittest.TestCase):
         profile = AcademicProfileService(backend.repository).get_profile("missing")
 
         self.assertIsNone(profile)
+
+    def test_users_can_find_profiles_without_knowing_academic_id(self) -> None:
+        backend = build_mock_backend()
+
+        profiles = search_academic_profiles(backend.repository, "Alice Chen")
+
+        self.assertEqual([profile.structured_information["name"] for profile in profiles], ["Dr Alice Chen"])
 
     def test_profile_without_supporting_evidence_is_insufficient(self) -> None:
         backend = build_mock_backend()

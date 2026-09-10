@@ -21,8 +21,27 @@ def search_papers(
     return rank_retrieval_response(response)
 
 
-def get_academic_profile(
-    repository: "AcademicGraphRepository", academic_id: str
-) -> AcademicProfile | None:
-    """Load an evidence-grounded academic profile by entity ID."""
-    return AcademicProfileService(repository).get_profile(academic_id)
+
+
+def search_academic_profiles(
+    repository: "AcademicGraphRepository", search_text: str
+) -> list[AcademicProfile]:
+    """Find academic profiles using a user-facing name or keyword search."""
+    normalized_query = search_text.strip().casefold()
+    if not normalized_query:
+        return []
+
+    profiles = AcademicProfileService(repository)
+    matches = []
+    for academic in repository.list_entities(entity_types=("Researcher",)):
+        searchable_values = (
+            academic.label,
+            *academic.aliases,
+            academic.text,
+        )
+        if not any(normalized_query in value.casefold() for value in searchable_values):
+            continue
+        profile = profiles.get_profile(academic.id)
+        if profile is not None:
+            matches.append(profile)
+    return matches

@@ -27,6 +27,9 @@ from .traversal import BoundedGraphExpander, TraversalConfig
 
 __all__ = [
     "AcademicGraphRepository",
+    "AcademicProfile",
+    "AcademicProfileService",
+    "AcademicProfileSummary",
     "AcademicSignalProvider",
     "BoundedGraphExpander",
     "DenseRetriever",
@@ -39,6 +42,7 @@ __all__ = [
     "LLMProvider",
     "MetadataAcademicSignalProvider",
     "PipelineConfig",
+    "ProfileCitation",
     "RankedResult",
     "RankingWeights",
     "Relationship",
@@ -51,4 +55,28 @@ __all__ = [
     "stable_id",
     "stable_relationship_id",
 ]
+
+
+def __getattr__(name: str):
+    """Load profile types lazily to avoid a GraphRAG/profile import cycle."""
+    if name in {
+        "AcademicProfile",
+        "AcademicProfileService",
+        "AcademicProfileSummary",
+        "ProfileCitation",
+    }:
+        from academic_profiles.academic_profile import (
+            AcademicProfile,
+            AcademicProfileService,
+            AcademicProfileSummary,
+            ProfileCitation,
+        )
+
+        return {
+            "AcademicProfile": AcademicProfile,
+            "AcademicProfileService": AcademicProfileService,
+            "AcademicProfileSummary": AcademicProfileSummary,
+            "ProfileCitation": ProfileCitation,
+        }[name]
+    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
 

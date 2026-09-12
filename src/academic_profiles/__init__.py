@@ -2,6 +2,7 @@
 
 from .academic_profile import (
 	AcademicProfile,
+	AcademicProfileSnapshot,
 	AcademicProfileService,
 	AcademicProfileSummary,
 	ProfileCitation,
@@ -9,6 +10,7 @@ from .academic_profile import (
 
 __all__ = [
 	"AcademicProfile",
+	"AcademicProfileSnapshot",
 	"AcademicProfileService",
 	"AcademicProfileSummary",
 	"ProfileCitation",

@@ -41,6 +41,21 @@ vector column or RPC.
 GraphRAG refers only to the bounded typed expansion behind
 `GraphExpansionPort`; orchestration belongs to `RetrievalRankingPipeline`.
 
+## Application profile integration
+
+`application.search_papers` accepts a `RetrievalRankingPipeline` and
+`QueryPlan`, then serializes the pipeline's ranked publication results. It
+does not recreate a retrieval engine or apply another fusion/ranking pass.
+
+Academic profile pages use `AcademicProfileSnapshot`, an immutable bounded
+projection composed from ranking's `EntityRecord`, `GraphEdge`, and validated
+`EvidenceItem` values. The profile service renders authored publications,
+affiliation, and source-linked summaries only from that snapshot; without
+validated evidence it returns `insufficient_information` rather than
+fabricating a summary. Snapshots may also carry bounded `searchable_text` so
+the application can retain user-facing name and keyword profile search without
+reintroducing a second repository or retrieval pipeline.
+
 ## Supabase smoke test
 
 Keep `SUPABASE_URL` and `SUPABASE_KEY` in the ignored project-root `.env` file,

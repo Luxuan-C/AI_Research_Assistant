@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "academic-graphrag"
 version = "0.1.0"
-description = "Standalone, provider-neutral GraphRAG retrieval core for the SOFT3888 research assistant"
+description = "Deterministic retrieval, bounded graph expansion, and evidence routing for the SOFT3888 research assistant"
 readme = "README.md"
 requires-python = ">=3.11"
 authors = [{ name = "SOFT3888 Project Team" }]

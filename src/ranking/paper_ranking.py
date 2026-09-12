@@ -1,369 +1,692 @@
-"""
-Vecton AI Research Assistant ranking stage.
+"""Deterministic retrieval, graph-routing, and ranking contracts.
 
-Pipeline:
-    mock GraphRAG output
-      -> hybrid retrieval score H (RRF)
-         1.BM25(keyword matching)
-         2.dense vector search (semantic understanding)
-         3.Merge results via RRF (Reciprocal Rank Fusion)
-         
-      -> combined relevance R
-      -> eligibility gates
-      -> Quality Q / citation influence I/ temporal validity T/ innovation interaction N/ Author Authority A
-      -> final score S=(w_R)​R+(w_Q)​Q+(w_I)​I+(w_T)​T+(w_N)​Q*N+(w_A)​A
-      -> evidence-backed explanation
-
-GraphRAG RetrievalResponse objects can be converted with
-``candidates_from_retrieval_response`` and ranked with
-``rank_retrieval_response``.
+This module deliberately has no Supabase client, SQL, or LLM dependency. The
+database schema is owned elsewhere, so adapters supply read-only rows through
+the ports below. Lexical and optional dense results remain independent until
+``FusionService`` applies RRF exactly once.
 """
 
-from dataclasses import dataclass, asdict
+from __future__ import annotations
+
+from dataclasses import dataclass, field
 from datetime import date
-from math import exp
-from typing import List, Optional, Dict, Any, TYPE_CHECKING
-import json
-
-from academic_graphrag import RetrievalQuery
-from academic_graphrag.mock_data import build_mock_backend
-
-if TYPE_CHECKING:
-    from academic_graphrag.interfaces import AcademicGraphRepository
-    from academic_graphrag.models import RetrievalQuery, RetrievalResponse
-    from academic_graphrag.pipeline import GraphRAGEngine
-
-TODAY = date(2026, 9, 4)
-RRF_K = 60
-TAU_H = 0.20
-TAU_E = 0.70
-TAU_S = 0.45
-QUALITY_KAPPA = 5.0
-
-PROFILES = {
-    "GENERAL":       {"wH": .55, "wQ": .16, "wI": .12, "wT": .08, "wN": .06, "wA": .03, "half_life": 8,  "beta": .25},
-    "RECENT":        {"wH": .50, "wQ": .14, "wI": .07, "wT": .23, "wN": .03, "wA": .03, "half_life": 2,  "beta": 0},
-    "FOUNDATIONAL":  {"wH": .42, "wQ": .14, "wI": .32, "wT": .03, "wN": .04, "wA": .05, "half_life": 25, "beta": .50},
-    "EMERGING":      {"wH": .46, "wQ": .14, "wI": .06, "wT": .10, "wN": .21, "wA": .03, "half_life": 4,  "beta": .15},
-    "RELATIONSHIP":  {"wH": .63, "wQ": .12, "wI": .08, "wT": .06, "wN": .08, "wA": .03, "half_life": 10, "beta": .25},
-}
-
-@dataclass
-class Evidence:
-    evidence_id: str
-    source_type: str
-    confidence: float
-    supports: str
-
-@dataclass
-class CandidatePaper:
-    paper_id: str
-    title: str
-    bm25_rank: Optional[int]
-    dense_rank: Optional[int]
-    evidence: List[Evidence]
-    publication_date: str
-    publication_type: str
-    status: str
-    venue_prior: float
-    venue_count: int
-    document_prior: float
-    quality_confidence: float
-    citation_influence: float
-    innovation: float
-    author_authority: float
+from math import isclose
+from typing import Mapping, Protocol, Sequence
 
 
-def candidates_from_retrieval_response(response: "RetrievalResponse") -> List[CandidatePaper]:
-    """Convert GraphRAG publication results into ranking candidates.
+PUBLICATION = "publication"
+RESEARCHER = "researcher"
 
-    Researcher results are intentionally ignored because this stage ranks
-    papers. Missing metadata uses conservative defaults so the adapter remains
-    compatible with partial provider records.
+
+def _unit(value: float, name: str) -> float:
+    if not 0.0 <= value <= 1.0:
+        raise ValueError(f"{name} must be in [0, 1], got {value}")
+    return float(value)
+
+
+@dataclass(frozen=True, slots=True)
+class QueryPlan:
+    """A deterministic, LLM-free interpretation of one user request."""
+
+    text: str
+    as_of: date
+    target_kinds: tuple[str, ...] = (PUBLICATION, RESEARCHER)
+    filters: Mapping[str, object] = field(default_factory=dict)
+    profile: str = "GENERAL"
+    limit: int = 10
+    seed_limit: int = 10
+    require_evidence: bool = False
+
+    def __post_init__(self) -> None:
+        if not self.text.strip():
+            raise ValueError("Query text cannot be empty")
+        if not self.target_kinds:
+            raise ValueError("At least one target kind is required")
+        if self.limit <= 0 or self.seed_limit <= 0:
+            raise ValueError("limit and seed_limit must be positive")
+
+
+class QueryPlanner:
+    """Small deterministic planner; it never calls an LLM."""
+
+    def plan(
+        self,
+        text: str,
+        *,
+        as_of: date,
+        filters: Mapping[str, object] | None = None,
+        target_kinds: tuple[str, ...] = (PUBLICATION, RESEARCHER),
+        limit: int = 10,
+        seed_limit: int = 10,
+        require_evidence: bool = False,
+    ) -> QueryPlan:
+        lowered = text.lower()
+        if any(word in lowered for word in ("latest", "recent", "newest", "current")):
+            profile = "RECENT"
+        elif any(word in lowered for word in ("foundational", "seminal", "classic")):
+            profile = "FOUNDATIONAL"
+        else:
+            profile = "GENERAL"
+        return QueryPlan(
+            text=text,
+            as_of=as_of,
+            target_kinds=target_kinds,
+            filters=filters or {},
+            profile=profile,
+            limit=limit,
+            seed_limit=seed_limit,
+            require_evidence=require_evidence,
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class EntityRecord:
+    """Read-only projection of fields an adapter obtained from the fixed schema.
+
+    ``citation_score`` must already be an offline, field/year/type-normalised
+    feature. Raw ``incoming_citation_count`` is intentionally not ranked here.
+    Academic authority fields are retained only to make their exclusion rules
+    explicit.
     """
-    candidates = []
-    for result in response.results:
-        # This stage currently ranks publications; researcher results are
-        # reserved for a future researcher-ranking stage.
-        if result.entity.entity_type != "Publication":
-            continue
 
-        metadata = result.entity.metadata
-        evidence = [
-            Evidence(
-                evidence_id=item.evidence.id,
-                source_type=item.source.provider,
-                confidence=item.evidence.confidence,
-                supports=item.evidence.excerpt,
+    entity_id: str
+    kind: str
+    label: str
+    publication_date: date | None = None
+    citation_score: float | None = None
+    paper_authority_score: float | None = None
+    paper_authority_reproducible: bool = False
+    journal_authenticity_score: float | None = None
+    journal_authenticity_reproducible: bool = False
+    academic_authority_score: float | None = None
+    academic_authority_provenance: str | None = None
+    evidence_ids: tuple[str, ...] = ()
+    source_urls: tuple[str, ...] = ()
+
+    def __post_init__(self) -> None:
+        if not self.entity_id or not self.label:
+            raise ValueError("Entity records need a stable ID and label")
+        for name in (
+            "citation_score",
+            "paper_authority_score",
+            "journal_authenticity_score",
+            "academic_authority_score",
+        ):
+            value = getattr(self, name)
+            if value is not None:
+                _unit(value, name)
+
+
+@dataclass(frozen=True, slots=True)
+class RetrievalHit:
+    """One item from exactly one upstream retrieval channel."""
+
+    entity: EntityRecord
+    channel: str
+    rank: int
+    raw_score: float
+
+    def __post_init__(self) -> None:
+        if not self.channel:
+            raise ValueError("Retrieval channel cannot be empty")
+        if self.rank < 1:
+            raise ValueError("Retrieval rank must be positive")
+
+
+class RetrievalPort(Protocol):
+    """May expose lexical alone, or lexical and dense channels when available."""
+
+    def retrieve(self, plan: QueryPlan) -> Mapping[str, Sequence[RetrievalHit]]: ...
+
+
+@dataclass(frozen=True, slots=True)
+class FusedCandidate:
+    entity: EntityRecord
+    rrf_score: float
+    raw_rrf_score: float
+    channel_ranks: Mapping[str, int]
+    channel_raw_scores: Mapping[str, float]
+
+
+class FusionService:
+    """Fuse independent ranked lists once with reciprocal-rank fusion."""
+
+    def __init__(self, *, rrf_k: int = 60) -> None:
+        if rrf_k <= 0:
+            raise ValueError("rrf_k must be positive")
+        self.rrf_k = rrf_k
+
+    def fuse(self, rankings: Mapping[str, Sequence[RetrievalHit]]) -> tuple[FusedCandidate, ...]:
+        raw_scores: dict[str, float] = {}
+        entities: dict[str, EntityRecord] = {}
+        ranks: dict[str, dict[str, int]] = {}
+        channel_scores: dict[str, dict[str, float]] = {}
+
+        for channel, hits in rankings.items():
+            if not channel:
+                raise ValueError("Ranking map contains an empty channel name")
+            seen: set[str] = set()
+            for fallback_rank, hit in enumerate(hits, start=1):
+                if hit.channel != channel:
+                    raise ValueError(f"Hit channel {hit.channel!r} does not match {channel!r}")
+                entity_id = hit.entity.entity_id
+                if entity_id in seen:
+                    continue
+                seen.add(entity_id)
+                rank = hit.rank if hit.rank > 0 else fallback_rank
+                existing = entities.get(entity_id)
+                if existing is not None and existing.kind != hit.entity.kind:
+                    raise ValueError(f"Conflicting entity kind for {entity_id}")
+                entities[entity_id] = hit.entity
+                raw_scores[entity_id] = raw_scores.get(entity_id, 0.0) + 1.0 / (self.rrf_k + rank)
+                ranks.setdefault(entity_id, {})[channel] = rank
+                channel_scores.setdefault(entity_id, {})[channel] = hit.raw_score
+
+        maximum = max(raw_scores.values(), default=0.0)
+        output = tuple(
+            FusedCandidate(
+                entity=entities[entity_id],
+                raw_rrf_score=raw_score,
+                rrf_score=raw_score / maximum if maximum else 0.0,
+                channel_ranks=dict(sorted(ranks[entity_id].items())),
+                channel_raw_scores=dict(sorted(channel_scores[entity_id].items())),
             )
-            for item in result.evidence
-        ]
-        year = metadata.get("year", metadata.get("latest_publication_year"))
-        if year is None:
-            raise ValueError(f"Publication {result.entity.id} is missing year metadata")
-
-        candidates.append(
-            CandidatePaper(
-                paper_id=result.entity.id,
-                title=result.entity.label,
-                bm25_rank=result.rank,
-                dense_rank=result.rank,
-                evidence=evidence,
-                publication_date=f"{int(year):04d}-01-01",
-                publication_type=str(metadata.get("publication_type", "journal-article")),
-                status=str(metadata.get("status", "valid")),
-                venue_prior=_number01(metadata.get("venue_quality"), 0.5),
-                venue_count=_nonnegative_int(metadata.get("venue_count"), 0),
-                document_prior=_number01(metadata.get("document_prior"), 0.5),
-                quality_confidence=_number01(metadata.get("quality_confidence"), 0.5),
-                citation_influence=_number01(
-                    result.score.components.get("citation_influence"), 0.0
-                ),
-                innovation=_number01(metadata.get("innovation"), 0.0),
-                author_authority=_number01(metadata.get("author_authority"), 0.0),
+            for entity_id, raw_score in raw_scores.items()
+        )
+        return tuple(
+            sorted(
+                output,
+                key=lambda item: (-item.rrf_score, -len(item.channel_ranks), item.entity.entity_id),
             )
         )
-    return candidates
 
 
-def rank_retrieval_response(response: "RetrievalResponse") -> List[Dict[str, Any]]:
-    """Rank the publication candidates contained in a GraphRAG response."""
-    # The ranking profile is selected by the upstream RetrievalQuery.
-    selected_profile = _profile_from_response(response)
-    return rank_candidates(candidates_from_retrieval_response(response), selected_profile)
+@dataclass(frozen=True, slots=True)
+class GraphEdge:
+    """A read-only relationship projected from the externally owned schema."""
+
+    edge_id: str
+    source_id: str
+    target_id: str
+    relation_type: str
+    confidence: float = 1.0
+    evidence_ids: tuple[str, ...] = ()
+
+    def __post_init__(self) -> None:
+        if not self.edge_id or not self.source_id or not self.target_id or not self.relation_type:
+            raise ValueError("Graph edges need IDs and a relation type")
+        _unit(self.confidence, "edge confidence")
 
 
-def retrieve_and_rank(
-    engine: "GraphRAGEngine", query: "RetrievalQuery"
-) -> List[Dict[str, Any]]:
-    """Call GraphRAG and rank papers returned in its RetrievalResponse.
+@dataclass(frozen=True, slots=True)
+class GraphBudget:
+    max_hops: int = 2
+    max_entities: int = 50
+    max_relationships: int = 100
+    max_neighbors_per_node: int = 20
+    hop_decay: float = 0.80
+    minimum_edge_confidence: float = 0.50
+    allowed_relation_types: tuple[str, ...] = (
+        "AUTHORED",
+        "CITES",
+        "AFFILIATED_WITH",
+        "ACADEMIC_IN_DISCIPLINE",
+        "EXPERTISE_IN_FIELD",
+        "PAPER_AT_UNIVERSITY",
+        "PAPER_IN_FACULTY",
+        "PUBLISHED_IN",
+    )
 
-    The caller owns the engine and query. This function only connects the RAG
-    retrieval result to the paper-ranking output. The candidates are taken from
-    ``response.results``; the local ``MOCK`` data is not used.
+    def __post_init__(self) -> None:
+        if self.max_hops < 0:
+            raise ValueError("max_hops cannot be negative")
+        if min(self.max_entities, self.max_relationships, self.max_neighbors_per_node) <= 0:
+            raise ValueError("Graph budgets must be positive")
+        _unit(self.hop_decay, "hop_decay")
+        _unit(self.minimum_edge_confidence, "minimum_edge_confidence")
+
+
+@dataclass(frozen=True, slots=True)
+class GraphPath:
+    seed_id: str
+    target_id: str
+    edge_ids: tuple[str, ...]
+    relevance: float
+    evidence_ids: tuple[str, ...] = ()
+
+    @property
+    def hops(self) -> int:
+        return len(self.edge_ids)
+
+
+@dataclass(frozen=True, slots=True)
+class ExpansionResult:
+    entities: Mapping[str, EntityRecord]
+    paths: Mapping[str, GraphPath]
+    truncated: bool
+
+
+class GraphExpansionPort(Protocol):
+    def expand(
+        self,
+        plan: QueryPlan,
+        seeds: Sequence[FusedCandidate],
+    ) -> ExpansionResult: ...
+
+
+class SchemaRelationshipGraph:
+    """Bounded GraphRAG over read-only relationships from the fixed schema.
+
+    A Supabase adapter fetches the needed rows and creates this projection. It
+    does not require a graph table or a migration.
     """
-    response = engine.retrieve(query)
-    print_ranking(response)
-    return rank_retrieval_response(response)
+
+    def __init__(
+        self,
+        entities: Sequence[EntityRecord],
+        edges: Sequence[GraphEdge],
+        *,
+        budget: GraphBudget | None = None,
+    ) -> None:
+        self.entities = {entity.entity_id: entity for entity in entities}
+        self.edges = {edge.edge_id: edge for edge in edges}
+        self.budget = budget or GraphBudget()
+        self._adjacency: dict[str, list[GraphEdge]] = {}
+        for edge in self.edges.values():
+            self._adjacency.setdefault(edge.source_id, []).append(edge)
+            self._adjacency.setdefault(edge.target_id, []).append(edge)
+        for values in self._adjacency.values():
+            values.sort(key=lambda edge: edge.edge_id)
+
+    def expand(self, plan: QueryPlan, seeds: Sequence[FusedCandidate]) -> ExpansionResult:
+        selected = tuple(seeds[: min(plan.seed_limit, self.budget.max_entities)])
+        truncated = len(seeds) > len(selected)
+        entities = dict(self.entities)
+        paths: dict[str, GraphPath] = {}
+        selected_edge_ids: set[str] = set()
+        frontier: list[GraphPath] = []
+
+        for seed in selected:
+            entity_id = seed.entity.entity_id
+            entities[entity_id] = seed.entity
+            path = GraphPath(entity_id, entity_id, (), seed.rrf_score, seed.entity.evidence_ids)
+            paths[entity_id] = path
+            frontier.append(path)
+
+        while frontier:
+            frontier.sort(key=lambda path: (-path.relevance, path.seed_id, path.target_id, path.edge_ids))
+            current = frontier.pop(0)
+            if current.hops >= self.budget.max_hops:
+                continue
+            neighbors = self._adjacency.get(current.target_id, ())
+            accepted_neighbors = 0
+            for edge in neighbors:
+                if edge.relation_type not in self.budget.allowed_relation_types:
+                    continue
+                if edge.confidence < self.budget.minimum_edge_confidence:
+                    continue
+                accepted_neighbors += 1
+                if accepted_neighbors > self.budget.max_neighbors_per_node:
+                    truncated = True
+                    break
+                if edge.edge_id not in selected_edge_ids and len(selected_edge_ids) >= self.budget.max_relationships:
+                    truncated = True
+                    continue
+                other_id = edge.target_id if edge.source_id == current.target_id else edge.source_id
+                if other_id not in entities:
+                    continue
+                relevance = current.relevance * edge.confidence * self.budget.hop_decay
+                candidate = GraphPath(
+                    seed_id=current.seed_id,
+                    target_id=other_id,
+                    edge_ids=(*current.edge_ids, edge.edge_id),
+                    relevance=relevance,
+                    evidence_ids=tuple(dict.fromkeys((*current.evidence_ids, *edge.evidence_ids))),
+                )
+                previous = paths.get(other_id)
+                if previous is None and len(paths) >= self.budget.max_entities:
+                    truncated = True
+                    continue
+                if previous is not None and not _prefer_path(candidate, previous):
+                    continue
+                paths[other_id] = candidate
+                selected_edge_ids.add(edge.edge_id)
+                frontier.append(candidate)
+
+        return ExpansionResult(
+            entities={entity_id: entities[entity_id] for entity_id in paths},
+            paths=paths,
+            truncated=truncated,
+        )
 
 
-def _profile_from_response(response: "RetrievalResponse") -> str:
-    profile = response.query.ranking_profile
-    if profile not in PROFILES:
-        raise ValueError(f"Unknown profile: {profile}")
-    return profile
+def _prefer_path(candidate: GraphPath, previous: GraphPath) -> bool:
+    return candidate.relevance > previous.relevance or (
+        isclose(candidate.relevance, previous.relevance) and candidate.edge_ids < previous.edge_ids
+    )
 
 
-def _number01(value: object, default: float) -> float:
-    if isinstance(value, bool) or not isinstance(value, (int, float)):
-        return default
-    return max(0.0, min(1.0, float(value)))
+def edges_from_fixed_schema_rows(
+    *,
+    academics: Sequence[Mapping[str, object]] = (),
+    research_papers: Sequence[Mapping[str, object]] = (),
+) -> tuple[GraphEdge, ...]:
+    """Project documented read-only array/FK relationships into graph edges.
+
+    It uses only existing relationships: authorship, citations, affiliation,
+    expertise, paper-university/faculty membership, and paper-journal links.
+    """
+
+    edges: dict[str, GraphEdge] = {}
+
+    def add(relation: str, source: object, target: object) -> None:
+        source_id, target_id = str(source), str(target)
+        edge_id = f"{relation}:{source_id}:{target_id}"
+        edges[edge_id] = GraphEdge(edge_id, source_id, target_id, relation)
+
+    for academic in academics:
+        academic_id = academic.get("id")
+        if academic_id is None:
+            continue
+        for paper_id in _id_array(academic.get("research_paper_ids")):
+            add("AUTHORED", academic_id, paper_id)
+        for university_id in _id_array(academic.get("university_ids")):
+            add("AFFILIATED_WITH", academic_id, university_id)
+        for discipline_id in _id_array(academic.get("discipline_ids")):
+            add("ACADEMIC_IN_DISCIPLINE", academic_id, discipline_id)
+        for field_id in _id_array(academic.get("field_ids")):
+            add("EXPERTISE_IN_FIELD", academic_id, field_id)
+
+    for paper in research_papers:
+        paper_id = paper.get("id")
+        if paper_id is None:
+            continue
+        for academic_id in _id_array(paper.get("academic_ids")):
+            add("AUTHORED", academic_id, paper_id)
+        for cited_paper_id in _id_array(paper.get("outgoing_citations")):
+            add("CITES", paper_id, cited_paper_id)
+        for university_id in _id_array(paper.get("university_ids")):
+            add("PAPER_AT_UNIVERSITY", paper_id, university_id)
+        for faculty_id in _id_array(paper.get("faculty_ids")):
+            add("PAPER_IN_FACULTY", paper_id, faculty_id)
+        journal_id = paper.get("journal_id")
+        if journal_id is not None:
+            add("PUBLISHED_IN", paper_id, journal_id)
+
+    return tuple(edges[key] for key in sorted(edges))
 
 
-def _nonnegative_int(value: object, default: int) -> int:
-    if isinstance(value, bool) or not isinstance(value, (int, float)):
-        return default
-    return max(0, int(value))
+def _id_array(value: object) -> tuple[str, ...]:
+    if not isinstance(value, (list, tuple, set, frozenset)):
+        return ()
+    return tuple(str(item) for item in value if item is not None)
 
-def validate01(x: float, name: str):
-    if not 0 <= x <= 1:
-        raise ValueError(f"{name} must be in [0,1], got {x}")
 
-def validate(p: CandidatePaper):
-    for name in ["venue_prior", "document_prior", "quality_confidence",
-                 "citation_influence", "innovation", "author_authority"]:
-        validate01(getattr(p, name), name)
-    for e in p.evidence:
-        validate01(e.confidence, f"evidence {e.evidence_id} confidence")
-    if p.bm25_rank is not None and p.bm25_rank < 1:
-        raise ValueError("bm25_rank must be >= 1 or None")
-    if p.dense_rank is not None and p.dense_rank < 1:
-        raise ValueError("dense_rank must be >= 1 or None")
-    date.fromisoformat(p.publication_date)
+@dataclass(frozen=True, slots=True)
+class RankingCandidate:
+    entity: EntityRecord
+    retrieval_score: float
+    graph_score: float = 0.0
+    graph_path: GraphPath | None = None
+    evidence_ids: tuple[str, ...] = ()
 
-def rrf(rank: Optional[int]) -> float:
-    return 0.0 if rank is None else (RRF_K + 1) / (RRF_K + rank)
+    def __post_init__(self) -> None:
+        _unit(self.retrieval_score, "retrieval_score")
+        _unit(self.graph_score, "graph_score")
 
-def hybrid_relevance(p: CandidatePaper, bm25_weight=.5, dense_weight=.5) -> float:
-    return bm25_weight * rrf(p.bm25_rank) + dense_weight * rrf(p.dense_rank)
 
-def evidence_confidence(p: CandidatePaper) -> float:
-    # Use the strongest supporting evidence; do not reward duplicate evidence.
-    return max((e.confidence for e in p.evidence), default=0.0)
+def candidates_from_fusion_and_expansion(
+    plan: QueryPlan,
+    fused: Sequence[FusedCandidate],
+    expansion: ExpansionResult,
+) -> tuple[RankingCandidate, ...]:
+    """Combine retrieval and graph output without fusing channels a second time."""
 
-def quality(p: CandidatePaper) -> float:
-    # Conservative venue smoothing:
-    # V' = (nV*V + kappa*0.5)/(nV+kappa)
-    v_prime = (p.venue_count * p.venue_prior + QUALITY_KAPPA * .5) / (p.venue_count + QUALITY_KAPPA)
-    return p.quality_confidence * (.6 * v_prime + .4 * p.document_prior) + (1-p.quality_confidence) * .5
+    by_id: dict[str, tuple[EntityRecord, float, GraphPath | None]] = {
+        item.entity.entity_id: (item.entity, item.rrf_score, None) for item in fused
+    }
+    for entity_id, path in expansion.paths.items():
+        entity = expansion.entities[entity_id]
+        existing = by_id.get(entity_id)
+        retrieval_score = existing[1] if existing is not None else 0.0
+        by_id[entity_id] = (entity, retrieval_score, path)
 
-def temporal(p: CandidatePaper, profile: str, q: float) -> float:
-    cfg = PROFILES[profile]
-    age = max(0, (TODAY - date.fromisoformat(p.publication_date)).days / 365.25)
-    h_eff = cfg["half_life"] * (1 + cfg["beta"] * q * p.innovation)
-    return 2 ** (-age / h_eff)
+    candidates: list[RankingCandidate] = []
+    for entity_id, (entity, retrieval_score, path) in by_id.items():
+        if entity.kind not in plan.target_kinds:
+            continue
+        graph_score = 0.0 if path is None or path.hops == 0 else path.relevance
+        path_evidence = path.evidence_ids if path else ()
+        evidence_ids = tuple(dict.fromkeys((*entity.evidence_ids, *path_evidence)))
+        candidates.append(RankingCandidate(entity, retrieval_score, graph_score, path, evidence_ids))
+    return tuple(sorted(candidates, key=lambda item: item.entity.entity_id))
 
-def eligible(p: CandidatePaper, h: float, e: float):
-    reasons = []
-    if p.status.lower() != "valid":
-        reasons.append(f"status={p.status}")
-    if h < TAU_H:
-        reasons.append(f"H={h:.3f} < {TAU_H:.2f}")
-    if e < TAU_E:
-        reasons.append(f"E={e:.3f} < {TAU_E:.2f}")
-    return len(reasons) == 0, reasons
 
-def rank_candidates(candidates: List[CandidatePaper], profile="GENERAL") -> List[Dict[str, Any]]:
-    if profile not in PROFILES:
-        raise ValueError(f"Unknown profile: {profile}")
-    cfg = PROFILES[profile]
-    results = []
+@dataclass(frozen=True, slots=True)
+class RankingProfile:
+    name: str
+    publication_retrieval_weight: float
+    publication_graph_weight: float
+    citation_weight: float
+    recency_weight: float
+    paper_authority_weight: float
+    researcher_retrieval_weight: float
+    researcher_graph_weight: float
+    publication_half_life_years: float
+    minimum_journal_authenticity: float | None = 0.50
 
-    for p in candidates:
-        validate(p)
-        H = hybrid_relevance(p)
-        E = evidence_confidence(p)
-        ok, reasons = eligible(p, H, E)
+    def __post_init__(self) -> None:
+        publication_total = (
+            self.publication_retrieval_weight
+            + self.publication_graph_weight
+            + self.citation_weight
+            + self.recency_weight
+            + self.paper_authority_weight
+        )
+        researcher_total = self.researcher_retrieval_weight + self.researcher_graph_weight
+        if not isclose(publication_total, 1.0) or not isclose(researcher_total, 1.0):
+            raise ValueError("Ranking profile weights must each sum to one")
+        if self.publication_half_life_years <= 0:
+            raise ValueError("publication_half_life_years must be positive")
+        if self.minimum_journal_authenticity is not None:
+            _unit(self.minimum_journal_authenticity, "minimum_journal_authenticity")
 
-        Q = quality(p)
-        I = p.citation_influence
-        T = temporal(p, profile, Q)
-        N = p.innovation
-        A = p.author_authority
-        QN = Q * N
 
-        contributions = {
-            "H": cfg["wH"] * H,
-            "Q": cfg["wQ"] * Q,
-            "I": cfg["wI"] * I,
-            "T": cfg["wT"] * T,
-            "QN": cfg["wN"] * QN,
-            "A": cfg["wA"] * A,
-        }
+DEFAULT_PROFILES = {
+    "GENERAL": RankingProfile("GENERAL", 0.65, 0.20, 0.07, 0.03, 0.05, 0.75, 0.25, 8.0),
+    "RECENT": RankingProfile("RECENT", 0.60, 0.18, 0.04, 0.18, 0.00, 0.75, 0.25, 2.0),
+    "FOUNDATIONAL": RankingProfile("FOUNDATIONAL", 0.65, 0.20, 0.12, 0.00, 0.03, 0.75, 0.25, 25.0),
+}
 
-        S = sum(contributions.values()) if ok else 0.0
 
-        if ok and S < TAU_S:
-            ok = False
-            reasons.append(f"S={S:.3f} < {TAU_S:.2f}")
-            S = 0.0
-            contributions = {k: 0.0 for k in contributions}
+@dataclass(frozen=True, slots=True)
+class RankedEntity:
+    rank: int
+    entity: EntityRecord
+    eligible: bool
+    final_score: float
+    score_breakdown: Mapping[str, float]
+    gate_reasons: tuple[str, ...]
+    evidence_ids: tuple[str, ...]
+    graph_path: GraphPath | None
+    ignored_signals: tuple[str, ...]
 
-        result = {
-            "paper_id": p.paper_id,
-            "title": p.title,
-            "eligible": ok,
-            "final_score": round(S, 6),
-            "score_breakdown": {
-                "H_hybrid_relevance": round(H, 6),
-                "Q_quality": round(Q, 6),
-                "I_citation_influence": round(I, 6),
-                "T_temporal_validity": round(T, 6),
-                "N_innovation": round(N, 6),
-                "QN_quality_x_innovation": round(QN, 6),
-                "A_author_authority": round(A, 6),
-            },
-            "weighted_contributions": {k: round(v, 6) for k, v in contributions.items()},
-            "evidence": {
-                "confidence": round(E, 6),
-                "ids": [e.evidence_id for e in p.evidence],
-            },
-            "eligibility_reasons": reasons,
-        }
 
-        if ok:
-            strongest = max(contributions, key=contributions.get)
-            result["explanation"] = (
-                f"Strongest weighted factor: {strongest}={contributions[strongest]:.3f}. "
-                f"H={H:.3f}, Q={Q:.3f}, I={I:.3f}, T={T:.3f}, "
-                f"N={N:.3f}, A={A:.3f}. Final S={S:.3f}. "
-                f"Evidence IDs: {', '.join(result['evidence']['ids']) or 'none'}."
+class RankingService:
+    """Pure deterministic ranking: no database calls, LLM calls, or I/O."""
+
+    def __init__(self, profiles: Mapping[str, RankingProfile] | None = None) -> None:
+        self.profiles = dict(profiles or DEFAULT_PROFILES)
+
+    def rank(self, plan: QueryPlan, candidates: Sequence[RankingCandidate]) -> tuple[RankedEntity, ...]:
+        profile = self.profiles.get(plan.profile)
+        if profile is None:
+            raise ValueError(f"Unknown ranking profile: {plan.profile}")
+        provisional = [self._rank_one(plan, profile, candidate) for candidate in candidates]
+        provisional.sort(key=lambda item: (not item["eligible"], -item["final_score"], item["entity"].entity_id))
+        return tuple(
+            RankedEntity(rank=index, **item)
+            for index, item in enumerate(provisional[: plan.limit], start=1)
+        )
+
+    def _rank_one(
+        self,
+        plan: QueryPlan,
+        profile: RankingProfile,
+        candidate: RankingCandidate,
+    ) -> dict[str, object]:
+        entity = candidate.entity
+        reasons: list[str] = []
+        if plan.require_evidence and not candidate.evidence_ids:
+            reasons.append("missing_evidence")
+        if (
+            entity.kind == PUBLICATION
+            and entity.journal_authenticity_reproducible
+            and entity.journal_authenticity_score is not None
+            and profile.minimum_journal_authenticity is not None
+            and entity.journal_authenticity_score < profile.minimum_journal_authenticity
+        ):
+            reasons.append("journal_authenticity_gate")
+
+        ignored: list[str] = []
+        if entity.academic_authority_score is not None:
+            ignored.append("academic_authority_score")
+
+        if entity.kind == PUBLICATION:
+            citation = entity.citation_score if entity.citation_score is not None else 0.0
+            authority = (
+                entity.paper_authority_score
+                if entity.paper_authority_reproducible and entity.paper_authority_score is not None
+                else 0.0
+            )
+            recency = _recency(entity.publication_date, plan.as_of, profile.publication_half_life_years)
+            components = {
+                "retrieval": candidate.retrieval_score,
+                "graph": candidate.graph_score,
+                "citation": citation,
+                "recency": recency,
+                "paper_authority": authority,
+            }
+            score = (
+                profile.publication_retrieval_weight * components["retrieval"]
+                + profile.publication_graph_weight * components["graph"]
+                + profile.citation_weight * components["citation"]
+                + profile.recency_weight * components["recency"]
+                + profile.paper_authority_weight * components["paper_authority"]
+            )
+        elif entity.kind == RESEARCHER:
+            components = {"retrieval": candidate.retrieval_score, "graph": candidate.graph_score}
+            score = (
+                profile.researcher_retrieval_weight * components["retrieval"]
+                + profile.researcher_graph_weight * components["graph"]
             )
         else:
-            result["explanation"] = (
-                "Rejected by deterministic gates: " +
-                "; ".join(reasons) +
-                f". Evidence IDs: {', '.join(result['evidence']['ids']) or 'none'}."
-            )
+            reasons.append(f"unsupported_ranking_kind={entity.kind}")
+            components = {"retrieval": candidate.retrieval_score, "graph": candidate.graph_score}
+            score = 0.0
 
-        results.append(result)
-
-    # Stable deterministic ordering.
-    results.sort(key=lambda x: (not x["eligible"], -x["final_score"], x["paper_id"]))
-    for i, r in enumerate(results, 1):
-        r["rank"] = i
-    return results
-
-
-
-def print_ranking(response: "RetrievalResponse") -> None:
-    """Print readable paper-ranking output for an existing RAG response."""
-    results = rank_retrieval_response(response)
-    query = response.query.text
-
-    print("=" * 78)
-    print("Academic GraphRAG -> Paper Ranking")
-    print("=" * 78)
-    print(f"Query: {query}")
-    print(f"Papers returned: {len(results)}")
-    print()
-
-    for result in results:
-        breakdown = result["score_breakdown"]
-        status = "ELIGIBLE" if result["eligible"] else "REJECTED"
-        evidence_ids = result["evidence"]["ids"]
-
-        print("-" * 78)
-        print(f"Rank {result['rank']}: {result['title']}")
-        print(f"Paper ID: {result['paper_id']}")
-        print(f"Status: {status}")
-        print(f"Final score: {result['final_score']:.4f}")
-        print("Score breakdown:")
-        print(f"  Hybrid relevance (H): {breakdown['H_hybrid_relevance']:.3f}")
-        print(f"  Quality (Q):          {breakdown['Q_quality']:.3f}")
-        print(f"  Citation influence (I): {breakdown['I_citation_influence']:.3f}")
-        print(f"  Temporal validity (T):  {breakdown['T_temporal_validity']:.3f}")
-        print(f"  Innovation (N):       {breakdown['N_innovation']:.3f}")
-        print(f"  Author authority (A): {breakdown['A_author_authority']:.3f}")
-        print(f"Evidence confidence: {result['evidence']['confidence']:.3f}")
-        print(f"Evidence IDs: {', '.join(evidence_ids) or 'none'}")
-        if result["eligibility_reasons"]:
-            print("Eligibility reasons: " + "; ".join(result["eligibility_reasons"]))
-        print(f"Explanation: {result['explanation']}")
-
-    print("-" * 78)
+        eligible = not reasons
+        return {
+            "entity": entity,
+            "eligible": eligible,
+            "final_score": round(score if eligible else 0.0, 12),
+            "score_breakdown": {key: round(value, 12) for key, value in components.items()},
+            "gate_reasons": tuple(reasons),
+            "evidence_ids": candidate.evidence_ids,
+            "graph_path": candidate.graph_path,
+            "ignored_signals": tuple(ignored),
+        }
 
 
-def main() -> None:
-    """Run the local GraphRAG demo and print its ranked paper results."""
-    backend = build_mock_backend()
-    query = RetrievalQuery(
-        "How can artificial intelligence improve aged care?",
-        limit=5,
-        ranking_profile="GENERAL",
-    )
-    response = backend.engine.retrieve(query)
-
-    print(f"GraphRAG status: {response.status.value}")
-    print(f"GraphRAG results: {len(response.results)}")
-    print_ranking(response)
-
-    from application import search_academic_profiles_with_graphrag
-
-    profiles = search_academic_profiles_with_graphrag(backend.engine, query)
-    print()
-    print("GraphRAG -> Academic Profiles")
-    print("=" * 78)
-    print(f"Profiles returned: {len(profiles)}")
-    for profile in profiles:
-        information = profile.structured_information
-        print("-" * 78)
-        print(f"Name: {information['name']}")
-        print(f"Institution: {information['institution'] or 'Unknown'}")
-        print(f"Publications: {len(profile.publications)}")
-        print(f"Summary status: {profile.summary.status}")
-        print(f"Summary: {profile.summary.text}")
+def _recency(publication_date: date | None, as_of: date, half_life_years: float) -> float:
+    if publication_date is None:
+        return 0.0
+    age = max(0.0, (as_of - publication_date).days / 365.25)
+    return 0.5 ** (age / half_life_years)
 
 
-if __name__ == "__main__":
-    main()
+@dataclass(frozen=True, slots=True)
+class EvidenceItem:
+    evidence_id: str
+    entity_id: str
+    source_url: str
+    excerpt: str
+    confidence: float = 1.0
+
+    def __post_init__(self) -> None:
+        if not self.evidence_id or not self.entity_id or not self.source_url:
+            raise ValueError("Evidence needs an ID, subject entity, and source URL")
+        _unit(self.confidence, "evidence confidence")
+
+
+@dataclass(frozen=True, slots=True)
+class EvidencePack:
+    status: str
+    items: tuple[EvidenceItem, ...]
+    ranked_entity_ids: tuple[str, ...]
+
+
+class EvidencePackBuilder:
+    """Select bounded, server-supplied evidence. It never fabricates evidence."""
+
+    def build(
+        self,
+        ranked: Sequence[RankedEntity],
+        evidence_by_id: Mapping[str, EvidenceItem],
+        *,
+        limit: int = 8,
+    ) -> EvidencePack:
+        if limit <= 0:
+            raise ValueError("Evidence limit must be positive")
+        items: list[EvidenceItem] = []
+        entity_ids: list[str] = []
+        seen: set[str] = set()
+        for result in ranked:
+            if not result.eligible:
+                continue
+            entity_ids.append(result.entity.entity_id)
+            for evidence_id in result.evidence_ids:
+                item = evidence_by_id.get(evidence_id)
+                if item is None or item.entity_id != result.entity.entity_id or item.evidence_id in seen:
+                    continue
+                seen.add(item.evidence_id)
+                items.append(item)
+                if len(items) == limit:
+                    return EvidencePack("ready", tuple(items), tuple(entity_ids))
+        return EvidencePack("ready" if items else "insufficient_evidence", tuple(items), tuple(entity_ids))
+
+
+class GenerationPort(Protocol):
+    """One downstream synthesis call receives an EvidencePack, never database access."""
+
+    def synthesize(self, question: str, evidence: EvidencePack) -> object: ...
+
+
+@dataclass(frozen=True, slots=True)
+class RetrievalRankingResult:
+    fused: tuple[FusedCandidate, ...]
+    expansion: ExpansionResult
+    ranked: tuple[RankedEntity, ...]
+
+
+class RetrievalRankingPipeline:
+    """Orchestrates retrieval through ranking; it intentionally stops before generation."""
+
+    def __init__(
+        self,
+        *,
+        retrieval: RetrievalPort,
+        fusion: FusionService,
+        expansion: GraphExpansionPort,
+        ranking: RankingService,
+    ) -> None:
+        self.retrieval = retrieval
+        self.fusion = fusion
+        self.expansion = expansion
+        self.ranking = ranking
+
+    def retrieve_and_rank(self, plan: QueryPlan) -> RetrievalRankingResult:
+        fused = self.fusion.fuse(self.retrieval.retrieve(plan))
+        expansion = self.expansion.expand(plan, fused)
+        candidates = candidates_from_fusion_and_expansion(plan, fused, expansion)
+        return RetrievalRankingResult(fused, expansion, self.ranking.rank(plan, candidates))

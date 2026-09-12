@@ -1,97 +1,147 @@
+from datetime import date
+import inspect
 import unittest
 
-from academic_graphrag import PipelineConfig, RetrievalQuery, RetrievalStatus
-from academic_graphrag.in_memory import PassthroughReranker
-from academic_graphrag.mock_data import build_mock_backend
+from ranking import (
+    Answer,
+    AnswerOrchestrator,
+    EvidencePackBuilder,
+    FusionService,
+    InsufficientInformation,
+    QueryPlanner,
+    RankingService,
+    RetrievalRankingPipeline,
+)
+from support import build_mock_scenario
 
 
-class GraphRAGPipelineTests(unittest.TestCase):
-    def test_reranker_is_replaceable_and_invoked(self) -> None:
-        class RecordingReranker(PassthroughReranker):
-            called = False
-
-            def rerank(self, query, candidates, entities):
-                self.called = True
-                return super().rerank(query, candidates, entities)
-
-        backend = build_mock_backend()
-        reranker = RecordingReranker()
-        backend.engine.reranker = reranker
-
-        backend.engine.retrieve(RetrievalQuery("aged care robotics"))
-
-        self.assertTrue(reranker.called)
-
-    def test_returns_ranked_explainable_sourced_results(self) -> None:
-        response = build_mock_backend().engine.retrieve(
-            RetrievalQuery("How can artificial intelligence improve aged care?", limit=5)
+class RetrievalRankingPipelineTests(unittest.TestCase):
+    def setUp(self) -> None:
+        self.scenario = build_mock_scenario()
+        self.pipeline = RetrievalRankingPipeline(
+            retrieval=self.scenario.retrieval,
+            fusion=FusionService(),
+            expansion=self.scenario.graph,
+            ranking=RankingService(),
         )
 
-        self.assertEqual(response.status, RetrievalStatus.OK)
-        self.assertGreaterEqual(len(response.results), 2)
-        self.assertEqual(response.results[0].rank, 1)
-        self.assertIn(response.results[0].entity.entity_type, {"Researcher", "Publication"})
-        self.assertTrue(response.relationships_used)
-        self.assertTrue(response.generation_context.passages)
+    def test_pipeline_returns_ranked_publications_and_researchers(self) -> None:
+        plan = QueryPlanner().plan("aged care robotics", as_of=date(2026, 9, 8))
 
-        expected_components = {
-            "rrf",
-            "semantic_relevance",
-            "citation_influence",
-            "recency",
-            "venue_quality",
-            "topic_coverage",
-            "evidence_confidence",
-            "graph_hops",
-        }
-        for result in response.results:
-            self.assertEqual(set(result.score.components), expected_components)
-            self.assertTrue(result.evidence)
-            self.assertTrue(result.provenance_ids)
-            self.assertIn(result.evidence[0].evidence.id, result.context)
+        result = self.pipeline.retrieve_and_rank(plan)
 
-    def test_unrelated_query_fails_closed(self) -> None:
-        response = build_mock_backend().engine.retrieve(
-            RetrievalQuery("quantum entanglement in marine geology")
+        self.assertTrue(result.fused)
+        self.assertTrue(result.expansion.paths)
+        self.assertTrue(result.ranked)
+        self.assertEqual(
+            [item.rank for item in result.ranked],
+            list(range(1, len(result.ranked) + 1)),
+        )
+        self.assertEqual(
+            {item.entity.kind for item in result.ranked},
+            {"publication", "researcher"},
         )
 
-        self.assertEqual(response.status, RetrievalStatus.INSUFFICIENT_INFORMATION)
-        self.assertEqual(response.results, ())
-        self.assertIn("Insufficient Information", response.message or "")
-        self.assertEqual(response.generation_context.passages, ())
-
-    def test_evidence_confidence_threshold_is_configurable(self) -> None:
-        backend = build_mock_backend(
-            PipelineConfig(evidence_confidence_threshold=0.99)
+    def test_pipeline_stops_before_generation_and_builds_bounded_evidence(self) -> None:
+        plan = QueryPlanner().plan(
+            "aged care robotics",
+            as_of=date(2026, 9, 8),
+            require_evidence=True,
         )
-        response = backend.engine.retrieve(RetrievalQuery("aged care artificial intelligence"))
+        result = self.pipeline.retrieve_and_rank(plan)
 
-        self.assertEqual(response.status, RetrievalStatus.INSUFFICIENT_INFORMATION)
+        pack = EvidencePackBuilder().build(result.ranked, self.scenario.evidence, limit=3)
 
-    def test_academic_filters_are_passed_to_retrieval_adapters(self) -> None:
-        response = build_mock_backend().engine.retrieve(
-            RetrievalQuery(
-                "environmental impact of electric vehicles",
-                filters={"institution": "Monash University"},
-            )
+        self.assertEqual(pack.status, "ready")
+        self.assertLessEqual(len(pack.items), 3)
+        self.assertTrue(all(item.source_url.startswith("https://") for item in pack.items))
+
+    def test_pipeline_is_stable_across_repeated_runs(self) -> None:
+        plan = QueryPlanner().plan("aged care robotics", as_of=date(2026, 9, 8))
+
+        first = self.pipeline.retrieve_and_rank(plan)
+        second = self.pipeline.retrieve_and_rank(plan)
+
+        self.assertEqual(first, second)
+
+    def test_evidence_builder_fails_closed_without_evidence(self) -> None:
+        plan = QueryPlanner().plan("aged care robotics", as_of=date(2026, 9, 8))
+        result = self.pipeline.retrieve_and_rank(plan)
+
+        pack = EvidencePackBuilder().build(result.ranked, {})
+
+        self.assertEqual(pack.status, "insufficient_evidence")
+        self.assertEqual(pack.items, ())
+
+    def test_answer_orchestrator_builds_evidence_after_ranking_and_generates_once(self) -> None:
+        calls: list[str] = []
+
+        class RecordingRankingService(RankingService):
+            def rank(self, plan, candidates):
+                calls.append("ranking")
+                return super().rank(plan, candidates)
+
+        class RecordingEvidenceBuilder(EvidencePackBuilder):
+            def build(self, ranked, evidence_by_id, *, limit=8):
+                calls.append("evidence")
+                return super().build(ranked, evidence_by_id, limit=limit)
+
+        class RecordingGenerationPort:
+            def synthesize(self, question, evidence):
+                calls.append("generation")
+                return {"question": question, "evidence_ids": [item.evidence_id for item in evidence.items]}
+
+        pipeline = RetrievalRankingPipeline(
+            retrieval=self.scenario.retrieval,
+            fusion=FusionService(),
+            expansion=self.scenario.graph,
+            ranking=RecordingRankingService(),
         )
-
-        self.assertEqual(response.status, RetrievalStatus.OK)
-        self.assertTrue(response.results)
-        self.assertTrue(
-            all(result.entity.metadata["institution"] == "Monash University" for result in response.results)
+        orchestrator = AnswerOrchestrator(
+            retrieval_ranking=pipeline,
+            evidence_builder=RecordingEvidenceBuilder(),
+            generation=RecordingGenerationPort(),
+            evidence_limit=3,
         )
+        plan = QueryPlanner().plan("aged care robotics", as_of=date(2026, 9, 8), require_evidence=True)
 
-    def test_llm_is_not_required_for_retrieval_context(self) -> None:
-        response = build_mock_backend().engine.retrieve(
-            RetrievalQuery("assistive robotics for aged care", limit=3)
-        )
+        result = orchestrator.answer(plan, self.scenario.evidence)
 
-        self.assertEqual(response.status, RetrievalStatus.OK)
-        self.assertTrue(response.generation_context.provenance_ids)
-        self.assertTrue(
-            all(passage.evidence_ids for passage in response.generation_context.passages)
+        self.assertIsInstance(result, Answer)
+        self.assertEqual(calls, ["ranking", "evidence", "generation"])
+        self.assertEqual(result.answer["question"], plan.text)
+        self.assertLessEqual(len(result.evidence.items), 3)
+
+    def test_answer_orchestrator_abstains_deterministically_without_evidence(self) -> None:
+        calls: list[str] = []
+
+        class RecordingGenerationPort:
+            def synthesize(self, question, evidence):
+                calls.append("generation")
+                return "must not run"
+
+        orchestrator = AnswerOrchestrator(
+            retrieval_ranking=self.pipeline,
+            evidence_builder=EvidencePackBuilder(),
+            generation=RecordingGenerationPort(),
         )
+        plan = QueryPlanner().plan("aged care robotics", as_of=date(2026, 9, 8), require_evidence=True)
+
+        first = orchestrator.answer(plan, {})
+        second = orchestrator.answer(plan, {})
+
+        self.assertIsInstance(first, InsufficientInformation)
+        self.assertEqual(first, second)
+        self.assertEqual(first.status, "insufficient_information")
+        self.assertEqual(first.evidence.status, "insufficient_evidence")
+        self.assertEqual(calls, [])
+
+    def test_ranking_service_has_no_supabase_or_generation_dependency(self) -> None:
+        source = inspect.getsource(RankingService)
+
+        self.assertNotIn("Supabase", source)
+        self.assertNotIn(".table(", source)
+        self.assertNotIn("synthesize(", source)
 
 
 if __name__ == "__main__":

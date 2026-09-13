@@ -21,6 +21,27 @@ def search_papers(
     return rank_retrieval_response(response)
 
 
+def search_academic_profiles_with_graphrag(
+    engine: "GraphRAGEngine", query: "RetrievalQuery"
+) -> list[AcademicProfile]:
+    """Retrieve relevant researchers with GraphRAG and build their profiles."""
+    response = engine.retrieve(query)
+    profile_service = AcademicProfileService(engine.repository)
+    profiles: list[AcademicProfile] = []
+    seen_ids: set[str] = set()
+
+    for result in response.results:
+        academic = result.entity
+        if academic.entity_type != "Researcher" or academic.id in seen_ids:
+            continue
+        profile = profile_service.get_profile(academic.id)
+        if profile is not None:
+            profiles.append(profile)
+            seen_ids.add(academic.id)
+
+    return profiles
+
+
 
 
 def search_academic_profiles(

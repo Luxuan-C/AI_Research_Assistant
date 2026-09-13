@@ -1,8 +1,8 @@
 import unittest
 
-from academic_graphrag import AcademicProfileService
+from academic_graphrag import AcademicProfileService, RetrievalQuery
 from academic_graphrag.mock_data import build_mock_backend
-from application import search_academic_profiles
+from application import search_academic_profiles, search_academic_profiles_with_graphrag
 
 
 class AcademicProfileTests(unittest.TestCase):
@@ -41,6 +41,20 @@ class AcademicProfileTests(unittest.TestCase):
         profiles = search_academic_profiles(backend.repository, "Alice Chen")
 
         self.assertEqual([profile.structured_information["name"] for profile in profiles], ["Dr Alice Chen"])
+
+    def test_graphrag_results_are_connected_to_academic_profiles(self) -> None:
+        backend = build_mock_backend()
+
+        profiles = search_academic_profiles_with_graphrag(
+            backend.engine,
+            RetrievalQuery("artificial intelligence aged care", limit=5),
+        )
+
+        self.assertEqual(
+            [profile.structured_information["name"] for profile in profiles],
+            ["Dr Alice Chen", "Dr Bob Nguyen"],
+        )
+        self.assertTrue(all(profile.summary.status == "ok" for profile in profiles))
 
     def test_profile_without_supporting_evidence_is_insufficient(self) -> None:
         backend = build_mock_backend()

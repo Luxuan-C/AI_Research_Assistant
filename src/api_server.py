@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import json
+import time
+from threading import Lock
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from typing import Any
 from urllib.parse import parse_qs, urlparse
@@ -11,10 +13,33 @@ from database.database import Database
 
 
 DATABASE = Database()
+_ROW_CACHE: dict[tuple[str, str, str], tuple[float, list[dict[str, Any]]]] = {}
+_CACHE_SECONDS = 60.0
+_ROW_CACHE_LOCK = Lock()
 
 
-def rows(table: str, columns: str = "*") -> list[dict[str, Any]]:
-    return DATABASE.connection.table(table).select(columns).execute().data or []
+def rows(table: str, columns: str = "*", limit: int | None = None) -> list[dict[str, Any]]:
+    cache_key = (table, columns, str(limit))
+    with _ROW_CACHE_LOCK:
+        cached = _ROW_CACHE.get(cache_key)
+        if cached is not None and time.monotonic() - cached[0] < _CACHE_SECONDS:
+            return cached[1]
+
+        last_error: Exception | None = None
+        for attempt in range(3):
+            try:
+                request = DATABASE.connection.table(table).select(columns)
+                if limit is not None:
+                    request = request.limit(limit)
+                result = request.execute().data or []
+                _ROW_CACHE[cache_key] = (time.monotonic(), result)
+                return result
+            except Exception as error:
+                last_error = error
+                if attempt == 2:
+                    raise
+                time.sleep(0.25 * (attempt + 1))
+    raise last_error  # type: ignore[misc]
 
 
 def first_value(value: Any) -> Any:
@@ -66,8 +91,10 @@ def profile_payload(
     academic: dict[str, Any],
     universities: dict[Any, str] | None = None,
     disciplines: dict[Any, str] | None = None,
+    papers: list[dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
-    papers = papers_for(academic)
+    if papers is None:
+        papers = papers_for(academic)
     interests = academic.get("research_interests") or academic.get("areas_of_expertise") or []
     university = (
         next((universities.get(item) for item in academic.get("university_ids") or [] if item in universities), None)
@@ -110,8 +137,9 @@ def search_researchers(query: str, university: str, discipline: str) -> list[dic
     universities = {item["id"]: item["name"] for item in rows("university", "id,name")}
     disciplines = {item["id"]: item["name"] for item in rows("discipline", "id,name")}
     results = []
-    for academic in rows("academic"):
-        profile = profile_payload(academic, universities, disciplines)
+    academic_columns = "id,name,academic_position,profile_url,orcid_url,university_ids,discipline_ids"
+    for academic in rows("academic", academic_columns, limit=25):
+        profile = profile_payload(academic, universities, disciplines, papers=[])
         searchable = " ".join(
             [
                 str(profile.get("name") or ""),
@@ -131,19 +159,24 @@ def search_researchers(query: str, university: str, discipline: str) -> list[dic
 
 def directory_options() -> dict[str, list[str]]:
     return {
-        "universities": sorted({item["name"] for item in rows("university", "name") if item.get("name")}),
-        "disciplines": sorted({item["name"] for item in rows("discipline", "name") if item.get("name")}),
+        "universities": sorted({item["name"] for item in rows("university", "name", limit=100) if item.get("name")} ),
+        "disciplines": sorted({item["name"] for item in rows("discipline", "name", limit=100) if item.get("name")} ),
     }
 
 
 def ask_payload(question: str) -> dict[str, Any]:
     normalized = question.casefold().strip()
     papers = []
+    seen_papers: set[str] = set()
     for paper in rows("research_paper"):
         searchable = " ".join(
             [str(paper.get("name") or ""), " ".join(str(item) for item in paper.get("keywords") or [])]
         ).casefold()
         if not normalized or any(token in searchable for token in normalized.split()):
+            paper_key = str(paper.get("doi") or paper.get("id") or paper.get("name"))
+            if paper_key in seen_papers:
+                continue
+            seen_papers.add(paper_key)
             papers.append(paper_payload(paper))
 
     citations = [

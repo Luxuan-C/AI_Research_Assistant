@@ -24,14 +24,18 @@ export default function Profile() {
 
       <h3 style={{ fontWeight: 500 }}>Publications</h3>
       <ul>
-        {profile.publications.map((pub, i) => (
-          <li key={i}>{pub}</li>
+        {profile.publications.map((pub) => (
+          <li key={pub.id}>
+            {pub.url ? <a href={pub.url} target="_blank" rel="noreferrer">{pub.title}</a> : pub.title}
+          </li>
         ))}
       </ul>
 
-      <a href={profile.official_profile_url} target="_blank" rel="noreferrer">
-        Official profile →
-      </a>
+      {profile.official_profile_url && (
+        <a href={profile.official_profile_url} target="_blank" rel="noreferrer">
+          Official profile →
+        </a>
+      )}
     </div>
   );
 }

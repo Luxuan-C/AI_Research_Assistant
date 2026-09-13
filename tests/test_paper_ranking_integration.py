@@ -1,6 +1,7 @@
 import unittest
 
 from academic_graphrag import RetrievalQuery
+from application import search_papers
 from academic_graphrag.mock_data import build_mock_backend
 from ranking.paper_ranking import (
     candidates_from_retrieval_response,
@@ -39,6 +40,21 @@ class PaperRankingIntegrationTests(unittest.TestCase):
         self.assertTrue(results)
         self.assertEqual([result["rank"] for result in results], list(range(1, len(results) + 1)))
         self.assertTrue(all("explanation" in result for result in results))
+
+    def test_application_service_connects_rag_to_ranking(self) -> None:
+        backend = build_mock_backend()
+        query = RetrievalQuery(
+            "electric vehicle emissions",
+            ranking_profile="RECENT",
+        )
+
+        results = search_papers(backend.engine, query)
+
+        self.assertEqual(len(results), 1)
+        self.assertEqual(
+            results[0]["title"],
+            "Life-cycle Emissions of Electric Vehicles in Australia",
+        )
 
 
 if __name__ == "__main__":

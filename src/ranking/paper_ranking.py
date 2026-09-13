@@ -25,6 +25,9 @@ from math import exp
 from typing import List, Optional, Dict, Any, TYPE_CHECKING
 import json
 
+from academic_graphrag import RetrievalQuery
+from academic_graphrag.mock_data import build_mock_backend
+
 if TYPE_CHECKING:
     from academic_graphrag.interfaces import AcademicGraphRepository
     from academic_graphrag.models import RetrievalQuery, RetrievalResponse
@@ -331,9 +334,35 @@ def print_ranking(response: "RetrievalResponse") -> None:
     print("-" * 78)
 
 
-def main(response: "RetrievalResponse") -> None:
-    """Print ranking output for a RetrievalResponse supplied by RAG."""
+def main() -> None:
+    """Run the local GraphRAG demo and print its ranked paper results."""
+    backend = build_mock_backend()
+    query = RetrievalQuery(
+        "How can artificial intelligence improve aged care?",
+        limit=5,
+        ranking_profile="GENERAL",
+    )
+    response = backend.engine.retrieve(query)
+
+    print(f"GraphRAG status: {response.status.value}")
+    print(f"GraphRAG results: {len(response.results)}")
     print_ranking(response)
+
+    from application import search_academic_profiles_with_graphrag
+
+    profiles = search_academic_profiles_with_graphrag(backend.engine, query)
+    print()
+    print("GraphRAG -> Academic Profiles")
+    print("=" * 78)
+    print(f"Profiles returned: {len(profiles)}")
+    for profile in profiles:
+        information = profile.structured_information
+        print("-" * 78)
+        print(f"Name: {information['name']}")
+        print(f"Institution: {information['institution'] or 'Unknown'}")
+        print(f"Publications: {len(profile.publications)}")
+        print(f"Summary status: {profile.summary.status}")
+        print(f"Summary: {profile.summary.text}")
 
 
 if __name__ == "__main__":

@@ -41,6 +41,35 @@ vector column or RPC.
 GraphRAG refers only to the bounded typed expansion behind
 `GraphExpansionPort`; orchestration belongs to `RetrievalRankingPipeline`.
 
+## HTTP API runtime
+
+`src/api_server.py` is the production composition root for research data. At
+server startup it validates `SUPABASE_URL` and `SUPABASE_KEY`, creates one
+Supabase client, and constructs one shared read-only repository, retrieval
+adapter, graph adapter, fusion service, and ranking service. Constructors do not
+read tables or build the lexical corpus; those costs are paid lazily by the
+first relevant request.
+
+Run the API from the repository root with:
+
+```bash
+PYTHONPATH=src python3 -m api_server
+```
+
+The existing `/api/researchers`, `/api/researchers/{id}`, `/api/ask`, and
+`/api/directory-options` routes keep their frontend-facing JSON fields. Internal
+namespaced ranking IDs are converted back to raw database UUIDs at the HTTP
+boundary. API reads use deterministic keyset pagination with a 4,000-row total
+bound and expose `truncated` when either the data or result budget is reached.
+
+The process-local repository uses a 60-second TTL. The tokenized lexical corpus
+is a four-entry LRU keyed to repository table revisions, so TTL expiry or
+explicit invalidation rebuilds it on demand. Cache state is shared safely by
+handler threads, and cache coordination does not hold the repository state lock
+during Supabase requests. Research retrieval and ranking fixtures under
+`tests/` are test-only; the HTTP research-data routes do not import frontend or
+Python mock datasets.
+
 ## Application profile integration
 
 `application.search_papers` accepts a `RetrievalRankingPipeline` and
@@ -56,6 +85,12 @@ fabricating a summary. Snapshots may also carry bounded `searchable_text` so
 the application can retain user-facing name and keyword profile search without
 reintroducing a second repository or retrieval pipeline.
 
+The HTTP profile endpoint hydrates its requested academic by ID through the same
+bounded repository and seed-driven graph adapter. It does not scan the academic
+table to locate one profile. Where no validated evidence is available, profile
+and ask responses return `insufficient_information`; the API does not install a
+fake generator or label fixed prose as an evidence-backed summary.
+
 ## Supabase smoke test
 
 Keep `SUPABASE_URL` and `SUPABASE_KEY` in the ignored project-root `.env` file,
@@ -65,7 +100,7 @@ then run:
 PYTHONPATH=src python3 -m ranking.supabase_live_check "assistive robotics"
 ```
 
-The command first performs `limit(1)` read checks against all nine fixed-schema
+The command first performs `limit(1)` read checks against all eight fixed-schema
 tables. It stops at the first denied or failed table. On success it runs real
 lexical retrieval, one fusion, seed-driven bounded graph expansion, and pure
 deterministic ranking, then prints structured JSON. It never writes database

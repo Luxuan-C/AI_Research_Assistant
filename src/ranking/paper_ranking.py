@@ -264,6 +264,7 @@ class ExpansionResult:
     entities: Mapping[str, EntityRecord]
     paths: Mapping[str, GraphPath]
     truncated: bool
+    relationships: tuple[GraphEdge, ...] = ()
 
 
 class GraphExpansionPort(Protocol):
@@ -357,6 +358,9 @@ class SchemaRelationshipGraph:
             entities={entity_id: entities[entity_id] for entity_id in paths},
             paths=paths,
             truncated=truncated,
+            relationships=tuple(
+                self.edges[edge_id] for edge_id in sorted(selected_edge_ids)
+            ),
         )
 
 

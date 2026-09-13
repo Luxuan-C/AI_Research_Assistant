@@ -1,23 +1,50 @@
+from datetime import date
 import unittest
 
-from academic_graphrag import AcademicProfileService, RetrievalQuery
-from academic_graphrag.mock_data import build_mock_backend
-from application import search_academic_profiles, search_academic_profiles_with_graphrag
+from academic_profiles import AcademicProfileService, AcademicProfileSnapshot
+from application import (
+    search_academic_profiles,
+    search_academic_profiles_with_ranking,
+    search_papers,
+)
+from ranking import RESEARCHER, FusionService, QueryPlanner, RankingService, RetrievalRankingPipeline
+from support import build_mock_scenario
 
 
 class AcademicProfileTests(unittest.TestCase):
-    def test_profile_contains_structured_data_publications_and_citations(self) -> None:
-        backend = build_mock_backend()
-        academic = next(
+    def setUp(self) -> None:
+        self.scenario = build_mock_scenario()
+        self.alice = next(
             entity
-            for entity in backend.repository.list_entities(entity_types=("Researcher",))
+            for entity in self.scenario.entities
             if entity.label == "Dr Alice Chen"
         )
+        self.bob = next(
+            entity
+            for entity in self.scenario.entities
+            if entity.label == "Dr Bob Nguyen"
+        )
 
-        profile = AcademicProfileService(backend.repository).get_profile(academic.id)
+    def profile_snapshot(
+        self,
+        academic=None,
+        *,
+        evidence=None,
+        searchable_text=(),
+    ) -> AcademicProfileSnapshot:
+        academic = self.alice if academic is None else academic
+        return AcademicProfileSnapshot(
+            academic=academic,
+            entities={entity.entity_id: entity for entity in self.scenario.entities},
+            relationships=tuple(self.scenario.graph.edges.values()),
+            validated_evidence_by_id=self.scenario.evidence if evidence is None else evidence,
+            searchable_text=searchable_text
+            or ("Alice Chen", "trustworthy artificial intelligence aged care"),
+        )
 
-        self.assertIsNotNone(profile)
-        assert profile is not None
+    def test_profile_contains_structured_data_publications_and_citations(self) -> None:
+        profile = AcademicProfileService().get_profile(self.profile_snapshot())
+
         self.assertEqual(profile.structured_information["name"], "Dr Alice Chen")
         self.assertEqual(
             profile.structured_information["institution"],
@@ -28,26 +55,51 @@ class AcademicProfileTests(unittest.TestCase):
         self.assertIn("[", profile.summary.text)
         self.assertTrue(all(citation.uri for citation in profile.summary.citations))
 
-    def test_unknown_entity_does_not_produce_a_profile(self) -> None:
-        backend = build_mock_backend()
+    def test_unknown_name_does_not_produce_a_profile(self) -> None:
+        profiles = search_academic_profiles((self.profile_snapshot(),), "missing")
 
-        profile = AcademicProfileService(backend.repository).get_profile("missing")
-
-        self.assertIsNone(profile)
+        self.assertEqual(profiles, [])
 
     def test_users_can_find_profiles_without_knowing_academic_id(self) -> None:
-        backend = build_mock_backend()
+        profiles = search_academic_profiles((self.profile_snapshot(),), "alice chen")
 
-        profiles = search_academic_profiles(backend.repository, "Alice Chen")
+        self.assertEqual(
+            [profile.structured_information["name"] for profile in profiles],
+            ["Dr Alice Chen"],
+        )
 
-        self.assertEqual([profile.structured_information["name"] for profile in profiles], ["Dr Alice Chen"])
+    def test_users_can_find_profiles_by_snapshot_keyword(self) -> None:
+        profiles = search_academic_profiles((self.profile_snapshot(),), "trustworthy")
 
-    def test_graphrag_results_are_connected_to_academic_profiles(self) -> None:
-        backend = build_mock_backend()
+        self.assertEqual(
+            [profile.structured_information["name"] for profile in profiles],
+            ["Dr Alice Chen"],
+        )
 
-        profiles = search_academic_profiles_with_graphrag(
-            backend.engine,
-            RetrievalQuery("artificial intelligence aged care", limit=5),
+    def test_ranked_researchers_are_connected_to_academic_profiles(self) -> None:
+        pipeline = RetrievalRankingPipeline(
+            retrieval=self.scenario.retrieval,
+            fusion=FusionService(),
+            expansion=self.scenario.graph,
+            ranking=RankingService(),
+        )
+        plan = QueryPlanner().plan(
+            "artificial intelligence aged care",
+            as_of=date(2026, 9, 13),
+            target_kinds=(RESEARCHER,),
+            limit=5,
+        )
+
+        profiles = search_academic_profiles_with_ranking(
+            pipeline,
+            plan,
+            (
+                self.profile_snapshot(),
+                self.profile_snapshot(
+                    self.bob,
+                    searchable_text=("Bob Nguyen", "assistive robotics aged care"),
+                ),
+            ),
         )
 
         self.assertEqual(
@@ -57,38 +109,25 @@ class AcademicProfileTests(unittest.TestCase):
         self.assertTrue(all(profile.summary.status == "ok" for profile in profiles))
 
     def test_profile_without_supporting_evidence_is_insufficient(self) -> None:
-        backend = build_mock_backend()
-        academic = next(
-            entity
-            for entity in backend.repository.list_entities(entity_types=("Researcher",))
-            if entity.label == "Dr Alice Chen"
-        )
-        repository = _RepositoryWithoutEvidence(backend.repository, academic.id)
+        profile = AcademicProfileService().get_profile(self.profile_snapshot(evidence={}))
 
-        profile = AcademicProfileService(repository).get_profile(academic.id)
-
-        self.assertIsNotNone(profile)
-        assert profile is not None
         self.assertEqual(profile.summary.status, "insufficient_information")
         self.assertIn("Insufficient verified information", profile.summary.text)
 
+    def test_paper_search_uses_the_current_retrieval_ranking_pipeline(self) -> None:
+        pipeline = RetrievalRankingPipeline(
+            retrieval=self.scenario.retrieval,
+            fusion=FusionService(),
+            expansion=self.scenario.graph,
+            ranking=RankingService(),
+        )
+        plan = QueryPlanner().plan("aged care", as_of=date(2026, 9, 13))
 
-class _RepositoryWithoutEvidence:
-    def __init__(self, repository, academic_id: str) -> None:
-        self.repository = repository
-        self.academic_id = academic_id
+        results = search_papers(pipeline, plan)
 
-    def get_entities(self, entity_ids):
-        return self.repository.get_entities(entity_ids)
-
-    def get_relationships(self, node_ids, *, relation_types=()):
-        return self.repository.get_relationships(node_ids, relation_types=relation_types)
-
-    def get_evidence(self, supported_ids):
-        return ()
-
-    def get_sources(self, source_record_ids):
-        return ()
+        self.assertTrue(results)
+        self.assertTrue(all("paper_id" in result for result in results))
+        self.assertTrue(all("title" in result for result in results))
 
 
 if __name__ == "__main__":

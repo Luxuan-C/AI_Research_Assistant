@@ -6,5 +6,7 @@ __pycache__/
 build/
 dist/
 .env
-
+.env.*
+.DS_Store
+**/.DS_Store
 src/data_collector/data/    # data_collector .json/.csv files

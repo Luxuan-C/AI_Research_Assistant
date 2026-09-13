@@ -1,138 +1,83 @@
-## Current scope
+# RAG and GraphRAG
 
-Implemented:
+## Purpose
 
-- extensible `Researcher`, `Publication`, `Institution`, `Topic`, `SourceRecord`, and `Evidence` models;
-- opaque deterministic IDs and typed relationships;
-- repository, keyword, dense, embedding, reranking, academic-signal, and future LLM interfaces;
-- an in-memory repository and sourced mock academic dataset;
-- BM25 keyword retrieval and a deterministic mock embedding adapter;
-- Reciprocal Rank Fusion (RRF);
-- relation-aware graph expansion with hop, entity, relationship, neighbor, and confidence limits;
-- configurable semantic relevance, citation influence, recency, venue quality, and topic coverage;
-- sourced evidence selection, explainable score components, and generation-ready context;
-- configurable relevance/evidence thresholds with fail-closed `insufficient_information` responses.
+This subsystem turns research questions into a small, traceable set of relevant
+researchers, papers, and supporting evidence. It combines search with a
+read-only view of academic relationships so that the application can return
+ranked results and, where validated evidence is available, support generation.
 
-Not implemented in this version:
-
-- a production Supabase/PostgreSQL repository;
-- production full-text or pgvector queries;
-- a real semantic embedding model or cross-encoder reranker;
-- LLM generation or citation validation after generation;
-- HTTP routes or deployment configuration;
-- a final production database schema.
-
-## Module boundaries
+## Pipeline
 
 ```text
-src/academic_graphrag/
-  models.py       Open domain, query, score, evidence, and response contracts
-  interfaces.py   Repository and provider ports
-  identity.py     Storage-independent deterministic identities
-  in_memory.py    In-memory repository, BM25, mock embeddings, dense search
-  ranking.py      RRF and configurable academic ranking signals
-  traversal.py    Bounded academic graph expansion
-  pipeline.py     Public GraphRAGEngine orchestration
-  mock_data.py    Sourced local academic graph and ready-to-run engine
+Query → Retrieval → Fusion → Graph Expansion → Ranking → Evidence Pack → Generation
 ```
 
-The core depends on interfaces, not database or provider SDKs:
+The graph stage enriches retrieved seeds; it does not replace search. Generation
+is only appropriate when the evidence pack is sufficient and validated.
 
-```text
-KeywordRetriever ----\
-DenseRetriever -------+--> RRF --> bounded graph expansion --> Reranker
-Repository -----------/                                      |
-                                                             v
-AcademicSignalProvider --> weighted scoring --> Evidence --> thresholds
-                                                        |
-                                                        v
-                                              structured RetrievalResponse
-```
+## Retrieval and graph coverage
 
-`LLMProvider` is defined as a future port, but `GraphRAGEngine` does not call it. The response already contains a bounded `GenerationContext` with passages, evidence IDs, relationships, and provenance IDs.
+- Lexical retrieval is active for academic and research-paper metadata.
+- Dense/vector retrieval is not currently available. It must not be assumed
+  until the database team supplies a production vector capability.
+- The graph uses the existing UUID array fields directly—no junction tables are
+  required. Conceptual relationships include authorship and co-authorship,
+  paper citations, academic affiliation with universities, discipline and field
+  expertise, and paper links to universities, faculties, and journals.
+- Publisher relationships and publisher support have been removed from the RAG
+  scope.
 
-## Domain contract
+## Database boundary
 
-Entity and relationship types are strings rather than closed database enums. Additional fields live in open metadata until the production schema stabilises. The current canonical academic relationships are:
+RAG is a read-only consumer of the externally owned Supabase database. It does
+not modify the database, schema, SQL, or data model. UUID arrays are the source
+of graph relationships and are projected at read time; the RAG team must not
+add junction tables or normalise these fields.
 
-- `Researcher -AUTHORED-> Publication`
-- `Researcher -AFFILIATED_WITH-> Institution`
-- `Publication -ABOUT-> Topic`
-- `Publication -CITES-> Publication`
-- `SourceRecord -SUPPORTS-> Evidence`
+## Ranking
 
-The repository stores only the canonical authorship facts. Co-authorship is derived by traversing `Researcher -> Publication <- Researcher`; the unit tests demonstrate this two-hop path.
+Researcher ranking and paper/evidence ranking are separate responsibilities.
+Both are deterministic and reproducible, so the same inputs produce the same
+ordered results. Publisher authority or prestige is not a ranking signal.
 
-`Evidence.supports_ids` may reference an entity or relationship. Each evidence item identifies a `SourceRecord`, allowing every returned context passage to retain the original provider/source identifier.
+## Live integration status
 
-## Run locally
+- 3,158 academic records are readable from Supabase.
+- Live academic retrieval, fusion, and ranking have been verified.
+- Supabase pagination beyond 1,000 rows works.
+- `research_paper` currently has no live rows.
+- Academic relationship arrays are currently unpopulated, so live graph
+  traversal is waiting on data.
 
-Python 3.11 or later is required. The first version has no third-party runtime dependencies.
+## Data-team dependencies
+
+To enable useful live graph traversal, the data team needs to populate the
+academic relationship arrays: `university_ids`, `discipline_ids`, `field_ids`,
+and `research_paper_ids`. Research-paper ingestion is also required before
+paper retrieval, citation paths, and paper-based evidence can operate live.
+
+## Team ownership
+
+- **Frontend:** present search, ranked results, relationship context, evidence,
+  and clear empty/insufficient-information states. Do not infer relationships
+  or ranking in the client.
+- **Ranking:** own retrieval orchestration, one fusion step, graph expansion,
+  deterministic ranking, and evidence-pack selection. Do not write to the
+  database or assign publisher prestige.
+- **Database:** own the schema, data ingestion, row visibility, and population
+  of relationship arrays. Changes to those assets remain database-team work.
+
+## Checks
+
+From the repository root, run the automated suite:
 
 ```bash
 PYTHONPATH=src python3 -m unittest discover -s tests -v
 ```
 
-Example:
+With read-only Supabase credentials in `.env`, run the live check:
 
-```python
-from academic_graphrag import RetrievalQuery
-from academic_graphrag.mock_data import build_mock_backend
-
-backend = build_mock_backend()
-response = backend.engine.retrieve(
-    RetrievalQuery(
-        "How can artificial intelligence improve aged care?",
-        limit=5,
-        filters={"institution": "The University of Sydney"},
-    )
-)
-
-print(response.status)
-for result in response.results:
-    print(result.rank, result.entity.label, result.score.final_score)
-    print(result.score.components)
-    print(result.provenance_ids)
+```bash
+PYTHONPATH=src python3 -m ranking.supabase_live_check "George Siemens" --row-limit 4000
 ```
-
-The deterministic hash embedding adapter is only a local test double. It provides the dense retrieval contract without selecting a final model and should not be used as evidence of semantic-search quality.
-
-## Retrieval flow
-
-1. The keyword and dense adapters independently retrieve candidate entities.
-2. RRF combines their ranks while absolute channel scores remain available for relevance.
-3. The highest-ranked seeds are expanded over an allowlist of academic relationships.
-4. Expansion is hard-bounded and treats relationships as traversable in either direction for discovery while preserving their canonical direction in output.
-5. A reranker adapter receives the combined candidate pool. The default adapter preserves retrieval relevance; a future BGE cross-encoder adapter can replace it.
-6. Academic signals are calculated by a replaceable provider and combined with configurable weights.
-7. Evidence supporting the entity and graph path is joined to its source record.
-8. Results below either the relevance or evidence-confidence threshold are rejected.
-9. If nothing qualifies, the API returns `insufficient_information` with no generation passages.
-
-RRF is reported as an explainability component, but final relevance does not depend on rank position alone. This prevents a weak top result from becoming confident merely because it ranked first in a low-quality channel.
-
-## Configuration
-
-`PipelineConfig` controls retrieval limits, RRF `k`, graph decay, evidence count, relevance/evidence thresholds, ranking weights, and traversal budgets. `TraversalConfig` controls allowed relationship types, maximum hops, maximum entities/relationships/neighbors, and minimum relationship confidence.
-
-The initial `MetadataAcademicSignalProvider` reads configurable metadata keys. A production feature adapter may instead calculate citation, recency, venue, and topic signals from SQL views or another service without changing `GraphRAGEngine`.
-
-## Future Supabase/PostgreSQL integration
-
-Add adapters; do not change the core models or pipeline:
-
-1. Implement `AcademicGraphRepository` in a separate infrastructure package.
-2. Translate the current database rows/views into `Entity`, `Relationship`, `Evidence`, and `SourceRecord` at the adapter boundary.
-3. Keep all Supabase table names, SQL columns, joins, and row-level-security details inside that adapter.
-4. Implement `KeywordRetriever` with PostgreSQL full-text or another BM25-capable search and return provider-neutral `Candidate` objects.
-5. Implement `DenseRetriever` with pgvector or another vector store behind the same interface.
-6. Add a model-specific `EmbeddingProvider` and a BGE or equivalent `Reranker` adapter only after evaluation.
-7. Add an `LLMProvider` adapter later; pass only `RetrievalResponse.generation_context` to it and validate generated citations separately.
-
-The repository's `list_entities` method supports optional entity IDs, types, and open filters. A SQL adapter should translate those values to its current schema rather than exposing schema details to the core.
-
-## Testing and limitations
-
-The unit suite covers stable identity, RRF, BM25 and filters, derived co-authorship, traversal truncation, score/evidence output, generation context, configurable thresholds, and unrelated-query rejection.
-
-The mock records and URLs are synthetic. They validate module behavior, not retrieval quality, real academic coverage, source correctness, or production performance. Evaluation against the client-approved query set and real sourced data remains required by the tutorial notes.

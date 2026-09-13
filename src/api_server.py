@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import math
 import time
 from threading import Lock
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -132,6 +133,58 @@ def paper_payload(paper: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def paper_ranking_payload(
+    paper: dict[str, Any],
+    score: dict[str, Any] | None,
+    query_tokens: set[str],
+) -> dict[str, Any]:
+    title_tokens = set(str(paper.get("name") or "").casefold().split())
+    keyword_tokens = {
+        str(value).casefold()
+        for value in paper.get("keywords") or []
+    }
+    searchable_tokens = title_tokens | keyword_tokens
+    relevance = (
+        len(query_tokens & searchable_tokens) / len(query_tokens)
+        if query_tokens
+        else 0.0
+    )
+    citation_count = max(0, int(paper.get("incoming_citation_count") or 0))
+    citation_influence = min(1.0, math.log1p(citation_count) / math.log1p(1000))
+    publication_year = str(paper.get("publication_date") or "")[:4]
+    age = max(0, 2026 - int(publication_year)) if publication_year.isdigit() else 0
+    temporal_validity = 0.5 ** (age / 5)
+    quality = float((score or {}).get("paper_authority_score") or 0.0)
+    author_authority = float((score or {}).get("academic_authority_score") or 0.0)
+    innovation = 0.0
+    final_score = (
+        0.55 * relevance
+        + 0.16 * quality
+        + 0.12 * citation_influence
+        + 0.08 * temporal_validity
+        + 0.03 * author_authority
+    )
+    payload = paper_payload(paper)
+    payload.update({
+        "final_score": round(final_score, 6),
+        "score_breakdown": {
+            "H_hybrid_relevance": round(relevance, 6),
+            "Q_quality": round(quality, 6),
+            "I_citation_influence": round(citation_influence, 6),
+            "T_temporal_validity": round(temporal_validity, 6),
+            "N_innovation": innovation,
+            "A_author_authority": round(author_authority, 6),
+        },
+        "evidence": {
+            "confidence": 1.0 if payload.get("url") else 0.0,
+            "source_url": payload.get("url"),
+            "source_type": "Supabase research_paper record",
+            "citation_count": citation_count,
+        },
+    })
+    return payload
+
+
 def search_researchers(query: str, university: str, discipline: str) -> list[dict[str, Any]]:
     normalized = query.casefold().strip()
     universities = {item["id"]: item["name"] for item in rows("university", "id,name")}
@@ -166,21 +219,44 @@ def directory_options() -> dict[str, list[str]]:
 
 def ask_payload(question: str) -> dict[str, Any]:
     normalized = question.casefold().strip()
+    query_tokens = set(normalized.split())
     papers = []
     seen_papers: set[str] = set()
+    scores = {
+        item.get("research_paper_id"): item
+        for item in rows("score")
+        if item.get("research_paper_id")
+    }
     for paper in rows("research_paper"):
         searchable = " ".join(
             [str(paper.get("name") or ""), " ".join(str(item) for item in paper.get("keywords") or [])]
         ).casefold()
         if not normalized or any(token in searchable for token in normalized.split()):
-            paper_key = str(paper.get("doi") or paper.get("id") or paper.get("name"))
+            payload = paper_ranking_payload(
+                paper,
+                scores.get(paper.get("id")),
+                query_tokens,
+            )
+            paper_key = (
+                str(payload.get("doi") or "").casefold().strip()
+                or str(payload.get("url") or "").casefold().strip()
+                or str(payload.get("title") or "").casefold().strip()
+            )
             if paper_key in seen_papers:
                 continue
             seen_papers.add(paper_key)
-            papers.append(paper_payload(paper))
+            papers.append(payload)
+
+    papers.sort(key=lambda item: (-item["final_score"], item["title"] or ""))
+    for rank, paper in enumerate(papers, start=1):
+        paper["rank"] = rank
 
     citations = [
-        {"source_title": paper["title"], "source_url": paper["url"]}
+        {
+            "source_title": paper["title"],
+            "source_url": paper["url"],
+            "evidence": paper["evidence"],
+        }
         for paper in papers
         if paper.get("url")
     ]

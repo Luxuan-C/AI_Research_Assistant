@@ -44,18 +44,33 @@ ordered results. Publisher authority or prestige is not a ranking signal.
 ## Live integration status
 
 - 3,158 academic records are readable from Supabase.
-- Live academic retrieval, fusion, and ranking have been verified.
+- The HTTP researcher, profile, and ask routes now use the shared live Supabase
+  retrieval, fusion, bounded graph expansion, and deterministic ranking stack.
 - Supabase pagination beyond 1,000 rows works.
-- `research_paper` currently has no live rows.
-- Academic relationship arrays are currently unpopulated, so live graph
-  traversal is waiting on data.
+- The current live snapshot contains 16 `research_paper` rows representing eight
+  duplicate DOI/title pairs. Duplicate live rows remain a database-data concern;
+  the RAG adapter does not rewrite them.
+- Academic and research-paper relationship arrays are currently unpopulated, so
+  live graph traversal produces no relationship enrichment even though the HTTP
+  graph stage executes.
+- The live schema does not expose `academic.research_interests` or
+  `academic.areas_of_expertise`; the API does not fabricate those fields.
+- No production validated-evidence provider or generator is currently wired.
+  Ask and profile summaries therefore fail closed with
+  `insufficient_information` while still returning ranked paper/source metadata.
+
+The API constructs its shared client and services without table reads at
+startup. Table projections are loaded lazily, bounded to 4,000 rows per table,
+and cached in-process for 60 seconds. The bounded tokenized-corpus LRU is keyed
+to repository revisions and rebuilt after TTL expiry or explicit invalidation.
 
 ## Data-team dependencies
 
 To enable useful live graph traversal, the data team needs to populate the
-academic relationship arrays: `university_ids`, `discipline_ids`, `field_ids`,
-and `research_paper_ids`. Research-paper ingestion is also required before
-paper retrieval, citation paths, and paper-based evidence can operate live.
+existing relationship arrays, including academic `university_ids`,
+`discipline_ids`, `field_ids`, and `research_paper_ids`, and the corresponding
+research-paper relationships. Validated evidence ingestion remains necessary
+before evidence-backed answer synthesis can operate live.
 
 ## Team ownership
 

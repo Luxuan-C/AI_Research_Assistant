@@ -1,275 +1,114 @@
-"""Local HTTP API backed by the live Supabase database."""
+"""Local HTTP API over the unified live Supabase ranking application."""
 
 from __future__ import annotations
 
 import json
-import math
-import time
-from threading import Lock
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from typing import Any
 from urllib.parse import parse_qs, urlparse
 
-from database.database import Database
+from application import (
+    DEFAULT_API_ROW_LIMIT,
+    DEFAULT_CACHE_TTL_SECONDS,
+    HydratedAcademicProfile,
+    PublicationResult,
+    ResearchApplication,
+    ResearcherResult,
+)
+from ranking.supabase_config import (
+    SupabaseConfigurationError,
+    create_supabase_client,
+)
+from ranking.supabase_retrieval import safe_error_detail
 
 
-DATABASE = Database()
-_ROW_CACHE: dict[tuple[str, str, str], tuple[float, list[dict[str, Any]]]] = {}
-_CACHE_SECONDS = 60.0
-_ROW_CACHE_LOCK = Lock()
+def create_live_application() -> ResearchApplication:
+    """Construct shared services without reading any Supabase table."""
 
-
-def rows(table: str, columns: str = "*", limit: int | None = None) -> list[dict[str, Any]]:
-    cache_key = (table, columns, str(limit))
-    with _ROW_CACHE_LOCK:
-        cached = _ROW_CACHE.get(cache_key)
-        if cached is not None and time.monotonic() - cached[0] < _CACHE_SECONDS:
-            return cached[1]
-
-        last_error: Exception | None = None
-        for attempt in range(3):
-            try:
-                request = DATABASE.connection.table(table).select(columns)
-                if limit is not None:
-                    request = request.limit(limit)
-                result = request.execute().data or []
-                _ROW_CACHE[cache_key] = (time.monotonic(), result)
-                return result
-            except Exception as error:
-                last_error = error
-                if attempt == 2:
-                    raise
-                time.sleep(0.25 * (attempt + 1))
-    raise last_error  # type: ignore[misc]
-
-
-def first_value(value: Any) -> Any:
-    if isinstance(value, list):
-        return value[0] if value else None
-    return value
-
-
-def paper_url(paper: dict[str, Any]) -> str | None:
-    return (
-        paper.get("open_access_url")
-        or paper.get("primary_url")
-        or (f"https://doi.org/{paper['doi']}" if paper.get("doi") else None)
+    return ResearchApplication.from_supabase_client(
+        create_supabase_client(),
+        row_limit=DEFAULT_API_ROW_LIMIT,
+        cache_ttl_seconds=DEFAULT_CACHE_TTL_SECONDS,
     )
 
 
-def university_name(university_ids: list[Any] | None) -> str | None:
-    ids = set(university_ids or [])
-    if not ids:
-        return None
-    for university in rows("university", "id,name"):
-        if university.get("id") in ids:
-            return university.get("name")
-    return None
-
-
-def discipline_name(discipline_ids: list[Any] | None) -> str | None:
-    ids = set(discipline_ids or [])
-    if not ids:
-        return None
-    for discipline in rows("discipline", "id,name"):
-        if discipline.get("id") in ids:
-            return discipline.get("name")
-    return None
-
-
-def papers_for(academic: dict[str, Any]) -> list[dict[str, Any]]:
-    paper_ids = set(academic.get("research_paper_ids") or [])
-    if not paper_ids:
-        return []
-    return [
-        paper
-        for paper in rows("research_paper")
-        if paper.get("id") in paper_ids
-    ]
-
-
-def profile_payload(
-    academic: dict[str, Any],
-    universities: dict[Any, str] | None = None,
-    disciplines: dict[Any, str] | None = None,
-    papers: list[dict[str, Any]] | None = None,
-) -> dict[str, Any]:
-    if papers is None:
-        papers = papers_for(academic)
-    interests = academic.get("research_interests") or academic.get("areas_of_expertise") or []
-    university = (
-        next((universities.get(item) for item in academic.get("university_ids") or [] if item in universities), None)
-        if universities is not None
-        else university_name(academic.get("university_ids"))
-    )
-    discipline = (
-        next((disciplines.get(item) for item in academic.get("discipline_ids") or [] if item in disciplines), None)
-        if disciplines is not None
-        else discipline_name(academic.get("discipline_ids"))
-    )
-    description = academic.get("academic_position") or "No verified research description is available."
-    summary = f"{academic.get('name', 'This researcher')} is listed in the live academic database."
+def researcher_payload(researcher: ResearcherResult) -> dict[str, Any]:
     return {
-        "id": academic.get("id"),
-        "name": academic.get("name"),
-        "university": university,
-        "discipline": discipline,
-        "research_interests": interests,
-        "description": description,
-        "ai_summary": summary,
-        "summary_status": "ok" if academic.get("name") else "insufficient_information",
-        "publications": [paper_payload(paper) for paper in papers],
-        "official_profile_url": academic.get("profile_url") or academic.get("orcid_url"),
+        "id": researcher.raw_id,
+        "name": researcher.name,
+        "university": researcher.institution,
+        "discipline": researcher.discipline,
+        "research_interests": list(researcher.research_interests),
+        "description": researcher.position
+        or "No verified research description is available.",
+        "ai_summary": (
+            "Insufficient verified information is available to produce a reliable "
+            "academic summary."
+        ),
+        "summary_status": "insufficient_information",
+        "publications": [],
+        "official_profile_url": next(iter(researcher.source_urls), None),
+        "rank": researcher.rank,
     }
 
 
-def paper_payload(paper: dict[str, Any]) -> dict[str, Any]:
+def paper_payload(paper: PublicationResult) -> dict[str, Any]:
+    ranking = getattr(paper, "score_breakdown", {})
+    evidence = {
+        "confidence": 0.0,
+        "source_url": paper.source_url,
+        "source_type": "Ranked Supabase record; validated evidence unavailable",
+        "citation_count": None,
+    }
     return {
-        "id": paper.get("id"),
-        "title": paper.get("name"),
-        "year": str(paper.get("publication_date", ""))[:4] or None,
-        "doi": paper.get("doi"),
-        "url": paper_url(paper),
-    }
-
-
-def paper_ranking_payload(
-    paper: dict[str, Any],
-    score: dict[str, Any] | None,
-    query_tokens: set[str],
-) -> dict[str, Any]:
-    title_tokens = set(str(paper.get("name") or "").casefold().split())
-    keyword_tokens = {
-        str(value).casefold()
-        for value in paper.get("keywords") or []
-    }
-    searchable_tokens = title_tokens | keyword_tokens
-    relevance = (
-        len(query_tokens & searchable_tokens) / len(query_tokens)
-        if query_tokens
-        else 0.0
-    )
-    citation_count = max(0, int(paper.get("incoming_citation_count") or 0))
-    citation_influence = min(1.0, math.log1p(citation_count) / math.log1p(1000))
-    publication_year = str(paper.get("publication_date") or "")[:4]
-    age = max(0, 2026 - int(publication_year)) if publication_year.isdigit() else 0
-    temporal_validity = 0.5 ** (age / 5)
-    quality = float((score or {}).get("paper_authority_score") or 0.0)
-    author_authority = float((score or {}).get("academic_authority_score") or 0.0)
-    innovation = 0.0
-    final_score = (
-        0.55 * relevance
-        + 0.16 * quality
-        + 0.12 * citation_influence
-        + 0.08 * temporal_validity
-        + 0.03 * author_authority
-    )
-    payload = paper_payload(paper)
-    payload.update({
-        "final_score": round(final_score, 6),
+        "id": paper.raw_id,
+        "title": paper.title,
+        "year": str(paper.publication_date.year) if paper.publication_date else None,
+        "doi": paper.doi,
+        "url": paper.source_url,
+        "rank": paper.rank,
+        "final_score": round(paper.score, 6),
         "score_breakdown": {
-            "H_hybrid_relevance": round(relevance, 6),
-            "Q_quality": round(quality, 6),
-            "I_citation_influence": round(citation_influence, 6),
-            "T_temporal_validity": round(temporal_validity, 6),
-            "N_innovation": innovation,
-            "A_author_authority": round(author_authority, 6),
+            "H_hybrid_relevance": round(ranking.get("retrieval", paper.score), 6),
+            "Q_quality": round(ranking.get("paper_authority", 0.0), 6),
+            "I_citation_influence": round(ranking.get("citation", 0.0), 6),
+            "T_temporal_validity": round(ranking.get("recency", 0.0), 6),
+            "N_innovation": 0.0,
+            "A_author_authority": 0.0,
+            "G_graph_enrichment": round(ranking.get("graph", 0.0), 6),
         },
-        "evidence": {
-            "confidence": 1.0 if payload.get("url") else 0.0,
-            "source_url": payload.get("url"),
-            "source_type": "Supabase research_paper record",
-            "citation_count": citation_count,
-        },
-    })
-    return payload
+        "evidence": evidence,
+    }
 
 
-def search_researchers(query: str, university: str, discipline: str) -> list[dict[str, Any]]:
-    normalized = query.casefold().strip()
-    universities = {item["id"]: item["name"] for item in rows("university", "id,name")}
-    disciplines = {item["id"]: item["name"] for item in rows("discipline", "id,name")}
-    results = []
-    academic_columns = "id,name,academic_position,profile_url,orcid_url,university_ids,discipline_ids"
-    for academic in rows("academic", academic_columns, limit=25):
-        profile = profile_payload(academic, universities, disciplines, papers=[])
-        searchable = " ".join(
-            [
-                str(profile.get("name") or ""),
-                str(profile.get("description") or ""),
-                " ".join(str(item) for item in profile.get("research_interests") or []),
-            ]
-        ).casefold()
-        if normalized and normalized not in searchable:
-            continue
-        if university and profile.get("university") != university:
-            continue
-        if discipline and profile.get("discipline") != discipline:
-            continue
-        results.append(profile)
-    return results
-
-
-def directory_options() -> dict[str, list[str]]:
+def profile_payload(profile: HydratedAcademicProfile) -> dict[str, Any]:
     return {
-        "universities": sorted({item["name"] for item in rows("university", "name", limit=100) if item.get("name")} ),
-        "disciplines": sorted({item["name"] for item in rows("discipline", "name", limit=100) if item.get("name")} ),
+        "id": profile.raw_id,
+        "name": profile.name,
+        "university": profile.institution,
+        "discipline": profile.discipline,
+        "research_interests": list(profile.research_interests),
+        "description": profile.position
+        or "No verified research description is available.",
+        "ai_summary": profile.summary_text,
+        "summary_status": profile.summary_status,
+        "publications": [paper_payload(paper) for paper in profile.publications],
+        "official_profile_url": profile.official_profile_url,
+        "citations": [
+            {
+                "evidence_id": citation.evidence_id,
+                "source_url": citation.uri,
+                "excerpt": citation.excerpt,
+            }
+            for citation in profile.citations
+        ],
+        "truncated": profile.truncated,
     }
-
-
-def ask_payload(question: str) -> dict[str, Any]:
-    normalized = question.casefold().strip()
-    query_tokens = set(normalized.split())
-    papers = []
-    seen_papers: set[str] = set()
-    scores = {
-        item.get("research_paper_id"): item
-        for item in rows("score")
-        if item.get("research_paper_id")
-    }
-    for paper in rows("research_paper"):
-        searchable = " ".join(
-            [str(paper.get("name") or ""), " ".join(str(item) for item in paper.get("keywords") or [])]
-        ).casefold()
-        if not normalized or any(token in searchable for token in normalized.split()):
-            payload = paper_ranking_payload(
-                paper,
-                scores.get(paper.get("id")),
-                query_tokens,
-            )
-            paper_key = (
-                str(payload.get("doi") or "").casefold().strip()
-                or str(payload.get("url") or "").casefold().strip()
-                or str(payload.get("title") or "").casefold().strip()
-            )
-            if paper_key in seen_papers:
-                continue
-            seen_papers.add(paper_key)
-            papers.append(payload)
-
-    papers.sort(key=lambda item: (-item["final_score"], item["title"] or ""))
-    for rank, paper in enumerate(papers, start=1):
-        paper["rank"] = rank
-
-    citations = [
-        {
-            "source_title": paper["title"],
-            "source_url": paper["url"],
-            "evidence": paper["evidence"],
-        }
-        for paper in papers
-        if paper.get("url")
-    ]
-    if papers:
-        answer = f"Supabase found {len(papers)} research paper(s) related to your question."
-        status = "ok"
-    else:
-        answer = "No matching research papers with verified source links were found in Supabase."
-        status = "insufficient_information"
-    return {"answer": answer, "citations": citations, "papers": papers, "status": status}
 
 
 class ApiHandler(BaseHTTPRequestHandler):
+    application: ResearchApplication | None = None
+
     def send_json(self, status: int, payload: Any) -> None:
         body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
         self.send_response(status)
@@ -279,29 +118,54 @@ class ApiHandler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(body)
 
+    def _application(self) -> ResearchApplication:
+        if self.application is None:
+            raise RuntimeError("API application services have not been configured")
+        return self.application
+
     def do_GET(self) -> None:
         parsed = urlparse(self.path)
         params = {key: values[0] for key, values in parse_qs(parsed.query).items()}
         try:
+            application = self._application()
             if parsed.path == "/api/researchers":
-                self.send_json(200, {"researchers": search_researchers(
-                    params.get("q", ""), params.get("university", ""), params.get("discipline", "")
-                )})
+                result = application.search_researchers(
+                    params.get("q", ""),
+                    university=params.get("university", ""),
+                    discipline=params.get("discipline", ""),
+                )
+                self.send_json(
+                    200,
+                    {
+                        "researchers": [
+                            researcher_payload(item) for item in result.researchers
+                        ],
+                        "truncated": result.truncated,
+                    },
+                )
                 return
             if parsed.path == "/api/directory-options":
-                self.send_json(200, directory_options())
+                options = application.directory_options()
+                self.send_json(
+                    200,
+                    {
+                        "universities": list(options.universities),
+                        "disciplines": list(options.disciplines),
+                        "truncated": options.truncated,
+                    },
+                )
                 return
             if parsed.path.startswith("/api/researchers/"):
                 researcher_id = parsed.path.rsplit("/", 1)[-1]
-                match = next((item for item in rows("academic") if item.get("id") == researcher_id), None)
-                if match is None:
+                profile = application.get_academic_profile(researcher_id)
+                if profile is None:
                     self.send_json(404, {"error": "Researcher not found"})
                 else:
-                    self.send_json(200, profile_payload(match))
+                    self.send_json(200, profile_payload(profile))
                 return
             self.send_json(404, {"error": "Endpoint not found"})
         except Exception as error:
-            self.send_json(500, {"error": str(error)})
+            self.send_json(500, {"error": safe_error_detail(error)})
 
     def do_POST(self) -> None:
         if self.path != "/api/ask":
@@ -314,17 +178,63 @@ class ApiHandler(BaseHTTPRequestHandler):
             if not question:
                 self.send_json(400, {"error": "Question cannot be empty"})
                 return
-            self.send_json(200, ask_payload(question))
+            result = self._application().search_publications(question)
+            papers = [paper_payload(item) for item in result.publications]
+            citations = [
+                {
+                    "source_title": paper["title"],
+                    "source_url": paper["url"],
+                    "evidence": paper["evidence"],
+                }
+                for paper in papers
+                if paper["url"]
+            ]
+            answer = (
+                "Ranked research papers were found, but validated evidence is not "
+                "available to synthesize a reliable answer."
+                if papers
+                else "No ranked research papers were found for this question."
+            )
+            self.send_json(
+                200,
+                {
+                    "answer": answer,
+                    "citations": citations,
+                    "papers": papers,
+                    "status": "insufficient_information",
+                    "evidence_status": result.evidence_status,
+                    "truncated": result.truncated,
+                },
+            )
         except (ValueError, json.JSONDecodeError) as error:
-            self.send_json(400, {"error": str(error)})
+            self.send_json(400, {"error": safe_error_detail(error)})
+        except Exception as error:
+            self.send_json(500, {"error": safe_error_detail(error)})
 
     def log_message(self, format: str, *args: Any) -> None:
         print(f"API: {format % args}")
 
 
+def configured_handler(application: ResearchApplication) -> type[ApiHandler]:
+    """Bind one shared application instance to all request-handler threads."""
+
+    class ConfiguredApiHandler(ApiHandler):
+        pass
+
+    ConfiguredApiHandler.application = application
+    return ConfiguredApiHandler
+
+
 def main() -> None:
-    server = ThreadingHTTPServer(("127.0.0.1", 8000), ApiHandler)
-    print("Live Supabase API running at http://127.0.0.1:8000")
+    try:
+        application = create_live_application()
+    except SupabaseConfigurationError as error:
+        raise SystemExit(f"API configuration error: {error}") from error
+    server = ThreadingHTTPServer(
+        ("127.0.0.1", 8000),
+        configured_handler(application),
+    )
+    print("Unified Supabase ranking API running at http://127.0.0.1:8000")
     try:
         server.serve_forever()
     except KeyboardInterrupt:

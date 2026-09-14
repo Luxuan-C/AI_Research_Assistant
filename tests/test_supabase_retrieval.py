@@ -1,5 +1,6 @@
 from collections import Counter
 from datetime import date
+from threading import Event, Thread
 from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
@@ -75,6 +76,24 @@ class FakeSupabaseClient:
 
     def table(self, table):
         return FakeQuery(self, table)
+
+
+class BlockingFakeQuery(FakeQuery):
+    def execute(self):
+        if self.table == "academic" and not self.client.release_academic.is_set():
+            self.client.academic_started.set()
+            self.client.release_academic.wait(timeout=2.0)
+        return super().execute()
+
+
+class BlockingFakeSupabaseClient(FakeSupabaseClient):
+    def __init__(self, data=None):
+        super().__init__(data)
+        self.academic_started = Event()
+        self.release_academic = Event()
+
+    def table(self, table):
+        return BlockingFakeQuery(self, table)
 
 
 def supabase_rows():
@@ -313,6 +332,160 @@ class SupabaseBoundaryTests(unittest.TestCase):
                 for table in SupabaseSchemaRelationshipGraph.GRAPH_TABLES
             )
         )
+
+    def test_repository_cache_expires_and_refetches_without_unbounded_staleness(self):
+        now = [100.0]
+        client = FakeSupabaseClient(supabase_rows())
+        repository = SupabaseReadRepository(
+            client,
+            cache_ttl_seconds=60.0,
+            clock=lambda: now[0],
+        )
+
+        first = repository.rows("academic")
+        executions_after_first = client.executions["academic"]
+        second = repository.rows("academic")
+        now[0] += 61.0
+        third = repository.rows("academic")
+
+        self.assertEqual(first, second)
+        self.assertEqual(second, third)
+        self.assertEqual(client.executions["academic"], executions_after_first * 2)
+
+    def test_tokenized_corpus_is_reused_until_repository_invalidation(self):
+        client = FakeSupabaseClient(supabase_rows())
+        repository = SupabaseReadRepository(client)
+        retrieval = SupabaseRetrievalPort(repository)
+        plan = QueryPlanner().plan(
+            "assistive robotics",
+            as_of=date(2026, 9, 13),
+            target_kinds=("publication",),
+        )
+
+        first = retrieval.retrieve(plan)
+        executions_after_first = client.executions["research_paper"]
+        second = retrieval.retrieve(plan)
+        repository.invalidate("research_paper")
+        third = retrieval.retrieve(plan)
+
+        self.assertEqual(first, second)
+        self.assertEqual(second, third)
+        self.assertEqual(retrieval.corpus_build_count, 2)
+        self.assertEqual(
+            client.executions["research_paper"],
+            executions_after_first * 2,
+        )
+
+    def test_repository_expiry_invalidates_the_derived_corpus(self):
+        now = [100.0]
+        client = FakeSupabaseClient(supabase_rows())
+        repository = SupabaseReadRepository(
+            client,
+            cache_ttl_seconds=60.0,
+            clock=lambda: now[0],
+        )
+        retrieval = SupabaseRetrievalPort(repository)
+        plan = QueryPlanner().plan(
+            "assistive robotics",
+            as_of=date(2026, 9, 13),
+            target_kinds=("publication",),
+        )
+
+        first = retrieval.retrieve(plan)
+        executions_after_first = client.executions["research_paper"]
+        now[0] += 61.0
+        second = retrieval.retrieve(plan)
+
+        self.assertEqual(first, second)
+        self.assertEqual(retrieval.corpus_build_count, 2)
+        self.assertEqual(
+            client.executions["research_paper"],
+            executions_after_first * 2,
+        )
+
+    def test_equivalent_concurrent_requests_share_one_corpus_build(self):
+        client = FakeSupabaseClient(supabase_rows())
+        retrieval = SupabaseRetrievalPort(SupabaseReadRepository(client))
+        plan = QueryPlanner().plan(
+            "assistive robotics",
+            as_of=date(2026, 9, 13),
+            target_kinds=("publication",),
+        )
+        tokenization_started = Event()
+        release_tokenization = Event()
+        results = []
+
+        from ranking import supabase_retrieval as retrieval_module
+
+        original_tokens = retrieval_module._tokens
+
+        def blocking_tokens(value):
+            tokenization_started.set()
+            release_tokenization.wait(timeout=2.0)
+            return original_tokens(value)
+
+        with patch.object(retrieval_module, "_tokens", side_effect=blocking_tokens):
+            first = Thread(target=lambda: results.append(retrieval.retrieve(plan)))
+            second = Thread(target=lambda: results.append(retrieval.retrieve(plan)))
+            first.start()
+            self.assertTrue(tokenization_started.wait(timeout=1.0))
+            second.start()
+            release_tokenization.set()
+            first.join(timeout=1.0)
+            second.join(timeout=1.0)
+
+        self.assertFalse(first.is_alive())
+        self.assertFalse(second.is_alive())
+        self.assertEqual(len(results), 2)
+        self.assertEqual(results[0], results[1])
+        self.assertEqual(retrieval.corpus_build_count, 1)
+
+    def test_unrelated_cold_table_reads_are_not_globally_serialized(self):
+        client = BlockingFakeSupabaseClient(supabase_rows())
+        repository = SupabaseReadRepository(client)
+        paper_finished = Event()
+
+        academic_thread = Thread(target=lambda: repository.rows("academic"))
+        paper_thread = Thread(
+            target=lambda: (
+                repository.rows("research_paper"),
+                paper_finished.set(),
+            )
+        )
+        academic_thread.start()
+        self.assertTrue(client.academic_started.wait(timeout=1.0))
+        paper_thread.start()
+
+        self.assertTrue(paper_finished.wait(timeout=1.0))
+        client.release_academic.set()
+        academic_thread.join(timeout=1.0)
+        paper_thread.join(timeout=1.0)
+        self.assertFalse(academic_thread.is_alive())
+        self.assertFalse(paper_thread.is_alive())
+
+    def test_equivalent_concurrent_id_reads_share_one_request(self):
+        client = BlockingFakeSupabaseClient(supabase_rows())
+        repository = SupabaseReadRepository(client)
+        results = []
+
+        first = Thread(
+            target=lambda: results.append(repository.rows_by_ids("academic", ("a1",)))
+        )
+        second = Thread(
+            target=lambda: results.append(repository.rows_by_ids("academic", ("a1",)))
+        )
+        first.start()
+        self.assertTrue(client.academic_started.wait(timeout=1.0))
+        second.start()
+        client.release_academic.set()
+        first.join(timeout=1.0)
+        second.join(timeout=1.0)
+
+        self.assertFalse(first.is_alive())
+        self.assertFalse(second.is_alive())
+        self.assertEqual(len(results), 2)
+        self.assertEqual(results[0], results[1])
+        self.assertEqual(client.executions["academic"], 1)
 
     def test_graph_prefetch_obeys_neighbor_budget(self):
         client = FakeSupabaseClient(supabase_rows())

@@ -8,13 +8,15 @@ current production adapter exposes only ``lexical``.
 
 from __future__ import annotations
 
-from collections import Counter
-from dataclasses import replace
+from collections import Counter, OrderedDict
+from dataclasses import dataclass, replace
 from datetime import date
 from math import log
 import os
 import re
-from typing import Any, Mapping, Sequence
+from threading import Event, RLock
+from time import monotonic
+from typing import Any, Callable, Mapping, Sequence
 
 from .paper_ranking import (
     PUBLICATION,
@@ -97,6 +99,18 @@ FILTER_TARGET_KINDS: Mapping[str, frozenset[str]] = {
     "publication_type": frozenset((PUBLICATION,)),
 }
 
+RELATIONSHIP_FILTER_TABLES: Mapping[str, str] = {
+    "university": "university",
+    "university_id": "university",
+    "institution": "university",
+    "faculty": "faculty",
+    "faculty_id": "faculty",
+    "discipline": "discipline",
+    "discipline_id": "discipline",
+    "field": "field",
+    "field_id": "field",
+}
+
 
 class SupabaseReadError(RuntimeError):
     """A read failed against one named table."""
@@ -137,33 +151,81 @@ def smoke_test_read_access(client: Any) -> tuple[str, ...]:
 
 
 class SupabaseReadRepository:
-    """Read-through cache for bounded, keyset-paginated Supabase reads."""
+    """Thread-safe TTL cache for bounded, keyset-paginated Supabase reads.
 
-    def __init__(self, client: Any, *, row_limit: int = 1000) -> None:
+    Cache coordination never holds the state lock during a network request.
+    Equivalent full-table and ID misses share in-flight loads, while reads for
+    unrelated tables remain independent.
+    """
+
+    def __init__(
+        self,
+        client: Any,
+        *,
+        row_limit: int = 1000,
+        cache_ttl_seconds: float = 60.0,
+        clock: Callable[[], float] = monotonic,
+    ) -> None:
         if row_limit <= 0:
             raise ValueError("row_limit must be positive")
+        if cache_ttl_seconds <= 0:
+            raise ValueError("cache_ttl_seconds must be positive")
         self.client = client
         self.row_limit = row_limit
+        self.cache_ttl_seconds = float(cache_ttl_seconds)
+        self._clock = clock
         self._scans: dict[str, tuple[Mapping[str, Any], ...]] = {}
         self._rows_by_id: dict[str, dict[str, Mapping[str, Any]]] = {}
         self._queried_ids: dict[str, set[str]] = {}
         self._fully_scanned: set[str] = set()
         self._possibly_truncated: set[str] = set()
+        self._fetched_at: dict[str, float] = {}
+        self._table_revisions: dict[str, int] = {}
+        self._scan_inflight: dict[str, Event] = {}
+        self._id_inflight: dict[str, dict[str, Event]] = {}
+        self._lock = RLock()
 
     def rows(self, table: str) -> tuple[Mapping[str, Any], ...]:
         if table not in TABLE_COLUMNS:
             raise ValueError(f"No read projection is defined for table {table!r}")
-        if table in self._scans:
-            return self._scans[table]
+        while True:
+            with self._lock:
+                self._expire_if_needed_locked(table)
+                cached = self._scans.get(table)
+                if cached is not None:
+                    return cached
+                inflight = self._scan_inflight.get(table)
+                if inflight is None:
+                    inflight = Event()
+                    self._scan_inflight[table] = inflight
+                    owns_load = True
+                else:
+                    owns_load = False
 
-        rows = self._read_all_pages(table, limit=self.row_limit)
-        if len(rows) >= self.row_limit:
-            self._possibly_truncated.add(table)
-        else:
-            self._fully_scanned.add(table)
-        self._remember(table, rows)
-        self._scans[table] = rows
-        return rows
+            if not owns_load:
+                inflight.wait()
+                continue
+
+            try:
+                loaded = self._read_all_pages(table, limit=self.row_limit)
+            except BaseException:
+                with self._lock:
+                    self._scan_inflight.pop(table, None)
+                    inflight.set()
+                raise
+
+            with self._lock:
+                self._clear_table_locked(table)
+                if len(loaded) >= self.row_limit:
+                    self._possibly_truncated.add(table)
+                else:
+                    self._fully_scanned.add(table)
+                self._remember_locked(table, loaded)
+                self._scans[table] = loaded
+                self._record_fetch_locked(table)
+                self._scan_inflight.pop(table, None)
+                inflight.set()
+                return loaded
 
     def rows_by_ids(
         self,
@@ -179,20 +241,69 @@ class SupabaseReadRepository:
         if batch_size <= 0:
             raise ValueError("batch_size must be positive")
         requested = tuple(sorted({str(value) for value in ids if value}))
-        cache = self._rows_by_id.setdefault(table, {})
-        queried = self._queried_ids.setdefault(table, set())
-        if table not in self._fully_scanned:
-            missing = [value for value in requested if value not in cache and value not in queried]
-            available = max(0, self.row_limit - len(cache))
-            bounded_missing = missing[:available]
-            if len(bounded_missing) < len(missing):
-                self._possibly_truncated.add(table)
-            for start in range(0, len(bounded_missing), batch_size):
-                batch = bounded_missing[start : start + batch_size]
-                rows = self._read_all_pages(table, limit=len(batch), ids=batch)
-                self._remember(table, rows)
-                queried.update(batch)
-        return tuple(cache[value] for value in requested if value in cache)
+        while True:
+            with self._lock:
+                self._expire_if_needed_locked(table)
+                cache = self._rows_by_id.setdefault(table, {})
+                queried = self._queried_ids.setdefault(table, set())
+                if table in self._fully_scanned:
+                    return tuple(cache[value] for value in requested if value in cache)
+
+                scan_inflight = self._scan_inflight.get(table)
+                if scan_inflight is not None:
+                    owned_ids: tuple[str, ...] = ()
+                    wait_events = (scan_inflight,)
+                else:
+                    missing = tuple(
+                        value
+                        for value in requested
+                        if value not in cache and value not in queried
+                    )
+                    inflight_by_id = self._id_inflight.setdefault(table, {})
+                    wait_events = tuple(
+                        dict.fromkeys(
+                            inflight_by_id[value]
+                            for value in missing
+                            if value in inflight_by_id
+                        )
+                    )
+                    unclaimed = tuple(
+                        value for value in missing if value not in inflight_by_id
+                    )
+                    available = max(
+                        0,
+                        self.row_limit - len(cache) - len(inflight_by_id),
+                    )
+                    owned_ids = unclaimed[:available]
+                    if len(owned_ids) < len(unclaimed):
+                        self._possibly_truncated.add(table)
+                    for value in owned_ids:
+                        inflight_by_id[value] = Event()
+
+                if not owned_ids and not wait_events:
+                    return tuple(cache[value] for value in requested if value in cache)
+
+            if owned_ids:
+                try:
+                    loaded: list[Mapping[str, Any]] = []
+                    for start in range(0, len(owned_ids), batch_size):
+                        batch = owned_ids[start : start + batch_size]
+                        loaded.extend(
+                            self._read_all_pages(table, limit=len(batch), ids=batch)
+                        )
+                except BaseException:
+                    self._finish_id_load(table, owned_ids)
+                    raise
+
+                with self._lock:
+                    self._expire_if_needed_locked(table)
+                    self._remember_locked(table, loaded)
+                    self._queried_ids.setdefault(table, set()).update(owned_ids)
+                    self._record_fetch_locked(table)
+                self._finish_id_load(table, owned_ids)
+
+            for event in wait_events:
+                event.wait()
 
     def _read_all_pages(
         self,
@@ -243,14 +354,90 @@ class SupabaseReadRepository:
             last_id = page_last_id
         return tuple(rows)
 
-    def _remember(self, table: str, rows: Sequence[Mapping[str, Any]]) -> None:
+    def _remember_locked(
+        self,
+        table: str,
+        rows: Sequence[Mapping[str, Any]],
+    ) -> None:
         cache = self._rows_by_id.setdefault(table, {})
         for row in rows:
             if row.get("id") is not None:
                 cache[str(row["id"])] = row
 
     def possibly_truncated(self, tables: Sequence[str]) -> bool:
-        return any(table in self._possibly_truncated for table in tables)
+        with self._lock:
+            for table in tables:
+                self._expire_if_needed_locked(table)
+            return any(table in self._possibly_truncated for table in tables)
+
+    def revisions_for(self, tables: Sequence[str]) -> tuple[int, ...]:
+        """Return cache revisions suitable for derived-index invalidation."""
+
+        with self._lock:
+            for table in tables:
+                self._expire_if_needed_locked(table)
+            return tuple(self._table_revisions.get(table, 0) for table in tables)
+
+    def invalidate(self, table: str | None = None) -> None:
+        """Explicitly invalidate one table or every cached projection."""
+
+        with self._lock:
+            tables = (table,) if table is not None else tuple(TABLE_COLUMNS)
+            for current in tables:
+                if current not in TABLE_COLUMNS:
+                    raise ValueError(
+                        f"No read projection is defined for table {current!r}"
+                    )
+                self._clear_table_locked(current)
+                self._table_revisions[current] = (
+                    self._table_revisions.get(current, 0) + 1
+                )
+
+    def _expire_if_needed_locked(self, table: str) -> None:
+        fetched_at = self._fetched_at.get(table)
+        if fetched_at is None:
+            return
+        if self._clock() - fetched_at < self.cache_ttl_seconds:
+            return
+        self._clear_table_locked(table)
+        self._table_revisions[table] = self._table_revisions.get(table, 0) + 1
+
+    def _clear_table_locked(self, table: str) -> None:
+        self._scans.pop(table, None)
+        self._rows_by_id.pop(table, None)
+        self._queried_ids.pop(table, None)
+        self._fully_scanned.discard(table)
+        self._possibly_truncated.discard(table)
+        self._fetched_at.pop(table, None)
+
+    def _record_fetch_locked(self, table: str) -> None:
+        self._fetched_at[table] = self._clock()
+        self._table_revisions[table] = self._table_revisions.get(table, 0) + 1
+
+    def _finish_id_load(self, table: str, identifiers: Sequence[str]) -> None:
+        with self._lock:
+            inflight_by_id = self._id_inflight.get(table, {})
+            for value in identifiers:
+                event = inflight_by_id.pop(value, None)
+                if event is not None:
+                    event.set()
+            if not inflight_by_id:
+                self._id_inflight.pop(table, None)
+
+
+@dataclass(frozen=True, slots=True)
+class _CorpusDocument:
+    entity: EntityRecord
+    row: Mapping[str, Any]
+    text: str
+    tokens: tuple[str, ...]
+
+
+@dataclass(frozen=True, slots=True)
+class _LexicalCorpus:
+    documents: tuple[_CorpusDocument, ...]
+    document_frequency: Mapping[str, int]
+    average_length: float
 
 
 class SupabaseRetrievalPort:
@@ -261,42 +448,163 @@ class SupabaseRetrievalPort:
     It intentionally returns no ``dense`` channel.
     """
 
-    def __init__(self, repository: SupabaseReadRepository) -> None:
+    def __init__(
+        self,
+        repository: SupabaseReadRepository,
+        *,
+        corpus_cache_size: int = 4,
+    ) -> None:
+        if corpus_cache_size <= 0:
+            raise ValueError("corpus_cache_size must be positive")
         self.repository = repository
+        self.corpus_cache_size = corpus_cache_size
+        self._corpora: OrderedDict[
+            tuple[tuple[str, ...], tuple[int, ...]], _LexicalCorpus
+        ] = OrderedDict()
+        self._corpus_inflight: dict[
+            tuple[tuple[str, ...], tuple[int, ...]], Event
+        ] = {}
+        self._corpus_lock = RLock()
+        self.corpus_build_count = 0
 
     def retrieve(self, plan: QueryPlan) -> Mapping[str, Sequence[RetrievalHit]]:
-        records: list[tuple[EntityRecord, Mapping[str, Any], str]] = []
-        if PUBLICATION in plan.target_kinds:
-            records.extend(
-                (_paper_entity(row), row, _paper_text(row))
-                for row in self.repository.rows("research_paper")
-                if row.get("id") is not None
+        corpus = self._corpus(plan.target_kinds)
+        relationship_filter_ids = self._resolve_relationship_filter_ids(plan.filters)
+        filtered = tuple(
+            document
+            for document in corpus.documents
+            if self._matches_filters(
+                document.entity,
+                document.row,
+                plan.filters,
+                relationship_filter_ids,
             )
-        if RESEARCHER in plan.target_kinds:
-            records.extend(
-                (_academic_entity(row), row, _academic_text(row))
-                for row in self.repository.rows("academic")
-                if row.get("id") is not None
+        )
+        if plan.text.strip() == "*":
+            scored = tuple(
+                (document.entity, 1.0)
+                for document in sorted(
+                    filtered,
+                    key=lambda item: item.entity.entity_id,
+                )
             )
-
-        filtered = [
-            (entity, text)
-            for entity, row, text in records
-            if self._matches_filters(entity, row, plan.filters)
-        ]
-        scored = _bm25_scores(plan.text, filtered)
+        else:
+            scored = _bm25_scores_from_documents(
+                plan.text,
+                filtered,
+                document_frequency=(
+                    corpus.document_frequency if not plan.filters else None
+                ),
+                average_length=(corpus.average_length if not plan.filters else None),
+            )
+            scored_ids = {entity.entity_id for entity, _score in scored}
+            normalized_query = plan.text.casefold().strip()
+            if normalized_query:
+                scored = (
+                    *scored,
+                    *(
+                        (document.entity, 1.0)
+                        for document in filtered
+                        if document.entity.entity_id not in scored_ids
+                        and normalized_query in document.text.casefold()
+                    ),
+                )
         ordered = sorted(scored, key=lambda item: (-item[1], item[0].entity_id))
         hits = tuple(
             RetrievalHit(entity, "lexical", rank, score)
-            for rank, (entity, score) in enumerate(ordered[: plan.seed_limit], start=1)
+            for rank, (entity, score) in enumerate(
+                ordered[: plan.seed_limit], start=1
+            )
         )
         return {"lexical": hits}
+
+    def _corpus(self, target_kinds: Sequence[str]) -> _LexicalCorpus:
+        normalized_kinds = tuple(dict.fromkeys(target_kinds))
+        tables: list[str] = []
+        rows_by_table: dict[str, tuple[Mapping[str, Any], ...]] = {}
+        if PUBLICATION in normalized_kinds:
+            tables.append("research_paper")
+            rows_by_table["research_paper"] = self.repository.rows(
+                "research_paper"
+            )
+        if RESEARCHER in normalized_kinds:
+            tables.append("academic")
+            rows_by_table["academic"] = self.repository.rows("academic")
+
+        cache_key = (
+            normalized_kinds,
+            self.repository.revisions_for(tables),
+        )
+        while True:
+            with self._corpus_lock:
+                cached = self._corpora.get(cache_key)
+                if cached is not None:
+                    self._corpora.move_to_end(cache_key)
+                    return cached
+                inflight = self._corpus_inflight.get(cache_key)
+                if inflight is None:
+                    inflight = Event()
+                    self._corpus_inflight[cache_key] = inflight
+                    owns_build = True
+                else:
+                    owns_build = False
+
+            if owns_build:
+                break
+            inflight.wait()
+
+        try:
+            documents: list[_CorpusDocument] = []
+            for row in rows_by_table.get("research_paper", ()):
+                if row.get("id") is None:
+                    continue
+                text = _paper_text(row)
+                documents.append(
+                    _CorpusDocument(_paper_entity(row), row, text, _tokens(text))
+                )
+            for row in rows_by_table.get("academic", ()):
+                if row.get("id") is None:
+                    continue
+                text = _academic_text(row)
+                documents.append(
+                    _CorpusDocument(_academic_entity(row), row, text, _tokens(text))
+                )
+            frozen_documents = tuple(documents)
+            document_frequency = Counter(
+                term for document in frozen_documents for term in set(document.tokens)
+            )
+            average_length = (
+                sum(len(document.tokens) for document in frozen_documents)
+                / len(frozen_documents)
+                if frozen_documents
+                else 1.0
+            ) or 1.0
+            corpus = _LexicalCorpus(
+                frozen_documents,
+                dict(document_frequency),
+                average_length,
+            )
+        except BaseException:
+            with self._corpus_lock:
+                self._corpus_inflight.pop(cache_key, None)
+                inflight.set()
+            raise
+
+        with self._corpus_lock:
+            self._corpora[cache_key] = corpus
+            self.corpus_build_count += 1
+            while len(self._corpora) > self.corpus_cache_size:
+                self._corpora.popitem(last=False)
+            self._corpus_inflight.pop(cache_key, None)
+            inflight.set()
+            return corpus
 
     def _matches_filters(
         self,
         entity: EntityRecord,
         row: Mapping[str, Any],
         filters: Mapping[str, object],
+        relationship_filter_ids: Mapping[str, frozenset[str]],
     ) -> bool:
         for key, expected in sorted(filters.items()):
             normalized = key.lower()
@@ -309,16 +617,28 @@ class SupabaseRetrievalPort:
             ):
                 return False
             elif normalized in {"university", "university_id", "institution"}:
-                if not self._matches_relationship("university", row.get("university_ids"), expected):
+                if not _matches_relationship_ids(
+                    row.get("university_ids"),
+                    relationship_filter_ids[normalized],
+                ):
                     return False
             elif normalized in {"faculty", "faculty_id"}:
-                if not self._matches_relationship("faculty", row.get("faculty_ids"), expected):
+                if not _matches_relationship_ids(
+                    row.get("faculty_ids"),
+                    relationship_filter_ids[normalized],
+                ):
                     return False
             elif normalized in {"discipline", "discipline_id"}:
-                if not self._matches_relationship("discipline", row.get("discipline_ids"), expected):
+                if not _matches_relationship_ids(
+                    row.get("discipline_ids"),
+                    relationship_filter_ids[normalized],
+                ):
                     return False
             elif normalized in {"field", "field_id"}:
-                if not self._matches_relationship("field", row.get("field_ids"), expected):
+                if not _matches_relationship_ids(
+                    row.get("field_ids"),
+                    relationship_filter_ids[normalized],
+                ):
                     return False
             elif normalized == "is_open_access":
                 if bool(row.get("is_open_access")) is not bool(expected):
@@ -330,18 +650,29 @@ class SupabaseRetrievalPort:
                 return False
         return True
 
-    def _matches_relationship(self, table: str, ids: object, expected: object) -> bool:
-        relationship_ids = {str(value) for value in _array(ids)}
-        expected_text = str(expected)
-        if expected_text in relationship_ids:
-            return True
-        matching_ids = {
-            str(row["id"])
-            for row in self.repository.rows(table)
-            if row.get("id") is not None
-            and str(row.get("name") or "").casefold() == expected_text.casefold()
-        }
-        return bool(relationship_ids & matching_ids)
+    def _resolve_relationship_filter_ids(
+        self,
+        filters: Mapping[str, object],
+    ) -> Mapping[str, frozenset[str]]:
+        resolved: dict[str, frozenset[str]] = {}
+        for key, expected in sorted(filters.items()):
+            normalized = key.lower()
+            table = RELATIONSHIP_FILTER_TABLES.get(normalized)
+            if table is None:
+                continue
+            expected_text = str(expected)
+            matching_ids = {
+                expected_text,
+                *(
+                    str(row["id"])
+                    for row in self.repository.rows(table)
+                    if row.get("id") is not None
+                    and str(row.get("name") or "").casefold()
+                    == expected_text.casefold()
+                ),
+            }
+            resolved[normalized] = frozenset(matching_ids)
+        return resolved
 
 
 class SupabaseSchemaRelationshipGraph:
@@ -450,6 +781,13 @@ def _array(value: object) -> tuple[object, ...]:
     return ()
 
 
+def _matches_relationship_ids(
+    values: object,
+    accepted_ids: frozenset[str],
+) -> bool:
+    return any(str(value) in accepted_ids for value in _array(values))
+
+
 def _flatten_text(*values: object) -> str:
     parts: list[str] = []
     for value in values:
@@ -480,33 +818,54 @@ def _bm25_scores(
     query: str,
     records: Sequence[tuple[EntityRecord, str]],
 ) -> tuple[tuple[EntityRecord, float], ...]:
+    documents = tuple(
+        _CorpusDocument(entity, {}, text, _tokens(text))
+        for entity, text in records
+    )
+    return _bm25_scores_from_documents(query, documents)
+
+
+def _bm25_scores_from_documents(
+    query: str,
+    documents: Sequence[_CorpusDocument],
+    *,
+    document_frequency: Mapping[str, int] | None = None,
+    average_length: float | None = None,
+) -> tuple[tuple[EntityRecord, float], ...]:
     query_terms = _tokens(query)
-    documents = tuple((_tokens(text), entity) for entity, text in records)
     if not query_terms or not documents:
         return ()
 
-    document_frequency = Counter(
-        term for terms, _entity in documents for term in set(terms)
+    resolved_frequency = document_frequency or Counter(
+        term for document in documents for term in set(document.tokens)
     )
-    average_length = sum(len(terms) for terms, _entity in documents) / len(documents)
-    average_length = average_length or 1.0
+    resolved_average_length = average_length
+    if resolved_average_length is None:
+        resolved_average_length = sum(
+            len(document.tokens) for document in documents
+        ) / len(documents)
+    resolved_average_length = resolved_average_length or 1.0
     k1, b = 1.2, 0.75
     output: list[tuple[EntityRecord, float]] = []
-    for terms, entity in documents:
-        frequencies = Counter(terms)
+    for document in documents:
+        frequencies = Counter(document.tokens)
         score = 0.0
         for term in query_terms:
             frequency = frequencies.get(term, 0)
             if not frequency:
                 continue
-            frequency_in_documents = document_frequency[term]
+            frequency_in_documents = resolved_frequency[term]
             inverse_document_frequency = log(
                 1.0 + (len(documents) - frequency_in_documents + 0.5) / (frequency_in_documents + 0.5)
             )
-            denominator = frequency + k1 * (1.0 - b + b * len(terms) / average_length)
+            denominator = frequency + k1 * (
+                1.0
+                - b
+                + b * len(document.tokens) / resolved_average_length
+            )
             score += inverse_document_frequency * frequency * (k1 + 1.0) / denominator
         if score > 0.0:
-            output.append((entity, score))
+            output.append((document.entity, score))
     return tuple(output)
 
 
@@ -615,6 +974,12 @@ def _academic_entity(row: Mapping[str, Any]) -> EntityRecord:
         label=str(row.get("name") or row["id"]),
         source_urls=_source_urls(row.get("profile_url"), row.get("orcid_url")),
     )
+
+
+def academic_entity_from_row(row: Mapping[str, Any]) -> EntityRecord:
+    """Project one fixed-schema academic row through the production adapter."""
+
+    return _academic_entity(row)
 
 
 def _metadata_entity(table: str, row: Mapping[str, Any]) -> EntityRecord:

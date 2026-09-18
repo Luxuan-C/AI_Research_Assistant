@@ -1,0 +1,132 @@
+[
+  {
+    "id": 0,
+    "name": "Biochemistry, Genetics and Molecular Biology",
+    "faculty_id": 0
+  },
+  {
+    "id": 1,
+    "name": "Economics, Econometrics and Finance",
+    "faculty_id": 1
+  },
+  {
+    "id": 2,
+    "name": "Physics and Astronomy",
+    "faculty_id": 2
+  },
+  {
+    "id": 3,
+    "name": "Medicine",
+    "faculty_id": 3
+  },
+  {
+    "id": 4,
+    "name": "Environmental Science",
+    "faculty_id": 4
+  },
+  {
+    "id": 5,
+    "name": "Computer Science",
+    "faculty_id": 4
+  },
+  {
+    "id": 6,
+    "name": "Social Sciences",
+    "faculty_id": 4
+  },
+  {
+    "id": 7,
+    "name": "Engineering",
+    "faculty_id": 4
+  },
+  {
+    "id": 8,
+    "name": "Neuroscience",
+    "faculty_id": 4
+  },
+  {
+    "id": 9,
+    "name": "Mathematics",
+    "faculty_id": 4
+  },
+  {
+    "id": 10,
+    "name": "Earth and Planetary Sciences",
+    "faculty_id": 4
+  },
+  {
+    "id": 11,
+    "name": "Immunology and Microbiology",
+    "faculty_id": 4
+  },
+  {
+    "id": 12,
+    "name": "Psychology",
+    "faculty_id": 4
+  },
+  {
+    "id": 13,
+    "name": "Health Professions",
+    "faculty_id": 4
+  },
+  {
+    "id": 14,
+    "name": "Materials Science",
+    "faculty_id": 4
+  },
+  {
+    "id": 15,
+    "name": "Business, Management and Accounting",
+    "faculty_id": 4
+  },
+  {
+    "id": 16,
+    "name": "Chemistry",
+    "faculty_id": 4
+  },
+  {
+    "id": 17,
+    "name": "Decision Sciences",
+    "faculty_id": 4
+  },
+  {
+    "id": 18,
+    "name": "Agricultural and Biological Sciences",
+    "faculty_id": 4
+  },
+  {
+    "id": 19,
+    "name": "Veterinary",
+    "faculty_id": 4
+  },
+  {
+    "id": 20,
+    "name": "Pharmacology, Toxicology and Pharmaceutics",
+    "faculty_id": 4
+  },
+  {
+    "id": 21,
+    "name": "Chemical Engineering",
+    "faculty_id": 4
+  },
+  {
+    "id": 22,
+    "name": "Energy",
+    "faculty_id": 4
+  },
+  {
+    "id": 23,
+    "name": "Dentistry",
+    "faculty_id": 4
+  },
+  {
+    "id": 24,
+    "name": "Arts and Humanities",
+    "faculty_id": 4
+  },
+  {
+    "id": 25,
+    "name": "Nursing",
+    "faculty_id": 4
+  }
+]

@@ -1,0 +1,662 @@
+[
+  {
+    "id": 0,
+    "name": "Molecular Biology",
+    "discipline_id": 0
+  },
+  {
+    "id": 1,
+    "name": "Genetics",
+    "discipline_id": 1
+  },
+  {
+    "id": 2,
+    "name": "Economics and Econometrics",
+    "discipline_id": 1
+  },
+  {
+    "id": 3,
+    "name": "Astronomy and Astrophysics",
+    "discipline_id": 2
+  },
+  {
+    "id": 4,
+    "name": "Pediatrics, Perinatology and Child Health",
+    "discipline_id": 3
+  },
+  {
+    "id": 5,
+    "name": "Global and Planetary Change",
+    "discipline_id": 4
+  },
+  {
+    "id": 6,
+    "name": "Computer Networks and Communications",
+    "discipline_id": 5
+  },
+  {
+    "id": 7,
+    "name": "Public Health, Environmental and Occupational Health",
+    "discipline_id": 6
+  },
+  {
+    "id": 8,
+    "name": "Health",
+    "discipline_id": 6
+  },
+  {
+    "id": 9,
+    "name": "Psychiatry and Mental health",
+    "discipline_id": 7
+  },
+  {
+    "id": 10,
+    "name": "Nuclear and High Energy Physics",
+    "discipline_id": 7
+  },
+  {
+    "id": 11,
+    "name": "Ecological Modeling",
+    "discipline_id": 7
+  },
+  {
+    "id": 12,
+    "name": "Geriatrics and Gerontology",
+    "discipline_id": 7
+  },
+  {
+    "id": 13,
+    "name": "Automotive Engineering",
+    "discipline_id": 7
+  },
+  {
+    "id": 14,
+    "name": "Neurology",
+    "discipline_id": 8
+  },
+  {
+    "id": 15,
+    "name": "Oncology",
+    "discipline_id": 9
+  },
+  {
+    "id": 16,
+    "name": "Epidemiology",
+    "discipline_id": 9
+  },
+  {
+    "id": 17,
+    "name": "Pulmonary and Respiratory Medicine",
+    "discipline_id": 9
+  },
+  {
+    "id": 18,
+    "name": "Health, Toxicology and Mutagenesis",
+    "discipline_id": 9
+  },
+  {
+    "id": 19,
+    "name": "Nephrology",
+    "discipline_id": 9
+  },
+  {
+    "id": 20,
+    "name": "Statistics and Probability",
+    "discipline_id": 9
+  },
+  {
+    "id": 21,
+    "name": "Physiology",
+    "discipline_id": 10
+  },
+  {
+    "id": 22,
+    "name": "Education",
+    "discipline_id": 10
+  },
+  {
+    "id": 23,
+    "name": "Cancer Research",
+    "discipline_id": 10
+  },
+  {
+    "id": 24,
+    "name": "Geophysics",
+    "discipline_id": 10
+  },
+  {
+    "id": 25,
+    "name": "Surgery",
+    "discipline_id": 11
+  },
+  {
+    "id": 26,
+    "name": "Nature and Landscape Conservation",
+    "discipline_id": 11
+  },
+  {
+    "id": 27,
+    "name": "Immunology",
+    "discipline_id": 11
+  },
+  {
+    "id": 28,
+    "name": "Applied Microbiology and Biotechnology",
+    "discipline_id": 12
+  },
+  {
+    "id": 29,
+    "name": "Social Psychology",
+    "discipline_id": 12
+  },
+  {
+    "id": 30,
+    "name": "Information Systems",
+    "discipline_id": 13
+  },
+  {
+    "id": 31,
+    "name": "Environmental Engineering",
+    "discipline_id": 13
+  },
+  {
+    "id": 32,
+    "name": "General Health Professions",
+    "discipline_id": 13
+  },
+  {
+    "id": 33,
+    "name": "Pharmacology",
+    "discipline_id": 14
+  },
+  {
+    "id": 34,
+    "name": "Ophthalmology",
+    "discipline_id": 14
+  },
+  {
+    "id": 35,
+    "name": "Civil and Structural Engineering",
+    "discipline_id": 14
+  },
+  {
+    "id": 36,
+    "name": "Artificial Intelligence",
+    "discipline_id": 14
+  },
+  {
+    "id": 37,
+    "name": "Mechanical Engineering",
+    "discipline_id": 14
+  },
+  {
+    "id": 38,
+    "name": "Materials Chemistry",
+    "discipline_id": 14
+  },
+  {
+    "id": 39,
+    "name": "Infectious Diseases",
+    "discipline_id": 15
+  },
+  {
+    "id": 40,
+    "name": "Critical Care and Intensive Care Medicine",
+    "discipline_id": 15
+  },
+  {
+    "id": 41,
+    "name": "Cardiology and Cardiovascular Medicine",
+    "discipline_id": 15
+  },
+  {
+    "id": 42,
+    "name": "Organizational Behavior and Human Resource Management",
+    "discipline_id": 15
+  },
+  {
+    "id": 43,
+    "name": "Clinical Psychology",
+    "discipline_id": 16
+  },
+  {
+    "id": 44,
+    "name": "Electrochemistry",
+    "discipline_id": 16
+  },
+  {
+    "id": 45,
+    "name": "Rheumatology",
+    "discipline_id": 17
+  },
+  {
+    "id": 46,
+    "name": "Statistics, Probability and Uncertainty",
+    "discipline_id": 17
+  },
+  {
+    "id": 47,
+    "name": "Animal Science and Zoology",
+    "discipline_id": 18
+  },
+  {
+    "id": 48,
+    "name": "Endocrinology, Diabetes and Metabolism",
+    "discipline_id": 19
+  },
+  {
+    "id": 49,
+    "name": "Gender Studies",
+    "discipline_id": 19
+  },
+  {
+    "id": 50,
+    "name": "Strategy and Management",
+    "discipline_id": 19
+  },
+  {
+    "id": 51,
+    "name": "Computational Theory and Mathematics",
+    "discipline_id": 19
+  },
+  {
+    "id": 52,
+    "name": "Applied Mathematics",
+    "discipline_id": 19
+  },
+  {
+    "id": 53,
+    "name": "Experimental and Cognitive Psychology",
+    "discipline_id": 19
+  },
+  {
+    "id": 54,
+    "name": "Small Animals",
+    "discipline_id": 19
+  },
+  {
+    "id": 55,
+    "name": "Control and Systems Engineering",
+    "discipline_id": 20
+  },
+  {
+    "id": 56,
+    "name": "Speech and Hearing",
+    "discipline_id": 20
+  },
+  {
+    "id": 57,
+    "name": "Waste Management and Disposal",
+    "discipline_id": 20
+  },
+  {
+    "id": 58,
+    "name": "Cell Biology",
+    "discipline_id": 20
+  },
+  {
+    "id": 59,
+    "name": "Pollution",
+    "discipline_id": 20
+  },
+  {
+    "id": 60,
+    "name": "Computer Vision and Pattern Recognition",
+    "discipline_id": 20
+  },
+  {
+    "id": 61,
+    "name": "Complementary and Manual Therapy",
+    "discipline_id": 20
+  },
+  {
+    "id": 62,
+    "name": "Aerospace Engineering",
+    "discipline_id": 20
+  },
+  {
+    "id": 63,
+    "name": "Inorganic Chemistry",
+    "discipline_id": 20
+  },
+  {
+    "id": 64,
+    "name": "Physical Therapy, Sports Therapy and Rehabilitation",
+    "discipline_id": 20
+  },
+  {
+    "id": 65,
+    "name": "Polymers and Plastics",
+    "discipline_id": 20
+  },
+  {
+    "id": 66,
+    "name": "Hematology",
+    "discipline_id": 20
+  },
+  {
+    "id": 67,
+    "name": "Management Science and Operations Research",
+    "discipline_id": 20
+  },
+  {
+    "id": 68,
+    "name": "Emergency Medicine",
+    "discipline_id": 20
+  },
+  {
+    "id": 69,
+    "name": "Organic Chemistry",
+    "discipline_id": 20
+  },
+  {
+    "id": 70,
+    "name": "Pharmaceutical Science",
+    "discipline_id": 20
+  },
+  {
+    "id": 71,
+    "name": "Immunology and Allergy",
+    "discipline_id": 21
+  },
+  {
+    "id": 72,
+    "name": "Catalysis",
+    "discipline_id": 21
+  },
+  {
+    "id": 73,
+    "name": "Cognitive Neuroscience",
+    "discipline_id": 22
+  },
+  {
+    "id": 74,
+    "name": "Finance",
+    "discipline_id": 22
+  },
+  {
+    "id": 75,
+    "name": "Computational Mechanics",
+    "discipline_id": 22
+  },
+  {
+    "id": 76,
+    "name": "Signal Processing",
+    "discipline_id": 22
+  },
+  {
+    "id": 77,
+    "name": "Management Information Systems",
+    "discipline_id": 22
+  },
+  {
+    "id": 78,
+    "name": "Clinical Biochemistry",
+    "discipline_id": 22
+  },
+  {
+    "id": 79,
+    "name": "Management, Monitoring, Policy and Law",
+    "discipline_id": 22
+  },
+  {
+    "id": 80,
+    "name": "Molecular Medicine",
+    "discipline_id": 22
+  },
+  {
+    "id": 81,
+    "name": "Ecology",
+    "discipline_id": 22
+  },
+  {
+    "id": 82,
+    "name": "Surfaces, Coatings and Films",
+    "discipline_id": 22
+  },
+  {
+    "id": 83,
+    "name": "Accounting",
+    "discipline_id": 22
+  },
+  {
+    "id": 84,
+    "name": "Otorhinolaryngology",
+    "discipline_id": 22
+  },
+  {
+    "id": 85,
+    "name": "Renewable Energy, Sustainability and the Environment",
+    "discipline_id": 22
+  },
+  {
+    "id": 86,
+    "name": "Linguistics and Language",
+    "discipline_id": 23
+  },
+  {
+    "id": 87,
+    "name": "Safety, Risk, Reliability and Quality",
+    "discipline_id": 23
+  },
+  {
+    "id": 88,
+    "name": "Sociology and Political Science",
+    "discipline_id": 23
+  },
+  {
+    "id": 89,
+    "name": "Mechanics of Materials",
+    "discipline_id": 23
+  },
+  {
+    "id": 90,
+    "name": "Periodontics",
+    "discipline_id": 23
+  },
+  {
+    "id": 91,
+    "name": "Atmospheric Science",
+    "discipline_id": 24
+  },
+  {
+    "id": 92,
+    "name": "Electrical and Electronic Engineering",
+    "discipline_id": 24
+  },
+  {
+    "id": 93,
+    "name": "Health Informatics",
+    "discipline_id": 24
+  },
+  {
+    "id": 94,
+    "name": "Industrial and Manufacturing Engineering",
+    "discipline_id": 24
+  },
+  {
+    "id": 95,
+    "name": "Biomedical Engineering",
+    "discipline_id": 24
+  },
+  {
+    "id": 96,
+    "name": "Applied Psychology",
+    "discipline_id": 24
+  },
+  {
+    "id": 97,
+    "name": "Pathology and Forensic Medicine",
+    "discipline_id": 24
+  },
+  {
+    "id": 98,
+    "name": "Media Technology",
+    "discipline_id": 24
+  },
+  {
+    "id": 99,
+    "name": "Insect Science",
+    "discipline_id": 24
+  },
+  {
+    "id": 100,
+    "name": "History",
+    "discipline_id": 24
+  },
+  {
+    "id": 101,
+    "name": "Ocean Engineering",
+    "discipline_id": 25
+  },
+  {
+    "id": 102,
+    "name": "Paleontology",
+    "discipline_id": 25
+  },
+  {
+    "id": 103,
+    "name": "Atomic and Molecular Physics, and Optics",
+    "discipline_id": 25
+  },
+  {
+    "id": 104,
+    "name": "Condensed Matter Physics",
+    "discipline_id": 25
+  },
+  {
+    "id": 105,
+    "name": "Radiological and Ultrasound Technology",
+    "discipline_id": 25
+  },
+  {
+    "id": 106,
+    "name": "Statistical and Nonlinear Physics",
+    "discipline_id": 25
+  },
+  {
+    "id": 107,
+    "name": "Plant Science",
+    "discipline_id": 25
+  },
+  {
+    "id": 108,
+    "name": "Water Science and Technology",
+    "discipline_id": 25
+  },
+  {
+    "id": 109,
+    "name": "Geochemistry and Petrology",
+    "discipline_id": 25
+  },
+  {
+    "id": 110,
+    "name": "Electronic, Optical and Magnetic Materials",
+    "discipline_id": 25
+  },
+  {
+    "id": 111,
+    "name": "Ecology, Evolution, Behavior and Systematics",
+    "discipline_id": 25
+  },
+  {
+    "id": 112,
+    "name": "Spectroscopy",
+    "discipline_id": 25
+  },
+  {
+    "id": 113,
+    "name": "Developmental and Educational Psychology",
+    "discipline_id": 25
+  },
+  {
+    "id": 114,
+    "name": "Radiology, Nuclear Medicine and Imaging",
+    "discipline_id": 25
+  },
+  {
+    "id": 115,
+    "name": "Food Science",
+    "discipline_id": 25
+  },
+  {
+    "id": 116,
+    "name": "Biochemistry",
+    "discipline_id": 25
+  },
+  {
+    "id": 117,
+    "name": "Marketing",
+    "discipline_id": 25
+  },
+  {
+    "id": 118,
+    "name": "Software",
+    "discipline_id": 25
+  },
+  {
+    "id": 119,
+    "name": "Building and Construction",
+    "discipline_id": 25
+  },
+  {
+    "id": 120,
+    "name": "Literature and Literary Theory",
+    "discipline_id": 25
+  },
+  {
+    "id": 121,
+    "name": "Aquatic Science",
+    "discipline_id": 25
+  },
+  {
+    "id": 122,
+    "name": "Computer Science Applications",
+    "discipline_id": 25
+  },
+  {
+    "id": 123,
+    "name": "Communication",
+    "discipline_id": 25
+  },
+  {
+    "id": 124,
+    "name": "Orthopedics and Sports Medicine",
+    "discipline_id": 25
+  },
+  {
+    "id": 125,
+    "name": "Energy Engineering and Power Technology",
+    "discipline_id": 25
+  },
+  {
+    "id": 126,
+    "name": "Biotechnology",
+    "discipline_id": 25
+  },
+  {
+    "id": 127,
+    "name": "Museology",
+    "discipline_id": 25
+  },
+  {
+    "id": 128,
+    "name": "Complementary and alternative medicine",
+    "discipline_id": 25
+  },
+  {
+    "id": 129,
+    "name": "Nutrition and Dietetics",
+    "discipline_id": 25
+  },
+  {
+    "id": 130,
+    "name": "Rehabilitation",
+    "discipline_id": 26
+  },
+  {
+    "id": 131,
+    "name": "Hepatology",
+    "discipline_id": 26
+  }
+]

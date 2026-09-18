@@ -1,0 +1,2739 @@
+[
+  {
+    "id": 147,
+    "name": "Nucleic Acids Research",
+    "type": "journal",
+    "issn": "0305-1048",
+    "publisher_id": -1
+  },
+  {
+    "id": 319,
+    "name": "Bioinformatics",
+    "type": "journal",
+    "issn": "1367-4803",
+    "publisher_id": -1
+  },
+  {
+    "id": 382,
+    "name": "Nature",
+    "type": "journal",
+    "issn": "0028-0836",
+    "publisher_id": -1
+  },
+  {
+    "id": 114,
+    "name": "BMJ",
+    "type": "journal",
+    "issn": "1756-1833",
+    "publisher_id": -1
+  },
+  {
+    "id": 121,
+    "name": "Physical Review Letters",
+    "type": "journal",
+    "issn": "0031-9007",
+    "publisher_id": -1
+  },
+  {
+    "id": 384,
+    "name": "The Lancet",
+    "type": "journal",
+    "issn": "0099-5355",
+    "publisher_id": -1
+  },
+  {
+    "id": 6,
+    "name": "Hydrology and earth system sciences",
+    "type": "journal",
+    "issn": "1027-5606",
+    "publisher_id": -1
+  },
+  {
+    "id": 33,
+    "name": "Future Generation Computer Systems",
+    "type": "journal",
+    "issn": "0167-739X",
+    "publisher_id": -1
+  },
+  {
+    "id": 8,
+    "name": "Journal of Extracellular Vesicles",
+    "type": "journal",
+    "issn": "2001-3078",
+    "publisher_id": -1
+  },
+  {
+    "id": 190,
+    "name": "Alzheimer s & Dementia",
+    "type": "journal",
+    "issn": "1552-5260",
+    "publisher_id": -1
+  },
+  {
+    "id": 37,
+    "name": "Physics Letters B",
+    "type": "journal",
+    "issn": "0370-2693",
+    "publisher_id": -1
+  },
+  {
+    "id": 152,
+    "name": "The American Journal of Human Genetics",
+    "type": "journal",
+    "issn": "0002-9297",
+    "publisher_id": -1
+  },
+  {
+    "id": 190,
+    "name": "Ecography",
+    "type": "journal",
+    "issn": "0906-7590",
+    "publisher_id": -1
+  },
+  {
+    "id": 47,
+    "name": "PLoS Computational Biology",
+    "type": "journal",
+    "issn": "1553-734X",
+    "publisher_id": -1
+  },
+  {
+    "id": 94,
+    "name": "Composites Part B Engineering",
+    "type": "journal",
+    "issn": "1359-8368",
+    "publisher_id": -1
+  },
+  {
+    "id": 275,
+    "name": "New England Journal of Medicine",
+    "type": "journal",
+    "issn": "0028-4793",
+    "publisher_id": -1
+  },
+  {
+    "id": 16,
+    "name": "Genetics",
+    "type": "journal",
+    "issn": "0016-6731",
+    "publisher_id": -1
+  },
+  {
+    "id": 130,
+    "name": "Cell",
+    "type": "journal",
+    "issn": "0092-8674",
+    "publisher_id": -1
+  },
+  {
+    "id": 64,
+    "name": "BMJ",
+    "type": "journal",
+    "issn": "0007-1447",
+    "publisher_id": -1
+  },
+  {
+    "id": 19,
+    "name": "Annual Review of Ecology Evolution and Systematics",
+    "type": "journal",
+    "issn": "1543-592X",
+    "publisher_id": -1
+  },
+  {
+    "id": 125,
+    "name": "Genome biology",
+    "type": "journal",
+    "issn": "1465-6906",
+    "publisher_id": -1
+  },
+  {
+    "id": 21,
+    "name": "Diversity and Distributions",
+    "type": "journal",
+    "issn": "0967-9952",
+    "publisher_id": -1
+  },
+  {
+    "id": 22,
+    "name": "Cell Death and Differentiation",
+    "type": "journal",
+    "issn": "1350-9047",
+    "publisher_id": -1
+  },
+  {
+    "id": 224,
+    "name": "Journal of Petrology",
+    "type": "journal",
+    "issn": "0022-3530",
+    "publisher_id": -1
+  },
+  {
+    "id": 24,
+    "name": "Journal of Animal Ecology",
+    "type": "journal",
+    "issn": "0021-8790",
+    "publisher_id": -1
+  },
+  {
+    "id": 382,
+    "name": "Science",
+    "type": "journal",
+    "issn": "0036-8075",
+    "publisher_id": -1
+  },
+  {
+    "id": 26,
+    "name": "Immunity",
+    "type": "journal",
+    "issn": "1074-7613",
+    "publisher_id": -1
+  },
+  {
+    "id": 36,
+    "name": "Progress of Theoretical and Experimental Physics",
+    "type": "journal",
+    "issn": "2050-3911",
+    "publisher_id": -1
+  },
+  {
+    "id": 291,
+    "name": "JAMA Oncology",
+    "type": "journal",
+    "issn": "2374-2437",
+    "publisher_id": -1
+  },
+  {
+    "id": 29,
+    "name": "The Lancet Infectious Diseases",
+    "type": "journal",
+    "issn": "1473-3099",
+    "publisher_id": -1
+  },
+  {
+    "id": 259,
+    "name": "Autophagy",
+    "type": "journal",
+    "issn": "1554-8627",
+    "publisher_id": -1
+  },
+  {
+    "id": 31,
+    "name": "Physical review. D. Particles, fields, gravitation, and cosmology/Physical review. D. Particles and fields",
+    "type": "journal",
+    "issn": "0556-2821",
+    "publisher_id": -1
+  },
+  {
+    "id": 32,
+    "name": "Gene",
+    "type": "journal",
+    "issn": "0378-1119",
+    "publisher_id": -1
+  },
+  {
+    "id": 33,
+    "name": "Bulletin of the American Meteorological Society",
+    "type": "journal",
+    "issn": "0003-0007",
+    "publisher_id": -1
+  },
+  {
+    "id": 101,
+    "name": "Cochrane Database of Systematic Reviews",
+    "type": "journal",
+    "issn": "1361-6137",
+    "publisher_id": -1
+  },
+  {
+    "id": 35,
+    "name": "Journal of Neuroscience",
+    "type": "journal",
+    "issn": "0270-6474",
+    "publisher_id": -1
+  },
+  {
+    "id": 188,
+    "name": "Pain",
+    "type": "journal",
+    "issn": "0304-3959",
+    "publisher_id": -1
+  },
+  {
+    "id": 43,
+    "name": "Epilepsia",
+    "type": "journal",
+    "issn": "0013-9580",
+    "publisher_id": -1
+  },
+  {
+    "id": 86,
+    "name": "Diabetes Care",
+    "type": "journal",
+    "issn": "0149-5992",
+    "publisher_id": -1
+  },
+  {
+    "id": 39,
+    "name": "Software Practice and Experience",
+    "type": "journal",
+    "issn": "0038-0644",
+    "publisher_id": -1
+  },
+  {
+    "id": 298,
+    "name": "Nature Genetics",
+    "type": "journal",
+    "issn": "1061-4036",
+    "publisher_id": -1
+  },
+  {
+    "id": 189,
+    "name": "Journal of Materials Science",
+    "type": "journal",
+    "issn": "0022-2461",
+    "publisher_id": -1
+  },
+  {
+    "id": 42,
+    "name": "Journal of Analytical Atomic Spectrometry",
+    "type": "journal",
+    "issn": "0267-9477",
+    "publisher_id": -1
+  },
+  {
+    "id": 43,
+    "name": "Energy & Environmental Science",
+    "type": "journal",
+    "issn": "1754-5692",
+    "publisher_id": -1
+  },
+  {
+    "id": 86,
+    "name": "Angewandte Chemie International Edition",
+    "type": "journal",
+    "issn": "1433-7851",
+    "publisher_id": -1
+  },
+  {
+    "id": 45,
+    "name": "Journal of Instrumentation",
+    "type": "journal",
+    "issn": "1748-0221",
+    "publisher_id": -1
+  },
+  {
+    "id": 378,
+    "name": "Nature Medicine",
+    "type": "journal",
+    "issn": "1078-8956",
+    "publisher_id": -1
+  },
+  {
+    "id": 183,
+    "name": "Critical Care Medicine",
+    "type": "journal",
+    "issn": "0090-3493",
+    "publisher_id": -1
+  },
+  {
+    "id": 84,
+    "name": "Journal of the American College of Cardiology",
+    "type": "journal",
+    "issn": "0735-1097",
+    "publisher_id": -1
+  },
+  {
+    "id": 49,
+    "name": "Climatic Change",
+    "type": "journal",
+    "issn": "0165-0009",
+    "publisher_id": -1
+  },
+  {
+    "id": 50,
+    "name": "Psychological Methods",
+    "type": "journal",
+    "issn": "1082-989X",
+    "publisher_id": -1
+  },
+  {
+    "id": 339,
+    "name": "The Lancet Psychiatry",
+    "type": "journal",
+    "issn": "2215-0366",
+    "publisher_id": -1
+  },
+  {
+    "id": 179,
+    "name": "Nature Reviews Drug Discovery",
+    "type": "journal",
+    "issn": "1474-1776",
+    "publisher_id": -1
+  },
+  {
+    "id": 53,
+    "name": "Langmuir",
+    "type": "journal",
+    "issn": "0743-7463",
+    "publisher_id": -1
+  },
+  {
+    "id": 54,
+    "name": "Osteoarthritis and Cartilage",
+    "type": "journal",
+    "issn": "1063-4584",
+    "publisher_id": -1
+  },
+  {
+    "id": 55,
+    "name": "Physical Review X",
+    "type": "journal",
+    "issn": "2160-3308",
+    "publisher_id": -1
+  },
+  {
+    "id": 56,
+    "name": "International Journal for Quality in Health Care",
+    "type": "journal",
+    "issn": "1353-4505",
+    "publisher_id": -1
+  },
+  {
+    "id": 205,
+    "name": "Nature Methods",
+    "type": "journal",
+    "issn": "1548-7091",
+    "publisher_id": -1
+  },
+  {
+    "id": 58,
+    "name": "CA A Cancer Journal for Clinicians",
+    "type": "journal",
+    "issn": "0007-9235",
+    "publisher_id": -1
+  },
+  {
+    "id": 59,
+    "name": "Addiction",
+    "type": "journal",
+    "issn": "0965-2140",
+    "publisher_id": -1
+  },
+  {
+    "id": 60,
+    "name": "British Journal of Sports Medicine",
+    "type": "journal",
+    "issn": "0306-3674",
+    "publisher_id": -1
+  },
+  {
+    "id": 246,
+    "name": "Astronomy and Astrophysics",
+    "type": "journal",
+    "issn": "0004-6361",
+    "publisher_id": -1
+  },
+  {
+    "id": 98,
+    "name": "Diabetes Research and Clinical Practice",
+    "type": "journal",
+    "issn": "0168-8227",
+    "publisher_id": -1
+  },
+  {
+    "id": 63,
+    "name": "Gender & Society",
+    "type": "journal",
+    "issn": "0891-2432",
+    "publisher_id": -1
+  },
+  {
+    "id": 64,
+    "name": "Organization Studies",
+    "type": "journal",
+    "issn": "0170-8406",
+    "publisher_id": -1
+  },
+  {
+    "id": 65,
+    "name": "Journal of Symbolic Computation",
+    "type": "journal",
+    "issn": "0747-7171",
+    "publisher_id": -1
+  },
+  {
+    "id": 66,
+    "name": "Journal of the Royal Statistical Society Series D (The Statistician)",
+    "type": "journal",
+    "issn": "0039-0526",
+    "publisher_id": -1
+  },
+  {
+    "id": 105,
+    "name": "Intensive Care Medicine",
+    "type": "journal",
+    "issn": "0342-4642",
+    "publisher_id": -1
+  },
+  {
+    "id": 68,
+    "name": "Circulation",
+    "type": "journal",
+    "issn": "0009-7322",
+    "publisher_id": -1
+  },
+  {
+    "id": 325,
+    "name": "PLoS Biology",
+    "type": "journal",
+    "issn": "1544-9173",
+    "publisher_id": -1
+  },
+  {
+    "id": 206,
+    "name": "Molecular Biology and Evolution",
+    "type": "journal",
+    "issn": "0737-4038",
+    "publisher_id": -1
+  },
+  {
+    "id": 71,
+    "name": "Astrophysics and Space Science",
+    "type": "journal",
+    "issn": "0004-640X",
+    "publisher_id": -1
+  },
+  {
+    "id": 86,
+    "name": "The Lancet Neurology",
+    "type": "journal",
+    "issn": "1474-4422",
+    "publisher_id": -1
+  },
+  {
+    "id": 281,
+    "name": "The Astrophysical Journal Supplement Series",
+    "type": "journal",
+    "issn": "0067-0049",
+    "publisher_id": -1
+  },
+  {
+    "id": 74,
+    "name": "Nature Reviews Gastroenterology & Hepatology",
+    "type": "journal",
+    "issn": "1759-5045",
+    "publisher_id": -1
+  },
+  {
+    "id": 75,
+    "name": "Health Promotion International",
+    "type": "journal",
+    "issn": "0957-4824",
+    "publisher_id": -1
+  },
+  {
+    "id": 76,
+    "name": "Biochemie und Physiologie der Pflanzen",
+    "type": "journal",
+    "issn": "0015-3796",
+    "publisher_id": -1
+  },
+  {
+    "id": 325,
+    "name": "Proceedings of the National Academy of Sciences",
+    "type": "journal",
+    "issn": "0027-8424",
+    "publisher_id": -1
+  },
+  {
+    "id": 78,
+    "name": "Nature Reviews Disease Primers",
+    "type": "journal",
+    "issn": "2056-676X",
+    "publisher_id": -1
+  },
+  {
+    "id": 79,
+    "name": "Physical Therapy",
+    "type": "journal",
+    "issn": "0031-9023",
+    "publisher_id": -1
+  },
+  {
+    "id": 80,
+    "name": "Environmental Science & Technology",
+    "type": "journal",
+    "issn": "0013-936X",
+    "publisher_id": -1
+  },
+  {
+    "id": 320,
+    "name": "Medicine & Science in Sports & Exercise",
+    "type": "journal",
+    "issn": "0195-9131",
+    "publisher_id": -1
+  },
+  {
+    "id": 82,
+    "name": "Journal of Oral & Facial Pain and Headache",
+    "type": "journal",
+    "issn": "2333-0376",
+    "publisher_id": -1
+  },
+  {
+    "id": 83,
+    "name": "Journal of Hepatology",
+    "type": "journal",
+    "issn": "0168-8278",
+    "publisher_id": -1
+  },
+  {
+    "id": 84,
+    "name": "IEEE Robotics & Automation Magazine",
+    "type": "journal",
+    "issn": "1070-9932",
+    "publisher_id": -1
+  },
+  {
+    "id": 85,
+    "name": "Earth-Science Reviews",
+    "type": "journal",
+    "issn": "0012-8252",
+    "publisher_id": -1
+  },
+  {
+    "id": 314,
+    "name": "Higher Education",
+    "type": "journal",
+    "issn": "0018-1560",
+    "publisher_id": -1
+  },
+  {
+    "id": 356,
+    "name": "Annals of Oncology",
+    "type": "journal",
+    "issn": "0923-7534",
+    "publisher_id": -1
+  },
+  {
+    "id": 88,
+    "name": "European Respiratory Journal",
+    "type": "journal",
+    "issn": "0903-1936",
+    "publisher_id": -1
+  },
+  {
+    "id": 89,
+    "name": "International Journal of Computer Vision",
+    "type": "journal",
+    "issn": "0920-5691",
+    "publisher_id": -1
+  },
+  {
+    "id": 90,
+    "name": "BMC Medical Research Methodology",
+    "type": "journal",
+    "issn": "1471-2288",
+    "publisher_id": -1
+  },
+  {
+    "id": 91,
+    "name": "Geoderma",
+    "type": "journal",
+    "issn": "0016-7061",
+    "publisher_id": -1
+  },
+  {
+    "id": 146,
+    "name": "Annals of the Rheumatic Diseases",
+    "type": "journal",
+    "issn": "0003-4967",
+    "publisher_id": -1
+  },
+  {
+    "id": 93,
+    "name": "Experimental Physiology",
+    "type": "journal",
+    "issn": "0958-0670",
+    "publisher_id": -1
+  },
+  {
+    "id": 261,
+    "name": "Biological Conservation",
+    "type": "journal",
+    "issn": "0006-3207",
+    "publisher_id": -1
+  },
+  {
+    "id": 327,
+    "name": "JAMA",
+    "type": "journal",
+    "issn": "0002-9955",
+    "publisher_id": -1
+  },
+  {
+    "id": 126,
+    "name": "Systematic Reviews",
+    "type": "journal",
+    "issn": "2046-4053",
+    "publisher_id": -1
+  },
+  {
+    "id": 97,
+    "name": "International Journal of Surgery",
+    "type": "journal",
+    "issn": "1743-9159",
+    "publisher_id": -1
+  },
+  {
+    "id": 376,
+    "name": "IEEE Transactions on Neural Networks and Learning Systems",
+    "type": "journal",
+    "issn": "2162-237X",
+    "publisher_id": -1
+  },
+  {
+    "id": 99,
+    "name": "International Journal of Evidence-Based Healthcare",
+    "type": "journal",
+    "issn": "1744-1595",
+    "publisher_id": -1
+  },
+  {
+    "id": 122,
+    "name": "Physical review. D/Physical review. D.",
+    "type": "journal",
+    "issn": "2470-0010",
+    "publisher_id": -1
+  },
+  {
+    "id": 101,
+    "name": "Nature reviews. Immunology",
+    "type": "journal",
+    "issn": "1474-1733",
+    "publisher_id": -1
+  },
+  {
+    "id": 102,
+    "name": "Blood",
+    "type": "journal",
+    "issn": "0006-4971",
+    "publisher_id": -1
+  },
+  {
+    "id": 103,
+    "name": "International Journal of Forecasting",
+    "type": "journal",
+    "issn": "0169-2070",
+    "publisher_id": -1
+  },
+  {
+    "id": 104,
+    "name": "Computer Physics Communications",
+    "type": "journal",
+    "issn": "0010-4655",
+    "publisher_id": -1
+  },
+  {
+    "id": 105,
+    "name": "American Journal of Psychiatry",
+    "type": "journal",
+    "issn": "0002-953X",
+    "publisher_id": -1
+  },
+  {
+    "id": 117,
+    "name": "Implementation Science",
+    "type": "journal",
+    "issn": "1748-5908",
+    "publisher_id": -1
+  },
+  {
+    "id": 166,
+    "name": "PLoS Medicine",
+    "type": "journal",
+    "issn": "1549-1277",
+    "publisher_id": -1
+  },
+  {
+    "id": 108,
+    "name": "Coordination Chemistry Reviews",
+    "type": "journal",
+    "issn": "0010-8545",
+    "publisher_id": -1
+  },
+  {
+    "id": 109,
+    "name": "Pharmaceutics",
+    "type": "journal",
+    "issn": "1999-4923",
+    "publisher_id": -1
+  },
+  {
+    "id": 110,
+    "name": "Allergy",
+    "type": "journal",
+    "issn": "0105-4538",
+    "publisher_id": -1
+  },
+  {
+    "id": 391,
+    "name": "Nature Materials",
+    "type": "journal",
+    "issn": "1476-1122",
+    "publisher_id": -1
+  },
+  {
+    "id": 271,
+    "name": "Psychological Review",
+    "type": "journal",
+    "issn": "0033-295X",
+    "publisher_id": -1
+  },
+  {
+    "id": 113,
+    "name": "Journal of Geophysical Research Atmospheres",
+    "type": "journal",
+    "issn": "0148-0227",
+    "publisher_id": -1
+  },
+  {
+    "id": 128,
+    "name": "Journal of Clinical Epidemiology",
+    "type": "journal",
+    "issn": "0895-4356",
+    "publisher_id": -1
+  },
+  {
+    "id": 115,
+    "name": "Theoretical Population Biology",
+    "type": "journal",
+    "issn": "0040-5809",
+    "publisher_id": -1
+  },
+  {
+    "id": 116,
+    "name": "Journal of Leukocyte Biology",
+    "type": "journal",
+    "issn": "0741-5400",
+    "publisher_id": -1
+  },
+  {
+    "id": 117,
+    "name": "European Heart Journal",
+    "type": "journal",
+    "issn": "0195-668X",
+    "publisher_id": -1
+  },
+  {
+    "id": 118,
+    "name": "International Journal for Equity in Health",
+    "type": "journal",
+    "issn": "1475-9276",
+    "publisher_id": -1
+  },
+  {
+    "id": 119,
+    "name": "The Astrophysical Journal Letters",
+    "type": "journal",
+    "issn": "2041-8205",
+    "publisher_id": -1
+  },
+  {
+    "id": 120,
+    "name": "Nature Reviews Nephrology",
+    "type": "journal",
+    "issn": "1745-8323",
+    "publisher_id": -1
+  },
+  {
+    "id": 121,
+    "name": "Classical and Quantum Gravity",
+    "type": "journal",
+    "issn": "0264-9381",
+    "publisher_id": -1
+  },
+  {
+    "id": 122,
+    "name": "Campbell Systematic Reviews",
+    "type": "journal",
+    "issn": "1891-1803",
+    "publisher_id": -1
+  },
+  {
+    "id": 123,
+    "name": "Journal of Computational Physics",
+    "type": "journal",
+    "issn": "0021-9991",
+    "publisher_id": -1
+  },
+  {
+    "id": 124,
+    "name": "Journal of neurosurgery",
+    "type": "journal",
+    "issn": "0022-3085",
+    "publisher_id": -1
+  },
+  {
+    "id": 125,
+    "name": "Data Mining and Knowledge Discovery",
+    "type": "journal",
+    "issn": "1384-5810",
+    "publisher_id": -1
+  },
+  {
+    "id": 161,
+    "name": "Accounting Organizations and Society",
+    "type": "journal",
+    "issn": "0361-3682",
+    "publisher_id": -1
+  },
+  {
+    "id": 127,
+    "name": "Arthritis & Rheumatism",
+    "type": "journal",
+    "issn": "0004-3591",
+    "publisher_id": -1
+  },
+  {
+    "id": 152,
+    "name": "Clinical Infectious Diseases",
+    "type": "journal",
+    "issn": "1058-4838",
+    "publisher_id": -1
+  },
+  {
+    "id": 129,
+    "name": "Clinical Nutrition",
+    "type": "journal",
+    "issn": "0261-5614",
+    "publisher_id": -1
+  },
+  {
+    "id": 130,
+    "name": "Journal of the North American Benthological Society",
+    "type": "journal",
+    "issn": "0887-3593",
+    "publisher_id": -1
+  },
+  {
+    "id": 367,
+    "name": "Physiological Reviews",
+    "type": "journal",
+    "issn": "0031-9333",
+    "publisher_id": -1
+  },
+  {
+    "id": 132,
+    "name": "European Urology",
+    "type": "journal",
+    "issn": "0302-2838",
+    "publisher_id": -1
+  },
+  {
+    "id": 268,
+    "name": "Ecology Letters",
+    "type": "journal",
+    "issn": "1461-023X",
+    "publisher_id": -1
+  },
+  {
+    "id": 134,
+    "name": "Clinical Neurophysiology",
+    "type": "journal",
+    "issn": "1388-2457",
+    "publisher_id": -1
+  },
+  {
+    "id": 135,
+    "name": "MMWR Morbidity and Mortality Weekly Report",
+    "type": "journal",
+    "issn": "0149-2195",
+    "publisher_id": -1
+  },
+  {
+    "id": 136,
+    "name": "International Journal of Climatology",
+    "type": "journal",
+    "issn": "0899-8418",
+    "publisher_id": -1
+  },
+  {
+    "id": 137,
+    "name": "Clinical Microbiology and Infection",
+    "type": "journal",
+    "issn": "1198-743X",
+    "publisher_id": -1
+  },
+  {
+    "id": 138,
+    "name": "Applied and Environmental Microbiology",
+    "type": "journal",
+    "issn": "0099-2240",
+    "publisher_id": -1
+  },
+  {
+    "id": 139,
+    "name": "eLife",
+    "type": "journal",
+    "issn": "2050-084X",
+    "publisher_id": -1
+  },
+  {
+    "id": 140,
+    "name": "Wiley series in probability and statistics",
+    "type": "book series",
+    "issn": "1940-6347",
+    "publisher_id": -1
+  },
+  {
+    "id": 141,
+    "name": "Pattern Recognition",
+    "type": "journal",
+    "issn": "0031-3203",
+    "publisher_id": -1
+  },
+  {
+    "id": 142,
+    "name": "International review of cytology",
+    "type": "book series",
+    "issn": "0074-7696",
+    "publisher_id": -1
+  },
+  {
+    "id": 143,
+    "name": "INTERNATIONAL JOURNAL OF SYSTEMATIC AND EVOLUTIONARY MICROBIOLOGY",
+    "type": "journal",
+    "issn": "1466-5026",
+    "publisher_id": -1
+  },
+  {
+    "id": 144,
+    "name": "Applied Surface Science",
+    "type": "journal",
+    "issn": "0169-4332",
+    "publisher_id": -1
+  },
+  {
+    "id": 227,
+    "name": "Nature Reviews Genetics",
+    "type": "journal",
+    "issn": "1471-0056",
+    "publisher_id": -1
+  },
+  {
+    "id": 146,
+    "name": "Journal of Financial Economics",
+    "type": "journal",
+    "issn": "0304-405X",
+    "publisher_id": -1
+  },
+  {
+    "id": 147,
+    "name": "Knowledge and Information Systems",
+    "type": "journal",
+    "issn": "0219-1377",
+    "publisher_id": -1
+  },
+  {
+    "id": 148,
+    "name": "Rhinology Journal",
+    "type": "journal",
+    "issn": "0300-0729",
+    "publisher_id": -1
+  },
+  {
+    "id": 201,
+    "name": "Nature Human Behaviour",
+    "type": "journal",
+    "issn": "2397-3374",
+    "publisher_id": -1
+  },
+  {
+    "id": 150,
+    "name": "American Journal of Epidemiology",
+    "type": "journal",
+    "issn": "0002-9262",
+    "publisher_id": -1
+  },
+  {
+    "id": 151,
+    "name": "Instructional Science",
+    "type": "journal",
+    "issn": "0020-4277",
+    "publisher_id": -1
+  },
+  {
+    "id": 214,
+    "name": "Nature Biotechnology",
+    "type": "journal",
+    "issn": "0733-222X",
+    "publisher_id": -1
+  },
+  {
+    "id": 238,
+    "name": "Reviews of Modern Physics",
+    "type": "journal",
+    "issn": "0034-6861",
+    "publisher_id": -1
+  },
+  {
+    "id": 154,
+    "name": "Frontiers in Ecology and the Environment",
+    "type": "journal",
+    "issn": "1540-9295",
+    "publisher_id": -1
+  },
+  {
+    "id": 185,
+    "name": "Academy of Management Review",
+    "type": "journal",
+    "issn": "0363-7425",
+    "publisher_id": -1
+  },
+  {
+    "id": 156,
+    "name": "BMC Genomics",
+    "type": "journal",
+    "issn": "1471-2164",
+    "publisher_id": -1
+  },
+  {
+    "id": 318,
+    "name": "Trends in Ecology & Evolution",
+    "type": "journal",
+    "issn": "0169-5347",
+    "publisher_id": -1
+  },
+  {
+    "id": 158,
+    "name": "International Journal of Rock Mechanics and Mining Sciences",
+    "type": "journal",
+    "issn": "1365-1609",
+    "publisher_id": -1
+  },
+  {
+    "id": 159,
+    "name": "Clinical Microbiology Reviews",
+    "type": "journal",
+    "issn": "0893-8512",
+    "publisher_id": -1
+  },
+  {
+    "id": 301,
+    "name": "Decision Support Systems",
+    "type": "journal",
+    "issn": "0167-9236",
+    "publisher_id": -1
+  },
+  {
+    "id": 161,
+    "name": "Cerebral Cortex",
+    "type": "journal",
+    "issn": "1047-3211",
+    "publisher_id": -1
+  },
+  {
+    "id": 162,
+    "name": "Journal of Periodontology",
+    "type": "journal",
+    "issn": "0022-3492",
+    "publisher_id": -1
+  },
+  {
+    "id": 391,
+    "name": "Global Ecology and Biogeography",
+    "type": "journal",
+    "issn": "1466-822X",
+    "publisher_id": -1
+  },
+  {
+    "id": 271,
+    "name": "The Astrophysical Journal",
+    "type": "journal",
+    "issn": "0004-637X",
+    "publisher_id": -1
+  },
+  {
+    "id": 257,
+    "name": "Behaviour Research and Therapy",
+    "type": "journal",
+    "issn": "0005-7967",
+    "publisher_id": -1
+  },
+  {
+    "id": 166,
+    "name": "NeuroImage",
+    "type": "journal",
+    "issn": "1053-8119",
+    "publisher_id": -1
+  },
+  {
+    "id": 219,
+    "name": "Radiocarbon",
+    "type": "journal",
+    "issn": "0033-8222",
+    "publisher_id": -1
+  },
+  {
+    "id": 168,
+    "name": "Cognitive Science",
+    "type": "journal",
+    "issn": "0364-0213",
+    "publisher_id": -1
+  },
+  {
+    "id": 376,
+    "name": "Nature Photonics",
+    "type": "journal",
+    "issn": "1749-4885",
+    "publisher_id": -1
+  },
+  {
+    "id": 170,
+    "name": "Journal of Thrombosis and Haemostasis",
+    "type": "journal",
+    "issn": "1538-7836",
+    "publisher_id": -1
+  },
+  {
+    "id": 376,
+    "name": "Chemical Reviews",
+    "type": "journal",
+    "issn": "0009-2665",
+    "publisher_id": -1
+  },
+  {
+    "id": 197,
+    "name": "Educational Psychologist",
+    "type": "journal",
+    "issn": "0046-1520",
+    "publisher_id": -1
+  },
+  {
+    "id": 173,
+    "name": "Nature Reviews Microbiology",
+    "type": "journal",
+    "issn": "1740-1526",
+    "publisher_id": -1
+  },
+  {
+    "id": 174,
+    "name": "British Journal of Clinical Psychology",
+    "type": "journal",
+    "issn": "0144-6657",
+    "publisher_id": -1
+  },
+  {
+    "id": 175,
+    "name": "Educational Psychology Review",
+    "type": "journal",
+    "issn": "1040-726X",
+    "publisher_id": -1
+  },
+  {
+    "id": 176,
+    "name": "Ophthalmology",
+    "type": "journal",
+    "issn": "0161-6420",
+    "publisher_id": -1
+  },
+  {
+    "id": 177,
+    "name": "Journal of the American Ceramic Society",
+    "type": "journal",
+    "issn": "0002-7820",
+    "publisher_id": -1
+  },
+  {
+    "id": 178,
+    "name": "Brain",
+    "type": "journal",
+    "issn": "0006-8950",
+    "publisher_id": -1
+  },
+  {
+    "id": 179,
+    "name": "Annals of Internal Medicine",
+    "type": "journal",
+    "issn": "0003-4819",
+    "publisher_id": -1
+  },
+  {
+    "id": 180,
+    "name": "Journal of Neuroscience Methods",
+    "type": "journal",
+    "issn": "0165-0270",
+    "publisher_id": -1
+  },
+  {
+    "id": 181,
+    "name": "International Journal of Information Management",
+    "type": "journal",
+    "issn": "0268-4012",
+    "publisher_id": -1
+  },
+  {
+    "id": 335,
+    "name": "IEEE Transactions on Industrial Informatics",
+    "type": "journal",
+    "issn": "1551-3203",
+    "publisher_id": -1
+  },
+  {
+    "id": 183,
+    "name": "British Journal of Medical Psychology",
+    "type": "journal",
+    "issn": "0007-1129",
+    "publisher_id": -1
+  },
+  {
+    "id": 184,
+    "name": "Learning and Instruction",
+    "type": "journal",
+    "issn": "0959-4752",
+    "publisher_id": -1
+  },
+  {
+    "id": 271,
+    "name": "Australian Journal of Management",
+    "type": "journal",
+    "issn": "0312-8962",
+    "publisher_id": -1
+  },
+  {
+    "id": 190,
+    "name": "The Lancet Global Health",
+    "type": "journal",
+    "issn": "2214-109X",
+    "publisher_id": -1
+  },
+  {
+    "id": 187,
+    "name": "Journal of the Academy of Marketing Science",
+    "type": "journal",
+    "issn": "0092-0703",
+    "publisher_id": -1
+  },
+  {
+    "id": 188,
+    "name": "The Ocular Surface",
+    "type": "journal",
+    "issn": "1542-0124",
+    "publisher_id": -1
+  },
+  {
+    "id": 281,
+    "name": "Psychological Bulletin",
+    "type": "journal",
+    "issn": "0033-2909",
+    "publisher_id": -1
+  },
+  {
+    "id": 190,
+    "name": "Journal of the Engineering Mechanics Division",
+    "type": "journal",
+    "issn": "0044-7951",
+    "publisher_id": -1
+  },
+  {
+    "id": 191,
+    "name": "Neurourology and Urodynamics",
+    "type": "journal",
+    "issn": "0733-2467",
+    "publisher_id": -1
+  },
+  {
+    "id": 192,
+    "name": "Movement Disorders",
+    "type": "journal",
+    "issn": "0885-3185",
+    "publisher_id": -1
+  },
+  {
+    "id": 193,
+    "name": "Journal of Clinical Oncology",
+    "type": "journal",
+    "issn": "0732-183X",
+    "publisher_id": -1
+  },
+  {
+    "id": 194,
+    "name": "Biometrics",
+    "type": "journal",
+    "issn": "0006-341X",
+    "publisher_id": -1
+  },
+  {
+    "id": 195,
+    "name": "IEEE Transactions on Geoscience and Remote Sensing",
+    "type": "journal",
+    "issn": "0196-2892",
+    "publisher_id": -1
+  },
+  {
+    "id": 196,
+    "name": "Gut",
+    "type": "journal",
+    "issn": "0017-5749",
+    "publisher_id": -1
+  },
+  {
+    "id": 197,
+    "name": "International Journal of Epidemiology",
+    "type": "journal",
+    "issn": "0300-5771",
+    "publisher_id": -1
+  },
+  {
+    "id": 198,
+    "name": "Strategic Management Journal",
+    "type": "journal",
+    "issn": "0143-2095",
+    "publisher_id": -1
+  },
+  {
+    "id": 199,
+    "name": "Cognition and Instruction",
+    "type": "journal",
+    "issn": "0737-0008",
+    "publisher_id": -1
+  },
+  {
+    "id": 200,
+    "name": "International Journal for Numerical Methods in Fluids",
+    "type": "journal",
+    "issn": "0271-2091",
+    "publisher_id": -1
+  },
+  {
+    "id": 201,
+    "name": "Journal of The Royal Society Interface",
+    "type": "journal",
+    "issn": "1742-5662",
+    "publisher_id": -1
+  },
+  {
+    "id": 202,
+    "name": "IEEE Transactions on Software Engineering",
+    "type": "journal",
+    "issn": "0098-5589",
+    "publisher_id": -1
+  },
+  {
+    "id": 203,
+    "name": "Pacific Affairs",
+    "type": "journal",
+    "issn": "0030-851X",
+    "publisher_id": -1
+  },
+  {
+    "id": 204,
+    "name": "Geological Society London Special Publications",
+    "type": "journal",
+    "issn": "0305-8719",
+    "publisher_id": -1
+  },
+  {
+    "id": 205,
+    "name": "Classics in mathematics",
+    "type": "book series",
+    "issn": "1431-0821",
+    "publisher_id": -1
+  },
+  {
+    "id": 206,
+    "name": "Molecular Ecology Notes",
+    "type": "journal",
+    "issn": "1471-8278",
+    "publisher_id": -1
+  },
+  {
+    "id": 269,
+    "name": "Chemical Geology",
+    "type": "journal",
+    "issn": "0009-2541",
+    "publisher_id": -1
+  },
+  {
+    "id": 208,
+    "name": "Statistics and Computing",
+    "type": "journal",
+    "issn": "0960-3174",
+    "publisher_id": -1
+  },
+  {
+    "id": 221,
+    "name": "Planta",
+    "type": "journal",
+    "issn": "0032-0935",
+    "publisher_id": -1
+  },
+  {
+    "id": 210,
+    "name": "The Review of Economic Studies",
+    "type": "journal",
+    "issn": "0034-6527",
+    "publisher_id": -1
+  },
+  {
+    "id": 211,
+    "name": "Ecology and Society",
+    "type": "journal",
+    "issn": "1708-3087",
+    "publisher_id": -1
+  },
+  {
+    "id": 212,
+    "name": "IEEE Intelligent Systems and their Applications",
+    "type": "journal",
+    "issn": "1094-7167",
+    "publisher_id": -1
+  },
+  {
+    "id": 213,
+    "name": "The Journal of Physical Chemistry",
+    "type": "journal",
+    "issn": "0022-3654",
+    "publisher_id": -1
+  },
+  {
+    "id": 287,
+    "name": "Global Environmental Change",
+    "type": "journal",
+    "issn": "0959-3780",
+    "publisher_id": -1
+  },
+  {
+    "id": 215,
+    "name": "Microbiome",
+    "type": "journal",
+    "issn": "2049-2618",
+    "publisher_id": -1
+  },
+  {
+    "id": 245,
+    "name": "Neural Computation",
+    "type": "journal",
+    "issn": "0899-7667",
+    "publisher_id": -1
+  },
+  {
+    "id": 260,
+    "name": "Contributions to Mineralogy and Petrology",
+    "type": "journal",
+    "issn": "0010-7999",
+    "publisher_id": -1
+  },
+  {
+    "id": 218,
+    "name": "Series on advances in statistical mechanics",
+    "type": "book series",
+    "issn": "2010-1996",
+    "publisher_id": -1
+  },
+  {
+    "id": 219,
+    "name": "Journal of Internal Medicine",
+    "type": "journal",
+    "issn": "0954-6820",
+    "publisher_id": -1
+  },
+  {
+    "id": 220,
+    "name": "Advanced textbooks in control and signal processing",
+    "type": "book series",
+    "issn": "1439-2232",
+    "publisher_id": -1
+  },
+  {
+    "id": 221,
+    "name": "Grundlehren der mathematischen Wissenschaften",
+    "type": "book series",
+    "issn": "0072-7830",
+    "publisher_id": -1
+  },
+  {
+    "id": 222,
+    "name": "Economic Record",
+    "type": "journal",
+    "issn": "0013-0249",
+    "publisher_id": -1
+  },
+  {
+    "id": 223,
+    "name": "Economics Letters",
+    "type": "journal",
+    "issn": "0165-1765",
+    "publisher_id": -1
+  },
+  {
+    "id": 224,
+    "name": "The Anthropocene Review",
+    "type": "journal",
+    "issn": "2053-0196",
+    "publisher_id": -1
+  },
+  {
+    "id": 228,
+    "name": "Geophysical Journal International",
+    "type": "journal",
+    "issn": "0956-540X",
+    "publisher_id": -1
+  },
+  {
+    "id": 359,
+    "name": "The Journal of Chemical Physics",
+    "type": "journal",
+    "issn": "0021-9606",
+    "publisher_id": -1
+  },
+  {
+    "id": 315,
+    "name": "Hydrological Processes",
+    "type": "journal",
+    "issn": "0885-6087",
+    "publisher_id": -1
+  },
+  {
+    "id": 228,
+    "name": "Probability and its applications",
+    "type": "book series",
+    "issn": "1431-7028",
+    "publisher_id": -1
+  },
+  {
+    "id": 229,
+    "name": "AMBIO",
+    "type": "journal",
+    "issn": "0044-7447",
+    "publisher_id": -1
+  },
+  {
+    "id": 230,
+    "name": "BMC Psychiatry",
+    "type": "journal",
+    "issn": "1471-244X",
+    "publisher_id": -1
+  },
+  {
+    "id": 239,
+    "name": "MIS Quarterly",
+    "type": "journal",
+    "issn": "0276-7783",
+    "publisher_id": -1
+  },
+  {
+    "id": 232,
+    "name": "The Economic Journal",
+    "type": "journal",
+    "issn": "0013-0133",
+    "publisher_id": -1
+  },
+  {
+    "id": 233,
+    "name": "Technometrics",
+    "type": "journal",
+    "issn": "0040-1706",
+    "publisher_id": -1
+  },
+  {
+    "id": 234,
+    "name": "Molecular Physics",
+    "type": "journal",
+    "issn": "0026-8976",
+    "publisher_id": -1
+  },
+  {
+    "id": 235,
+    "name": "Molecular Ecology",
+    "type": "journal",
+    "issn": "0962-1083",
+    "publisher_id": -1
+  },
+  {
+    "id": 236,
+    "name": "Science Advances",
+    "type": "journal",
+    "issn": "2375-2548",
+    "publisher_id": -1
+  },
+  {
+    "id": 255,
+    "name": "Geochimica et Cosmochimica Acta",
+    "type": "journal",
+    "issn": "0016-7037",
+    "publisher_id": -1
+  },
+  {
+    "id": 238,
+    "name": "Journal of the Royal Statistical Society Series B (Statistical Methodology)",
+    "type": "journal",
+    "issn": "1369-7412",
+    "publisher_id": -1
+  },
+  {
+    "id": 239,
+    "name": "Proceedings of the AAAI Conference on Artificial Intelligence",
+    "type": "conference",
+    "issn": "2159-5399",
+    "publisher_id": -1
+  },
+  {
+    "id": 240,
+    "name": "Medical Teacher",
+    "type": "journal",
+    "issn": "0142-159X",
+    "publisher_id": -1
+  },
+  {
+    "id": 241,
+    "name": "Ecosystem Services",
+    "type": "journal",
+    "issn": "2212-0416",
+    "publisher_id": -1
+  },
+  {
+    "id": 242,
+    "name": "Physics Reports",
+    "type": "journal",
+    "issn": "0370-1573",
+    "publisher_id": -1
+  },
+  {
+    "id": 243,
+    "name": "IEEE Transactions on Systems Man and Cybernetics",
+    "type": "journal",
+    "issn": "0018-9472",
+    "publisher_id": -1
+  },
+  {
+    "id": 329,
+    "name": "IEEE Communications Surveys & Tutorials",
+    "type": "journal",
+    "issn": "1553-877X",
+    "publisher_id": -1
+  },
+  {
+    "id": 245,
+    "name": "The Journal of Experimental Medicine",
+    "type": "journal",
+    "issn": "0022-1007",
+    "publisher_id": -1
+  },
+  {
+    "id": 280,
+    "name": "Global Change Biology",
+    "type": "journal",
+    "issn": "1354-1013",
+    "publisher_id": -1
+  },
+  {
+    "id": 247,
+    "name": "Journal of Hypertension",
+    "type": "journal",
+    "issn": "0263-6352",
+    "publisher_id": -1
+  },
+  {
+    "id": 248,
+    "name": "Political Psychology",
+    "type": "journal",
+    "issn": "0162-895X",
+    "publisher_id": -1
+  },
+  {
+    "id": 249,
+    "name": "IEEE Journal on Selected Areas in Communications",
+    "type": "journal",
+    "issn": "0733-8716",
+    "publisher_id": -1
+  },
+  {
+    "id": 253,
+    "name": "Contemporary Sociology A Journal of Reviews",
+    "type": "journal",
+    "issn": "0094-3061",
+    "publisher_id": -1
+  },
+  {
+    "id": 251,
+    "name": "Educational Psychology",
+    "type": "journal",
+    "issn": "0144-3410",
+    "publisher_id": -1
+  },
+  {
+    "id": 253,
+    "name": "Australian Journal of Botany",
+    "type": "journal",
+    "issn": "0067-1924",
+    "publisher_id": -1
+  },
+  {
+    "id": 253,
+    "name": "IEEE Transactions on Medical Imaging",
+    "type": "journal",
+    "issn": "0278-0062",
+    "publisher_id": -1
+  },
+  {
+    "id": 254,
+    "name": "Precambrian Research",
+    "type": "journal",
+    "issn": "0301-9268",
+    "publisher_id": -1
+  },
+  {
+    "id": 255,
+    "name": "Behavior Research Methods, Instruments, & Computers",
+    "type": "journal",
+    "issn": "0743-3808",
+    "publisher_id": -1
+  },
+  {
+    "id": 256,
+    "name": "Annual Review of Ecology and Systematics",
+    "type": "journal",
+    "issn": "0066-4162",
+    "publisher_id": -1
+  },
+  {
+    "id": 260,
+    "name": "New Phytologist",
+    "type": "journal",
+    "issn": "0028-646X",
+    "publisher_id": -1
+  },
+  {
+    "id": 258,
+    "name": "Lithos",
+    "type": "journal",
+    "issn": "0024-4937",
+    "publisher_id": -1
+  },
+  {
+    "id": 259,
+    "name": "Monthly Notices of the Royal Astronomical Society",
+    "type": "journal",
+    "issn": "0035-8711",
+    "publisher_id": -1
+  },
+  {
+    "id": 272,
+    "name": "Conservation Biology",
+    "type": "journal",
+    "issn": "0888-8892",
+    "publisher_id": -1
+  },
+  {
+    "id": 261,
+    "name": "Biological reviews/Biological reviews of the Cambridge Philosophical Society",
+    "type": "journal",
+    "issn": "0006-3231",
+    "publisher_id": -1
+  },
+  {
+    "id": 262,
+    "name": "Free Radical Biology and Medicine",
+    "type": "journal",
+    "issn": "0891-5849",
+    "publisher_id": -1
+  },
+  {
+    "id": 263,
+    "name": "International Journal of Consumer Studies",
+    "type": "journal",
+    "issn": "1470-6423",
+    "publisher_id": -1
+  },
+  {
+    "id": 323,
+    "name": "Renewable and Sustainable Energy Reviews",
+    "type": "journal",
+    "issn": "1364-0321",
+    "publisher_id": -1
+  },
+  {
+    "id": 265,
+    "name": "Journal of Asian Earth Sciences",
+    "type": "journal",
+    "issn": "1367-9120",
+    "publisher_id": -1
+  },
+  {
+    "id": 291,
+    "name": "Lecture notes in computer science",
+    "type": "book series",
+    "issn": "0302-9743",
+    "publisher_id": -1
+  },
+  {
+    "id": 267,
+    "name": "Plant and Soil",
+    "type": "journal",
+    "issn": "0032-079X",
+    "publisher_id": -1
+  },
+  {
+    "id": 268,
+    "name": "Asia Pacific Journal of Management",
+    "type": "journal",
+    "issn": "0217-4561",
+    "publisher_id": -1
+  },
+  {
+    "id": 269,
+    "name": "Methods in Ecology and Evolution",
+    "type": "journal",
+    "issn": "2041-210X",
+    "publisher_id": -1
+  },
+  {
+    "id": 356,
+    "name": "ACM Computing Surveys",
+    "type": "journal",
+    "issn": "0360-0300",
+    "publisher_id": -1
+  },
+  {
+    "id": 271,
+    "name": "The Astronomical Journal",
+    "type": "journal",
+    "issn": "0004-6256",
+    "publisher_id": -1
+  },
+  {
+    "id": 272,
+    "name": "Australian Journal of Earth Sciences",
+    "type": "journal",
+    "issn": "0812-0099",
+    "publisher_id": -1
+  },
+  {
+    "id": 329,
+    "name": "Nature Nanotechnology",
+    "type": "journal",
+    "issn": "1748-3387",
+    "publisher_id": -1
+  },
+  {
+    "id": 274,
+    "name": "Celebrity Studies",
+    "type": "journal",
+    "issn": "1939-2397",
+    "publisher_id": -1
+  },
+  {
+    "id": 275,
+    "name": "International Journal of Plant Sciences",
+    "type": "journal",
+    "issn": "1058-5893",
+    "publisher_id": -1
+  },
+  {
+    "id": 280,
+    "name": "Energy and Buildings",
+    "type": "journal",
+    "issn": "0378-7788",
+    "publisher_id": -1
+  },
+  {
+    "id": 277,
+    "name": "Trends in Genetics",
+    "type": "journal",
+    "issn": "0168-9525",
+    "publisher_id": -1
+  },
+  {
+    "id": 278,
+    "name": "Journal of Youth and Adolescence",
+    "type": "journal",
+    "issn": "0047-2891",
+    "publisher_id": -1
+  },
+  {
+    "id": 279,
+    "name": "Journal of the American Medical Informatics Association",
+    "type": "journal",
+    "issn": "1067-5027",
+    "publisher_id": -1
+  },
+  {
+    "id": 280,
+    "name": "Genetics Research",
+    "type": "journal",
+    "issn": "0016-6723",
+    "publisher_id": -1
+  },
+  {
+    "id": 317,
+    "name": "The Science of The Total Environment",
+    "type": "journal",
+    "issn": "0048-9697",
+    "publisher_id": -1
+  },
+  {
+    "id": 286,
+    "name": "The Journal of Marketing Theory and Practice",
+    "type": "journal",
+    "issn": "1069-6679",
+    "publisher_id": -1
+  },
+  {
+    "id": 283,
+    "name": "The ISME Journal",
+    "type": "journal",
+    "issn": "1751-7362",
+    "publisher_id": -1
+  },
+  {
+    "id": 284,
+    "name": "Theory and Society",
+    "type": "journal",
+    "issn": "0304-2421",
+    "publisher_id": -1
+  },
+  {
+    "id": 285,
+    "name": "Journal of Intellectual Capital",
+    "type": "journal",
+    "issn": "1469-1930",
+    "publisher_id": -1
+  },
+  {
+    "id": 286,
+    "name": "Machine Learning",
+    "type": "journal",
+    "issn": "0885-6125",
+    "publisher_id": -1
+  },
+  {
+    "id": 287,
+    "name": "IEEE Transactions on Automatic Control",
+    "type": "journal",
+    "issn": "0018-9286",
+    "publisher_id": -1
+  },
+  {
+    "id": 288,
+    "name": "Oecologia",
+    "type": "journal",
+    "issn": "0029-8549",
+    "publisher_id": -1
+  },
+  {
+    "id": 289,
+    "name": "IEEE Transactions on Image Processing",
+    "type": "journal",
+    "issn": "1057-7149",
+    "publisher_id": -1
+  },
+  {
+    "id": 290,
+    "name": "Computer Methods in Applied Mechanics and Engineering",
+    "type": "journal",
+    "issn": "0045-7825",
+    "publisher_id": -1
+  },
+  {
+    "id": 326,
+    "name": "Expert Systems with Applications",
+    "type": "journal",
+    "issn": "0957-4174",
+    "publisher_id": -1
+  },
+  {
+    "id": 292,
+    "name": "Computers & Industrial Engineering",
+    "type": "journal",
+    "issn": "0360-8352",
+    "publisher_id": -1
+  },
+  {
+    "id": 293,
+    "name": "Science China Information Sciences",
+    "type": "journal",
+    "issn": "1869-1919",
+    "publisher_id": -1
+  },
+  {
+    "id": 294,
+    "name": "Materials Science and Engineering R Reports",
+    "type": "journal",
+    "issn": "0927-796X",
+    "publisher_id": -1
+  },
+  {
+    "id": 295,
+    "name": "Journal of Banking & Finance",
+    "type": "journal",
+    "issn": "0378-4266",
+    "publisher_id": -1
+  },
+  {
+    "id": 296,
+    "name": "Design Studies",
+    "type": "journal",
+    "issn": "0142-694X",
+    "publisher_id": -1
+  },
+  {
+    "id": 297,
+    "name": "Nature Catalysis",
+    "type": "journal",
+    "issn": "2520-1158",
+    "publisher_id": -1
+  },
+  {
+    "id": 298,
+    "name": "PharmacoEconomics",
+    "type": "journal",
+    "issn": "1170-7690",
+    "publisher_id": -1
+  },
+  {
+    "id": 299,
+    "name": "Journal of Imaging Informatics in Medicine",
+    "type": "journal",
+    "issn": "0897-1889",
+    "publisher_id": -1
+  },
+  {
+    "id": 317,
+    "name": "Assessment & Evaluation in Higher Education",
+    "type": "journal",
+    "issn": "0260-2938",
+    "publisher_id": -1
+  },
+  {
+    "id": 301,
+    "name": "Journal of Applied Phycology",
+    "type": "journal",
+    "issn": "0921-8971",
+    "publisher_id": -1
+  },
+  {
+    "id": 302,
+    "name": "Journal of Sound and Vibration",
+    "type": "journal",
+    "issn": "0022-460X",
+    "publisher_id": -1
+  },
+  {
+    "id": 303,
+    "name": "Chem",
+    "type": "journal",
+    "issn": "2451-9294",
+    "publisher_id": -1
+  },
+  {
+    "id": 304,
+    "name": "Health Economics",
+    "type": "journal",
+    "issn": "1057-9230",
+    "publisher_id": -1
+  },
+  {
+    "id": 305,
+    "name": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+    "type": "journal",
+    "issn": "0162-8828",
+    "publisher_id": -1
+  },
+  {
+    "id": 326,
+    "name": "Bioresource Technology",
+    "type": "journal",
+    "issn": "0960-8524",
+    "publisher_id": -1
+  },
+  {
+    "id": 307,
+    "name": "Journal of International Financial Markets Institutions and Money",
+    "type": "journal",
+    "issn": "1042-4431",
+    "publisher_id": -1
+  },
+  {
+    "id": 308,
+    "name": "Nursing Research",
+    "type": "journal",
+    "issn": "0029-6562",
+    "publisher_id": -1
+  },
+  {
+    "id": 309,
+    "name": "Neurocomputing",
+    "type": "journal",
+    "issn": "0925-2312",
+    "publisher_id": -1
+  },
+  {
+    "id": 310,
+    "name": "Progress in Retinal and Eye Research",
+    "type": "journal",
+    "issn": "1350-9462",
+    "publisher_id": -1
+  },
+  {
+    "id": 311,
+    "name": "International Journal of Artificial Intelligence in Education",
+    "type": "journal",
+    "issn": "1560-4292",
+    "publisher_id": -1
+  },
+  {
+    "id": 312,
+    "name": "Molecular Cancer",
+    "type": "journal",
+    "issn": "1476-4598",
+    "publisher_id": -1
+  },
+  {
+    "id": 313,
+    "name": "Journal of Biological Chemistry",
+    "type": "journal",
+    "issn": "0021-9258",
+    "publisher_id": -1
+  },
+  {
+    "id": 314,
+    "name": "Journal of Hazardous Materials",
+    "type": "journal",
+    "issn": "0304-3894",
+    "publisher_id": -1
+  },
+  {
+    "id": 315,
+    "name": "Biomedicine & Pharmacotherapy",
+    "type": "journal",
+    "issn": "0753-3322",
+    "publisher_id": -1
+  },
+  {
+    "id": 316,
+    "name": "Nature Microbiology",
+    "type": "journal",
+    "issn": "2058-5276",
+    "publisher_id": -1
+  },
+  {
+    "id": 317,
+    "name": "Composites Science and Technology",
+    "type": "journal",
+    "issn": "0266-3538",
+    "publisher_id": -1
+  },
+  {
+    "id": 318,
+    "name": "Discourse & Communication",
+    "type": "journal",
+    "issn": "1750-4813",
+    "publisher_id": -1
+  },
+  {
+    "id": 319,
+    "name": "Nature Physics",
+    "type": "journal",
+    "issn": "1745-2473",
+    "publisher_id": -1
+  },
+  {
+    "id": 384,
+    "name": "Nature Communications",
+    "type": "journal",
+    "issn": "2041-1723",
+    "publisher_id": -1
+  },
+  {
+    "id": 321,
+    "name": "Corporate Governance An International Review",
+    "type": "journal",
+    "issn": "0964-8410",
+    "publisher_id": -1
+  },
+  {
+    "id": 356,
+    "name": "Journal of Environmental Management",
+    "type": "journal",
+    "issn": "0301-4797",
+    "publisher_id": -1
+  },
+  {
+    "id": 323,
+    "name": "IEEE Wireless Communications",
+    "type": "journal",
+    "issn": "1536-1284",
+    "publisher_id": -1
+  },
+  {
+    "id": 324,
+    "name": "Aquatic Botany",
+    "type": "journal",
+    "issn": "0304-3770",
+    "publisher_id": -1
+  },
+  {
+    "id": 390,
+    "name": "Journal of Business Research",
+    "type": "journal",
+    "issn": "0148-2963",
+    "publisher_id": -1
+  },
+  {
+    "id": 326,
+    "name": "International Journal of Fatigue",
+    "type": "journal",
+    "issn": "0142-1123",
+    "publisher_id": -1
+  },
+  {
+    "id": 327,
+    "name": "Human Communication Research",
+    "type": "journal",
+    "issn": "0360-3989",
+    "publisher_id": -1
+  },
+  {
+    "id": 328,
+    "name": "Security Dialogue",
+    "type": "journal",
+    "issn": "0967-0106",
+    "publisher_id": -1
+  },
+  {
+    "id": 329,
+    "name": "Metabolomics",
+    "type": "journal",
+    "issn": "1573-3882",
+    "publisher_id": -1
+  },
+  {
+    "id": 330,
+    "name": "Materials & Design (1980-2015)",
+    "type": "journal",
+    "issn": "0261-3069",
+    "publisher_id": -1
+  },
+  {
+    "id": 348,
+    "name": "Accounting Auditing & Accountability Journal",
+    "type": "journal",
+    "issn": "0951-3574",
+    "publisher_id": -1
+  },
+  {
+    "id": 332,
+    "name": "IEEE Wireless Communications Letters",
+    "type": "journal",
+    "issn": "2162-2337",
+    "publisher_id": -1
+  },
+  {
+    "id": 336,
+    "name": "Automatica",
+    "type": "journal",
+    "issn": "0005-1098",
+    "publisher_id": -1
+  },
+  {
+    "id": 334,
+    "name": "International Journal of Transgender Health",
+    "type": "journal",
+    "issn": "2689-5269",
+    "publisher_id": -1
+  },
+  {
+    "id": 335,
+    "name": "American Journal of Clinical Nutrition",
+    "type": "journal",
+    "issn": "0002-9165",
+    "publisher_id": -1
+  },
+  {
+    "id": 346,
+    "name": "Materials & Design",
+    "type": "journal",
+    "issn": "0264-1275",
+    "publisher_id": -1
+  },
+  {
+    "id": 337,
+    "name": "Biomaterials",
+    "type": "journal",
+    "issn": "0142-9612",
+    "publisher_id": -1
+  },
+  {
+    "id": 338,
+    "name": "Metabolites",
+    "type": "journal",
+    "issn": "2218-1989",
+    "publisher_id": -1
+  },
+  {
+    "id": 339,
+    "name": "Planning Theory & Practice",
+    "type": "journal",
+    "issn": "1464-9357",
+    "publisher_id": -1
+  },
+  {
+    "id": 340,
+    "name": "Euphytica",
+    "type": "journal",
+    "issn": "0014-2336",
+    "publisher_id": -1
+  },
+  {
+    "id": 341,
+    "name": "Advances in Science and Technology",
+    "type": "journal",
+    "issn": "2006-0394",
+    "publisher_id": -1
+  },
+  {
+    "id": 342,
+    "name": "The Journal of Physiology",
+    "type": "journal",
+    "issn": "0022-3751",
+    "publisher_id": -1
+  },
+  {
+    "id": 343,
+    "name": "Automation in Construction",
+    "type": "journal",
+    "issn": "0926-5805",
+    "publisher_id": -1
+  },
+  {
+    "id": 344,
+    "name": "Hydrological Sciences Journal",
+    "type": "journal",
+    "issn": "0262-6667",
+    "publisher_id": -1
+  },
+  {
+    "id": 345,
+    "name": "Advanced Science",
+    "type": "journal",
+    "issn": "2198-3844",
+    "publisher_id": -1
+  },
+  {
+    "id": 346,
+    "name": "Advanced Functional Materials",
+    "type": "journal",
+    "issn": "1616-301X",
+    "publisher_id": -1
+  },
+  {
+    "id": 347,
+    "name": "IEEE Transactions on Industrial Electronics",
+    "type": "journal",
+    "issn": "0278-0046",
+    "publisher_id": -1
+  },
+  {
+    "id": 348,
+    "name": "Smart Materials and Structures",
+    "type": "journal",
+    "issn": "0964-1726",
+    "publisher_id": -1
+  },
+  {
+    "id": 349,
+    "name": "Computers in Human Behavior",
+    "type": "journal",
+    "issn": "0747-5632",
+    "publisher_id": -1
+  },
+  {
+    "id": 350,
+    "name": "Acta Materialia",
+    "type": "journal",
+    "issn": "1359-6454",
+    "publisher_id": -1
+  },
+  {
+    "id": 351,
+    "name": "The Medical Journal of Australia",
+    "type": "journal",
+    "issn": "0025-729X",
+    "publisher_id": -1
+  },
+  {
+    "id": 352,
+    "name": "Chemical Society Reviews",
+    "type": "journal",
+    "issn": "0306-0012",
+    "publisher_id": -1
+  },
+  {
+    "id": 353,
+    "name": "Chemical Engineering Journal",
+    "type": "journal",
+    "issn": "1385-8947",
+    "publisher_id": -1
+  },
+  {
+    "id": 354,
+    "name": "Eurasia Journal of Mathematics Science and Technology Education",
+    "type": "journal",
+    "issn": "1305-8215",
+    "publisher_id": -1
+  },
+  {
+    "id": 355,
+    "name": "Public Health Nutrition",
+    "type": "journal",
+    "issn": "1368-9800",
+    "publisher_id": -1
+  },
+  {
+    "id": 356,
+    "name": "Composite Structures",
+    "type": "journal",
+    "issn": "0263-8223",
+    "publisher_id": -1
+  },
+  {
+    "id": 357,
+    "name": "Archives of Toxicology",
+    "type": "journal",
+    "issn": "0340-5761",
+    "publisher_id": -1
+  },
+  {
+    "id": 358,
+    "name": "Journal of Epidemiology & Community Health",
+    "type": "journal",
+    "issn": "0141-7681",
+    "publisher_id": -1
+  },
+  {
+    "id": 359,
+    "name": "IEEE Transactions on Emerging Topics in Computing",
+    "type": "journal",
+    "issn": "2168-6750",
+    "publisher_id": -1
+  },
+  {
+    "id": 360,
+    "name": "Polymers",
+    "type": "journal",
+    "issn": "2073-4360",
+    "publisher_id": -1
+  },
+  {
+    "id": 361,
+    "name": "European Polymer Journal",
+    "type": "journal",
+    "issn": "0014-3057",
+    "publisher_id": -1
+  },
+  {
+    "id": 362,
+    "name": "Clinical Cosmetic and Investigational Dermatology",
+    "type": "journal",
+    "issn": "1178-7015",
+    "publisher_id": -1
+  },
+  {
+    "id": 363,
+    "name": "Advances in industrial control",
+    "type": "book series",
+    "issn": "1430-9491",
+    "publisher_id": -1
+  },
+  {
+    "id": 364,
+    "name": "Journal of Cleaner Production",
+    "type": "journal",
+    "issn": "0959-6526",
+    "publisher_id": -1
+  },
+  {
+    "id": 365,
+    "name": "European Journal of Immunology",
+    "type": "journal",
+    "issn": "0014-2980",
+    "publisher_id": -1
+  },
+  {
+    "id": 366,
+    "name": "Evaluation",
+    "type": "journal",
+    "issn": "1356-3890",
+    "publisher_id": -1
+  },
+  {
+    "id": 367,
+    "name": "Transportation Research Part E Logistics and Transportation Review",
+    "type": "journal",
+    "issn": "1366-5545",
+    "publisher_id": -1
+  },
+  {
+    "id": 368,
+    "name": "Scientific Reports",
+    "type": "journal",
+    "issn": "2045-2322",
+    "publisher_id": -1
+  },
+  {
+    "id": 369,
+    "name": "Journal of Consumer Research",
+    "type": "journal",
+    "issn": "0093-5301",
+    "publisher_id": -1
+  },
+  {
+    "id": 385,
+    "name": "Sports Medicine",
+    "type": "journal",
+    "issn": "0112-1642",
+    "publisher_id": -1
+  },
+  {
+    "id": 371,
+    "name": "Journal of Sports Sciences",
+    "type": "journal",
+    "issn": "0264-0414",
+    "publisher_id": -1
+  },
+  {
+    "id": 372,
+    "name": "Small",
+    "type": "journal",
+    "issn": "1613-6810",
+    "publisher_id": -1
+  },
+  {
+    "id": 373,
+    "name": "Nutrients",
+    "type": "journal",
+    "issn": "2072-6643",
+    "publisher_id": -1
+  },
+  {
+    "id": 374,
+    "name": "International Journal of Project Management",
+    "type": "journal",
+    "issn": "0263-7863",
+    "publisher_id": -1
+  },
+  {
+    "id": 375,
+    "name": "Diabetes",
+    "type": "journal",
+    "issn": "0012-1797",
+    "publisher_id": -1
+  },
+  {
+    "id": 376,
+    "name": "General Pharmacology The Vascular System",
+    "type": "journal",
+    "issn": "0306-3623",
+    "publisher_id": -1
+  },
+  {
+    "id": 377,
+    "name": "International Journal of Environmental Research",
+    "type": "journal",
+    "issn": "1735-6865",
+    "publisher_id": -1
+  },
+  {
+    "id": 391,
+    "name": "IEEE Access",
+    "type": "journal",
+    "issn": "2169-3536",
+    "publisher_id": -1
+  },
+  {
+    "id": 379,
+    "name": "Obesity Reviews",
+    "type": "journal",
+    "issn": "1467-7881",
+    "publisher_id": -1
+  },
+  {
+    "id": 380,
+    "name": "Finite Elements in Analysis and Design",
+    "type": "journal",
+    "issn": "0168-874X",
+    "publisher_id": -1
+  },
+  {
+    "id": 381,
+    "name": "IEEE Transactions on Power Systems",
+    "type": "journal",
+    "issn": "0885-8950",
+    "publisher_id": -1
+  },
+  {
+    "id": 382,
+    "name": "Advanced Energy Materials",
+    "type": "journal",
+    "issn": "1614-6832",
+    "publisher_id": -1
+  },
+  {
+    "id": 383,
+    "name": "AFRICAN JOURNAL OF BIOTECHNOLOGY",
+    "type": "journal",
+    "issn": "1684-5315",
+    "publisher_id": -1
+  },
+  {
+    "id": 384,
+    "name": "Drug Metabolism Reviews",
+    "type": "journal",
+    "issn": "0360-2532",
+    "publisher_id": -1
+  },
+  {
+    "id": 385,
+    "name": "Archives of Physical Medicine and Rehabilitation",
+    "type": "journal",
+    "issn": "0003-9993",
+    "publisher_id": -1
+  },
+  {
+    "id": 386,
+    "name": "Gastroenterology",
+    "type": "journal",
+    "issn": "0016-5085",
+    "publisher_id": -1
+  },
+  {
+    "id": 387,
+    "name": "Brain Behavior and Immunity",
+    "type": "journal",
+    "issn": "0889-1591",
+    "publisher_id": -1
+  },
+  {
+    "id": 388,
+    "name": "Membranes",
+    "type": "journal",
+    "issn": "2077-0375",
+    "publisher_id": -1
+  },
+  {
+    "id": 389,
+    "name": "IEEE Transactions on Circuits and Systems I Regular Papers",
+    "type": "journal",
+    "issn": "1549-8328",
+    "publisher_id": -1
+  },
+  {
+    "id": 390,
+    "name": "ACS Nano",
+    "type": "journal",
+    "issn": "1936-0851",
+    "publisher_id": -1
+  }
+]

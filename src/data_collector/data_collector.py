@@ -5,7 +5,17 @@ import pandas as pd
 import requests
 
 
-UNI_COUNT = 1
+TARGET_UNIVERSITY_IDS = {
+    "I165779595",  # University of Melbourne
+    "I129604602",  # University of Sydney
+    "I31746571",   # UNSW Sydney
+    "I114017466",  # University of Technology Sydney
+    "I99043593",   # Macquarie University
+    "I56590836",   # Monash University
+    "I82951845",   # RMIT University
+    "I165143802",  # University of Queensland
+    "I118347636",  # Australian National University
+}
 RESULTS_PER_PAGE = 100
 RESEARCH_PAPERS_PER_UNI = 100
 
@@ -14,33 +24,37 @@ OPENALEX_API = "y5MdFVQSKhClXHd0aoWGWP"
 
 def retrieve_data(uni_code: str):
     """
-    Retrieves data from the OpenAlex API.
+    Retrieves research papers from the OpenAlex API.
     """
     COMPUTER_SCIENCE_ID = 17
 
     cursor = "*"
     url = "https://api.openalex.org/works"
+
     params = {
         "api_key": OPENALEX_API,
-        "filter": f"institutions.id:{uni_code}&primary_topic.field.id:{COMPUTER_SCIENCE_ID}",
+        "filter": (
+            f"institutions.id:{uni_code}"
+            f"&primary_topic.field.id:{COMPUTER_SCIENCE_ID}"
+        ),
         "per-page": RESULTS_PER_PAGE,
         "cursor": cursor,
     }
 
     data = []
 
-    i = 0
-    while i < RESEARCH_PAPERS_PER_UNI / RESULTS_PER_PAGE and cursor is not None:
+    while len(data) < RESEARCH_PAPERS_PER_UNI and cursor is not None:
+        params["cursor"] = cursor
+
         response = requests.get(url, params=params)
         response.raise_for_status()
+
         json_res = response.json()
 
-        data += json_res["results"]
+        data.extend(json_res["results"])
         cursor = json_res["meta"]["next_cursor"]
 
-        i += 1
-
-    return data
+    return data[:RESEARCH_PAPERS_PER_UNI]
 
 def extract_required_data(data):
     """
@@ -82,6 +96,7 @@ def extract_required_data(data):
                 rp_unis.append(len(universities))
                 universities[name] = {
                     "id": len(universities),
+                    "openalex_id": institution["id"],
                     "name": institution["display_name"],
                     "country_code": institution["country_code"],
                     "ror_url": institution["ror"],
@@ -214,9 +229,9 @@ def extract_required_data(data):
             "outgoing_citations": None,
             "publisher_id": -1,
             "journal_id": rp_journal,
-            "university_ids": rp_unis,
+            "university_ids": list(dict.fromkeys(rp_unis)),
             "faculty_ids": [faculties[item["primary_topic"]["domain"]["display_name"]]["id"]],
-            "academics_ids": rp_academics
+            "academic_ids": list(dict.fromkeys(rp_academics))
         }
             
 
@@ -270,17 +285,25 @@ if __name__ == "__main__":
     if not os.path.isdir("./data/"): os.mkdir("./data/")
 
     data = []
+    seen_work_ids = set()
 
-    # retrieve data from each uni
-    for i, uni in enumerate(aus_unis):
-        if i >= UNI_COUNT:
-            break
+    for uni in aus_unis:
+        if uni["id"] not in TARGET_UNIVERSITY_IDS:
+            continue
 
-        uni_name = uni["name"].replace(" ", "_").lower()
         uni_code = uni["id"]
 
-        data += retrieve_data(uni_code)
+        print(f"Collecting papers for {uni['name']}...")
 
+        university_papers = retrieve_data(uni_code)
+
+        for paper in university_papers:
+            work_id = paper["id"]
+
+            if work_id not in seen_work_ids:
+                seen_work_ids.add(work_id)
+                data.append(paper)
+    print(f"Total unique research papers collected: {len(data)}")
     # extract all required information
     data_by_table = extract_required_data(data)
 

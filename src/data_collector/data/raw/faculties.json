@@ -1,0 +1,18 @@
+[
+  {
+    "id": 0,
+    "name": "Life Sciences"
+  },
+  {
+    "id": 1,
+    "name": "Social Sciences"
+  },
+  {
+    "id": 2,
+    "name": "Physical Sciences"
+  },
+  {
+    "id": 3,
+    "name": "Health Sciences"
+  }
+]

@@ -154,13 +154,13 @@
     "outgoing_citations": [
       "31c935eb-4545-46ef-a7d0-70e73c1b5bf7"
     ],
-    "journal_id": "66c666ac-08d7-4e05-b828-d56cae4222ab",
+    "journal_id": "69d8362c-7207-49a4-8812-628f68f04e53",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7",
       "76ccfb81-7253-46d8-899e-25e39ba20023"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "ba83eedc-e871-4f15-8f3e-10c8e124e9c0",
@@ -251,7 +251,7 @@
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "d03bde25-817c-4274-96cd-e0df3021bfba",
@@ -285,12 +285,12 @@
     "outgoing_citations": [
       "6acc0dd0-a140-4b6f-91a0-53e29bd9871b"
     ],
-    "journal_id": "a068c00d-c3d0-4fb6-867b-265ace58c134",
+    "journal_id": "072b3578-22f2-4a08-b234-3ac5959a1515",
     "university_ids": [
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "36ef64bb-254a-4293-a6e1-7f56f5124a1f",
@@ -615,7 +615,7 @@
       "727af96f-8d5e-4ba2-935e-2fa39f4009c1",
       "525ccd96-d6a0-4bed-9d9b-d0d3e3c592c1"
     ],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
@@ -662,13 +662,13 @@
       "31c935eb-4545-46ef-a7d0-70e73c1b5bf7",
       "3ce5eea0-61e2-4455-9941-0ef83343247c"
     ],
-    "journal_id": "66c666ac-08d7-4e05-b828-d56cae4222ab",
+    "journal_id": "69d8362c-7207-49a4-8812-628f68f04e53",
     "university_ids": [
       "76ccfb81-7253-46d8-899e-25e39ba20023",
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "ba83eedc-e871-4f15-8f3e-10c8e124e9c0",
@@ -710,7 +710,7 @@
       "9467271a-9cd4-42fb-bffe-e04731afeaff",
       "a58a9b58-c1ce-44d9-bd1f-b1fca3de0fc8"
     ],
-    "journal_id": "294144da-343a-406f-9ade-bb72c8fbf9e6",
+    "journal_id": "f5fba608-3bbd-481e-9ea2-7b66349c90c0",
     "university_ids": [
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a",
       "fdd57748-5185-4e73-863d-8304e834885d"
@@ -766,7 +766,7 @@
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "fa3a89f5-f2f8-40ef-b064-4c686d1cad43",
@@ -986,7 +986,7 @@
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "11186f58-f7b4-4933-a0e7-aa83b2890897",
@@ -1032,7 +1032,7 @@
     "outgoing_citations": [
       "68aaf35a-80f7-471f-b508-7530dc68ac4c"
     ],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
@@ -1120,7 +1120,7 @@
     "outgoing_citations": [
       "fd67fab2-68b4-401c-8525-91fe39d60af6"
     ],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "27c870c5-6b24-4889-bf1a-082d7b749c25",
       "fdd57748-5185-4e73-863d-8304e834885d",
@@ -1336,7 +1336,7 @@
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "445ef684-8218-4b16-a35b-6006e64e786a",
@@ -1433,7 +1433,7 @@
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "0b666ef0-416c-4fbe-a578-be18c57e4c36"
@@ -1476,7 +1476,7 @@
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "fa3a89f5-f2f8-40ef-b064-4c686d1cad43"
@@ -1633,7 +1633,7 @@
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "fa3a89f5-f2f8-40ef-b064-4c686d1cad43",
@@ -1710,7 +1710,7 @@
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "ffa597b1-42fa-49d6-96b9-1fdb682da0b8"
@@ -1746,7 +1746,7 @@
       "Microsatellite"
     ],
     "outgoing_citations": [],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
@@ -1800,7 +1800,7 @@
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "fa3a89f5-f2f8-40ef-b064-4c686d1cad43",
@@ -1897,7 +1897,7 @@
       "Genetics"
     ],
     "outgoing_citations": [],
-    "journal_id": "55f907f1-f3a1-4211-9652-097b0dab7d23",
+    "journal_id": "3ed6c906-6e18-4c57-95f5-f27a17f3749a",
     "university_ids": [
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
@@ -1982,7 +1982,7 @@
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "822e4962-c5cf-4c9c-af4b-4c4c567e6eef",
@@ -2272,7 +2272,7 @@
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "531656ae-9794-4ac0-9e6c-6f53e5b3eb6d"
@@ -2352,12 +2352,12 @@
       "Business"
     ],
     "outgoing_citations": [],
-    "journal_id": "a068c00d-c3d0-4fb6-867b-265ace58c134",
+    "journal_id": "072b3578-22f2-4a08-b234-3ac5959a1515",
     "university_ids": [
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "dccdf033-9e12-48b7-86fd-58a66fd825f6",
@@ -2496,7 +2496,7 @@
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "a6e13204-af3e-46fc-99f3-7775a474f20a"
@@ -2710,7 +2710,7 @@
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "822e4962-c5cf-4c9c-af4b-4c4c567e6eef",
@@ -2793,7 +2793,7 @@
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "531656ae-9794-4ac0-9e6c-6f53e5b3eb6d"
@@ -2904,13 +2904,13 @@
     "outgoing_citations": [
       "6acc0dd0-a140-4b6f-91a0-53e29bd9871b"
     ],
-    "journal_id": "8a0b874c-06d2-41cd-b990-f8141b56af2e",
+    "journal_id": "abe751c4-f621-46ee-99d1-70685823410f",
     "university_ids": [
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a",
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "c4d9fbcf-b837-46f1-bea9-bc63f8e7f92a",
@@ -2944,7 +2944,7 @@
     "outgoing_citations": [
       "a6e8efdf-6ec4-46a8-bd6b-8db8182c793b"
     ],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
@@ -3073,7 +3073,7 @@
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "d5c9613f-b28d-467f-b587-310a4aea9391",
@@ -3106,12 +3106,12 @@
     "outgoing_citations": [
       "1456af1e-5561-4162-8bea-7847ee3e3548"
     ],
-    "journal_id": "ee867532-7126-44c3-8c61-acaeb4b6f36e",
+    "journal_id": "f1c28f1e-6e7c-44ee-bb87-0dfd840f6a06",
     "university_ids": [
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "3810fdae-1a3d-4138-b017-d7af021f20f3",
@@ -3151,7 +3151,7 @@
       "Apicomplexa"
     ],
     "outgoing_citations": [],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
@@ -3285,7 +3285,7 @@
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "b8348691-ee58-4b73-9b44-18c7a7556686"
@@ -3328,7 +3328,7 @@
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "90fd4965-581a-41ed-9c34-8c82ccbc3460",
@@ -3368,7 +3368,7 @@
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "243dd750-675c-4b67-ab45-aeddf8b10f62"
@@ -3453,7 +3453,7 @@
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "d2f54285-cd54-49ce-b4b7-924a1d276615"
@@ -3760,7 +3760,7 @@
       "8166e26b-6650-42ce-8a5d-fff839c2eb16",
       "1e2a7aef-cc50-4dd0-ab92-15c13b22eaad"
     ],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a",
       "fdd57748-5185-4e73-863d-8304e834885d",
@@ -3810,7 +3810,7 @@
       "87262bd7-ec74-4de1-81a3-c47bbd0c87e4",
       "beb86bb6-ce22-459c-b11f-5e9ef6b0c1aa"
     ],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "fdd57748-5185-4e73-863d-8304e834885d",
       "27c870c5-6b24-4889-bf1a-082d7b749c25",
@@ -3934,7 +3934,7 @@
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "27ab88e5-1d41-4c0c-be0f-d12043e9c9e2"
@@ -4022,7 +4022,7 @@
       "Gene"
     ],
     "outgoing_citations": [],
-    "journal_id": "294144da-343a-406f-9ade-bb72c8fbf9e6",
+    "journal_id": "f5fba608-3bbd-481e-9ea2-7b66349c90c0",
     "university_ids": [
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
@@ -4164,7 +4164,7 @@
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "f5613f9a-ea90-4748-aaf9-e3071dedd5b2"
@@ -4284,13 +4284,13 @@
       "31c935eb-4545-46ef-a7d0-70e73c1b5bf7",
       "3ce5eea0-61e2-4455-9941-0ef83343247c"
     ],
-    "journal_id": "46cb7dba-f28d-4473-9e22-9e5bb6a009af",
+    "journal_id": "a1f83c4e-4a50-4ad5-b019-b0ae9ff6b8d7",
     "university_ids": [
       "76ccfb81-7253-46d8-899e-25e39ba20023",
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "ba83eedc-e871-4f15-8f3e-10c8e124e9c0",
@@ -4469,13 +4469,13 @@
       "a43fa75a-5b4b-4501-873d-9d7ff76948cb",
       "76c72612-9145-4797-bb91-c7c216fa1e21"
     ],
-    "journal_id": "ce2a318d-3c74-4a94-ad97-d80215153527",
+    "journal_id": "3e27dd47-9e24-49a1-b12b-6a1bdc263126",
     "university_ids": [
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da",
       "76ccfb81-7253-46d8-899e-25e39ba20023"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "a8c9569f-0060-4e17-868d-e89658414cad",
@@ -4603,7 +4603,7 @@
       "Gene"
     ],
     "outgoing_citations": [],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
     ],
@@ -4804,7 +4804,7 @@
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "b29b2369-d185-44e0-bb6f-1881451b33a0"
@@ -4869,7 +4869,7 @@
       "Physics"
     ],
     "outgoing_citations": [],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da",
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
@@ -5081,12 +5081,12 @@
       "Pure mathematics"
     ],
     "outgoing_citations": [],
-    "journal_id": "0aac13be-db84-4bed-8869-0e1d28d44d3b",
+    "journal_id": "a132defd-a0ae-47d3-87f1-d294b7623dc6",
     "university_ids": [
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "0df433ce-1385-4671-8eec-820584e5ea30",
@@ -5171,7 +5171,7 @@
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "c5d5c173-d7e5-43db-93ed-00e9967e39ae"
@@ -5541,7 +5541,7 @@
       "Biology"
     ],
     "outgoing_citations": [],
-    "journal_id": "4ce3b50d-40af-475a-9b68-c81734828f20",
+    "journal_id": "eaa791e6-bd25-4006-aae3-e41bb913cec8",
     "university_ids": [
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
     ],
@@ -5639,7 +5639,7 @@
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "44ff4013-8fd8-48d0-b0ba-9a0e88f39a32"
@@ -5775,7 +5775,7 @@
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "b29b2369-d185-44e0-bb6f-1881451b33a0"
@@ -6037,7 +6037,7 @@
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "f0769d70-6464-4b05-91c2-85f1fdd97156",
@@ -6214,7 +6214,7 @@
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "553d8dff-6116-43cf-b811-7d2a9bb0c7ab"
@@ -6259,7 +6259,7 @@
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "8f542fb8-6811-46a1-b807-f3011854611f",
@@ -6573,7 +6573,7 @@
       "Downregulation and upregulation"
     ],
     "outgoing_citations": [],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
     ],
@@ -6701,7 +6701,7 @@
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "abdca94b-fea6-42a3-8f73-19e8d47f802e"
@@ -6745,7 +6745,7 @@
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "8fad4362-6b31-4bbb-9605-aa6d48fef07d",
@@ -6826,7 +6826,7 @@
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "9a36754d-d474-42b9-bf96-e98c52d88fc6"
@@ -6869,7 +6869,7 @@
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "95039336-fc76-457c-b0ac-930627e77c91"
@@ -7176,13 +7176,13 @@
       "Engineering"
     ],
     "outgoing_citations": [],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da",
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "232ad883-81a1-4644-a2df-090247531174"
@@ -7216,13 +7216,13 @@
       "Database"
     ],
     "outgoing_citations": [],
-    "journal_id": "d2468781-1696-452e-a476-e5af4a147269",
+    "journal_id": "e8ca6435-d71d-41d7-a9c9-41c54c2ba8cb",
     "university_ids": [
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da",
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "6adab489-e3e4-4c9e-a089-61759fb8ff17",
@@ -7445,12 +7445,12 @@
       "86cb0dd8-dc3b-4f2b-97d3-7d003cfead19",
       "5c98c042-4a22-4754-9b8a-5bacd03077ca"
     ],
-    "journal_id": "144854e2-53b6-4f39-abe1-4d3e1989840b",
+    "journal_id": "57f8724d-1ba8-4f1e-bd9b-6860ed3fb6ae",
     "university_ids": [
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "2387a721-3df7-4954-b2b9-eb34eed715b1",
@@ -7546,7 +7546,7 @@
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "ba7a19ac-16a2-4590-aa02-c5f1e30a84b7",
@@ -7667,7 +7667,7 @@
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "b3b34cff-63a0-4a06-81b8-44f698e9d85d"
@@ -7705,7 +7705,7 @@
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "0b505aff-493f-4131-8cee-bb13cb8ec072",
@@ -8105,13 +8105,13 @@
     "outgoing_citations": [
       "ef94e18f-2529-40da-bf6a-c8696e4aff22"
     ],
-    "journal_id": "368c6f25-ce1c-482c-9256-a68a3d1a9d77",
+    "journal_id": "d9700b21-2aa9-44c5-9341-793e61616e71",
     "university_ids": [
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43",
       "76ccfb81-7253-46d8-899e-25e39ba20023"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "725ad88e-94ae-473c-abac-cf1d1cdaab38",
@@ -8199,7 +8199,7 @@
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "822e4962-c5cf-4c9c-af4b-4c4c567e6eef",
@@ -8311,7 +8311,7 @@
       "76ccfb81-7253-46d8-899e-25e39ba20023"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "6eee491f-6a47-4fa9-be42-e52c8a7aa73c",
@@ -8384,7 +8384,7 @@
       "Multivariate statistics"
     ],
     "outgoing_citations": [],
-    "journal_id": "72ea8d58-17e2-4d7d-bb00-3488511cd41c",
+    "journal_id": "a247ebfd-8c2d-4665-b63f-f3fa143a1fd4",
     "university_ids": [
       "76ccfb81-7253-46d8-899e-25e39ba20023"
     ],
@@ -8428,7 +8428,7 @@
       "76ccfb81-7253-46d8-899e-25e39ba20023"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "4dba53bb-a906-440d-a1e3-936723b9fa6a"
@@ -8772,7 +8772,7 @@
       "76ccfb81-7253-46d8-899e-25e39ba20023"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "725013d3-7278-4672-bba9-fb93a9b3bbfb"
@@ -8946,7 +8946,7 @@
       "76ccfb81-7253-46d8-899e-25e39ba20023"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "8d3cccc8-14d7-4901-99c7-9c3f75cc66b5"
@@ -9024,7 +9024,7 @@
       "76ccfb81-7253-46d8-899e-25e39ba20023"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "89d8ee45-a4c5-4306-8081-eb1d83405b72"
@@ -9283,7 +9283,7 @@
       "76ccfb81-7253-46d8-899e-25e39ba20023"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "a8aa1eaf-f0e3-48ab-b1fa-0625e81504ab"
@@ -9386,14 +9386,14 @@
       "Political science"
     ],
     "outgoing_citations": [],
-    "journal_id": "55f907f1-f3a1-4211-9652-097b0dab7d23",
+    "journal_id": "3ed6c906-6e18-4c57-95f5-f27a17f3749a",
     "university_ids": [
       "76ccfb81-7253-46d8-899e-25e39ba20023",
       "fdd57748-5185-4e73-863d-8304e834885d",
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "9d4e5c25-def2-42df-9b63-e459462c687d",
@@ -9490,7 +9490,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "ba83eedc-e871-4f15-8f3e-10c8e124e9c0",
@@ -9571,13 +9571,13 @@
       "a43fa75a-5b4b-4501-873d-9d7ff76948cb",
       "31c935eb-4545-46ef-a7d0-70e73c1b5bf7"
     ],
-    "journal_id": "66c666ac-08d7-4e05-b828-d56cae4222ab",
+    "journal_id": "69d8362c-7207-49a4-8812-628f68f04e53",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7",
       "76ccfb81-7253-46d8-899e-25e39ba20023"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "ba83eedc-e871-4f15-8f3e-10c8e124e9c0",
@@ -9623,7 +9623,7 @@
       "76ccfb81-7253-46d8-899e-25e39ba20023"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "ba83eedc-e871-4f15-8f3e-10c8e124e9c0",
@@ -9670,7 +9670,7 @@
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "ea647e99-8dfe-40a8-8e16-2a4b35cf3cd1",
@@ -9705,13 +9705,13 @@
       "Biology"
     ],
     "outgoing_citations": [],
-    "journal_id": "55f907f1-f3a1-4211-9652-097b0dab7d23",
+    "journal_id": "3ed6c906-6e18-4c57-95f5-f27a17f3749a",
     "university_ids": [
       "76ccfb81-7253-46d8-899e-25e39ba20023",
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "d8cd76bd-fc24-4f6d-9ca0-3e40414b7dc3",
@@ -9790,7 +9790,7 @@
       "76ccfb81-7253-46d8-899e-25e39ba20023"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "4fc18546-dee3-4cd1-a840-f065849098dd"
@@ -9823,7 +9823,7 @@
       "8166e26b-6650-42ce-8a5d-fff839c2eb16",
       "3ed23f5d-21f6-43e3-81e5-87eaf2a566ad"
     ],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a",
       "fdd57748-5185-4e73-863d-8304e834885d",
@@ -9872,13 +9872,13 @@
     "outgoing_citations": [
       "6c007639-5adb-45a9-a870-f8bd17ddd53b"
     ],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a",
       "76ccfb81-7253-46d8-899e-25e39ba20023"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "6e5082fe-cf0a-4ec2-a5a2-94cbaf74f7b4",
@@ -10000,12 +10000,12 @@
       "Geology"
     ],
     "outgoing_citations": [],
-    "journal_id": "6abdea25-735f-451e-b605-8fc85f908579",
+    "journal_id": "f12c5b59-3482-4961-8670-36ef05a50994",
     "university_ids": [
       "76ccfb81-7253-46d8-899e-25e39ba20023"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "1a76846a-80d1-4522-92ad-83a51174b132"
@@ -10076,7 +10076,7 @@
       "76ccfb81-7253-46d8-899e-25e39ba20023"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "cebe4327-c304-43cc-a767-abe3fa20d363",
@@ -10118,7 +10118,7 @@
       "Bioinformatics"
     ],
     "outgoing_citations": [],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "76ccfb81-7253-46d8-899e-25e39ba20023"
     ],
@@ -10593,7 +10593,7 @@
       "76ccfb81-7253-46d8-899e-25e39ba20023"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "725ad88e-94ae-473c-abac-cf1d1cdaab38",
@@ -10726,7 +10726,7 @@
       "76ccfb81-7253-46d8-899e-25e39ba20023"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "63f02328-1817-4021-8ae7-b24eff418430"
@@ -10766,12 +10766,12 @@
       "Organizational learning"
     ],
     "outgoing_citations": [],
-    "journal_id": "368c6f25-ce1c-482c-9256-a68a3d1a9d77",
+    "journal_id": "d9700b21-2aa9-44c5-9341-793e61616e71",
     "university_ids": [
       "76ccfb81-7253-46d8-899e-25e39ba20023"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "dceb7b88-c687-47d7-9d82-fc3a2b4f86df"
@@ -10809,7 +10809,7 @@
       "8ec467ce-34bc-4316-8036-3f4650b68cc6",
       "2c2038dd-a3ba-4702-832e-83942e7fd88e"
     ],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "fdd57748-5185-4e73-863d-8304e834885d",
       "27c870c5-6b24-4889-bf1a-082d7b749c25",
@@ -10953,7 +10953,7 @@
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "f04e829e-aeff-4dde-82da-9d1259954982",
@@ -11034,13 +11034,13 @@
     "outgoing_citations": [
       "b74be6ea-628c-4279-894c-8567e933c842"
     ],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "76ccfb81-7253-46d8-899e-25e39ba20023",
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "a3ab5f66-e0ad-40a7-bcc2-0d35f6996559",
@@ -11246,7 +11246,7 @@
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "af961035-ec34-42bf-b80d-d0a6e8fe1df9"
@@ -11371,7 +11371,7 @@
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "c11a558d-383d-430a-b360-f47837ad298e",
@@ -11401,7 +11401,7 @@
       "Gene"
     ],
     "outgoing_citations": [],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "27c870c5-6b24-4889-bf1a-082d7b749c25",
       "fdd57748-5185-4e73-863d-8304e834885d",
@@ -11449,12 +11449,12 @@
     "outgoing_citations": [
       "4d2d9a2c-2798-47e8-aa61-6be2ba77c074"
     ],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "05435292-28a7-4601-b292-0fd0f1d4bbb1"
@@ -11491,7 +11491,7 @@
       "Internal medicine"
     ],
     "outgoing_citations": [],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "27c870c5-6b24-4889-bf1a-082d7b749c25",
       "fdd57748-5185-4e73-863d-8304e834885d"
@@ -11593,7 +11593,7 @@
     "outgoing_citations": [
       "c1edc12f-ae2a-41f2-82aa-aec2fdd981ef"
     ],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "fdd57748-5185-4e73-863d-8304e834885d",
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
@@ -11737,12 +11737,12 @@
       "Physics"
     ],
     "outgoing_citations": [],
-    "journal_id": "5b0febe3-406a-4cd7-9560-9565b8f5827e",
+    "journal_id": "117c2d1e-7c1d-47ec-b839-0128b8de1069",
     "university_ids": [
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "9bc3128c-c62b-4abf-beed-6a59eb87bdca",
@@ -11775,12 +11775,12 @@
       "Artificial neural network"
     ],
     "outgoing_citations": [],
-    "journal_id": "97d0c998-2917-4b0e-8f3e-75af5827420e",
+    "journal_id": "aa90aec8-367c-4160-810d-b7b685eb3044",
     "university_ids": [
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "f245e261-55d6-4bc9-9f82-7c8bad3e75ee"
@@ -11853,7 +11853,7 @@
       "Gene expression"
     ],
     "outgoing_citations": [],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
@@ -11982,7 +11982,7 @@
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "c2d631a2-d12b-4608-bf02-690a81a141af",
@@ -12029,7 +12029,7 @@
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "42f69306-51f2-4a9f-9512-ee6d14f09c85",
@@ -12075,7 +12075,7 @@
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "e1d1d4eb-9059-49c2-87ab-cdab79623ac9",
@@ -12173,13 +12173,13 @@
     "outgoing_citations": [
       "aa71fce2-0687-47d2-902e-647d8895ee09"
     ],
-    "journal_id": "55f907f1-f3a1-4211-9652-097b0dab7d23",
+    "journal_id": "3ed6c906-6e18-4c57-95f5-f27a17f3749a",
     "university_ids": [
       "fdd57748-5185-4e73-863d-8304e834885d",
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "05435292-28a7-4601-b292-0fd0f1d4bbb1",
@@ -12236,12 +12236,12 @@
       "Channel (broadcasting)"
     ],
     "outgoing_citations": [],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "6235ac5a-2e4c-4970-a112-7c778cfb74cd"
@@ -12368,7 +12368,7 @@
       "Management"
     ],
     "outgoing_citations": [],
-    "journal_id": "085e581b-6f10-4f36-a817-c849baf9397e",
+    "journal_id": "d67e8e0e-a394-49c8-8639-8ce9815ccfcb",
     "university_ids": [
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
@@ -12503,13 +12503,13 @@
     "outgoing_citations": [
       "6a204417-c3ce-4e80-9c63-65793fb46623"
     ],
-    "journal_id": "5bcb75b7-06d6-4de8-b431-fe6b18227703",
+    "journal_id": "8836c279-87d1-4c56-82c1-af04e0f96fa7",
     "university_ids": [
       "fdd57748-5185-4e73-863d-8304e834885d",
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "7f6d12c9-e652-4be3-ae10-f62a4b7d2a1d",
@@ -12736,7 +12736,7 @@
     "outgoing_citations": [
       "6a258d82-4fba-4e5b-8977-bffcda92ee69"
     ],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
@@ -12883,7 +12883,7 @@
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "b251e91d-0fe4-40d5-83bb-1711bd0d39ff",
@@ -12913,12 +12913,12 @@
       "Economics"
     ],
     "outgoing_citations": [],
-    "journal_id": "55f907f1-f3a1-4211-9652-097b0dab7d23",
+    "journal_id": "3ed6c906-6e18-4c57-95f5-f27a17f3749a",
     "university_ids": [
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "349c7975-6173-4920-8598-b6090809dd06",
@@ -12966,12 +12966,12 @@
     "outgoing_citations": [
       "12821020-cca8-477c-a812-ca2debb93141"
     ],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "e7137d57-6ee1-4656-8263-47124976a069"
@@ -13014,7 +13014,7 @@
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "2c63fe08-3ad4-416e-835b-d1584f70214e",
@@ -13138,7 +13138,7 @@
       "a58a9b58-c1ce-44d9-bd1f-b1fca3de0fc8",
       "8ec467ce-34bc-4316-8036-3f4650b68cc6"
     ],
-    "journal_id": "294144da-343a-406f-9ade-bb72c8fbf9e6",
+    "journal_id": "f5fba608-3bbd-481e-9ea2-7b66349c90c0",
     "university_ids": [
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
@@ -13185,12 +13185,12 @@
       "Computer science"
     ],
     "outgoing_citations": [],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "54359cb1-53fd-4f78-a04e-ef46f38b11ce"
@@ -13353,13 +13353,13 @@
     "outgoing_citations": [
       "162ff034-4831-476f-8b81-51adcbb76186"
     ],
-    "journal_id": "55f907f1-f3a1-4211-9652-097b0dab7d23",
+    "journal_id": "3ed6c906-6e18-4c57-95f5-f27a17f3749a",
     "university_ids": [
       "fdd57748-5185-4e73-863d-8304e834885d",
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "6b04d2a2-00dc-4726-9d3a-bc1f45c210f9",
@@ -13407,7 +13407,7 @@
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "66656cea-6e32-43f7-8178-81f80fcdb0cc"
@@ -13525,12 +13525,12 @@
     "outgoing_citations": [
       "b0ed77cf-9048-4956-a027-2779336eb6fb"
     ],
-    "journal_id": "14441ab4-187a-4322-8a70-445720bc0248",
+    "journal_id": "9c9a4ce8-3abd-4eed-bc10-b29fc640da7c",
     "university_ids": [
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "7b79bb36-3af6-44e9-ae7f-fe67c5d02d13"
@@ -13567,7 +13567,7 @@
       "RNA"
     ],
     "outgoing_citations": [],
-    "journal_id": "55f907f1-f3a1-4211-9652-097b0dab7d23",
+    "journal_id": "3ed6c906-6e18-4c57-95f5-f27a17f3749a",
     "university_ids": [
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
@@ -13623,7 +13623,7 @@
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "875580f0-9b7f-49f3-8466-f37185b6c5a5"
@@ -13665,7 +13665,7 @@
       "Pathology"
     ],
     "outgoing_citations": [],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "fdd57748-5185-4e73-863d-8304e834885d",
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
@@ -13834,13 +13834,13 @@
     "outgoing_citations": [
       "aa71fce2-0687-47d2-902e-647d8895ee09"
     ],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "fdd57748-5185-4e73-863d-8304e834885d",
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "6b04d2a2-00dc-4726-9d3a-bc1f45c210f9",
@@ -13975,7 +13975,7 @@
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "d79bb91c-d4e0-490d-9c72-e8383493c7d6"
@@ -14176,7 +14176,7 @@
       "Political science"
     ],
     "outgoing_citations": [],
-    "journal_id": "8e475e17-f1b4-45f9-9f81-525059a538d0",
+    "journal_id": "db4c8f22-cbcd-4fd6-bcec-64e70da3f047",
     "university_ids": [
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
@@ -14303,7 +14303,7 @@
       "Gene"
     ],
     "outgoing_citations": [],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
@@ -14428,7 +14428,7 @@
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "dfc5cae5-4af5-40ab-b0d5-07342262e707"
@@ -14464,12 +14464,12 @@
       "Law"
     ],
     "outgoing_citations": [],
-    "journal_id": "55f907f1-f3a1-4211-9652-097b0dab7d23",
+    "journal_id": "3ed6c906-6e18-4c57-95f5-f27a17f3749a",
     "university_ids": [
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "b8fc5435-f25d-4a6a-b160-b7d31271dcd7",
@@ -14598,7 +14598,7 @@
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "460cd508-730e-45b4-95c9-1f1dd23a725c"
@@ -14631,7 +14631,7 @@
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "6c2724ee-fa86-434c-b5f2-3f8c445c1e1f"
@@ -14728,7 +14728,7 @@
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "b29b2369-d185-44e0-bb6f-1881451b33a0"
@@ -14834,7 +14834,7 @@
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "052aa4b5-6f35-42d7-8a16-9e2b0c9e9afe"
@@ -14998,7 +14998,7 @@
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "c1ba008d-4afa-4efe-bf48-f71c71cab9dd",
@@ -15039,12 +15039,12 @@
       "Chemical engineering"
     ],
     "outgoing_citations": [],
-    "journal_id": "12347e44-2c95-4d06-a85d-f3bc3550faf0",
+    "journal_id": "d04e5f23-59ab-4362-a585-79e651403df9",
     "university_ids": [
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "e233e26a-2697-4a20-b9c9-7533bfc8d7ff",
@@ -15120,12 +15120,12 @@
     "outgoing_citations": [
       "dcd04f5b-f702-4b3a-9e19-2e5cc87b66ef"
     ],
-    "journal_id": "77b126ba-5e3b-47c1-9872-31f7ea15625f",
+    "journal_id": "28fb4c69-0e6e-4ece-a6c2-ea7dbd18e5f1",
     "university_ids": [
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "ded6b756-5658-414f-bbc4-745b2e700c33"
@@ -15435,7 +15435,7 @@
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "c8e6b9e7-2715-465b-b575-c5b486b0b44e",
@@ -15635,12 +15635,12 @@
       "Medicine"
     ],
     "outgoing_citations": [],
-    "journal_id": "c9c88e5d-40e7-4fd5-9cf8-688601102b83",
+    "journal_id": "c13a8c1c-0100-4559-bdfd-92eb689b81e9",
     "university_ids": [
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "c6f97c96-d16f-4969-a72d-a472aacfbc3e",
@@ -15676,7 +15676,7 @@
       "Artificial intelligence"
     ],
     "outgoing_citations": [],
-    "journal_id": "63ee15eb-7ae2-4e2c-882e-d4f705d13598",
+    "journal_id": "05ccb9d7-9727-4943-970a-ca3ec1e8aa68",
     "university_ids": [
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
@@ -15720,12 +15720,12 @@
       "Marketing"
     ],
     "outgoing_citations": [],
-    "journal_id": "f55a30e2-431e-461a-806d-9a937fa653c6",
+    "journal_id": "f37b5675-92ea-4a71-bb19-d8e0fc1ecb8a",
     "university_ids": [
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "0cd60453-8c51-495b-8772-368e2aa791ba"
@@ -15882,7 +15882,7 @@
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "f356f037-b7ca-4b0f-86b9-ba7025232d28",
@@ -16036,12 +16036,12 @@
     "outgoing_citations": [
       "5d5804ac-a0ce-4d06-83e5-06ba55c78d99"
     ],
-    "journal_id": "55f907f1-f3a1-4211-9652-097b0dab7d23",
+    "journal_id": "3ed6c906-6e18-4c57-95f5-f27a17f3749a",
     "university_ids": [
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "691a28a6-ca7a-44c7-86ba-d568db03f42c"
@@ -16088,7 +16088,7 @@
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "1e4071ca-23a9-4b20-9348-7f0bbb2aa0bb"
@@ -16421,7 +16421,7 @@
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "bc381709-4133-4d45-8fed-bdee04557060",
@@ -16634,7 +16634,7 @@
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "fa3a89f5-f2f8-40ef-b064-4c686d1cad43",
@@ -16865,12 +16865,12 @@
       "Computer science"
     ],
     "outgoing_citations": [],
-    "journal_id": "40e60a9d-0455-45f9-a1bd-529b9da6dfdf",
+    "journal_id": "65e0f448-0735-40aa-b073-096a9bf94afa",
     "university_ids": [
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "cf11329b-e797-49b9-aab7-6d3a3ab64f67"
@@ -16908,7 +16908,7 @@
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "2c1110a3-c10a-419f-aa41-069e3daaa901"
@@ -16978,12 +16978,12 @@
     "outgoing_citations": [
       "7e5b9cf9-09c6-4492-8cad-1b1ced346927"
     ],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "3d4e0312-792f-4284-b4ab-c1160c1df51f"
@@ -17103,7 +17103,7 @@
       "Sociology"
     ],
     "outgoing_citations": [],
-    "journal_id": "79042137-7091-4b78-9e5d-12675b803540",
+    "journal_id": "79f20fae-8882-4b6b-a314-09a5ea507958",
     "university_ids": [
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
@@ -17308,7 +17308,7 @@
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "4df137c8-526d-4d89-bfdc-24cc7d9d2c45"
@@ -17379,7 +17379,7 @@
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "de01dee3-9fa4-4c3c-a887-8447bdd1a36a"
@@ -17422,12 +17422,12 @@
       "Engineering"
     ],
     "outgoing_citations": [],
-    "journal_id": "ef2a2966-a5cf-4664-a174-865288fd062d",
+    "journal_id": "844f8a65-eb45-4319-91a4-0969966d92ea",
     "university_ids": [
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "f60e2d19-49a1-422e-bd0b-b49c024d2b74"
@@ -17457,7 +17457,7 @@
       "Telecommunications"
     ],
     "outgoing_citations": [],
-    "journal_id": "ce2a318d-3c74-4a94-ad97-d80215153527",
+    "journal_id": "3e27dd47-9e24-49a1-b12b-6a1bdc263126",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
@@ -17532,7 +17532,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "a4e36e52-784b-491e-b8aa-d94ec5e25a6a",
@@ -17580,7 +17580,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "cde82029-72c0-414b-80c6-f1375c2eb9f2"
@@ -17615,12 +17615,12 @@
     "outgoing_citations": [
       "65797c64-66ce-45d6-bb49-27e2342f5697"
     ],
-    "journal_id": "ce2a318d-3c74-4a94-ad97-d80215153527",
+    "journal_id": "3e27dd47-9e24-49a1-b12b-6a1bdc263126",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "6976039d-a1a8-466f-b50c-bf3102a5bb29",
@@ -17658,12 +17658,12 @@
       "Mechanical engineering"
     ],
     "outgoing_citations": [],
-    "journal_id": "cf92bda7-c47d-461b-b587-72c69e9b03db",
+    "journal_id": "09abadf0-e008-42b9-a780-f60ba2f12d7a",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "eafba47d-f59e-41c7-bd2f-c8101b5af75a"
@@ -17813,7 +17813,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "a046046e-2e28-4a88-bcae-0f535b42840a",
@@ -17853,12 +17853,12 @@
       "e9da639a-53a4-4586-afb0-61f1313ce5a3",
       "1e604f2b-9889-4ae1-afc7-a204ceb4c4ac"
     ],
-    "journal_id": "5458fc3b-7a33-4edb-874a-f4383ce89016",
+    "journal_id": "2e7f0a8c-9b18-44f3-970d-7b1b67a699df",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "4ec925e1-b6d0-41b0-b528-08be4104d204",
@@ -17933,13 +17933,13 @@
     "outgoing_citations": [
       "8c33648c-3bc0-48ea-8972-a0031d364f19"
     ],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7",
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "de817483-0a06-473c-b029-906f8792574e",
@@ -18030,13 +18030,13 @@
       "6e820926-2c9a-4462-a463-7faa35723786",
       "8c33648c-3bc0-48ea-8972-a0031d364f19"
     ],
-    "journal_id": "55f907f1-f3a1-4211-9652-097b0dab7d23",
+    "journal_id": "3ed6c906-6e18-4c57-95f5-f27a17f3749a",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7",
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "de817483-0a06-473c-b029-906f8792574e",
@@ -18076,7 +18076,7 @@
       "RNA"
     ],
     "outgoing_citations": [],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
@@ -18173,7 +18173,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "1afc2dd0-e6a4-422d-a9fe-dc491c309084"
@@ -18208,13 +18208,13 @@
       "6e820926-2c9a-4462-a463-7faa35723786",
       "8c33648c-3bc0-48ea-8972-a0031d364f19"
     ],
-    "journal_id": "e407ea21-f1bc-4355-bde4-29ca7b54fb6d",
+    "journal_id": "f08bba6a-a905-47fe-aeaf-b5e2d67e4446",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7",
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "de817483-0a06-473c-b029-906f8792574e",
@@ -18248,12 +18248,12 @@
       "Active learning (machine learning)"
     ],
     "outgoing_citations": [],
-    "journal_id": "eccdedbf-f69c-4c02-a49e-4a2e8ecf4d2b",
+    "journal_id": "b72311d2-e2c4-4f56-bd9e-e1de8e350d48",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "19541d38-2a7b-4947-b67f-bdcfce14a109",
@@ -18299,7 +18299,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "06670dea-2ac0-457e-b4d0-6438edaa133f",
@@ -18379,13 +18379,13 @@
       "Food web"
     ],
     "outgoing_citations": [],
-    "journal_id": "55f907f1-f3a1-4211-9652-097b0dab7d23",
+    "journal_id": "3ed6c906-6e18-4c57-95f5-f27a17f3749a",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7",
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "7ee41e48-12ce-4f58-8508-9b322165ac4f",
@@ -18527,12 +18527,12 @@
       "7420f53f-ae6c-4c5f-a6cd-a1f4bbf7c634",
       "1e604f2b-9889-4ae1-afc7-a204ceb4c4ac"
     ],
-    "journal_id": "a7221b3e-c45b-4951-8f4f-255868003a72",
+    "journal_id": "7a50a404-ab0a-40fd-9fba-7be36e859f2f",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "628d5ca8-5aed-4abc-b36e-534d217b7769",
@@ -18604,12 +18604,12 @@
       "Volcano"
     ],
     "outgoing_citations": [],
-    "journal_id": "ff17403c-a772-41e4-894d-6f3070d05f9b",
+    "journal_id": "0cff68d7-e54a-4c46-867e-7bb072a048fa",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "0b8bc72f-777c-4e71-9480-623d2977293d",
@@ -18645,7 +18645,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "434b5447-a4c1-41ec-8e27-cc563435f3cc"
@@ -18716,13 +18716,13 @@
       "Mantle (geology)"
     ],
     "outgoing_citations": [],
-    "journal_id": "ff17403c-a772-41e4-894d-6f3070d05f9b",
+    "journal_id": "0cff68d7-e54a-4c46-867e-7bb072a048fa",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7",
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "df9eb2b4-c16c-4e01-86d9-889fffcfc35d"
@@ -18766,7 +18766,7 @@
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "2e636ab0-aba0-4629-a0ce-eafde56c224a",
@@ -18807,7 +18807,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "2422fed3-37b0-49e4-823b-da35b3911143",
@@ -18902,7 +18902,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "1358c9bd-24d4-46ea-aa7e-af48f7dc6ea0"
@@ -18932,12 +18932,12 @@
       "Computer hardware"
     ],
     "outgoing_citations": [],
-    "journal_id": "9b584d6a-d130-4fe9-a1de-e301e13472c9",
+    "journal_id": "8aec8143-6dd6-424c-9784-1d39a45ae5ad",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "1225db75-4d6c-444f-bc34-51ba428c3332"
@@ -19013,12 +19013,12 @@
       "Economics"
     ],
     "outgoing_citations": [],
-    "journal_id": "3c9cb8c6-fbb7-4fda-b3eb-2dad4a2987cc",
+    "journal_id": "5e22fb37-2897-4c25-a4ab-594c29359dac",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "eafba47d-f59e-41c7-bd2f-c8101b5af75a"
@@ -19092,7 +19092,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "cdf6e58f-a2f9-45b4-83d3-1fc818b938cc",
@@ -19126,7 +19126,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "56c239c1-4dbb-40ad-a6d3-387203518743",
@@ -19168,7 +19168,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "de817483-0a06-473c-b029-906f8792574e"
@@ -19209,7 +19209,7 @@
     "outgoing_citations": [
       "015572b3-3ea6-4c0e-9939-a1379d7223cc"
     ],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
@@ -19253,7 +19253,7 @@
       "Physics"
     ],
     "outgoing_citations": [],
-    "journal_id": "79042137-7091-4b78-9e5d-12675b803540",
+    "journal_id": "79f20fae-8882-4b6b-a314-09a5ea507958",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
@@ -19293,7 +19293,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "33aff4f4-3667-45ed-b50c-07368024f59f"
@@ -19330,12 +19330,12 @@
       "Mathematical analysis"
     ],
     "outgoing_citations": [],
-    "journal_id": "eb8359d6-d40d-409c-b9f8-638625996292",
+    "journal_id": "3c7b589f-7fca-48b9-9a4c-c4c0fd89c199",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "ca0b583c-71dc-40b7-ae92-85c4ec6ad3a2",
@@ -19421,7 +19421,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "33aff4f4-3667-45ed-b50c-07368024f59f"
@@ -19460,7 +19460,7 @@
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "5ca9df96-4f84-4ece-a93b-b31c7152da10",
@@ -19494,7 +19494,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "1672f15a-6a0c-4a45-a54f-d90c5c74baa7"
@@ -19532,7 +19532,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "de817483-0a06-473c-b029-906f8792574e"
@@ -19620,13 +19620,13 @@
     "outgoing_citations": [
       "162ff034-4831-476f-8b81-51adcbb76186"
     ],
-    "journal_id": "55f907f1-f3a1-4211-9652-097b0dab7d23",
+    "journal_id": "3ed6c906-6e18-4c57-95f5-f27a17f3749a",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7",
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "d9761bcb-2326-453b-aa42-484d9b70deb3",
@@ -19673,7 +19673,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "fe414a05-9f00-4ee2-86a8-9bf33137244f"
@@ -19790,7 +19790,7 @@
       "7ac2cb49-68a6-40eb-8fd6-427f76c76626",
       "9467271a-9cd4-42fb-bffe-e04731afeaff"
     ],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7",
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a",
@@ -19825,7 +19825,7 @@
       "Mathematics"
     ],
     "outgoing_citations": [],
-    "journal_id": "b382ad64-2482-4cc6-8d01-b88c8c92e41b",
+    "journal_id": "a9622ed8-7444-4ac2-9e8d-45e45f4d44a1",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
@@ -19873,7 +19873,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "b9a787a3-e559-4e08-a5c9-a42dff982970",
@@ -19953,13 +19953,13 @@
     "outgoing_citations": [
       "7e30c59f-a1f8-4fa0-b2b3-e7f580b5791e"
     ],
-    "journal_id": "79042137-7091-4b78-9e5d-12675b803540",
+    "journal_id": "79f20fae-8882-4b6b-a314-09a5ea507958",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7",
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "de817483-0a06-473c-b029-906f8792574e",
@@ -20005,7 +20005,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "de817483-0a06-473c-b029-906f8792574e"
@@ -20045,7 +20045,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "c2f341c1-0e7a-4053-bd2b-b3bd343bc082"
@@ -20089,7 +20089,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "88f4bbcc-772c-4b14-93c0-d409f898d7ee"
@@ -20129,7 +20129,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "aee80089-4696-4e41-a486-0dd18e3fbf78",
@@ -20160,12 +20160,12 @@
       "Channel (broadcasting)"
     ],
     "outgoing_citations": [],
-    "journal_id": "14441ab4-187a-4322-8a70-445720bc0248",
+    "journal_id": "9c9a4ce8-3abd-4eed-bc10-b29fc640da7c",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "1763be1a-f0b0-48cc-996e-7082976bfdbc",
@@ -20206,12 +20206,12 @@
       "Bayesian probability"
     ],
     "outgoing_citations": [],
-    "journal_id": "b5c6b67a-0da1-4edd-bc07-b8fe0fd7b465",
+    "journal_id": "59dac902-c738-4f8c-a3eb-016a0b0e6de2",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "d614739f-0a59-411d-9368-537fd716200e",
@@ -20298,13 +20298,13 @@
       "9d97de1f-07c1-4081-950b-b1a1baef5022",
       "e2fd7542-222f-4074-8e63-9de45b4f09ea"
     ],
-    "journal_id": "d0e06773-c039-442d-9476-06ee8acfceb4",
+    "journal_id": "ecb6d9df-8702-4a4c-bee6-16dd5db4d097",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7",
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "93bc531f-e48b-42fa-9edc-42170bf554df",
@@ -20341,7 +20341,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "ba7a19ac-16a2-4590-aa02-c5f1e30a84b7"
@@ -20370,12 +20370,12 @@
     "outgoing_citations": [
       "b62bd194-ecad-4096-9f6b-8629e46cfe8f"
     ],
-    "journal_id": "55f907f1-f3a1-4211-9652-097b0dab7d23",
+    "journal_id": "3ed6c906-6e18-4c57-95f5-f27a17f3749a",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "1763be1a-f0b0-48cc-996e-7082976bfdbc",
@@ -20412,7 +20412,7 @@
     "outgoing_citations": [
       "65797c64-66ce-45d6-bb49-27e2342f5697"
     ],
-    "journal_id": "55f907f1-f3a1-4211-9652-097b0dab7d23",
+    "journal_id": "3ed6c906-6e18-4c57-95f5-f27a17f3749a",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7",
       "76197670-83f1-40ce-87c4-4172c6829f90",
@@ -20468,7 +20468,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "0e406c6e-2d7d-423a-b5c2-34c3f6897018",
@@ -20554,7 +20554,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "81da4c9c-64ab-4d70-abbd-65e38f236474",
@@ -20584,13 +20584,13 @@
       "Limit (mathematics)"
     ],
     "outgoing_citations": [],
-    "journal_id": "71d6cee7-6807-4930-b4cd-08d0002ac014",
+    "journal_id": "2dc1accb-cb1b-49d7-8f42-f67bfbef1e25",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7",
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "1080bd32-9f8e-4739-998a-b810d1e2844d",
@@ -20620,12 +20620,12 @@
       "Computer hardware"
     ],
     "outgoing_citations": [],
-    "journal_id": "e053d902-f2de-4c03-b8e7-34f3c262a589",
+    "journal_id": "5b20f224-09d0-4267-a813-6f537dd9607d",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "513566a5-e6a6-449d-a3cd-5aef8e65bfec"
@@ -20662,12 +20662,12 @@
       "Distributed computing"
     ],
     "outgoing_citations": [],
-    "journal_id": "b5ddec8b-31f4-4c6c-98e0-881b09759784",
+    "journal_id": "336eb3af-262a-4618-9001-e58136234c92",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "4cb5ce09-9e62-4c03-a210-c14d7bc473af"
@@ -20700,12 +20700,12 @@
     "outgoing_citations": [
       "e9da639a-53a4-4586-afb0-61f1313ce5a3"
     ],
-    "journal_id": "a7221b3e-c45b-4951-8f4f-255868003a72",
+    "journal_id": "7a50a404-ab0a-40fd-9fba-7be36e859f2f",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "628d5ca8-5aed-4abc-b36e-534d217b7769",
@@ -20795,7 +20795,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "c0168cea-9dc9-4dad-99fa-4946ab8445a2"
@@ -20832,7 +20832,7 @@
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "526e5f35-5630-4fa7-836b-5133eab811b5",
@@ -20869,12 +20869,12 @@
       "Geography"
     ],
     "outgoing_citations": [],
-    "journal_id": "79042137-7091-4b78-9e5d-12675b803540",
+    "journal_id": "79f20fae-8882-4b6b-a314-09a5ea507958",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "8be2df1b-1a85-4d91-9f42-01bd7d5848e7",
@@ -20912,7 +20912,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "b7980f1e-2155-4711-af5b-0755b22db334"
@@ -20957,7 +20957,7 @@
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "d1a01420-3484-45b5-830c-810078c439de",
@@ -21082,13 +21082,13 @@
       "Cartography"
     ],
     "outgoing_citations": [],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "76197670-83f1-40ce-87c4-4172c6829f90",
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "c1dd86a9-3bdf-43fc-9044-da6b8e24061e",
@@ -21134,7 +21134,7 @@
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "5b68e5d8-01a4-44aa-8183-cf2152854ccb"
@@ -21168,12 +21168,12 @@
       "Population"
     ],
     "outgoing_citations": [],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "388cfff6-3984-482b-8b26-a0d280d3f9b7",
@@ -21210,7 +21210,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "50600df5-2aaa-4d7a-9bc7-61b3827902f2",
@@ -21246,7 +21246,7 @@
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "187fa838-a6e8-4ef9-9ab8-c1cd8077963a",
@@ -21332,7 +21332,7 @@
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "a154b766-e363-4962-ab50-315c0418269e",
@@ -21420,7 +21420,7 @@
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "b5a7f3d5-8826-4a02-bf83-ae3635597e50"
@@ -21503,7 +21503,7 @@
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "f04e829e-aeff-4dde-82da-9d1259954982",
@@ -21587,7 +21587,7 @@
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "0c2949a6-b272-46b8-b274-e053e5968ecc"
@@ -21673,7 +21673,7 @@
       "Central nervous system"
     ],
     "outgoing_citations": [],
-    "journal_id": "55f907f1-f3a1-4211-9652-097b0dab7d23",
+    "journal_id": "3ed6c906-6e18-4c57-95f5-f27a17f3749a",
     "university_ids": [
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
@@ -21769,7 +21769,7 @@
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "f0562d18-971c-4fd3-9ce9-af0d34c20200"
@@ -21814,13 +21814,13 @@
       "acf4ba8f-ceda-4678-988b-d070ecb2a668",
       "15709a3c-e8aa-4e03-a615-edd1d787a87e"
     ],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "76197670-83f1-40ce-87c4-4172c6829f90",
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "c1dd86a9-3bdf-43fc-9044-da6b8e24061e",
@@ -21902,7 +21902,7 @@
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "1599ac57-b35e-4aa1-b3a8-6775b8e1f980",
@@ -21993,7 +21993,7 @@
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "115946df-889d-4d1a-9d94-8c5dd370acc6",
@@ -22035,7 +22035,7 @@
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "b5a7f3d5-8826-4a02-bf83-ae3635597e50",
@@ -22114,12 +22114,12 @@
       "Geography"
     ],
     "outgoing_citations": [],
-    "journal_id": "55f907f1-f3a1-4211-9652-097b0dab7d23",
+    "journal_id": "3ed6c906-6e18-4c57-95f5-f27a17f3749a",
     "university_ids": [
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "98203d3e-ddc3-4133-8dd1-b16f0d3001c1"
@@ -22165,7 +22165,7 @@
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "c1dd86a9-3bdf-43fc-9044-da6b8e24061e"
@@ -22200,12 +22200,12 @@
     "outgoing_citations": [
       "48487138-7272-43b1-a412-5d78ec5f816e"
     ],
-    "journal_id": "d64e622a-c86b-4c30-9d71-d58e3080a10a",
+    "journal_id": "6f1ec456-2ef2-4052-82a5-85ead62c7ca1",
     "university_ids": [
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "1599ac57-b35e-4aa1-b3a8-6775b8e1f980",
@@ -22245,12 +22245,12 @@
       "Horticulture"
     ],
     "outgoing_citations": [],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "8de0e719-447c-47f3-b13b-2d1c990819aa",
@@ -22329,13 +22329,13 @@
     "outgoing_citations": [
       "1975a357-0c14-4c39-be6a-9c1d63e4c984"
     ],
-    "journal_id": "6ecbced6-b374-4c98-b077-5dbc85b3caf9",
+    "journal_id": "9f370341-567b-4f2e-982d-e05a2f8b3b88",
     "university_ids": [
       "76ccfb81-7253-46d8-899e-25e39ba20023",
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "d6639f21-b839-4065-ba95-2c3045c15bbd",
@@ -22366,12 +22366,12 @@
       "Petrology"
     ],
     "outgoing_citations": [],
-    "journal_id": "ff17403c-a772-41e4-894d-6f3070d05f9b",
+    "journal_id": "0cff68d7-e54a-4c46-867e-7bb072a048fa",
     "university_ids": [
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "2d0cef9a-f028-4ef7-8014-9b438feac207",
@@ -22418,7 +22418,7 @@
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "c1dd86a9-3bdf-43fc-9044-da6b8e24061e",
@@ -22596,7 +22596,7 @@
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "3a22e2ce-4a04-49c0-bdc7-0a643e89a03f",
@@ -22758,7 +22758,7 @@
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "8b46f44e-77bf-4308-b28b-8a1ab9814f03",
@@ -22884,7 +22884,7 @@
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "97ecfe55-c6aa-401a-a873-aa2e96c43c66",
@@ -22929,7 +22929,7 @@
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "68547223-7815-41ab-9c78-df635465d8db"
@@ -22968,12 +22968,12 @@
       "335584ea-8a4d-4500-8657-1b3cdd3d97c2",
       "2b2d09fa-c532-4691-9785-2603b4c2e5ef"
     ],
-    "journal_id": "55f907f1-f3a1-4211-9652-097b0dab7d23",
+    "journal_id": "3ed6c906-6e18-4c57-95f5-f27a17f3749a",
     "university_ids": [
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "d1a01420-3484-45b5-830c-810078c439de"
@@ -23004,13 +23004,13 @@
       "Natural language processing"
     ],
     "outgoing_citations": [],
-    "journal_id": "25332664-625c-4b6b-99c9-cf0bce2f394b",
+    "journal_id": "d4f17b8d-d562-40ab-9541-02ce84c9e4b6",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7",
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "2e636ab0-aba0-4629-a0ce-eafde56c224a",
@@ -23047,7 +23047,7 @@
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "b5a7f3d5-8826-4a02-bf83-ae3635597e50"
@@ -23090,7 +23090,7 @@
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "5723e40a-1ef2-452c-8b34-4b07d41895d7",
@@ -23185,7 +23185,7 @@
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "94285ecf-a627-460f-86f1-18617a63c223"
@@ -23274,7 +23274,7 @@
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "3a22e2ce-4a04-49c0-bdc7-0a643e89a03f",
@@ -23307,7 +23307,7 @@
     "outgoing_citations": [
       "acf4ba8f-ceda-4678-988b-d070ecb2a668"
     ],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "76197670-83f1-40ce-87c4-4172c6829f90",
       "27c870c5-6b24-4889-bf1a-082d7b749c25",
@@ -23352,12 +23352,12 @@
       "Software"
     ],
     "outgoing_citations": [],
-    "journal_id": "05b8fcb5-c716-4ded-b75e-2c18a2baceaf",
+    "journal_id": "45de5383-e7a8-4b9a-93af-e1f49f6775d9",
     "university_ids": [
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "1e5d1c5c-fb6d-4c09-a0f6-95d6ca7b69b3"
@@ -23395,7 +23395,7 @@
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "8410bb1b-3a51-406e-b858-6f5d4c42c4be",
@@ -23617,7 +23617,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "df9eb2b4-c16c-4e01-86d9-889fffcfc35d"
@@ -23654,7 +23654,7 @@
     "outgoing_citations": [
       "efc96479-83b5-4977-baef-db6ed0baa54e"
     ],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da",
       "fdd57748-5185-4e73-863d-8304e834885d",
@@ -23782,7 +23782,7 @@
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "73e6001b-869b-4b66-a1ad-8d17e69b9d55",
@@ -23864,12 +23864,12 @@
     "outgoing_citations": [
       "2b3c4c53-4550-4a22-b550-8ef2fc8163c8"
     ],
-    "journal_id": "77b126ba-5e3b-47c1-9872-31f7ea15625f",
+    "journal_id": "28fb4c69-0e6e-4ece-a6c2-ea7dbd18e5f1",
     "university_ids": [
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "56d3a1f7-4a3b-4492-b730-ac5af67590aa"
@@ -24006,7 +24006,7 @@
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "c1dd86a9-3bdf-43fc-9044-da6b8e24061e",
@@ -24104,7 +24104,7 @@
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "e73e73a0-5899-452b-95bc-575c56d28eb5"
@@ -24173,12 +24173,12 @@
       "World Wide Web"
     ],
     "outgoing_citations": [],
-    "journal_id": "55f907f1-f3a1-4211-9652-097b0dab7d23",
+    "journal_id": "3ed6c906-6e18-4c57-95f5-f27a17f3749a",
     "university_ids": [
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "7a1175d4-b0af-424f-ad4a-d1da1a329804"
@@ -24210,7 +24210,7 @@
       "Computer security"
     ],
     "outgoing_citations": [],
-    "journal_id": "4ce3b50d-40af-475a-9b68-c81734828f20",
+    "journal_id": "eaa791e6-bd25-4006-aae3-e41bb913cec8",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7",
       "76197670-83f1-40ce-87c4-4172c6829f90"
@@ -24361,7 +24361,7 @@
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "e73e73a0-5899-452b-95bc-575c56d28eb5"
@@ -24408,7 +24408,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "c1d3269c-7072-45a8-bb23-f291d8ae9d33",
@@ -24485,7 +24485,7 @@
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "03d821a1-da70-410e-9377-b8c5dc30743a"
@@ -24842,12 +24842,12 @@
       "Engineering"
     ],
     "outgoing_citations": [],
-    "journal_id": "98fa6c80-a7b4-42a6-8adf-cdc4370a9e9b",
+    "journal_id": "8181162c-8bc9-4c81-bb25-ce1afa33374c",
     "university_ids": [
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "7f6d12c9-e652-4be3-ae10-f62a4b7d2a1d"
@@ -24897,7 +24897,7 @@
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "6b4209f4-e977-48c9-9743-1d350128cc11",
@@ -24972,7 +24972,7 @@
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "9b3b67ca-b12e-483b-a663-0bb67993915e",
@@ -25020,13 +25020,13 @@
       "Physics"
     ],
     "outgoing_citations": [],
-    "journal_id": "310f1dbd-7ed0-4f8d-94ba-b68211432567",
+    "journal_id": "20a143b8-72b6-40a7-9c41-0e9fb37298c1",
     "university_ids": [
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43",
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "abdca94b-fea6-42a3-8f73-19e8d47f802e"
@@ -25070,7 +25070,7 @@
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "d8ef5ae8-d160-44b8-a087-a6f7b2b83bdb"
@@ -25099,13 +25099,13 @@
       "Image (mathematics)"
     ],
     "outgoing_citations": [],
-    "journal_id": "be4e24d2-3b35-4ff2-b237-08010ea3e162",
+    "journal_id": "2b9a59d5-af83-4801-93c7-7da62a5ab386",
     "university_ids": [
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43",
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "23f201fd-e231-4417-a0ee-f3105811130b"
@@ -25139,12 +25139,12 @@
       "Mathematical optimization"
     ],
     "outgoing_citations": [],
-    "journal_id": "b9c5febb-0c3f-4edd-88c0-20654273a2b8",
+    "journal_id": "41d07e77-bfeb-4f55-91ad-a39e18de229b",
     "university_ids": [
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "aea2a931-95c9-4836-84c3-228e696ffa00"
@@ -25219,12 +25219,12 @@
       "e9da639a-53a4-4586-afb0-61f1313ce5a3",
       "b8584da2-3490-47d5-bd6b-f97c01cafac5"
     ],
-    "journal_id": "05b8fcb5-c716-4ded-b75e-2c18a2baceaf",
+    "journal_id": "45de5383-e7a8-4b9a-93af-e1f49f6775d9",
     "university_ids": [
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "2c7fb8f9-00c8-4e26-93be-9e7847ceca2c"
@@ -25261,13 +25261,13 @@
       "9d97de1f-07c1-4081-950b-b1a1baef5022",
       "e2fd7542-222f-4074-8e63-9de45b4f09ea"
     ],
-    "journal_id": "25332664-625c-4b6b-99c9-cf0bce2f394b",
+    "journal_id": "d4f17b8d-d562-40ab-9541-02ce84c9e4b6",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7",
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "93bc531f-e48b-42fa-9edc-42170bf554df",
@@ -25296,12 +25296,12 @@
       "b8584da2-3490-47d5-bd6b-f97c01cafac5",
       "b08fb7ff-8387-40ca-90e9-80d7a6b4c5cd"
     ],
-    "journal_id": "b5ddec8b-31f4-4c6c-98e0-881b09759784",
+    "journal_id": "336eb3af-262a-4618-9001-e58136234c92",
     "university_ids": [
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "8438c4c1-5c40-4eb9-9b0d-d6c561fd9b80"
@@ -25340,7 +25340,7 @@
       "Clade"
     ],
     "outgoing_citations": [],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43",
       "fdd57748-5185-4e73-863d-8304e834885d"
@@ -25380,12 +25380,12 @@
       "Biology"
     ],
     "outgoing_citations": [],
-    "journal_id": "0ebc6e42-59b1-45e3-b5b5-8c5d22e8e9f4",
+    "journal_id": "fe8ce106-90b1-4ca3-86fc-8825777f5488",
     "university_ids": [
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "aea2a931-95c9-4836-84c3-228e696ffa00"
@@ -25417,12 +25417,12 @@
       "d82d1da5-1a26-40ad-981f-45aca0df8874",
       "3fb7141b-281b-455d-a799-2e5eae96d43c"
     ],
-    "journal_id": "9d08b2f2-77e8-4d97-b62c-ef975623dce6",
+    "journal_id": "41a4c29b-7813-4b3b-994b-6409bb4d8adb",
     "university_ids": [
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "aea2a931-95c9-4836-84c3-228e696ffa00"
@@ -25463,7 +25463,7 @@
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "37ccee47-afbe-402d-bf15-ab768a0a3f9b"
@@ -25495,12 +25495,12 @@
       "Telecommunications"
     ],
     "outgoing_citations": [],
-    "journal_id": "b5ddec8b-31f4-4c6c-98e0-881b09759784",
+    "journal_id": "336eb3af-262a-4618-9001-e58136234c92",
     "university_ids": [
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "8438c4c1-5c40-4eb9-9b0d-d6c561fd9b80"
@@ -25538,7 +25538,7 @@
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "69ee699e-bfd9-4600-9a8b-693bec9cca92"
@@ -25580,7 +25580,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "df210988-a9d0-4d69-a8ab-093a46dfc6c1",
@@ -25618,7 +25618,7 @@
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "72473f2d-df8c-4253-9a33-fe9a7ca57d0c"
@@ -25659,7 +25659,7 @@
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "725ad88e-94ae-473c-abac-cf1d1cdaab38",
@@ -25707,7 +25707,7 @@
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "256eb8d5-d210-4924-871c-e9f6e40c9211",
@@ -25756,7 +25756,7 @@
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "77b9750e-d023-4ead-b41c-e03aae9cf9bc",
@@ -25847,7 +25847,7 @@
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "5e091e99-3a09-45d5-b323-7a039676927d"
@@ -25891,7 +25891,7 @@
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "92d9fc52-2ae7-4907-b05c-47e16c00f92d",
@@ -25935,12 +25935,12 @@
       "Open quantum system"
     ],
     "outgoing_citations": [],
-    "journal_id": "12347e44-2c95-4d06-a85d-f3bc3550faf0",
+    "journal_id": "d04e5f23-59ab-4362-a585-79e651403df9",
     "university_ids": [
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "093a4eb8-55d0-4674-bb0c-1fcd7ab4a535",
@@ -26023,7 +26023,7 @@
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "53fc8bca-ef71-4fb4-b15c-9b49dd48d075",
@@ -26066,7 +26066,7 @@
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "b9283cfe-707d-4c2e-9f6b-7113e79406f6"
@@ -26182,12 +26182,12 @@
       "Pathology"
     ],
     "outgoing_citations": [],
-    "journal_id": "d74d9833-9b64-4c82-aaa5-d314a263acb6",
+    "journal_id": "67766b44-eb8d-4688-b496-40d92a7fa1ff",
     "university_ids": [
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "a213058d-b569-40af-a70c-0481fac855f6",
@@ -26216,13 +26216,13 @@
       "Biology"
     ],
     "outgoing_citations": [],
-    "journal_id": "55f907f1-f3a1-4211-9652-097b0dab7d23",
+    "journal_id": "3ed6c906-6e18-4c57-95f5-f27a17f3749a",
     "university_ids": [
       "fdd57748-5185-4e73-863d-8304e834885d",
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "dfc5cae5-4af5-40ab-b0d5-07342262e707",
@@ -26308,12 +26308,12 @@
       "Marketing"
     ],
     "outgoing_citations": [],
-    "journal_id": "8e475e17-f1b4-45f9-9f81-525059a538d0",
+    "journal_id": "db4c8f22-cbcd-4fd6-bcec-64e70da3f047",
     "university_ids": [
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "aed54015-68c6-4ad4-a218-867e0e66d732",
@@ -26355,7 +26355,7 @@
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "91d21fe6-714e-4ad5-a0f1-4f4980c8cc68"
@@ -26428,14 +26428,14 @@
       "World Wide Web"
     ],
     "outgoing_citations": [],
-    "journal_id": "b5ddec8b-31f4-4c6c-98e0-881b09759784",
+    "journal_id": "336eb3af-262a-4618-9001-e58136234c92",
     "university_ids": [
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43",
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7",
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "77fd85b9-fbac-464c-9022-f7ff1cc0fb48",
@@ -26477,7 +26477,7 @@
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "0fdbbd02-cc6f-4fe1-a3e2-acff20608e08",
@@ -26518,7 +26518,7 @@
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "624512c9-f50c-4c09-8cae-a52c3f97ad9b",
@@ -26559,7 +26559,7 @@
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "93bc531f-e48b-42fa-9edc-42170bf554df"
@@ -26593,12 +26593,12 @@
       "3fb7141b-281b-455d-a799-2e5eae96d43c",
       "3fc07be0-8c3d-4f5b-8ff8-e70d298b930c"
     ],
-    "journal_id": "0ebc6e42-59b1-45e3-b5b5-8c5d22e8e9f4",
+    "journal_id": "fe8ce106-90b1-4ca3-86fc-8825777f5488",
     "university_ids": [
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "aea2a931-95c9-4836-84c3-228e696ffa00"
@@ -26678,13 +26678,13 @@
       "Face detection"
     ],
     "outgoing_citations": [],
-    "journal_id": "e2097c19-b14c-4069-88b1-cf9f43ae5eff",
+    "journal_id": "c5fb7bf9-a295-44a9-bdab-fbec534f41b0",
     "university_ids": [
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43",
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "69ee699e-bfd9-4600-9a8b-693bec9cca92"
@@ -26727,7 +26727,7 @@
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "66232063-103b-49bf-872b-a49ce388fd18",
@@ -26770,12 +26770,12 @@
     "outgoing_citations": [
       "8373f70c-b1a7-4872-bb66-62bab2db3219"
     ],
-    "journal_id": "8f9da6cb-4124-4139-88d1-4766541ba082",
+    "journal_id": "8dcd5ebb-a510-47d3-8ee7-d4aaa2c1baf4",
     "university_ids": [
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "a574d82e-c883-4809-b0ee-7d399a1698f8",
@@ -26847,12 +26847,12 @@
     "outgoing_citations": [
       "ea25f652-3689-4b51-b803-88466ec7b90c"
     ],
-    "journal_id": "e08b505b-3947-40ed-9e26-6308b2cc2578",
+    "journal_id": "138bf84a-14aa-4f51-addd-80f4f0377f82",
     "university_ids": [
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "bdebc8bc-3f0e-4c7f-b629-df383e486fff",
@@ -26932,12 +26932,12 @@
       "Engineering"
     ],
     "outgoing_citations": [],
-    "journal_id": "778015b4-1bc1-40c0-af7e-09b06c1f1bc4",
+    "journal_id": "2dbb094e-7c03-4403-80c8-934196751823",
     "university_ids": [
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "72035f4a-c36b-4633-a697-616bf2228df8"
@@ -27109,7 +27109,7 @@
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "0e89aec4-5ac9-4014-a1d0-d5a3fda84528",
@@ -27144,7 +27144,7 @@
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "87b3139d-368d-4d9f-8f89-4a787856dea3"
@@ -27183,7 +27183,7 @@
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "2a1d9965-b994-411c-850b-d328a051a5db",
@@ -27268,7 +27268,7 @@
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "023fab07-3fd1-404a-865b-2b1c51ded905",
@@ -27353,7 +27353,7 @@
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "39a24b4c-ce83-4fb0-b83d-6acd3462df6b",
@@ -27387,7 +27387,7 @@
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "a8dc6803-90cb-4fcb-9055-0b93a4eaeb12",
@@ -27436,7 +27436,7 @@
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "0e89aec4-5ac9-4014-a1d0-d5a3fda84528",
@@ -27597,12 +27597,12 @@
       "Quantum dynamics"
     ],
     "outgoing_citations": [],
-    "journal_id": "03c1d917-556a-45b5-8b5d-ae07aeceb2d0",
+    "journal_id": "59b4ec90-e9ec-4c67-840b-7c9958bd0bf1",
     "university_ids": [
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "f6f2e5fd-e758-4212-b8be-ada0821ba2b3"
@@ -27713,14 +27713,14 @@
       "1a78cf9d-aa88-4b46-8d9d-aecbf440d6a5",
       "677a8fe2-ea32-4948-9f2d-d04928e1f9d2"
     ],
-    "journal_id": "2a86a32d-5d21-4fb7-bcd4-53ed3761d70f",
+    "journal_id": "7a1a6d17-d047-4364-9acc-806f9a13beb9",
     "university_ids": [
       "fdd57748-5185-4e73-863d-8304e834885d",
       "27c870c5-6b24-4889-bf1a-082d7b749c25",
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "875580f0-9b7f-49f3-8466-f37185b6c5a5",
@@ -27812,7 +27812,7 @@
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "50101671-4df1-4b99-9185-449fdd8c1307"
@@ -27860,7 +27860,7 @@
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "07b69691-d079-4181-b70f-7602d6d0f8b8",
@@ -27903,7 +27903,7 @@
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "00ab051c-a220-42b6-9537-08c46a34f0b4"
@@ -27943,7 +27943,7 @@
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "dfc5cae5-4af5-40ab-b0d5-07342262e707",
@@ -27982,7 +27982,7 @@
     "outgoing_citations": [
       "f125baed-d074-485f-b2c0-b55e5a657471"
     ],
-    "journal_id": "4ce3b50d-40af-475a-9b68-c81734828f20",
+    "journal_id": "eaa791e6-bd25-4006-aae3-e41bb913cec8",
     "university_ids": [
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
@@ -28027,12 +28027,12 @@
       "Engineering"
     ],
     "outgoing_citations": [],
-    "journal_id": "79042137-7091-4b78-9e5d-12675b803540",
+    "journal_id": "79f20fae-8882-4b6b-a314-09a5ea507958",
     "university_ids": [
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "e75242ca-7391-4b57-9f30-e7e0027c5137"
@@ -28115,7 +28115,7 @@
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "9d34b51a-3ad3-43c2-881d-01a89f338038",
@@ -28152,13 +28152,13 @@
     "outgoing_citations": [
       "a97405f8-f883-45d6-97cb-cbbbf3df1a14"
     ],
-    "journal_id": "2a86a32d-5d21-4fb7-bcd4-53ed3761d70f",
+    "journal_id": "7a1a6d17-d047-4364-9acc-806f9a13beb9",
     "university_ids": [
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43",
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "be262fec-92eb-40c6-b74a-4ad8e1a70183",
@@ -28191,12 +28191,12 @@
       "Mathematics"
     ],
     "outgoing_citations": [],
-    "journal_id": "0ebc6e42-59b1-45e3-b5b5-8c5d22e8e9f4",
+    "journal_id": "fe8ce106-90b1-4ca3-86fc-8825777f5488",
     "university_ids": [
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "aea2a931-95c9-4836-84c3-228e696ffa00"
@@ -28237,7 +28237,7 @@
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "39eb499e-387c-48c7-a3f9-16deda9ee4a0"
@@ -28412,13 +28412,13 @@
       "Thin-film transistor"
     ],
     "outgoing_citations": [],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43",
       "76197670-83f1-40ce-87c4-4172c6829f90"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "5476769c-9f69-4f28-a498-36cfa5cb613e"
@@ -28455,13 +28455,13 @@
       "Wireless"
     ],
     "outgoing_citations": [],
-    "journal_id": "b5ddec8b-31f4-4c6c-98e0-881b09759784",
+    "journal_id": "336eb3af-262a-4618-9001-e58136234c92",
     "university_ids": [
       "2ff40b74-fefd-43dd-a0be-2540e9f25e43",
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "07465e9b-64f3-4e21-acf8-7f775683417c",
@@ -28510,7 +28510,7 @@
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "f34871c8-10aa-4328-8741-fab0536069a8"
@@ -28587,7 +28587,7 @@
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "e215915f-ccf9-4d38-8f25-e7cf00ad4da2",
@@ -28673,7 +28673,7 @@
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "594735b6-c60a-4791-87ca-4fd30b66aefe",
@@ -28716,13 +28716,13 @@
     "outgoing_citations": [
       "412d5bd0-11f4-4463-9fe9-e14164a5f2b5"
     ],
-    "journal_id": "0e4865d4-48d1-4106-adc3-1e22a944d14a",
+    "journal_id": "74a57284-d02f-445c-8e7f-afe0a10bda0e",
     "university_ids": [
       "c062e483-3506-4add-813c-07885ef30eb2",
       "76ccfb81-7253-46d8-899e-25e39ba20023"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "7364cfcc-147e-4e56-89df-fb32faf58a33",
@@ -28804,12 +28804,12 @@
       "World Wide Web"
     ],
     "outgoing_citations": [],
-    "journal_id": "f55a30e2-431e-461a-806d-9a937fa653c6",
+    "journal_id": "f37b5675-92ea-4a71-bb19-d8e0fc1ecb8a",
     "university_ids": [
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "11749c29-08a7-49ea-b313-fc717143faa2"
@@ -28895,12 +28895,12 @@
       "Artificial intelligence"
     ],
     "outgoing_citations": [],
-    "journal_id": "0e4865d4-48d1-4106-adc3-1e22a944d14a",
+    "journal_id": "74a57284-d02f-445c-8e7f-afe0a10bda0e",
     "university_ids": [
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "6a31f157-4898-4f69-abf8-f67098c301d6"
@@ -28939,7 +28939,7 @@
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "8f830048-6af3-46c2-a0c0-f3c6d5cc33a9"
@@ -28985,7 +28985,7 @@
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "6607b323-6c10-4f62-ba01-cd4fdd92af35",
@@ -29033,12 +29033,12 @@
       "Catalysis"
     ],
     "outgoing_citations": [],
-    "journal_id": "12347e44-2c95-4d06-a85d-f3bc3550faf0",
+    "journal_id": "d04e5f23-59ab-4362-a585-79e651403df9",
     "university_ids": [
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "2b6e170c-ff10-442b-ad77-cfec280d2c78"
@@ -29335,12 +29335,12 @@
       "Civil engineering"
     ],
     "outgoing_citations": [],
-    "journal_id": "9731a611-67c9-4bc4-986b-d32fbd5c64d4",
+    "journal_id": "2693e345-4c64-4ad5-89b8-97e368ec8cf9",
     "university_ids": [
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "0cfb8dd1-a2aa-45cd-8cdc-7289160d5891"
@@ -29386,7 +29386,7 @@
       "76ccfb81-7253-46d8-899e-25e39ba20023"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "958f9040-8a9d-4bd8-9099-7f07be3558ec",
@@ -29422,7 +29422,7 @@
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "5d1ab2b8-8679-4ff0-9c75-631f51723d9c"
@@ -29458,13 +29458,13 @@
       "Optics"
     ],
     "outgoing_citations": [],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "76ccfb81-7253-46d8-899e-25e39ba20023",
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "b256031a-9b6d-4f4b-8355-e826317660a5",
@@ -29509,7 +29509,7 @@
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "955d1bc7-9a33-403b-9d0a-06f5398a6873",
@@ -29551,7 +29551,7 @@
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "910c0b8d-6751-4bb9-8bbf-3d987163500f",
@@ -29581,13 +29581,13 @@
       "Environmental science"
     ],
     "outgoing_citations": [],
-    "journal_id": "55f907f1-f3a1-4211-9652-097b0dab7d23",
+    "journal_id": "3ed6c906-6e18-4c57-95f5-f27a17f3749a",
     "university_ids": [
       "570e618b-14b2-4ce6-8c70-7b2bd5284fd7",
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "e4f4abcb-f271-4149-9416-d56beaf44d75",
@@ -29634,7 +29634,7 @@
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "6a31f157-4898-4f69-abf8-f67098c301d6"
@@ -29712,7 +29712,7 @@
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "b59905b4-7686-4956-9230-30ec71aabd03",
@@ -29796,7 +29796,7 @@
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "9c4069e5-0de7-4b31-b483-22aa73307ec9",
@@ -29880,7 +29880,7 @@
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "ea2fc95e-a990-4295-8433-d285e57ec681",
@@ -29934,7 +29934,7 @@
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "228add75-c540-4d8c-b346-9bb4a8506892"
@@ -30016,7 +30016,7 @@
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "594735b6-c60a-4791-87ca-4fd30b66aefe",
@@ -30094,7 +30094,7 @@
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "ed1177a9-7d2f-4399-b963-8253b2a93bc0",
@@ -30165,13 +30165,13 @@
       "Composite material"
     ],
     "outgoing_citations": [],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "c062e483-3506-4add-813c-07885ef30eb2",
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "60a4bb37-86d9-48e9-9333-4eaa148d6ea3",
@@ -30207,13 +30207,13 @@
       "World Wide Web"
     ],
     "outgoing_citations": [],
-    "journal_id": "05b8fcb5-c716-4ded-b75e-2c18a2baceaf",
+    "journal_id": "45de5383-e7a8-4b9a-93af-e1f49f6775d9",
     "university_ids": [
       "c062e483-3506-4add-813c-07885ef30eb2",
       "76ccfb81-7253-46d8-899e-25e39ba20023"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "1df34003-bb07-4c9e-bc06-9260fb45a85a"
@@ -30246,13 +30246,13 @@
       "World Wide Web"
     ],
     "outgoing_citations": [],
-    "journal_id": "05b8fcb5-c716-4ded-b75e-2c18a2baceaf",
+    "journal_id": "45de5383-e7a8-4b9a-93af-e1f49f6775d9",
     "university_ids": [
       "c062e483-3506-4add-813c-07885ef30eb2",
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "01d286e6-68d2-449f-982d-287d9d3d26f9",
@@ -30289,7 +30289,7 @@
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "fe6b6da4-920e-46b6-839a-1acc5e484a22"
@@ -30462,12 +30462,12 @@
       "Database"
     ],
     "outgoing_citations": [],
-    "journal_id": "eb8359d6-d40d-409c-b9f8-638625996292",
+    "journal_id": "3c7b589f-7fca-48b9-9a4c-c4c0fd89c199",
     "university_ids": [
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "9eda3d4b-5da0-4079-ac48-c52ac371a643"
@@ -30504,13 +30504,13 @@
       "Mathematics"
     ],
     "outgoing_citations": [],
-    "journal_id": "ab6db327-214a-4d7a-b227-9d2242a9c454",
+    "journal_id": "df96850f-a920-47b4-a8a1-6b8e051f2dc6",
     "university_ids": [
       "c062e483-3506-4add-813c-07885ef30eb2",
       "e6384eb4-8ee5-4bcf-8a49-22146c29c4da"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "3ed4effa-b5a9-4b83-be41-a5962e6b2cdc",
@@ -30556,7 +30556,7 @@
       "c5198c6a-8f7d-4684-b1fc-782fa625ae9a"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "2f38b204-92c1-4c1b-8e04-4ed2db26eae2",
@@ -30597,7 +30597,7 @@
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "cb0fb543-29a2-4c29-9529-ce3a9398fa1a"
@@ -30676,7 +30676,7 @@
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "f6569bc7-98b4-4ee5-8860-ad861f3d7d9e"
@@ -30719,7 +30719,7 @@
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "c772d898-c04d-41aa-9c17-6bec0fa32f3d",
@@ -30987,12 +30987,12 @@
       "Electrical engineering"
     ],
     "outgoing_citations": [],
-    "journal_id": "ab718f22-af0c-4de3-9815-21d56e441629",
+    "journal_id": "84388df7-bc4d-4848-88ee-9a05e0c2ab9a",
     "university_ids": [
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "6c293bb1-109e-4c59-b15e-acf9b992db90"
@@ -31081,7 +31081,7 @@
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "8f5d6036-7e24-4c47-b123-3ed340b1b3fc",
@@ -31196,12 +31196,12 @@
       "Engineering"
     ],
     "outgoing_citations": [],
-    "journal_id": "77b126ba-5e3b-47c1-9872-31f7ea15625f",
+    "journal_id": "28fb4c69-0e6e-4ece-a6c2-ea7dbd18e5f1",
     "university_ids": [
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "b242a7bb-31f4-473d-9061-06c7a7aa00b1",
@@ -31241,7 +31241,7 @@
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "ea12db72-cc28-479f-a83d-7c0d1211d6c0"
@@ -31285,7 +31285,7 @@
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "a0cd56c3-b9ac-4033-ac9b-ef516134b60d",
@@ -31468,12 +31468,12 @@
       "Quantum mechanics"
     ],
     "outgoing_citations": [],
-    "journal_id": "12347e44-2c95-4d06-a85d-f3bc3550faf0",
+    "journal_id": "d04e5f23-59ab-4362-a585-79e651403df9",
     "university_ids": [
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "bf3f94bc-342f-4ebb-a10d-f08e8b4f6e04",
@@ -31508,7 +31508,7 @@
       "In vitro"
     ],
     "outgoing_citations": [],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
@@ -31543,12 +31543,12 @@
     "outgoing_citations": [
       "5f38907e-498f-49d0-83c6-3e1f90e048f5"
     ],
-    "journal_id": "77b126ba-5e3b-47c1-9872-31f7ea15625f",
+    "journal_id": "28fb4c69-0e6e-4ece-a6c2-ea7dbd18e5f1",
     "university_ids": [
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "3d0950c7-0de2-402a-b9bf-2ab46f3d48c0",
@@ -31585,12 +31585,12 @@
     "outgoing_citations": [
       "7420f53f-ae6c-4c5f-a6cd-a1f4bbf7c634"
     ],
-    "journal_id": "368c6f25-ce1c-482c-9256-a68a3d1a9d77",
+    "journal_id": "d9700b21-2aa9-44c5-9341-793e61616e71",
     "university_ids": [
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "c968fd01-6b4f-4b87-bc78-53287ca436b1"
@@ -31681,7 +31681,7 @@
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "36273b90-fb9d-4444-8bfe-205ea21ea76c"
@@ -31765,13 +31765,13 @@
       "9f11606b-e4df-4969-a19d-827aae0acbcb",
       "b8584da2-3490-47d5-bd6b-f97c01cafac5"
     ],
-    "journal_id": "67577b62-2511-4fe4-a879-6598ac149e09",
+    "journal_id": "cfd895d9-b164-474c-8419-9dcccf83b276",
     "university_ids": [
       "c062e483-3506-4add-813c-07885ef30eb2",
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "bff6ba64-04d0-43f9-80d3-bfb0f894dfbe",
@@ -31806,13 +31806,13 @@
       "Metallurgy"
     ],
     "outgoing_citations": [],
-    "journal_id": "55f907f1-f3a1-4211-9652-097b0dab7d23",
+    "journal_id": "3ed6c906-6e18-4c57-95f5-f27a17f3749a",
     "university_ids": [
       "c062e483-3506-4add-813c-07885ef30eb2",
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "c69fbd3c-70d3-4e45-bd8b-1bcdca237623",
@@ -31901,7 +31901,7 @@
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "a52da28c-0465-455c-be8f-722961db22d2",
@@ -31948,7 +31948,7 @@
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "6a31f157-4898-4f69-abf8-f67098c301d6",
@@ -31987,14 +31987,14 @@
       "Quantum mechanics"
     ],
     "outgoing_citations": [],
-    "journal_id": "d0ab7d94-311e-422d-b1a8-0d901559ae91",
+    "journal_id": "db21881b-ab11-4ef4-9270-d7fa33b76ebc",
     "university_ids": [
       "76ccfb81-7253-46d8-899e-25e39ba20023",
       "c062e483-3506-4add-813c-07885ef30eb2",
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "0e01c6e3-0f63-480a-ae1e-77c44e5b148d",
@@ -32027,12 +32027,12 @@
       "Optics"
     ],
     "outgoing_citations": [],
-    "journal_id": "55f907f1-f3a1-4211-9652-097b0dab7d23",
+    "journal_id": "3ed6c906-6e18-4c57-95f5-f27a17f3749a",
     "university_ids": [
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "433bc91c-eb15-4014-8f13-a13aa19d441a"
@@ -32115,7 +32115,7 @@
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "b5abc202-1da3-4316-aa8e-48cb58baa710",
@@ -32158,7 +32158,7 @@
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "cdf47e84-4654-47f7-ad22-1a7ccda23455"
@@ -32236,13 +32236,13 @@
     "outgoing_citations": [
       "ce991a6d-8d4f-4226-94b5-4ee6cecef14c"
     ],
-    "journal_id": "2a86a32d-5d21-4fb7-bcd4-53ed3761d70f",
+    "journal_id": "7a1a6d17-d047-4364-9acc-806f9a13beb9",
     "university_ids": [
       "c062e483-3506-4add-813c-07885ef30eb2",
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "1bc2b138-6227-4c0b-9c5e-5a8d4f2984e3",
@@ -32494,7 +32494,7 @@
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "b45e83ba-d38a-4b76-91c8-696dd012026c",
@@ -32534,12 +32534,12 @@
       "Engineering"
     ],
     "outgoing_citations": [],
-    "journal_id": "1d685fbd-b221-4c67-a4a0-3f784055118e",
+    "journal_id": "996256c4-683e-4b46-97c1-f617d8e890cb",
     "university_ids": [
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "11749c29-08a7-49ea-b313-fc717143faa2"
@@ -32622,7 +32622,7 @@
       "27c870c5-6b24-4889-bf1a-082d7b749c25"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "1d6b0659-3285-4c4f-9baa-101fb48d2adb",
@@ -32670,12 +32670,12 @@
     "outgoing_citations": [
       "2a3431fb-cb74-407e-8256-dbdeebb3b02b"
     ],
-    "journal_id": "67577b62-2511-4fe4-a879-6598ac149e09",
+    "journal_id": "cfd895d9-b164-474c-8419-9dcccf83b276",
     "university_ids": [
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "d66f815b-22e9-4c69-9651-fc8bb5b297d5",
@@ -32718,7 +32718,7 @@
       "fdd57748-5185-4e73-863d-8304e834885d"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "4c897f94-caa8-4e42-a017-7197eb2f461a",
@@ -32770,7 +32770,7 @@
       "c062e483-3506-4add-813c-07885ef30eb2"
     ],
     "faculty_ids": [
-      "164b55bb-448c-4eff-a115-bf9800494f27"
+      "c8dc4421-07b7-4d29-8e0e-ea546081e1c2"
     ],
     "academic_ids": [
       "6b88e7dd-673d-4361-ab86-e29c2acf79ba"

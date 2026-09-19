@@ -1,0 +1,74 @@
+[
+  {
+    "id": 0,
+    "openalex_id": "https://openalex.org/I165779595",
+    "name": "The University of Melbourne",
+    "country_code": "AU",
+    "ror_url": "https://ror.org/01ej9dk98",
+    "type": "education"
+  },
+  {
+    "id": 100,
+    "openalex_id": "https://openalex.org/I118347636",
+    "name": "Australian National University",
+    "country_code": "AU",
+    "ror_url": "https://ror.org/019wvm592",
+    "type": "education"
+  },
+  {
+    "id": 148,
+    "openalex_id": "https://openalex.org/I129604602",
+    "name": "The University of Sydney",
+    "country_code": "AU",
+    "ror_url": "https://ror.org/0384j8v12",
+    "type": "education"
+  },
+  {
+    "id": 149,
+    "openalex_id": "https://openalex.org/I31746571",
+    "name": "UNSW Sydney",
+    "country_code": "AU",
+    "ror_url": "https://ror.org/03r8z3t63",
+    "type": "education"
+  },
+  {
+    "id": 181,
+    "openalex_id": "https://openalex.org/I56590836",
+    "name": "Monash University",
+    "country_code": "AU",
+    "ror_url": "https://ror.org/02bfwt286",
+    "type": "education"
+  },
+  {
+    "id": 263,
+    "openalex_id": "https://openalex.org/I165143802",
+    "name": "The University of Queensland",
+    "country_code": "AU",
+    "ror_url": "https://ror.org/00rqy9422",
+    "type": "education"
+  },
+  {
+    "id": 296,
+    "openalex_id": "https://openalex.org/I114017466",
+    "name": "University of Technology Sydney",
+    "country_code": "AU",
+    "ror_url": "https://ror.org/03f0f6041",
+    "type": "education"
+  },
+  {
+    "id": 921,
+    "openalex_id": "https://openalex.org/I99043593",
+    "name": "Macquarie University",
+    "country_code": "AU",
+    "ror_url": "https://ror.org/01sf06y89",
+    "type": "education"
+  },
+  {
+    "id": 3646,
+    "openalex_id": "https://openalex.org/I82951845",
+    "name": "RMIT University",
+    "country_code": "AU",
+    "ror_url": "https://ror.org/04ttjf776",
+    "type": "education"
+  }
+]

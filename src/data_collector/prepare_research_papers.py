@@ -7,8 +7,9 @@ from collections import Counter
 # ============================================================
 # CONFIGURATION
 # ============================================================
+
 RAW_DATA_DIR = "./data/raw"
-CLEANED_DATA_DIR = "./data/cleaned"
+CLEANED_DATA_DIR = "./data/filtered"
 
 RESEARCH_PAPERS_FILE = os.path.join(
     CLEANED_DATA_DIR,
@@ -20,13 +21,33 @@ MAPPINGS_FILE = os.path.join(
     "id_mappings.json"
 )
 
+SUPABASE_PAPERS_FILE = os.path.join(
+    CLEANED_DATA_DIR,
+    "research_papers_supabase.json"
+)
+
+
+# Existing university UUIDs from the team's Supabase database.
+# These MUST be reused so papers point to existing university rows.
+SUPABASE_UNIVERSITY_UUIDS = {
+    "0": "c5198c6a-8f7d-4684-b1fc-782fa625ae9a",      # Melbourne
+    "100": "570e618b-14b2-4ce6-8c70-7b2bd5284fd7",    # ANU
+    "148": "e6384eb4-8ee5-4bcf-8a49-22146c29c4da",    # Sydney
+    "149": "27c870c5-6b24-4889-bf1a-082d7b749c25",    # UNSW
+    "181": "76ccfb81-7253-46d8-899e-25e39ba20023",    # Monash
+    "263": "fdd57748-5185-4e73-863d-8304e834885d",    # Queensland
+    "296": "2ff40b74-fefd-43dd-a0be-2540e9f25e43",    # UTS
+    "921": "76197670-83f1-40ce-87c4-4172c6829f90",    # Macquarie
+    "3646": "c062e483-3506-4add-813c-07885ef30eb2",   # RMIT
+}
+
 
 # ============================================================
 # HELPER FUNCTIONS
 # ============================================================
 
 def load_json(path):
-    """Load a JSON file from a given path."""
+    """Load a JSON file."""
     with open(path, "r", encoding="utf-8") as file:
         return json.load(file)
 
@@ -49,8 +70,7 @@ def clean_issue(issue):
     Supabase expects issue to be INTEGER.
 
     Numeric strings such as "7" become 7.
-    Non-numeric values such as "1-2", "S1", etc.
-    become None.
+    Non-numeric values such as "1-2" or "S1" become None.
     """
     if issue is None:
         return None
@@ -100,6 +120,30 @@ def generate_or_reuse_mapping(items, existing_mapping=None):
     return mapping
 
 
+def map_single_id(local_id, mapping):
+    """Convert one local ID to its UUID."""
+    if local_id is None:
+        return None
+
+    return mapping.get(str(local_id))
+
+
+def map_id_list(local_ids, mapping):
+    """Convert local IDs to UUIDs and remove duplicates."""
+    if not local_ids:
+        return []
+
+    mapped_ids = []
+
+    for local_id in local_ids:
+        mapped_id = mapping.get(str(local_id))
+
+        if mapped_id is not None:
+            mapped_ids.append(mapped_id)
+
+    return list(dict.fromkeys(mapped_ids))
+
+
 # ============================================================
 # 1. LOAD FILTERED RESEARCH PAPERS
 # ============================================================
@@ -142,7 +186,6 @@ for paper in research_papers:
             "issue": issue
         })
 
-
 print(f"\nInvalid issue values: {len(invalid_issues)}")
 
 for paper in invalid_issues[:20]:
@@ -156,32 +199,7 @@ for paper in invalid_issues[:20]:
 
 
 # ============================================================
-# 3. INSPECT CURRENT ID TYPES
-# ============================================================
-
-print("\n=== ID TYPES ===")
-
-if research_papers:
-    example = research_papers[0]
-
-    print("paper id:", repr(example.get("id")))
-    print("journal_id:", repr(example.get("journal_id")))
-    print(
-        "university_ids:",
-        repr(example.get("university_ids"))
-    )
-    print(
-        "faculty_ids:",
-        repr(example.get("faculty_ids"))
-    )
-    print(
-        "academic_ids:",
-        repr(example.get("academic_ids"))
-    )
-
-
-# ============================================================
-# 4. CHECK REQUIRED FIELDS
+# 3. CHECK REQUIRED FIELDS
 # ============================================================
 
 papers_without_name = [
@@ -195,7 +213,7 @@ print(f"Papers without name: {len(papers_without_name)}")
 
 
 # ============================================================
-# 5. CLEAN BASIC RESEARCH PAPER FIELDS
+# 4. CLEAN BASIC RESEARCH PAPER FIELDS
 # ============================================================
 
 prepared_research_papers = []
@@ -256,7 +274,7 @@ print(f"Papers without issue: {papers_without_issue}")
 
 
 # ============================================================
-# 6. LOAD RELATED DATA
+# 5. LOAD RELATED DATA
 # ============================================================
 
 filtered_universities = load_json(
@@ -289,7 +307,7 @@ faculties = load_json(
 
 
 # ============================================================
-# 7. LOAD EXISTING UUID MAPPINGS IF AVAILABLE
+# 6. LOAD EXISTING UUID MAPPINGS
 # ============================================================
 
 if os.path.exists(MAPPINGS_FILE):
@@ -306,7 +324,7 @@ else:
 
 
 # ============================================================
-# 8. GENERATE CONSISTENT UUID MAPPINGS
+# 7. GENERATE / REUSE UUID MAPPINGS
 # ============================================================
 
 id_mappings = {
@@ -315,10 +333,8 @@ id_mappings = {
         existing_mappings.get("research_papers", {})
     ),
 
-    "universities": generate_or_reuse_mapping(
-        filtered_universities,
-        existing_mappings.get("universities", {})
-    ),
+    # Use the UUIDs that already exist in Supabase.
+    "universities": SUPABASE_UNIVERSITY_UUIDS.copy(),
 
     "academics": generate_or_reuse_mapping(
         filtered_academics,
@@ -337,8 +353,16 @@ id_mappings = {
 }
 
 
+# Preserve mappings created by prepare_academics.py.
+if "disciplines" in existing_mappings:
+    id_mappings["disciplines"] = existing_mappings["disciplines"]
+
+if "fields" in existing_mappings:
+    id_mappings["fields"] = existing_mappings["fields"]
+
+
 # ============================================================
-# 9. SAVE UUID MAPPINGS
+# 8. SAVE UUID MAPPINGS
 # ============================================================
 
 with open(
@@ -349,108 +373,80 @@ with open(
     json.dump(
         id_mappings,
         file,
-        indent=2
+        indent=2,
+        ensure_ascii=False
     )
 
 
 print("\n=== UUID MAPPINGS ===")
+print("Research papers:", len(id_mappings["research_papers"]))
+print("Universities:", len(id_mappings["universities"]))
+print("Academics:", len(id_mappings["academics"]))
+print("Journals:", len(id_mappings["journals"]))
+print("Faculties:", len(id_mappings["faculties"]))
 
-print(
-    "Research papers:",
-    len(id_mappings["research_papers"])
-)
+if "disciplines" in id_mappings:
+    print("Disciplines:", len(id_mappings["disciplines"]))
 
-print(
-    "Universities:",
-    len(id_mappings["universities"])
-)
+if "fields" in id_mappings:
+    print("Fields:", len(id_mappings["fields"]))
 
-print(
-    "Academics:",
-    len(id_mappings["academics"])
-)
-
-print(
-    "Journals:",
-    len(id_mappings["journals"])
-)
-
-print(
-    "Faculties:",
-    len(id_mappings["faculties"])
-)
-
-print(
-    f"\nUUID mappings saved to: {MAPPINGS_FILE}"
-)
+print(f"\nUUID mappings saved to: {MAPPINGS_FILE}")
 
 
 # ============================================================
-# 10. FINAL VALIDATION
+# 9. CREATE OPENALEX PAPER LOOKUP
 # ============================================================
 
-print("\n=== VALIDATION ===")
+# Allows:
+#
+# OpenAlex Work ID
+#       ↓
+# local paper ID
+#       ↓
+# Supabase paper UUID
+#
+# Only references to papers that are part of our 759-paper
+# dataset are stored in outgoing_citations.
 
-print(
-    "Prepared research papers:",
-    len(prepared_research_papers)
-)
+openalex_to_local_id = {
+    paper["openalex_id"]: paper["id"]
+    for paper in prepared_research_papers
+    if paper.get("openalex_id")
+}
 
-print(
-    "Paper UUID mappings:",
-    len(id_mappings["research_papers"])
-)
-
-print(
-    "University UUID mappings:",
-    len(id_mappings["universities"])
-)
-
-print(
-    "Academic UUID mappings:",
-    len(id_mappings["academics"])
-)
-
-print("\nPreparation completed successfully.")
 
 # ============================================================
-# 11. CONVERT RESEARCH PAPERS TO SUPABASE FORMAT
+# 10. CONVERT RESEARCH PAPERS TO SUPABASE FORMAT
 # ============================================================
 
 supabase_research_papers = []
 
-
-def map_single_id(local_id, mapping):
-    """Convert one local ID to its Supabase UUID."""
-    if local_id is None:
-        return None
-
-    return mapping.get(str(local_id))
-
-
-def map_id_list(local_ids, mapping):
-    """Convert a list of local IDs to Supabase UUIDs."""
-    if not local_ids:
-        return []
-
-    mapped_ids = []
-
-    for local_id in local_ids:
-        mapped_id = mapping.get(str(local_id))
-
-        if mapped_id is not None:
-            mapped_ids.append(mapped_id)
-
-    return list(dict.fromkeys(mapped_ids))
-
-
 for paper in prepared_research_papers:
 
+    paper_uuid = map_single_id(
+        paper["id"],
+        id_mappings["research_papers"]
+    )
+
+    outgoing_citations = [
+        id_mappings["research_papers"][
+            str(openalex_to_local_id[openalex_id])
+        ]
+        for openalex_id in paper.get("outgoing_citations", [])
+        if (
+            openalex_id in openalex_to_local_id
+            and openalex_to_local_id[openalex_id] != paper["id"]
+        )
+    ]
+
+    # Remove duplicate citation UUIDs while preserving order.
+    outgoing_citations = list(
+        dict.fromkeys(outgoing_citations)
+    )
+
     supabase_paper = {
-        "id": map_single_id(
-            paper["id"],
-            id_mappings["research_papers"]
-        ),
+        "id": paper_uuid,
 
         "name": paper["name"],
 
@@ -490,10 +486,7 @@ for paper in prepared_research_papers:
 
         "keywords": paper.get("keywords") or [],
 
-        # We are not mapping outgoing citations yet.
-        # The collector currently does not provide usable
-        # local research-paper IDs for this relationship.
-        "outgoing_citations": [],
+        "outgoing_citations": outgoing_citations,
 
         "journal_id": map_single_id(
             paper.get("journal_id"),
@@ -522,7 +515,7 @@ for paper in prepared_research_papers:
 
 
 # ============================================================
-# 12. VALIDATE SUPABASE RESEARCH PAPERS
+# 11. VALIDATE SUPABASE RESEARCH PAPERS
 # ============================================================
 
 missing_paper_uuid = [
@@ -542,6 +535,59 @@ missing_university_relationship = [
     for paper in supabase_research_papers
     if not paper["university_ids"]
 ]
+
+all_paper_uuids = {
+    paper["id"]
+    for paper in supabase_research_papers
+}
+
+all_outgoing_citations = [
+    citation
+    for paper in supabase_research_papers
+    for citation in paper["outgoing_citations"]
+]
+
+invalid_citations = [
+    citation
+    for citation in all_outgoing_citations
+    if citation not in all_paper_uuids
+]
+
+self_citations = [
+    paper
+    for paper in supabase_research_papers
+    if paper["id"] in paper["outgoing_citations"]
+]
+
+duplicate_citation_papers = [
+    paper
+    for paper in supabase_research_papers
+    if len(paper["outgoing_citations"])
+    != len(set(paper["outgoing_citations"]))
+]
+
+
+print("\n=== VALIDATION ===")
+
+print(
+    "Prepared research papers:",
+    len(prepared_research_papers)
+)
+
+print(
+    "Paper UUID mappings:",
+    len(id_mappings["research_papers"])
+)
+
+print(
+    "University UUID mappings:",
+    len(id_mappings["universities"])
+)
+
+print(
+    "Academic UUID mappings:",
+    len(id_mappings["academics"])
+)
 
 
 print("\n=== SUPABASE CONVERSION ===")
@@ -566,15 +612,38 @@ print(
     len(missing_university_relationship)
 )
 
-
-# ============================================================
-# 13. SAVE SUPABASE-READY PAPERS
-# ============================================================
-
-SUPABASE_PAPERS_FILE = os.path.join(
-    CLEANED_DATA_DIR,
-    "research_papers_supabase.json"
+print(
+    "Papers with outgoing citations:",
+    sum(
+        bool(paper["outgoing_citations"])
+        for paper in supabase_research_papers
+    )
 )
+
+print(
+    "Total mapped outgoing citations:",
+    len(all_outgoing_citations)
+)
+
+print(
+    "Invalid citation UUIDs:",
+    len(invalid_citations)
+)
+
+print(
+    "Self-citations:",
+    len(self_citations)
+)
+
+print(
+    "Papers with duplicate citations:",
+    len(duplicate_citation_papers)
+)
+
+
+# ============================================================
+# 12. SAVE SUPABASE-READY PAPERS
+# ============================================================
 
 with open(
     SUPABASE_PAPERS_FILE,

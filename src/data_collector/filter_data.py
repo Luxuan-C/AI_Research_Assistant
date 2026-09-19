@@ -7,7 +7,7 @@ import os
 # ============================================================
 
 RAW_DATA_DIR = "./data/raw"
-CLEANED_DATA_DIR = "./data/cleaned"
+CLEANED_DATA_DIR = "./data/filtered"
 
 # The 9 universities in project scope.
 # OpenAlex IDs are used instead of names because institution

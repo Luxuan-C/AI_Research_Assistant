@@ -33,6 +33,7 @@ class FakeQuery:
         self.table = table
         self.maximum = None
         self.identifiers = None
+        self.overlap_values = None
         self.after_id = None
 
     def select(self, _columns):
@@ -49,6 +50,10 @@ class FakeQuery:
         self.identifiers = {str(value) for value in identifiers}
         return self
 
+    def overlaps(self, _column, values):
+        self.overlap_values = {str(value) for value in values}
+        return self
+
     def gt(self, _column, value):
         self.after_id = str(value)
         return self
@@ -60,6 +65,14 @@ class FakeQuery:
         rows = sorted(self.client.data.get(self.table, ()), key=lambda row: str(row.get("id") or ""))
         if self.identifiers is not None:
             rows = [row for row in rows if str(row.get("id")) in self.identifiers]
+        if self.overlap_values is not None:
+            rows = [
+                row
+                for row in rows
+                if self.overlap_values.intersection(
+                    str(value) for value in row.get("field_ids", ())
+                )
+            ]
         if self.after_id is not None:
             rows = [row for row in rows if str(row.get("id") or "") > self.after_id]
         if self.maximum is not None:
@@ -220,6 +233,41 @@ class SupabaseBoundaryTests(unittest.TestCase):
         paper = next(hit.entity for hit in channels["lexical"] if hit.entity.kind == "publication")
         self.assertIsNone(paper.citation_score)
         self.assertIsNone(paper.paper_authority_score)
+
+    def test_score_table_values_are_normalized_and_aggregated_into_entity_records(self):
+        client = FakeSupabaseClient(
+            {
+                **supabase_rows(),
+                "score": [
+                    {
+                        "id": "s1",
+                        "research_paper_id": "p1",
+                        "academic_ids": ["a1"],
+                        "paper_authority_score": 0.8,
+                        "academic_authority_score": 0.7,
+                        "journal_authenticity_score": 0.9,
+                    },
+                    {
+                        "id": "s2",
+                        "research_paper_id": "p2",
+                        "academic_ids": ["a1"],
+                        "paper_authority_score": 0.4,
+                        "academic_authority_score": 0.7,
+                        "journal_authenticity_score": 0.5,
+                    },
+                ],
+            }
+        )
+        retrieval = SupabaseRetrievalPort(SupabaseReadRepository(client))
+        plan = QueryPlanner().plan("assistive robotics", as_of=date(2026, 9, 9))
+
+        paper = next(hit.entity for hit in retrieval.retrieve(plan)["lexical"] if hit.entity.kind == "publication")
+        academic = next(hit.entity for hit in retrieval.retrieve(plan)["lexical"] if hit.entity.kind == "researcher")
+
+        self.assertGreater(paper.citation_score, 0.0)
+        self.assertLessEqual(paper.citation_score, 1.0)
+        self.assertEqual(paper.paper_authority_score, 0.8)
+        self.assertEqual(academic.academic_authority_score, 0.7)
 
     def test_pagination_retrieves_a_matching_academic_beyond_the_first_server_page(self):
         academics = [

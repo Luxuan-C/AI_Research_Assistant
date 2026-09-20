@@ -74,7 +74,7 @@ def paper_payload(paper: PublicationResult) -> dict[str, Any]:
             "I_citation_influence": round(ranking.get("citation", 0.0), 6),
             "T_temporal_validity": round(ranking.get("recency", 0.0), 6),
             "N_innovation": 0.0,
-            "A_author_authority": 0.0,
+            "A_author_authority": round(ranking.get("author_authority", 0.0), 6),
             "G_graph_enrichment": round(ranking.get("graph", 0.0), 6),
         },
         "evidence": evidence,

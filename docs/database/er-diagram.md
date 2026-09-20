@@ -84,8 +84,6 @@ erDiagram
         varchar name
         varchar gender
         varchar academic_position
-        text[] research_interests
-        text[] areas_of_expertise
         varchar profile_url
         varchar orcid_url
         uuid[] research_paper_ids FK

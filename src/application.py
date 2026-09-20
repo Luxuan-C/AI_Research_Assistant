@@ -232,28 +232,84 @@ class ResearchApplication:
             query.strip() or "*",
             as_of=date.today(),
             filters=filters,
-            target_kinds=(PUBLICATION, RESEARCHER),
+            target_kinds=(RESEARCHER,),
             limit=PIPELINE_RESULT_LIMIT,
             seed_limit=PIPELINE_RESULT_LIMIT,
         )
-        result = self.pipeline.retrieve_and_rank(plan)
-        all_ranked_researchers = tuple(
-            item for item in result.ranked if item.entity.kind == RESEARCHER
+        normalized_query = query.strip().casefold()
+        query_terms = tuple(normalized_query.split())
+        field_rows = self.repository.rows("field")
+        fields = {
+            str(row["id"]): str(row["name"])
+            for row in field_rows
+            if row.get("id") is not None and row.get("name")
+        }
+        matching_field_ids = tuple(
+            field_id
+            for field_id, name in fields.items()
+            if not query_terms or any(term in name.casefold() for term in query_terms)
         )
+        if matching_field_ids:
+            candidate_rows = self.repository.rows_matching_array_values(
+                "academic",
+                "field_ids",
+                matching_field_ids,
+            )
+            all_ranked_researchers = tuple(
+                sorted(
+                    (
+                        academic_entity_from_row(row)
+                        for row in candidate_rows
+                        if self._matches_directory_filters(row, filters)
+                    ),
+                    key=lambda entity: (entity.label.casefold(), entity.entity_id),
+                )
+            )
+        else:
+            candidate_rows = self.repository.rows("academic")
+            scored_researchers = []
+            for row in candidate_rows:
+                if not self._matches_directory_filters(row, filters):
+                    continue
+                searchable_text = " ".join(
+                    str(row.get(value) or "").casefold()
+                    for value in ("name", "academic_position")
+                )
+                matched_terms = sum(term in searchable_text for term in query_terms)
+                if query_terms and matched_terms == 0:
+                    continue
+                exact_query = bool(normalized_query and normalized_query in searchable_text)
+                scored_researchers.append(
+                    (
+                        matched_terms + (len(query_terms) if exact_query else 0),
+                        academic_entity_from_row(row),
+                    )
+                )
+            all_ranked_researchers = tuple(
+                entity
+                for _score, entity in sorted(
+                    scored_researchers,
+                    key=lambda item: (-item[0], item[1].label.casefold(), item[1].entity_id),
+                )
+            )
         ranked_researchers = all_ranked_researchers[:FRONTEND_RESULT_LIMIT]
-        rows = self._rows_for_entities("academic", ranked_researchers)
+        rows = {
+            str(row["id"]): row
+            for row in candidate_rows
+            if row.get("id") is not None
+        }
         universities = self._related_names(rows.values(), "university_ids", "university")
         disciplines = self._related_names(rows.values(), "discipline_ids", "discipline")
 
         researchers: list[ResearcherResult] = []
-        for display_rank, ranked in enumerate(ranked_researchers, start=1):
-            raw_id = _raw_entity_id(ranked.entity.entity_id, "academic")
+        for display_rank, entity in enumerate(ranked_researchers, start=1):
+            raw_id = _raw_entity_id(entity.entity_id, "academic")
             row = rows.get(raw_id, {})
             researchers.append(
                 ResearcherResult(
                     rank=display_rank,
                     raw_id=raw_id,
-                    name=ranked.entity.label,
+                    name=entity.label,
                     position=_optional_text(row.get("academic_position")),
                     institution=_first_related_name(
                         row.get("university_ids"), universities
@@ -261,17 +317,41 @@ class ResearchApplication:
                     discipline=_first_related_name(
                         row.get("discipline_ids"), disciplines
                     ),
-                    research_interests=(),
-                    source_urls=ranked.entity.source_urls,
+                    research_interests=tuple(
+                        fields[str(field_id)]
+                        for field_id in _array(row.get("field_ids"))
+                        if str(field_id) in fields
+                    ),
+                    source_urls=entity.source_urls,
                 )
             )
         return ResearcherSearchResult(
             tuple(researchers),
-            result.expansion.truncated
+            len(all_ranked_researchers) >= plan.seed_limit
             or len(all_ranked_researchers) > len(ranked_researchers)
-            or len(result.fused) >= plan.seed_limit
-            or self.repository.possibly_truncated(("academic", "research_paper")),
+            or self.repository.possibly_truncated(("academic",)),
         )
+
+    def _matches_directory_filters(
+        self,
+        row: Mapping[str, Any],
+        filters: Mapping[str, object],
+    ) -> bool:
+        if filters.get("university"):
+            university_names = self._related_names((row,), "university_ids", "university")
+            if not any(
+                university_names.get(str(identifier)) == filters["university"]
+                for identifier in _array(row.get("university_ids"))
+            ):
+                return False
+        if filters.get("discipline"):
+            discipline_names = self._related_names((row,), "discipline_ids", "discipline")
+            if not any(
+                discipline_names.get(str(identifier)) == filters["discipline"]
+                for identifier in _array(row.get("discipline_ids"))
+            ):
+                return False
+        return True
 
     def search_publications(self, question: str) -> PublicationSearchResult:
         plan = self.planner.plan(

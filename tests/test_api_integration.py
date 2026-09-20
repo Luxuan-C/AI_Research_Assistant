@@ -15,14 +15,14 @@ def application_rows(*, academics=(), papers=()):
         "discipline": [
             {"id": "d1", "name": "Computer Science", "faculty_id": None}
         ],
-        "field": [],
+        "field": [{"id": "f1", "name": "Robotics"}],
         "journal": [],
         "academic": list(academics),
         "research_paper": list(papers),
     }
 
 
-def academic_row(identifier, name, *, position=None, papers=()):
+def academic_row(identifier, name, *, position=None, papers=(), fields=("f1",)):
     return {
         "id": identifier,
         "name": name,
@@ -32,7 +32,7 @@ def academic_row(identifier, name, *, position=None, papers=()):
         "research_paper_ids": list(papers),
         "university_ids": ["u1"],
         "discipline_ids": ["d1"],
-        "field_ids": [],
+        "field_ids": list(fields),
     }
 
 
@@ -109,7 +109,7 @@ class ApiIntegrationTests(unittest.TestCase):
         self.assertTrue(
             all(not item["id"].startswith("academic:") for item in payload["researchers"])
         )
-        self.assertEqual(application.retrieval.corpus_build_count, 1)
+        self.assertEqual(application.retrieval.corpus_build_count, 0)
 
     def test_researcher_beyond_first_supabase_page_is_returned(self):
         academics = [
@@ -172,6 +172,20 @@ class ApiIntegrationTests(unittest.TestCase):
             application,
             "/api/researchers?q=BOTICS%20RESE",
         )
+
+        self.assertEqual(status, 200)
+        self.assertEqual([item["id"] for item in payload["researchers"]], ["a1"])
+
+    def test_directory_search_does_not_require_score_schema(self):
+        client = FakeSupabaseClient(
+            application_rows(
+                academics=(academic_row("a1", "Ada Robotics Researcher"),)
+            ),
+            failures={"score": "column score.publisher_id does not exist"},
+        )
+        application = ResearchApplication.from_supabase_client(client, row_limit=2_000)
+
+        status, payload = self.get(application, "/api/researchers?q=robotics")
 
         self.assertEqual(status, 200)
         self.assertEqual([item["id"] for item in payload["researchers"]], ["a1"])

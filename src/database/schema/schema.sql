@@ -41,8 +41,6 @@ CREATE TABLE academic (
   name VARCHAR NOT NULL,
   gender VARCHAR,
   academic_position VARCHAR,
-  research_interests TEXT[] DEFAULT '{}',
-  areas_of_expertise TEXT[] DEFAULT '{}',
   profile_url VARCHAR,
   orcid_url VARCHAR,
   research_paper_ids UUID[] DEFAULT '{}',

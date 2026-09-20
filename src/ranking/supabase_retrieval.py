@@ -11,7 +11,7 @@ from __future__ import annotations
 from collections import Counter, OrderedDict
 from dataclasses import dataclass, replace
 from datetime import date
-from math import log
+from math import log, log1p
 import os
 import re
 from threading import Event, RLock
@@ -49,6 +49,17 @@ TABLE_COLUMNS: Mapping[str, tuple[str, ...]] = {
     "discipline": ("id", "name", "faculty_id"),
     "field": ("id", "name", "discipline_id"),
     "journal": ("id", "name", "type", "issn"),
+    "score": (
+        "id",
+        "paper_authority_score",
+        "academic_authority_score",
+        "publisher_authority_score",
+        "journal_authenticity_score",
+        "research_paper_id",
+        "academic_ids",
+        "publisher_id",
+        "journal_id",
+    ),
     "academic": (
         "id",
         "name",
@@ -305,12 +316,68 @@ class SupabaseReadRepository:
             for event in wait_events:
                 event.wait()
 
+    def rows_matching_array_values(
+        self,
+        table: str,
+        column: str,
+        values: Sequence[str],
+        *,
+        limit: int | None = None,
+    ) -> tuple[Mapping[str, Any], ...]:
+        """Read rows whose PostgreSQL array column overlaps supplied values."""
+
+        if table not in TABLE_COLUMNS:
+            raise ValueError(f"No read projection is defined for table {table!r}")
+        if column not in TABLE_COLUMNS[table]:
+            raise ValueError(f"Column {column!r} is not readable on table {table!r}")
+        identifiers = tuple(dict.fromkeys(str(value) for value in values if value))
+        if not identifiers:
+            return ()
+        read_limit = self.row_limit if limit is None else min(limit, self.row_limit)
+        if read_limit <= 0:
+            return ()
+        try:
+            return self._read_all_pages(
+                table,
+                limit=read_limit,
+                array_column=column,
+                array_values=identifiers,
+            )
+        except SupabaseReadError:
+            raise
+
+    def rows_limited(
+        self,
+        table: str,
+        limit: int,
+    ) -> tuple[Mapping[str, Any], ...]:
+        """Read the first bounded page without building a full-table cache."""
+
+        if table not in TABLE_COLUMNS:
+            raise ValueError(f"No read projection is defined for table {table!r}")
+        if limit <= 0:
+            return ()
+        try:
+            response = (
+                self.client.table(table)
+                .select(",".join(TABLE_COLUMNS[table]))
+                .order("id")
+                .limit(min(limit, self.row_limit))
+                .execute()
+            )
+        except Exception as error:
+            raise SupabaseReadError(table, safe_error_detail(error)) from error
+        data = getattr(response, "data", None) or ()
+        return tuple(row for row in data if isinstance(row, Mapping))
+
     def _read_all_pages(
         self,
         table: str,
         *,
         limit: int,
         ids: Sequence[str] | None = None,
+        array_column: str | None = None,
+        array_values: Sequence[str] = (),
     ) -> tuple[Mapping[str, Any], ...]:
         """Read at most ``limit`` rows through stable, non-overlapping ID pages."""
 
@@ -328,6 +395,8 @@ class SupabaseReadRepository:
                 )
                 if ids is not None:
                     query = query.in_("id", ids)
+                if array_column is not None:
+                    query = query.overlaps(array_column, array_values)
                 if last_id is not None:
                     query = query.gt("id", last_id)
                 response = query.execute()
@@ -530,10 +599,13 @@ class SupabaseRetrievalPort:
         if RESEARCHER in normalized_kinds:
             tables.append("academic")
             rows_by_table["academic"] = self.repository.rows("academic")
+        score_rows = self.repository.rows("score") if PUBLICATION in normalized_kinds else ()
+        paper_authority_by_id = _score_by_paper(score_rows)
+        academic_authority_by_id = _score_by_academic(score_rows)
 
         cache_key = (
             normalized_kinds,
-            self.repository.revisions_for(tables),
+            self.repository.revisions_for(tables + ["score"]),
         )
         while True:
             with self._corpus_lock:
@@ -559,15 +631,27 @@ class SupabaseRetrievalPort:
                 if row.get("id") is None:
                     continue
                 text = _paper_text(row)
+                row_id = str(row["id"])
                 documents.append(
-                    _CorpusDocument(_paper_entity(row), row, text, _tokens(text))
+                    _CorpusDocument(
+                        _paper_entity(row, paper_authority_by_id.get(row_id)),
+                        row,
+                        text,
+                        _tokens(text),
+                    )
                 )
             for row in rows_by_table.get("academic", ()):
                 if row.get("id") is None:
                     continue
                 text = _academic_text(row)
+                row_id = str(row["id"])
                 documents.append(
-                    _CorpusDocument(_academic_entity(row), row, text, _tokens(text))
+                    _CorpusDocument(
+                        _academic_entity(row, academic_authority_by_id.get(row_id)),
+                        row,
+                        text,
+                        _tokens(text),
+                    )
                 )
             frozen_documents = tuple(documents)
             document_frequency = Counter(
@@ -951,27 +1035,101 @@ def _parse_date(value: object) -> date | None:
     return None
 
 
+def _score_value(row: Mapping[str, Any] | None, field: str) -> float | None:
+    if row is None:
+        return None
+    value = row.get(field)
+    if value in (None, "", "null"):
+        return None
+    try:
+        score = float(value)
+    except (TypeError, ValueError):
+        return None
+    if not 0.0 <= score <= 1.0:
+        score = max(0.0, min(1.0, score))
+    return score
+
+
+def _normalize_citation_score(value: object) -> float:
+    if value in (None, ""):
+        return 0.0
+    try:
+        raw = float(value)
+    except (TypeError, ValueError):
+        return 0.0
+    if raw <= 0.0:
+        return 0.0
+    truncated = max(1.0, min(1_000_000.0, raw))
+    return min(1.0, log1p(raw) / log1p(truncated))
+
+
+def _aggregate_score(values: Sequence[float]) -> float | None:
+    if not values:
+        return None
+    return sum(values) / len(values)
+
+
+def _score_by_paper(rows: Sequence[Mapping[str, Any]]) -> Mapping[str, float]:
+    totals: dict[str, list[float]] = {}
+    for row in rows:
+        paper_id = row.get("research_paper_id")
+        if paper_id is None:
+            continue
+        author_score = _score_value(row, "paper_authority_score")
+        if author_score is not None:
+            totals.setdefault(str(paper_id), []).append(author_score)
+    return {paper_id: sum(scores) / len(scores) for paper_id, scores in totals.items()}
+
+
+def _score_by_academic(rows: Sequence[Mapping[str, Any]]) -> Mapping[str, float]:
+    totals: dict[str, list[float]] = {}
+    for row in rows:
+        authority = _score_value(row, "academic_authority_score")
+        if authority is None:
+            continue
+        for academic_id in _array(row.get("academic_ids")):
+            totals.setdefault(str(academic_id), []).append(authority)
+    return {academic_id: sum(scores) / len(scores) for academic_id, scores in totals.items()}
+
+
 def _source_urls(*values: object) -> tuple[str, ...]:
     return tuple(dict.fromkeys(str(value) for value in values if isinstance(value, str) and value.strip()))
 
 
-def _paper_entity(row: Mapping[str, Any]) -> EntityRecord:
+def _paper_entity(
+    row: Mapping[str, Any],
+    score_row: Mapping[str, Any] | None = None,
+) -> EntityRecord:
     doi = row.get("doi")
     doi_url = f"https://doi.org/{doi}" if isinstance(doi, str) and doi.strip() else None
+    paper_authority_score = _score_value(score_row, "paper_authority_score")
+    journal_authenticity_score = _score_value(score_row, "journal_authenticity_score")
     return EntityRecord(
         entity_id=_entity_id("research_paper", row["id"]),
         kind=PUBLICATION,
         label=str(row.get("name") or row["id"]),
         publication_date=_parse_date(row.get("publication_date")),
+        citation_score=_normalize_citation_score(row.get("incoming_citation_count")),
+        paper_authority_score=paper_authority_score,
+        paper_authority_reproducible=paper_authority_score is not None,
+        journal_authenticity_score=journal_authenticity_score,
+        journal_authenticity_reproducible=journal_authenticity_score is not None,
+        academic_authority_score=_score_value(score_row, "academic_authority_score"),
+        academic_authority_provenance="score_table" if score_row is not None else None,
         source_urls=_source_urls(row.get("primary_url"), row.get("open_access_url"), doi_url),
     )
 
 
-def _academic_entity(row: Mapping[str, Any]) -> EntityRecord:
+def _academic_entity(
+    row: Mapping[str, Any],
+    authority_score: float | None = None,
+) -> EntityRecord:
     return EntityRecord(
         entity_id=_entity_id("academic", row["id"]),
         kind=RESEARCHER,
         label=str(row.get("name") or row["id"]),
+        academic_authority_score=authority_score,
+        academic_authority_provenance="score_table" if authority_score is not None else None,
         source_urls=_source_urls(row.get("profile_url"), row.get("orcid_url")),
     )
 

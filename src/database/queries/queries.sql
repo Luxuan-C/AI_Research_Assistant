@@ -10,18 +10,13 @@ ORDER BY name;
 
 -- Search academics by keyword
 SELECT *
-FROM academic 
-WHERE 
-  name ILIKE '%smith%'
-  OR EXISTS (
+FROM academic a
+WHERE a.name ILIKE '%smith%'
+   OR EXISTS (
     SELECT 1
-    FROM unnest(research_interests) AS interest
-    WHERE interest ILIKE '%artificial intelligence%' 
-  )
-  OR EXISTS (
-    SELECT 1
-    FROM unnest(areas_of_expertise) AS expertise 
-    WHERE expertise ILIKE '%artificial intelligence%'
+    FROM field f
+    WHERE f.id = ANY(a.field_ids)
+      AND f.name ILIKE '%artificial intelligence%'
   );
 
 -- Find academics from a university

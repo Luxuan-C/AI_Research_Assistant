@@ -53,11 +53,9 @@ TABLE_COLUMNS: Mapping[str, tuple[str, ...]] = {
         "id",
         "paper_authority_score",
         "academic_authority_score",
-        "publisher_authority_score",
         "journal_authenticity_score",
         "research_paper_id",
         "academic_ids",
-        "publisher_id",
         "journal_id",
     ),
     "academic": (
@@ -600,7 +598,7 @@ class SupabaseRetrievalPort:
             tables.append("academic")
             rows_by_table["academic"] = self.repository.rows("academic")
         score_rows = self.repository.rows("score") if PUBLICATION in normalized_kinds else ()
-        paper_authority_by_id = _score_by_paper(score_rows)
+        paper_scores_by_id = _score_by_paper(score_rows)
         academic_authority_by_id = _score_by_academic(score_rows)
 
         cache_key = (
@@ -634,7 +632,7 @@ class SupabaseRetrievalPort:
                 row_id = str(row["id"])
                 documents.append(
                     _CorpusDocument(
-                        _paper_entity(row, paper_authority_by_id.get(row_id)),
+                        _paper_entity(row, paper_scores_by_id.get(row_id)),
                         row,
                         text,
                         _tokens(text),
@@ -791,12 +789,15 @@ class SupabaseSchemaRelationshipGraph:
         }
         projected: dict[tuple[str, str], Mapping[str, Any]] = {}
         frontier: dict[str, set[str]] = {table: set() for table in self.GRAPH_TABLES}
-        for seed in seeds[: plan.seed_limit]:
+        scheduled: set[tuple[str, str]] = set()
+        for seed in seeds[: min(plan.seed_limit, self.budget.max_entities)]:
             table, raw_id = _split_entity_id(seed.entity.entity_id)
             if table in {"academic", "research_paper"}:
                 frontier[table].add(raw_id)
+                scheduled.add((table, raw_id))
 
         prefetch_truncated = False
+        prefetched_relationships = 0
         for depth in range(self.budget.max_hops + 1):
             next_frontier: dict[str, set[str]] = {
                 table: set() for table in self.GRAPH_TABLES
@@ -817,8 +818,18 @@ class SupabaseSchemaRelationshipGraph:
                     prefetch_truncated = prefetch_truncated or was_truncated
                     if depth < self.budget.max_hops:
                         for target_table, target_id in references:
-                            if target_id not in loaded[target_table]:
-                                next_frontier[target_table].add(target_id)
+                            target = (target_table, target_id)
+                            if target in scheduled:
+                                continue
+                            if prefetched_relationships >= self.budget.max_relationships:
+                                prefetch_truncated = True
+                                continue
+                            if len(scheduled) >= self.budget.max_entities:
+                                prefetch_truncated = True
+                                continue
+                            scheduled.add(target)
+                            next_frontier[target_table].add(target_id)
+                            prefetched_relationships += 1
             frontier = next_frontier
 
         entities: list[EntityRecord] = []
@@ -1069,16 +1080,31 @@ def _aggregate_score(values: Sequence[float]) -> float | None:
     return sum(values) / len(values)
 
 
-def _score_by_paper(rows: Sequence[Mapping[str, Any]]) -> Mapping[str, float]:
-    totals: dict[str, list[float]] = {}
+def _score_by_paper(
+    rows: Sequence[Mapping[str, Any]],
+) -> Mapping[str, Mapping[str, float]]:
+    totals: dict[str, dict[str, list[float]]] = {}
     for row in rows:
         paper_id = row.get("research_paper_id")
         if paper_id is None:
             continue
-        author_score = _score_value(row, "paper_authority_score")
-        if author_score is not None:
-            totals.setdefault(str(paper_id), []).append(author_score)
-    return {paper_id: sum(scores) / len(scores) for paper_id, scores in totals.items()}
+        fields = totals.setdefault(str(paper_id), {})
+        for field in (
+            "paper_authority_score",
+            "academic_authority_score",
+            "journal_authenticity_score",
+        ):
+            score = _score_value(row, field)
+            if score is not None:
+                fields.setdefault(field, []).append(score)
+    return {
+        paper_id: {
+            field: aggregate
+            for field, values in fields.items()
+            if (aggregate := _aggregate_score(values)) is not None
+        }
+        for paper_id, fields in totals.items()
+    }
 
 
 def _score_by_academic(rows: Sequence[Mapping[str, Any]]) -> Mapping[str, float]:

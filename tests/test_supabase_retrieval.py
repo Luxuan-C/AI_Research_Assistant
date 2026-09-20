@@ -19,6 +19,8 @@ from ranking.supabase_retrieval import (
     smoke_test_read_access,
 )
 from ranking import (
+    EntityRecord,
+    FusedCandidate,
     FusionService,
     GraphBudget,
     QueryPlanner,
@@ -231,13 +233,16 @@ class SupabaseBoundaryTests(unittest.TestCase):
         self.assertTrue(channels["lexical"])
         self.assertEqual(channels["lexical"][0].entity.entity_id, "research_paper:p1")
         paper = next(hit.entity for hit in channels["lexical"] if hit.entity.kind == "publication")
-        self.assertIsNone(paper.citation_score)
+        self.assertGreater(paper.citation_score, 0.0)
+        self.assertLessEqual(paper.citation_score, 1.0)
         self.assertIsNone(paper.paper_authority_score)
 
     def test_score_table_values_are_normalized_and_aggregated_into_entity_records(self):
+        rows = supabase_rows()
+        rows["academic"][0]["academic_position"] = "robotics"
         client = FakeSupabaseClient(
             {
-                **supabase_rows(),
+                **rows,
                 "score": [
                     {
                         "id": "s1",
@@ -267,6 +272,8 @@ class SupabaseBoundaryTests(unittest.TestCase):
         self.assertGreater(paper.citation_score, 0.0)
         self.assertLessEqual(paper.citation_score, 1.0)
         self.assertEqual(paper.paper_authority_score, 0.8)
+        self.assertEqual(paper.academic_authority_score, 0.7)
+        self.assertEqual(paper.journal_authenticity_score, 0.9)
         self.assertEqual(academic.academic_authority_score, 0.7)
 
     def test_pagination_retrieves_a_matching_academic_beyond_the_first_server_page(self):
@@ -558,6 +565,53 @@ class SupabaseBoundaryTests(unittest.TestCase):
         self.assertEqual(client.executions["university"], 0)
         self.assertEqual(client.executions["faculty"], 0)
         self.assertEqual(client.executions["journal"], 0)
+
+    def test_graph_prefetch_obeys_global_entity_and_relationship_budgets(self):
+        rows = supabase_rows()
+        rows["research_paper"].append(
+            {
+                "id": "p3",
+                "name": "Another Related Paper",
+                "outgoing_citations": [],
+                "academic_ids": [],
+                "university_ids": [],
+                "faculty_ids": [],
+                "journal_id": None,
+            }
+        )
+        rows["research_paper"][0]["academic_ids"] = []
+        rows["research_paper"][0]["outgoing_citations"] = ["p2", "p3"]
+        repository = SupabaseReadRepository(FakeSupabaseClient(rows))
+        client = repository.client
+        graph = SupabaseSchemaRelationshipGraph(
+            repository,
+            budget=GraphBudget(
+                max_hops=2,
+                max_entities=2,
+                max_relationships=1,
+                max_neighbors_per_node=20,
+            ),
+        )
+        plan = QueryPlanner().plan(
+            "assistive robotics",
+            as_of=date(2026, 9, 9),
+            target_kinds=("publication",),
+            seed_limit=1,
+        )
+        seed = FusedCandidate(
+            EntityRecord("research_paper:p1", "publication", "Assistive Robotics"),
+            1.0,
+            1.0,
+            {},
+            {},
+        )
+
+        expansion = graph.expand(plan, (seed,))
+
+        self.assertTrue(expansion.truncated)
+        self.assertLessEqual(len(expansion.entities), 2)
+        self.assertNotIn("research_paper:p3", expansion.entities)
+        self.assertEqual(client.executions["research_paper"], 2)
 
 
 if __name__ == "__main__":

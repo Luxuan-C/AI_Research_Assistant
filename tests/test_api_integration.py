@@ -190,6 +190,27 @@ class ApiIntegrationTests(unittest.TestCase):
         self.assertEqual(status, 200)
         self.assertEqual([item["id"] for item in payload["researchers"]], ["a1"])
 
+    def test_repeated_directory_searches_reuse_cached_rows(self):
+        client = FakeSupabaseClient(
+            application_rows(
+                academics=(
+                    academic_row("a1", "Ada Robotics Researcher"),
+                    academic_row("a2", "Other Researcher", fields=("other",)),
+                )
+            )
+        )
+        client.data["field"].append({"id": "other", "name": "Other Field"})
+        application = ResearchApplication.from_supabase_client(client, row_limit=2_000)
+
+        first_status, first_payload = self.get(application, "/api/researchers?q=robotics")
+        first_executions = dict(client.executions)
+        second_status, second_payload = self.get(application, "/api/researchers?q=other")
+
+        self.assertEqual((first_status, second_status), (200, 200))
+        self.assertEqual([item["id"] for item in first_payload["researchers"]], ["a1"])
+        self.assertEqual([item["id"] for item in second_payload["researchers"]], ["a2"])
+        self.assertEqual(dict(client.executions), first_executions)
+
     def test_ask_uses_ranked_publications_and_fails_closed_without_evidence(self):
         client = FakeSupabaseClient(
             application_rows(

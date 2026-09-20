@@ -249,11 +249,15 @@ class ResearchApplication:
             for field_id, name in fields.items()
             if not query_terms or any(term in name.casefold() for term in query_terms)
         )
+        academic_rows = self.repository.rows("academic")
         if matching_field_ids:
-            candidate_rows = self.repository.rows_matching_array_values(
-                "academic",
-                "field_ids",
-                matching_field_ids,
+            matching_ids = set(matching_field_ids)
+            candidate_rows = tuple(
+                row
+                for row in academic_rows
+                if matching_ids.intersection(
+                    str(field_id) for field_id in _array(row.get("field_ids"))
+                )
             )
             all_ranked_researchers = tuple(
                 sorted(
@@ -266,7 +270,7 @@ class ResearchApplication:
                 )
             )
         else:
-            candidate_rows = self.repository.rows("academic")
+            candidate_rows = academic_rows
             scored_researchers = []
             for row in candidate_rows:
                 if not self._matches_directory_filters(row, filters):

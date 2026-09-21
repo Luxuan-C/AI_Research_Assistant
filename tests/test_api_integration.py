@@ -238,6 +238,10 @@ class ApiIntegrationTests(unittest.TestCase):
         self.assertEqual(payload["evidence_status"], "insufficient_evidence")
         self.assertIn("validated evidence", payload["answer"])
         self.assertNotIn("Supabase found", payload["answer"])
+        self.assertGreater(
+            payload["papers"][0]["score_breakdown"]["H_hybrid_relevance"],
+            0.0,
+        )
 
     def test_profile_hydrates_requested_id_through_bounded_repository(self):
         client = FakeSupabaseClient(

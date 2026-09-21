@@ -137,6 +137,7 @@ class PublicationResult:
     doi: str | None
     source_url: str | None
     score: float
+    score_breakdown: Mapping[str, float]
     evidence_ids: tuple[str, ...]
 
 
@@ -570,6 +571,7 @@ def _publication_result(
         ranked.entity,
         row,
         score=ranked.final_score,
+        score_breakdown=dict(ranked.score_breakdown),
         evidence_ids=ranked.evidence_ids,
     )
 
@@ -580,6 +582,7 @@ def _publication_from_entity(
     row: Mapping[str, Any],
     *,
     score: float = 0.0,
+    score_breakdown: Mapping[str, float] | None = None,
     evidence_ids: tuple[str, ...] = (),
 ) -> PublicationResult:
     raw_id = _raw_entity_id(entity.entity_id, "research_paper")
@@ -591,5 +594,6 @@ def _publication_from_entity(
         doi=_optional_text(row.get("doi")),
         source_url=_publication_source_url(row, entity),
         score=score,
+        score_breakdown=dict(score_breakdown or {}),
         evidence_ids=evidence_ids,
     )

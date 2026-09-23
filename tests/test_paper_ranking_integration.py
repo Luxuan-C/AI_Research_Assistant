@@ -193,6 +193,24 @@ class RetrievalRankingTests(unittest.TestCase):
         self.assertEqual(result.score_breakdown["paper_authority"], 0.0)
         self.assertEqual(result.gate_reasons, ("journal_authenticity_gate",))
 
+    def test_paper_authority_is_exposed_but_does_not_change_final_ranking(self) -> None:
+        low_a = self.publication("paper-low-a", author_authority_score=0.1)
+        high_a = self.publication("paper-high-a", author_authority_score=0.9)
+        candidates = (
+            RankingCandidate(low_a, retrieval_score=0.6),
+            RankingCandidate(high_a, retrieval_score=0.6),
+        )
+
+        ranked = RankingService().rank(self.plan, candidates)
+        by_id = {item.entity.entity_id: item for item in ranked}
+
+        self.assertEqual(
+            by_id["paper-low-a"].final_score,
+            by_id["paper-high-a"].final_score,
+        )
+        self.assertEqual(by_id["paper-low-a"].score_breakdown["author_authority"], 0.1)
+        self.assertEqual(by_id["paper-high-a"].score_breakdown["author_authority"], 0.9)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,4556 @@
+[
+  {
+    "research_paper_id": "00c13deb-ceeb-4926-ba0e-a4c638a85ea3",
+    "paper_authority_score": 0.6829268292682927,
+    "citation_influence_score": 0.7895004923566217,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "00f1adf1-ae91-4257-b555-fe626397eaaf",
+    "paper_authority_score": 0.12195121951219512,
+    "citation_influence_score": 0.7638692082047825,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "014c6a39-e4c6-4886-9579-925a7d51b2e7",
+    "paper_authority_score": 0.5666666666666667,
+    "citation_influence_score": 0.8381817773425486,
+    "author_authority_score": 0.9036333906616416
+  },
+  {
+    "research_paper_id": "015572b3-3ea6-4c0e-9939-a1379d7223cc",
+    "paper_authority_score": 0.7916666666666666,
+    "citation_influence_score": 0.8197568955832584,
+    "author_authority_score": 0.8320240621031366
+  },
+  {
+    "research_paper_id": "022a7d6c-4e85-45fc-906c-54b8dc56f8b6",
+    "paper_authority_score": 0.041666666666666664,
+    "citation_influence_score": 0.6907343349964971,
+    "author_authority_score": 0.7999958453597986
+  },
+  {
+    "research_paper_id": "023aada1-eb34-4bc3-86e4-e8123c4dfcfd",
+    "paper_authority_score": 0.7307692307692307,
+    "citation_influence_score": 0.8550819075568238,
+    "author_authority_score": 0.8792735256447527
+  },
+  {
+    "research_paper_id": "025b34aa-238d-469c-bcd5-c579ae601130",
+    "paper_authority_score": 0.4634146341463415,
+    "citation_influence_score": 0.8684039360138581,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "028c7f1f-8649-472d-b43b-71a9ea275aad",
+    "paper_authority_score": 0.22031662269129287,
+    "citation_influence_score": 0.7314295812517272,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "028ef5b5-767f-4fcf-b80e-7c9c29630d55",
+    "paper_authority_score": 0.26666666666666666,
+    "citation_influence_score": 0.749200423330143,
+    "author_authority_score": 0.8043143533098756
+  },
+  {
+    "research_paper_id": "02c14e54-b931-4c24-b280-d710ca5594b4",
+    "paper_authority_score": 0.5333333333333333,
+    "citation_influence_score": 0.8314012040369003,
+    "author_authority_score": 0.8481193572743854
+  },
+  {
+    "research_paper_id": "02df8e32-29f7-4bef-b93c-b7cfd9a5d37f",
+    "paper_authority_score": 0.6326530612244898,
+    "citation_influence_score": 0.8423580578652683,
+    "author_authority_score": 0.8370877253091042
+  },
+  {
+    "research_paper_id": "02e5a543-869e-43d5-9776-2a52ba699026",
+    "paper_authority_score": 0.9487179487179487,
+    "citation_influence_score": 0.881775928246001,
+    "author_authority_score": 0.8870859181744026
+  },
+  {
+    "research_paper_id": "02e8c468-48f1-4532-a5d3-34cda1e25042",
+    "paper_authority_score": 0.8529411764705882,
+    "citation_influence_score": 0.7458988085272104,
+    "author_authority_score": 0.8594410551080119
+  },
+  {
+    "research_paper_id": "049f8881-fe96-4575-9ce9-f256a5362fd4",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.9189836623322238,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "04c9e969-f19a-46e9-8b90-0d2fda6bd42b",
+    "paper_authority_score": 0.16666666666666666,
+    "citation_influence_score": 0.8983778366705678,
+    "author_authority_score": 0.6861205254221734
+  },
+  {
+    "research_paper_id": "04e70919-d668-4f5c-b29a-b9b097cca47c",
+    "paper_authority_score": 0.029411764705882353,
+    "citation_influence_score": 0.604291711556068,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "056493e1-cc32-41e5-986e-92ad473d625e",
+    "paper_authority_score": 0.8333333333333334,
+    "citation_influence_score": 0.914631888209629,
+    "author_authority_score": 0.8909669292286956
+  },
+  {
+    "research_paper_id": "057e8111-490f-4fc7-915d-ebb4c0568e12",
+    "paper_authority_score": 0.56,
+    "citation_influence_score": 0.7939208479433315,
+    "author_authority_score": 0.7762054831258225
+  },
+  {
+    "research_paper_id": "05dbf6bd-76d9-4cf0-9fa9-6eb96f3dd59d",
+    "paper_authority_score": 0.6818181818181818,
+    "citation_influence_score": 0.9047650528645473,
+    "author_authority_score": 0.8817254956309521
+  },
+  {
+    "research_paper_id": "05e67d98-10f9-4546-b88f-67094918d195",
+    "paper_authority_score": 0.08333333333333333,
+    "citation_influence_score": 0.6745521564596351,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "0759fdf8-d94e-44de-a204-72e67de37129",
+    "paper_authority_score": 0.14285714285714285,
+    "citation_influence_score": 0.6660516024786174,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "07b4e269-32f2-44d1-a95c-86a94bf3f5cc",
+    "paper_authority_score": 1.0,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.8042343696230967
+  },
+  {
+    "research_paper_id": "07cc28fc-002d-4a84-a5f9-e2a12d7d42a6",
+    "paper_authority_score": 0.26666666666666666,
+    "citation_influence_score": 0.7673998106211053,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "082240ef-deb3-442e-be09-d246dc439dff",
+    "paper_authority_score": 0.8,
+    "citation_influence_score": 0.8505061472482621,
+    "author_authority_score": 0.8616306321521374
+  },
+  {
+    "research_paper_id": "084389ba-51a3-4d88-8f4b-4ff5e2ba2b11",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.596535422980552,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "08a1172d-b71b-44ce-a8d4-a02c41ee1366",
+    "paper_authority_score": 0.25,
+    "citation_influence_score": 0.7562465894610974,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "08ae1a3e-6234-4b9e-b0ff-ab3cbd8b96cc",
+    "paper_authority_score": 0.21052631578947367,
+    "citation_influence_score": 0.8093164788159946,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "08eac3ff-7a03-4d17-b7cd-81dc23281018",
+    "paper_authority_score": 0.7083333333333334,
+    "citation_influence_score": 0.8104888579531505,
+    "author_authority_score": 0.9433899147436009
+  },
+  {
+    "research_paper_id": "09254322-4d73-4948-8611-19678d39ffa4",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.6734101241985367,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "0946f97c-a7f7-45d2-bf4e-c7e2ae3d8a1a",
+    "paper_authority_score": 0.9736842105263158,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "0a29e3b5-6e37-4509-8448-12e74a32e145",
+    "paper_authority_score": 0.8571428571428571,
+    "citation_influence_score": 0.9977196633069685,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "0a625fc2-81af-4ded-842c-64ad1baf2d9f",
+    "paper_authority_score": 0.39473684210526316,
+    "citation_influence_score": 0.7973286065107724,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "0a92624f-2f36-46cd-ae8d-488eead837fd",
+    "paper_authority_score": 0.1282051282051282,
+    "citation_influence_score": 0.6547925118515452,
+    "author_authority_score": 0.7291394863959684
+  },
+  {
+    "research_paper_id": "0aa6ab94-b65e-4b4b-823f-fdfd68a68278",
+    "paper_authority_score": 0.24489795918367346,
+    "citation_influence_score": 0.749787599964811,
+    "author_authority_score": 0.760595519833234
+  },
+  {
+    "research_paper_id": "0ac65795-0f71-496f-952d-a994f7ecdb07",
+    "paper_authority_score": 0.022222222222222223,
+    "citation_influence_score": 0.6391301695283548,
+    "author_authority_score": 0.7372353062022503
+  },
+  {
+    "research_paper_id": "0b17054d-0055-46c9-94de-f5a1b9c67e8c",
+    "paper_authority_score": 0.375,
+    "citation_influence_score": 0.9268836141748937,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "0bbbb24a-2705-41a2-a794-608ec19bcafa",
+    "paper_authority_score": 0.2857142857142857,
+    "citation_influence_score": 0.8321435300618321,
+    "author_authority_score": 0.8028486856219755
+  },
+  {
+    "research_paper_id": "0bcc5bcd-e034-46b2-863e-a94b0e5ff9a4",
+    "paper_authority_score": 0.24390243902439024,
+    "citation_influence_score": 0.7986860117577351,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "0cd90117-afc5-40b5-b170-19758663594d",
+    "paper_authority_score": 0.3958333333333333,
+    "citation_influence_score": 0.7914097149236404,
+    "author_authority_score": 0.7618168601390476
+  },
+  {
+    "research_paper_id": "0cda635d-aa61-4d6c-9019-b838bff1aebd",
+    "paper_authority_score": 0.42857142857142855,
+    "citation_influence_score": 0.8217680475129483,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "0d5f06b7-445a-402c-beb8-0d005c6231b4",
+    "paper_authority_score": 0.52,
+    "citation_influence_score": 0.7817465815612787,
+    "author_authority_score": 0.8661881707921865
+  },
+  {
+    "research_paper_id": "0d7091f1-542c-49d2-9a9a-2da2ed6a6332",
+    "paper_authority_score": 0.3181818181818182,
+    "citation_influence_score": 0.8080957165805472,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "0d9dc8cb-7c56-4a2d-8a3a-db6010657558",
+    "paper_authority_score": 0.8979591836734694,
+    "citation_influence_score": 0.9065750460290162,
+    "author_authority_score": 0.8646856065799428
+  },
+  {
+    "research_paper_id": "0e396466-105a-4f9e-b63e-a00384d619e5",
+    "paper_authority_score": 0.8,
+    "citation_influence_score": 0.7496325839813252,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "0e5bcef8-c736-419f-9bbf-d532fbf277bb",
+    "paper_authority_score": 0.5,
+    "citation_influence_score": 0.8033682943482963,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "0e8126f8-73d6-4397-b0d7-9083ab403ae0",
+    "paper_authority_score": 0.8333333333333334,
+    "citation_influence_score": 0.8366188506910699,
+    "author_authority_score": 0.8140976304871255
+  },
+  {
+    "research_paper_id": "0ebabc9b-6b40-485b-aa87-054d06c1f985",
+    "paper_authority_score": 0.7333333333333333,
+    "citation_influence_score": 0.8151080434942571,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "0ecdea1a-1125-43e2-8443-7e6de8c5491e",
+    "paper_authority_score": 0.08333333333333333,
+    "citation_influence_score": 0.8267760337933275,
+    "author_authority_score": 0.8134222983470204
+  },
+  {
+    "research_paper_id": "0f4b1ce2-c84e-4781-8a3f-2aa3e1395ad4",
+    "paper_authority_score": 0.5918367346938775,
+    "citation_influence_score": 0.8405645915059446,
+    "author_authority_score": 0.8041456137548839
+  },
+  {
+    "research_paper_id": "0f90b707-80e9-4bc5-9728-7166d39df30f",
+    "paper_authority_score": 0.3684210526315789,
+    "citation_influence_score": 0.7498483662407369,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "0fa4beb9-1d67-4c36-8fb8-c4797c19ca85",
+    "paper_authority_score": 0.4489795918367347,
+    "citation_influence_score": 0.8236314164480842,
+    "author_authority_score": 0.7628618127012223
+  },
+  {
+    "research_paper_id": "0fd963ee-6a8b-4afd-a1a8-0c7f91b8e766",
+    "paper_authority_score": 0.0975609756097561,
+    "citation_influence_score": 0.6773894480127292,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "10222017-3c2a-460a-80e9-3868fe71f039",
+    "paper_authority_score": 0.5714285714285714,
+    "citation_influence_score": 0.7906066332132692,
+    "author_authority_score": 0.8832297487980523
+  },
+  {
+    "research_paper_id": "1072bcf7-5359-47b7-a7cd-f638c7298ed5",
+    "paper_authority_score": 0.76,
+    "citation_influence_score": 0.8107198838598628,
+    "author_authority_score": 0.8210539692809883
+  },
+  {
+    "research_paper_id": "107bb47b-5300-4d8b-a5a9-1eac12bd5df9",
+    "paper_authority_score": 1.0,
+    "citation_influence_score": 0.877958784105242,
+    "author_authority_score": 0.9941620058627123
+  },
+  {
+    "research_paper_id": "10d21b68-a0e9-4f78-85cb-747a8750fa4f",
+    "paper_authority_score": 0.4666666666666667,
+    "citation_influence_score": 0.7774670215777965,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "10ed0f40-aca3-4ac0-bfe8-df59f57a03d1",
+    "paper_authority_score": 0.6444444444444445,
+    "citation_influence_score": 0.8071195610157534,
+    "author_authority_score": 0.8707103116983973
+  },
+  {
+    "research_paper_id": "1112d5f7-5634-4a21-910e-36ad045a72f8",
+    "paper_authority_score": 0.5526315789473685,
+    "citation_influence_score": 0.8152080927799987,
+    "author_authority_score": 0.8619262356417035
+  },
+  {
+    "research_paper_id": "11614406-4945-431e-9cb4-769341cb39e0",
+    "paper_authority_score": 0.72,
+    "citation_influence_score": 0.8088502066567064,
+    "author_authority_score": 0.8836759026319132
+  },
+  {
+    "research_paper_id": "1189d786-45a3-45eb-b620-3afe7155bf4c",
+    "paper_authority_score": 1.0,
+    "citation_influence_score": 0.7501804767614562,
+    "author_authority_score": 0.6958169791636092
+  },
+  {
+    "research_paper_id": "11a417ac-cda3-49c7-b9ad-bc28cdf8a80b",
+    "paper_authority_score": 0.25,
+    "citation_influence_score": 0.8220008042290122,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "1235a747-f31c-4ffb-8c19-8c75e4d64d30",
+    "paper_authority_score": 0.047619047619047616,
+    "citation_influence_score": 0.7002623230587693,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "125dd78a-f834-40ab-a05b-c9bc990c214d",
+    "paper_authority_score": 1.0,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.7320507539272316
+  },
+  {
+    "research_paper_id": "12821020-cca8-477c-a812-ca2debb93141",
+    "paper_authority_score": 0.9333333333333333,
+    "citation_influence_score": 0.8942049830675584,
+    "author_authority_score": 0.8525709911735022
+  },
+  {
+    "research_paper_id": "12925502-b70a-4f3c-9ca3-9ea7d261fc43",
+    "paper_authority_score": 0.8571428571428571,
+    "citation_influence_score": 0.8924752074109208,
+    "author_authority_score": 0.8041368415734498
+  },
+  {
+    "research_paper_id": "12a02189-7106-4946-ac22-2a9cc1318040",
+    "paper_authority_score": 0.5,
+    "citation_influence_score": 0.8118640783064928,
+    "author_authority_score": 0.8191628029583016
+  },
+  {
+    "research_paper_id": "1383e5ec-436a-4f06-8b79-09e0b6db3615",
+    "paper_authority_score": 0.68,
+    "citation_influence_score": 0.8059051046505898,
+    "author_authority_score": 0.7053917767391319
+  },
+  {
+    "research_paper_id": "13952adc-00e1-485f-8b36-266854f0ff64",
+    "paper_authority_score": 0.0975609756097561,
+    "citation_influence_score": 0.760595519833234,
+    "author_authority_score": 0.7027288996133384
+  },
+  {
+    "research_paper_id": "13ccde9d-ba3e-4599-b335-d74a896aa227",
+    "paper_authority_score": 0.7804878048780488,
+    "citation_influence_score": 0.9146830738119253,
+    "author_authority_score": 0.7393907438060017
+  },
+  {
+    "research_paper_id": "13fccc58-d234-49da-93d2-f791f53c6d39",
+    "paper_authority_score": 0.25,
+    "citation_influence_score": 0.6458555564803412,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "142462b8-275e-444b-9fed-5d521277f48a",
+    "paper_authority_score": 0.07317073170731707,
+    "citation_influence_score": 0.6740598343400728,
+    "author_authority_score": 0.6358165928608991
+  },
+  {
+    "research_paper_id": "1456af1e-5561-4162-8bea-7847ee3e3548",
+    "paper_authority_score": 0.625,
+    "citation_influence_score": 0.901441615535161,
+    "author_authority_score": 0.8998320105228871
+  },
+  {
+    "research_paper_id": "14974f14-2874-43c4-af59-4d3fb35de594",
+    "paper_authority_score": 0.9117647058823529,
+    "citation_influence_score": 0.8095470948436443,
+    "author_authority_score": 0.8520773069415747
+  },
+  {
+    "research_paper_id": "14e4a2c2-e876-452c-b0c3-f9d38aae2189",
+    "paper_authority_score": 0.23529411764705882,
+    "citation_influence_score": 0.6340337672970949,
+    "author_authority_score": 0.6899400848935648
+  },
+  {
+    "research_paper_id": "151efdba-2c67-4c0d-8946-4337f32c55a2",
+    "paper_authority_score": 0.7708333333333334,
+    "citation_influence_score": 0.8566409306705155,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "15709a3c-e8aa-4e03-a615-edd1d787a87e",
+    "paper_authority_score": 0.631578947368421,
+    "citation_influence_score": 0.8731591617607027,
+    "author_authority_score": 0.8264209194985109
+  },
+  {
+    "research_paper_id": "15875f07-822d-486b-b0ef-6d450c5a6c4b",
+    "paper_authority_score": 0.1,
+    "citation_influence_score": 0.8526532817662111,
+    "author_authority_score": 0.8921478498506193
+  },
+  {
+    "research_paper_id": "15937ac8-37db-4a85-b467-acf799e51e84",
+    "paper_authority_score": 0.21428571428571427,
+    "citation_influence_score": 0.8165218624611198,
+    "author_authority_score": 0.7470237193134607
+  },
+  {
+    "research_paper_id": "15b8c7e6-e8e5-4378-93b8-a8ea474cdab7",
+    "paper_authority_score": 0.8,
+    "citation_influence_score": 0.966833905052419,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "15ddf096-6cec-497c-8f4f-60f63527bf1d",
+    "paper_authority_score": 0.8,
+    "citation_influence_score": 0.8354238793430546,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "162ff034-4831-476f-8b81-51adcbb76186",
+    "paper_authority_score": 0.7857142857142857,
+    "citation_influence_score": 0.9781393980708337,
+    "author_authority_score": 0.8596138180989795
+  },
+  {
+    "research_paper_id": "1635f943-ff42-49a5-ad75-65aee5ba4277",
+    "paper_authority_score": 0.2,
+    "citation_influence_score": 0.7470237193134607,
+    "author_authority_score": 0.8165218624611198
+  },
+  {
+    "research_paper_id": "16406798-95ee-4ca7-b991-0031a4009c22",
+    "paper_authority_score": 0.8125,
+    "citation_influence_score": 0.8683696639625411,
+    "author_authority_score": 0.8518266930423407
+  },
+  {
+    "research_paper_id": "167a46d3-460d-41db-b624-eb44cffce8c5",
+    "paper_authority_score": 0.2926829268292683,
+    "citation_influence_score": 0.8109465981000573,
+    "author_authority_score": 0.7520484185508391
+  },
+  {
+    "research_paper_id": "179af5e9-7a7b-4041-8f76-28aa07e2a33b",
+    "paper_authority_score": 0.6333333333333333,
+    "citation_influence_score": 0.8589649246319205,
+    "author_authority_score": 0.8408863130152442
+  },
+  {
+    "research_paper_id": "179f2e89-b868-4d53-be34-38e5b3af0059",
+    "paper_authority_score": 0.28888888888888886,
+    "citation_influence_score": 0.7518689794550968,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "17c522b0-a1b3-4c55-9767-116a0c2a5650",
+    "paper_authority_score": 1.0,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.8037047371787109
+  },
+  {
+    "research_paper_id": "17e9a302-9ed8-4e83-980b-eba2c76c9a4c",
+    "paper_authority_score": 0.2631578947368421,
+    "citation_influence_score": 0.7878417673717326,
+    "author_authority_score": 0.8229014894598166
+  },
+  {
+    "research_paper_id": "18a4b243-89fc-4ff8-b9fc-665e53517a0b",
+    "paper_authority_score": 0.125,
+    "citation_influence_score": 0.916187568714252,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "19268426-ff06-4921-8171-60abdc7f216a",
+    "paper_authority_score": 0.05263157894736842,
+    "citation_influence_score": 0.6864597526259334,
+    "author_authority_score": 0.7226722060182331
+  },
+  {
+    "research_paper_id": "192affda-6d1a-4e02-9097-cee41b056b2c",
+    "paper_authority_score": 0.8421052631578947,
+    "citation_influence_score": 0.9770169654762617,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "1941f93d-4a70-4bac-9801-33a71ee8c82d",
+    "paper_authority_score": 0.75,
+    "citation_influence_score": 0.7057923526016294,
+    "author_authority_score": 0.911369271030134
+  },
+  {
+    "research_paper_id": "1975a357-0c14-4c39-be6a-9c1d63e4c984",
+    "paper_authority_score": 0.35714285714285715,
+    "citation_influence_score": 0.9010383878461334,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "1a78cf9d-aa88-4b46-8d9d-aecbf440d6a5",
+    "paper_authority_score": 0.9583333333333334,
+    "citation_influence_score": 0.8777865823970034,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "1aa3b75e-4c06-40c3-828c-2de861d0110e",
+    "paper_authority_score": 0.9583333333333334,
+    "citation_influence_score": 0.9542930753056673,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "1c561e07-55a7-462d-a19f-21d75c6efa47",
+    "paper_authority_score": 0.55,
+    "citation_influence_score": 0.9013539331541713,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "1c634107-24a1-49c2-9b0c-4c578a09c72f",
+    "paper_authority_score": 0.5,
+    "citation_influence_score": 0.7057430113628977,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "1cfac66c-3cfb-4b84-a9d4-dc4cb6e9a255",
+    "paper_authority_score": 0.6,
+    "citation_influence_score": 0.7942425869833671,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "1d1e521f-9c63-4cba-9d77-2aa19c923f9b",
+    "paper_authority_score": 0.7368421052631579,
+    "citation_influence_score": 0.8665397617696287,
+    "author_authority_score": 0.7971078005027391
+  },
+  {
+    "research_paper_id": "1e2a7aef-cc50-4dd0-ab92-15c13b22eaad",
+    "paper_authority_score": 0.4222222222222222,
+    "citation_influence_score": 0.7666362030025978,
+    "author_authority_score": 0.8065489885436155
+  },
+  {
+    "research_paper_id": "1e604f2b-9889-4ae1-afc7-a204ceb4c4ac",
+    "paper_authority_score": 0.5,
+    "citation_influence_score": 0.9259391672140798,
+    "author_authority_score": 0.9810498865778171
+  },
+  {
+    "research_paper_id": "1ed11c4f-e64c-4b28-9e67-1b5815e76e37",
+    "paper_authority_score": 0.8571428571428571,
+    "citation_influence_score": 0.9919975035450224,
+    "author_authority_score": 0.7720845688621046
+  },
+  {
+    "research_paper_id": "1eed3d5f-6d18-47db-8e82-92d1c412f64f",
+    "paper_authority_score": 0.6666666666666666,
+    "citation_influence_score": 0.8080856236851568,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "1f40ef2c-a24d-4192-9b20-87a58943df41",
+    "paper_authority_score": 0.5,
+    "citation_influence_score": 0.829967726184257,
+    "author_authority_score": 0.8930119728492107
+  },
+  {
+    "research_paper_id": "1f4db87a-76a7-432b-bdf2-4803f85dc513",
+    "paper_authority_score": 0.5384615384615384,
+    "citation_influence_score": 0.8264249651229567,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "1f65398f-64d4-4975-8a27-cc2fa48466a6",
+    "paper_authority_score": 0.7142857142857143,
+    "citation_influence_score": 0.8230710026716962,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "2044c9c9-381f-448e-99aa-e8250a1d45d5",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.6358165928608991,
+    "author_authority_score": 0.6901417138012931
+  },
+  {
+    "research_paper_id": "206346f3-0391-41ac-bc64-4ff3f2af2a81",
+    "paper_authority_score": 0.10526315789473684,
+    "citation_influence_score": 0.7565876780717844,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "209e191a-9cde-46a8-9337-e9232cd224a1",
+    "paper_authority_score": 0.04878048780487805,
+    "citation_influence_score": 0.7573989130836307,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "20caef28-4dc2-4d37-909e-fac2e7d92408",
+    "paper_authority_score": 0.9666666666666667,
+    "citation_influence_score": 0.9741762612593345,
+    "author_authority_score": 0.7104699230880007
+  },
+  {
+    "research_paper_id": "2258b969-5ef7-4d08-a64e-d9a8023d7ac6",
+    "paper_authority_score": 0.15,
+    "citation_influence_score": 0.7304332994642218,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "225d4f9c-ef2c-4b3c-bba0-f44f9c34d2c6",
+    "paper_authority_score": 0.06666666666666667,
+    "citation_influence_score": 0.7227968736470813,
+    "author_authority_score": 0.7732661747154996
+  },
+  {
+    "research_paper_id": "22d2e0e3-ea44-4de5-bc84-72230e5e984b",
+    "paper_authority_score": 0.5,
+    "citation_influence_score": 0.7481795155235201,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "231936fb-b3ca-4e23-8033-d07a7fd78862",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.7086059568006192,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "231dd422-79ed-459e-aba1-6477d606ccaa",
+    "paper_authority_score": 0.09523809523809523,
+    "citation_influence_score": 0.6639737413145949,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "234fda15-f025-4694-ba2d-5f5b32bfe9f3",
+    "paper_authority_score": 0.9736842105263158,
+    "citation_influence_score": 0.948157608847103,
+    "author_authority_score": 0.8468880968386918
+  },
+  {
+    "research_paper_id": "23cd86ee-460f-4468-a593-95be7e11c68f",
+    "paper_authority_score": 0.35555555555555557,
+    "citation_influence_score": 0.7613728202556416,
+    "author_authority_score": 0.7890115706564836
+  },
+  {
+    "research_paper_id": "24465366-f867-49d1-b041-8fa894e2efc7",
+    "paper_authority_score": 1.0,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.919085664224922
+  },
+  {
+    "research_paper_id": "24fddbcb-531d-422e-a0c0-56a28f15d0bd",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.6831737437700698,
+    "author_authority_score": 0.7864738846745034
+  },
+  {
+    "research_paper_id": "256b6b93-3e31-4485-93bc-edac152916cd",
+    "paper_authority_score": 0.7,
+    "citation_influence_score": 0.9440494248461581,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "25786d5d-6959-49a2-8035-c3afb6e182d8",
+    "paper_authority_score": 0.3,
+    "citation_influence_score": 0.9157634803161602,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "25accdc2-fc59-4df3-811c-c5fddcf2a897",
+    "paper_authority_score": 0.5128205128205128,
+    "citation_influence_score": 0.7699357736274405,
+    "author_authority_score": 0.884152415042828
+  },
+  {
+    "research_paper_id": "25c3e5de-01b3-4843-b8ea-29cf897eda49",
+    "paper_authority_score": 0.10204081632653061,
+    "citation_influence_score": 0.7291394863959684,
+    "author_authority_score": 0.6547925118515452
+  },
+  {
+    "research_paper_id": "26c99466-75c0-49de-9061-a06731110b5f",
+    "paper_authority_score": 0.8780487804878049,
+    "citation_influence_score": 0.8391976943468316,
+    "author_authority_score": 0.8976359849568251
+  },
+  {
+    "research_paper_id": "2788aa98-dbf9-4e7e-801a-72b86194e847",
+    "paper_authority_score": 0.3076923076923077,
+    "citation_influence_score": 0.6887657702578027,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "27b27565-8f7a-47af-bd7c-d750e49120ec",
+    "paper_authority_score": 0.6041666666666666,
+    "citation_influence_score": 0.8377054729221035,
+    "author_authority_score": 0.8282197030254199
+  },
+  {
+    "research_paper_id": "27b314d0-d675-47ca-8e07-83cca5328ac1",
+    "paper_authority_score": 0.25,
+    "citation_influence_score": 0.9165542848536478,
+    "author_authority_score": 0.977856360085996
+  },
+  {
+    "research_paper_id": "27bcee75-fb22-422d-a620-8591d448537b",
+    "paper_authority_score": 0.18181818181818182,
+    "citation_influence_score": 0.7638009666993818,
+    "author_authority_score": 0.7424782331089739
+  },
+  {
+    "research_paper_id": "28294691-bb99-4c47-8e04-463be324ca9d",
+    "paper_authority_score": 0.9523809523809523,
+    "citation_influence_score": 0.8876150148810632,
+    "author_authority_score": 0.8041456137548839
+  },
+  {
+    "research_paper_id": "28c8eaac-4d88-484c-bd39-5ddc9eb8135c",
+    "paper_authority_score": 0.3333333333333333,
+    "citation_influence_score": 0.7223923139990002,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "28e5e120-7ecf-493a-bc92-32a1bae51c64",
+    "paper_authority_score": 0.12,
+    "citation_influence_score": 0.723931968815685,
+    "author_authority_score": 0.8420227589795107
+  },
+  {
+    "research_paper_id": "2918edc0-e797-46e5-ad8d-dfd47fb893d1",
+    "paper_authority_score": 0.9183673469387755,
+    "citation_influence_score": 0.9071411854289708,
+    "author_authority_score": 0.8523403242353988
+  },
+  {
+    "research_paper_id": "2931dcf9-3703-4c64-9b1d-4a2442580caf",
+    "paper_authority_score": 0.47368421052631576,
+    "citation_influence_score": 0.8095933528556175,
+    "author_authority_score": 0.7123247333343802
+  },
+  {
+    "research_paper_id": "29fc96d0-ff54-4d26-ad08-4d04656c7d05",
+    "paper_authority_score": 0.46153846153846156,
+    "citation_influence_score": 0.7638402771112665,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "2a3431fb-cb74-407e-8256-dbdeebb3b02b",
+    "paper_authority_score": 0.5454545454545454,
+    "citation_influence_score": 0.8936101793298257,
+    "author_authority_score": 0.9586726364078201
+  },
+  {
+    "research_paper_id": "2a5fb84a-5fce-4765-8aae-c050c00feb34",
+    "paper_authority_score": 0.85,
+    "citation_influence_score": 0.8498006189736356,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "2ad3e974-8b6e-40b2-bb27-10b301884ebd",
+    "paper_authority_score": 0.2857142857142857,
+    "citation_influence_score": 0.8935393606467935,
+    "author_authority_score": 0.7659488353280148
+  },
+  {
+    "research_paper_id": "2ae1b076-2811-4058-965f-57b18fe5d146",
+    "paper_authority_score": 0.5588235294117647,
+    "citation_influence_score": 0.6926599472733036,
+    "author_authority_score": 0.8845521002297941
+  },
+  {
+    "research_paper_id": "2b2d09fa-c532-4691-9785-2603b4c2e5ef",
+    "paper_authority_score": 0.75,
+    "citation_influence_score": 0.9420031849747178,
+    "author_authority_score": 0.8910240710513744
+  },
+  {
+    "research_paper_id": "2b3c4c53-4550-4a22-b550-8ef2fc8163c8",
+    "paper_authority_score": 0.36,
+    "citation_influence_score": 0.7705928825253467,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "2b47b268-5205-4925-9597-d825047726f7",
+    "paper_authority_score": 0.9210526315789473,
+    "citation_influence_score": 0.9081973378451564,
+    "author_authority_score": 0.8489721484455367
+  },
+  {
+    "research_paper_id": "2b78ea8f-0c03-4a9e-98d0-ae59f968f2ec",
+    "paper_authority_score": 0.21951219512195122,
+    "citation_influence_score": 0.7032117325232459,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "2b9edf95-9a82-4181-8562-02b413f19aac",
+    "paper_authority_score": 0.44,
+    "citation_influence_score": 0.7743456724946203,
+    "author_authority_score": 0.8468864407878308
+  },
+  {
+    "research_paper_id": "2bc6d833-d2c1-43ee-bc52-228f78815051",
+    "paper_authority_score": 1.0,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.8140651334929067
+  },
+  {
+    "research_paper_id": "2bd5df45-2cde-41d0-afd8-3a582bf81a92",
+    "paper_authority_score": 0.17777777777777778,
+    "citation_influence_score": 0.7158727607361655,
+    "author_authority_score": 0.7672901791952705
+  },
+  {
+    "research_paper_id": "2c2038dd-a3ba-4702-832e-83942e7fd88e",
+    "paper_authority_score": 0.9512195121951219,
+    "citation_influence_score": 0.9865067363586504,
+    "author_authority_score": 0.7697045149598628
+  },
+  {
+    "research_paper_id": "2c840f99-0008-4b42-babc-c76f1a005ff7",
+    "paper_authority_score": 0.2653061224489796,
+    "citation_influence_score": 0.7543665921634001,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "2cb79997-d495-4b16-adbc-06b4c6df460f",
+    "paper_authority_score": 0.75,
+    "citation_influence_score": 0.9941620058627123,
+    "author_authority_score": 0.877958784105242
+  },
+  {
+    "research_paper_id": "2d865f76-bc82-4669-ae44-cb24a7298c6c",
+    "paper_authority_score": 0.42857142857142855,
+    "citation_influence_score": 0.9280843783243847,
+    "author_authority_score": 0.898077370239051
+  },
+  {
+    "research_paper_id": "2e0501ea-91be-4eb5-8708-06cb14ecf890",
+    "paper_authority_score": 0.6,
+    "citation_influence_score": 0.9292303139217049,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "2e81802a-3c03-4d0b-aadd-73ba5fc16bbc",
+    "paper_authority_score": 0.25,
+    "citation_influence_score": 0.7505605884716225,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "2e9c6d32-d562-468c-80ec-46b96418dad3",
+    "paper_authority_score": 0.1,
+    "citation_influence_score": 0.7254933112909548,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "2f14bb8a-0679-4595-bdc0-1088abd936e6",
+    "paper_authority_score": 0.4,
+    "citation_influence_score": 0.8080383744205231,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "2fe059f3-cb3c-4ad4-8b48-021920bedd7c",
+    "paper_authority_score": 0.5,
+    "citation_influence_score": 0.9280919312650857,
+    "author_authority_score": 0.8402687763651964
+  },
+  {
+    "research_paper_id": "2fef5bf4-4e8c-4e43-ba42-cf4f805d043f",
+    "paper_authority_score": 0.3684210526315789,
+    "citation_influence_score": 0.85511056626273,
+    "author_authority_score": 0.9109910556083342
+  },
+  {
+    "research_paper_id": "303cc72e-517f-4ed5-b226-37b090f28966",
+    "paper_authority_score": 0.45454545454545453,
+    "citation_influence_score": 0.870860164179386,
+    "author_authority_score": 0.9585079691518795
+  },
+  {
+    "research_paper_id": "3106a13f-ae87-421e-8227-42115c1b7be5",
+    "paper_authority_score": 0.07692307692307693,
+    "citation_influence_score": 0.7013514466347113,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "312424e9-1c64-4a88-bf6a-f445a7279b7e",
+    "paper_authority_score": 0.2682926829268293,
+    "citation_influence_score": 0.7085764115059494,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "31c935eb-4545-46ef-a7d0-70e73c1b5bf7",
+    "paper_authority_score": 0.4358974358974359,
+    "citation_influence_score": 0.762806764876381,
+    "author_authority_score": 0.8548675911659751
+  },
+  {
+    "research_paper_id": "31fba472-62b0-4fe8-878e-709000fbc1a5",
+    "paper_authority_score": 0.6666666666666666,
+    "citation_influence_score": 0.9170737584326975,
+    "author_authority_score": 0.7072353957342559
+  },
+  {
+    "research_paper_id": "32468eb5-92f8-42b0-b4a7-4e95cf03398c",
+    "paper_authority_score": 0.16666666666666666,
+    "citation_influence_score": 0.6962862536801031,
+    "author_authority_score": 0.8902938009266562
+  },
+  {
+    "research_paper_id": "32dcb8b7-4e65-4988-9c44-c5484e8d4dee",
+    "paper_authority_score": 0.17073170731707318,
+    "citation_influence_score": 0.6971891143993445,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "332afc49-c004-44f1-a50c-5ed8b388c9e8",
+    "paper_authority_score": 0.5,
+    "citation_influence_score": 0.8211337078731425,
+    "author_authority_score": 0.6797107849473999
+  },
+  {
+    "research_paper_id": "3339be11-7f59-4277-8f99-34522d63b1fc",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.6724054068243044,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "335584ea-8a4d-4500-8657-1b3cdd3d97c2",
+    "paper_authority_score": 0.9545454545454546,
+    "citation_influence_score": 0.977856360085996,
+    "author_authority_score": 0.8773370070700219
+  },
+  {
+    "research_paper_id": "336b734b-6f8d-4d5a-a9bc-9857804f33a1",
+    "paper_authority_score": 0.16666666666666666,
+    "citation_influence_score": 0.7576947130386396,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "33ef0e25-1879-47dd-86d9-c07f0acc7378",
+    "paper_authority_score": 0.5609756097560976,
+    "citation_influence_score": 0.8868674152431715,
+    "author_authority_score": 0.821756332432116
+  },
+  {
+    "research_paper_id": "34976f32-0cac-4aa1-a718-e645895663a2",
+    "paper_authority_score": 0.24,
+    "citation_influence_score": 0.766403949875625,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "357eef9d-976c-494f-a1ed-ecd5fd643612",
+    "paper_authority_score": 0.6470588235294118,
+    "citation_influence_score": 0.712687122178038,
+    "author_authority_score": 0.8011781565118489
+  },
+  {
+    "research_paper_id": "35e39448-72b6-44e7-a343-818efb083b86",
+    "paper_authority_score": 0.21951219512195122,
+    "citation_influence_score": 0.7771005317835666,
+    "author_authority_score": 0.8042343696230967
+  },
+  {
+    "research_paper_id": "363de267-7f2c-4c57-82e1-9d7d0dbf721a",
+    "paper_authority_score": 0.4411764705882353,
+    "citation_influence_score": 0.6846019671742488,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "3651eb08-5629-4c6c-8ae0-35e88e48f9a3",
+    "paper_authority_score": 0.047619047619047616,
+    "citation_influence_score": 0.6604047444549275,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "367ed80c-c962-4907-b5e6-6f50d17b58cd",
+    "paper_authority_score": 0.7142857142857143,
+    "citation_influence_score": 0.9374867062703106,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "3718ad63-fb2d-47f7-a9df-f11b75370b7c",
+    "paper_authority_score": 0.5789473684210527,
+    "citation_influence_score": 0.871861637115102,
+    "author_authority_score": 0.8910034432469341
+  },
+  {
+    "research_paper_id": "3720d937-8ead-467b-bc6c-14c854665f8b",
+    "paper_authority_score": 0.4791666666666667,
+    "citation_influence_score": 0.8026784255186996,
+    "author_authority_score": 0.7542074052624522
+  },
+  {
+    "research_paper_id": "378a9042-13e5-456f-a7ac-3adc27bcf679",
+    "paper_authority_score": 0.14285714285714285,
+    "citation_influence_score": 0.6697518334685519,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "380307a6-8fa3-4710-a6e0-885b4d20061c",
+    "paper_authority_score": 0.5714285714285714,
+    "citation_influence_score": 0.8360533015350053,
+    "author_authority_score": 0.848402358167362
+  },
+  {
+    "research_paper_id": "3926da0c-b742-405c-9b45-fb2cfc5fe2a9",
+    "paper_authority_score": 0.631578947368421,
+    "citation_influence_score": 0.9374335526402846,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "39c19675-d5c8-473a-a23b-c09a3b504812",
+    "paper_authority_score": 1.0,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.9649766302350177
+  },
+  {
+    "research_paper_id": "39cd6ad2-2a91-4c56-824c-749e7e4cb9c4",
+    "paper_authority_score": 0.07317073170731707,
+    "citation_influence_score": 0.7592751874950513,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "39d25e0e-4af7-40a2-ad2e-983a856891ce",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.7085375689498993,
+    "author_authority_score": 0.8041368415734498
+  },
+  {
+    "research_paper_id": "3aded94f-ebc3-4feb-9a5f-46f286304984",
+    "paper_authority_score": 0.07142857142857142,
+    "citation_influence_score": 0.7461648006060178,
+    "author_authority_score": 0.7206785469230478
+  },
+  {
+    "research_paper_id": "3b7e9d07-0d4a-421b-9047-b3724e4d9619",
+    "paper_authority_score": 0.061224489795918366,
+    "citation_influence_score": 0.7139509406859211,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "3c2763bd-c364-4b72-a9f7-36113dff832c",
+    "paper_authority_score": 0.8947368421052632,
+    "citation_influence_score": 0.8987500337860337,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "3ce5eea0-61e2-4455-9941-0ef83343247c",
+    "paper_authority_score": 0.9166666666666666,
+    "citation_influence_score": 0.9041286775299038,
+    "author_authority_score": 0.8719910181268054
+  },
+  {
+    "research_paper_id": "3d0a826d-0a2d-4fa8-b6d9-e493f6b692fb",
+    "paper_authority_score": 0.9705882352941176,
+    "citation_influence_score": 0.825189862705843,
+    "author_authority_score": 0.8490271609517381
+  },
+  {
+    "research_paper_id": "3d7be53a-25d1-45f6-b1ea-3b8a157b085d",
+    "paper_authority_score": 0.6097560975609756,
+    "citation_influence_score": 0.8909539989302161,
+    "author_authority_score": 0.8582104117214581
+  },
+  {
+    "research_paper_id": "3d7f9432-4d6d-45aa-a3fd-6f82c4bf88f9",
+    "paper_authority_score": 0.47368421052631576,
+    "citation_influence_score": 0.9161803934517733,
+    "author_authority_score": 0.7955393504383124
+  },
+  {
+    "research_paper_id": "3d87895d-d852-4587-9bf8-04115a15b638",
+    "paper_authority_score": 0.5714285714285714,
+    "citation_influence_score": 0.929450271067944,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "3dfa7c87-234f-4b68-8103-d4db3b0d7c85",
+    "paper_authority_score": 0.13333333333333333,
+    "citation_influence_score": 0.7041469990834622,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "3e274a3d-0779-45f5-b3ec-56379ee70c1d",
+    "paper_authority_score": 0.6,
+    "citation_influence_score": 0.9747814466083571,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "3ea68469-4af4-4b7b-ad48-63be73c1592c",
+    "paper_authority_score": 0.9047619047619048,
+    "citation_influence_score": 0.9203275585996221,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "3ea72714-c3e1-49c1-b683-eb65ce5b4e07",
+    "paper_authority_score": 0.10526315789473684,
+    "citation_influence_score": 0.7894613378719646,
+    "author_authority_score": 0.7311219647467018
+  },
+  {
+    "research_paper_id": "3ed23f5d-21f6-43e3-81e5-87eaf2a566ad",
+    "paper_authority_score": 0.4888888888888889,
+    "citation_influence_score": 0.7795260710766524,
+    "author_authority_score": 0.7715250198117687
+  },
+  {
+    "research_paper_id": "3fb7141b-281b-455d-a799-2e5eae96d43c",
+    "paper_authority_score": 0.5294117647058824,
+    "citation_influence_score": 0.6907441071653844,
+    "author_authority_score": 0.659533667086817
+  },
+  {
+    "research_paper_id": "3fc07be0-8c3d-4f5b-8ff8-e70d298b930c",
+    "paper_authority_score": 0.3235294117647059,
+    "citation_influence_score": 0.666860336873328,
+    "author_authority_score": 0.6655046096598312
+  },
+  {
+    "research_paper_id": "3fc2dfb1-549f-4a52-9639-cc1e0b085211",
+    "paper_authority_score": 0.28,
+    "citation_influence_score": 0.7701477274031333,
+    "author_authority_score": 0.8902938009266562
+  },
+  {
+    "research_paper_id": "4004feda-dfff-48b6-af46-ca86693ff5ab",
+    "paper_authority_score": 0.8780487804878049,
+    "citation_influence_score": 0.9512254148954588,
+    "author_authority_score": 0.886825964800751
+  },
+  {
+    "research_paper_id": "400b9c5b-e3c5-4a09-9df7-3577ef65920d",
+    "paper_authority_score": 0.23076923076923078,
+    "citation_influence_score": 0.749967365642654,
+    "author_authority_score": 0.8175759348540123
+  },
+  {
+    "research_paper_id": "4022df5d-be87-49e2-8771-4355c19122db",
+    "paper_authority_score": 0.8974358974358975,
+    "citation_influence_score": 0.8365335951733021,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "412d5bd0-11f4-4463-9fe9-e14164a5f2b5",
+    "paper_authority_score": 0.3157894736842105,
+    "citation_influence_score": 0.8414414421108298,
+    "author_authority_score": 0.7337179852275835
+  },
+  {
+    "research_paper_id": "41c12360-a2f2-453d-9055-7d89e6d685ae",
+    "paper_authority_score": 0.02564102564102564,
+    "citation_influence_score": 0.6245761460448632,
+    "author_authority_score": 0.7083831730861394
+  },
+  {
+    "research_paper_id": "42080009-67f6-456f-9bb4-fae8c1d81056",
+    "paper_authority_score": 0.37777777777777777,
+    "citation_influence_score": 0.7618178827232703,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "426a3054-a0f5-43bd-b82f-b4fa0418c3b3",
+    "paper_authority_score": 0.4090909090909091,
+    "citation_influence_score": 0.8675545378470978,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "4274fb59-e035-47c0-9a77-dc973f045d67",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.7226722060182331,
+    "author_authority_score": 0.7236152433810772
+  },
+  {
+    "research_paper_id": "4282a454-38dc-4092-af16-b33130dbe4ac",
+    "paper_authority_score": 0.5333333333333333,
+    "citation_influence_score": 0.7949961281598148,
+    "author_authority_score": 0.8680271427358488
+  },
+  {
+    "research_paper_id": "42945279-7f66-406e-853b-a73debd701a1",
+    "paper_authority_score": 0.1,
+    "citation_influence_score": 0.7286933329781448,
+    "author_authority_score": 0.7260828252232945
+  },
+  {
+    "research_paper_id": "43d6e775-348a-47da-a754-5a278098f0ea",
+    "paper_authority_score": 0.6842105263157895,
+    "citation_influence_score": 0.845206811978671,
+    "author_authority_score": 0.864279192109197
+  },
+  {
+    "research_paper_id": "44992c75-6bec-4781-bd5c-e43eb0f7a87e",
+    "paper_authority_score": 0.21240105540897097,
+    "citation_influence_score": 0.729087876719039,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "450dec73-deee-49a8-8de4-6420198a7215",
+    "paper_authority_score": 0.4146341463414634,
+    "citation_influence_score": 0.8638032791433131,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "45a59b8a-ecc5-416d-9db5-29380f196bed",
+    "paper_authority_score": 0.7560975609756098,
+    "citation_influence_score": 0.9075499358264283,
+    "author_authority_score": 0.8037859499506754
+  },
+  {
+    "research_paper_id": "465fcf61-e3b0-4984-8c34-f7d75effc888",
+    "paper_authority_score": 0.4,
+    "citation_influence_score": 0.9213383391184787,
+    "author_authority_score": 0.829967726184257
+  },
+  {
+    "research_paper_id": "466748a4-33f1-464d-a802-c8c9f33516a4",
+    "paper_authority_score": 0.8333333333333334,
+    "citation_influence_score": 0.7089643834489646,
+    "author_authority_score": 0.8503458002161658
+  },
+  {
+    "research_paper_id": "467bd79e-cb83-4357-830f-ee7f7dc64c1c",
+    "paper_authority_score": 0.8333333333333334,
+    "citation_influence_score": 0.8730987529822389,
+    "author_authority_score": 0.8714327808538067
+  },
+  {
+    "research_paper_id": "46e2f003-762d-4746-a6bb-222206da359c",
+    "paper_authority_score": 0.9375,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "481b684c-91fc-4b18-98f4-d08378e10711",
+    "paper_authority_score": 0.14583333333333334,
+    "citation_influence_score": 0.7121408897515027,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "48487138-7272-43b1-a412-5d78ec5f816e",
+    "paper_authority_score": 0.6666666666666666,
+    "citation_influence_score": 0.9469966977794982,
+    "author_authority_score": 0.8749662817090902
+  },
+  {
+    "research_paper_id": "48608dab-30aa-4454-8a26-a7139cc36125",
+    "paper_authority_score": 0.36363636363636365,
+    "citation_influence_score": 0.8313759571688877,
+    "author_authority_score": 0.8381678787043578
+  },
+  {
+    "research_paper_id": "48ac3217-c0a4-42ed-9ca0-524d32b02238",
+    "paper_authority_score": 0.5238095238095238,
+    "citation_influence_score": 0.798793397153843,
+    "author_authority_score": 0.7795462738310616
+  },
+  {
+    "research_paper_id": "4903b95d-77cb-4aa8-a4ce-b64075e5da10",
+    "paper_authority_score": 0.4444444444444444,
+    "citation_influence_score": 0.7720475777568028,
+    "author_authority_score": 0.8210927476263276
+  },
+  {
+    "research_paper_id": "4a0a23c4-ac61-4fb0-ab61-548d0a90c37b",
+    "paper_authority_score": 0.4,
+    "citation_influence_score": 0.7650763241615831,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "4a1d1b21-ac11-4f2b-a32f-d4ab5ed8d23b",
+    "paper_authority_score": 0.8,
+    "citation_influence_score": 0.93837055460944,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "4a823112-baae-46b7-acf1-5e53b80fbf42",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.657577115128933,
+    "author_authority_score": 0.6340337672970949
+  },
+  {
+    "research_paper_id": "4ac2b3e2-d4df-4daf-940b-5615247d9da7",
+    "paper_authority_score": 0.717948717948718,
+    "citation_influence_score": 0.8089482341098932,
+    "author_authority_score": 0.8972143986518923
+  },
+  {
+    "research_paper_id": "4ae06e1f-574b-4766-b194-c32da9acc5d5",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.7221477013364952,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "4b33c29f-71cf-4f90-89c9-aa1b1b57b9a4",
+    "paper_authority_score": 0.625,
+    "citation_influence_score": 0.8379021222472143,
+    "author_authority_score": 0.9051042957681501
+  },
+  {
+    "research_paper_id": "4ba78839-a6ec-4665-8d97-d571aeec231b",
+    "paper_authority_score": 0.5714285714285714,
+    "citation_influence_score": 0.9299974461196254,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "4bd801f6-c575-4c4d-a41d-ce73145feb2a",
+    "paper_authority_score": 0.9512195121951219,
+    "citation_influence_score": 0.892738668545601,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "4d1846ee-b3fe-490c-bb67-ec861f2c30c8",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.6891368565309052,
+    "author_authority_score": 0.739687861614752
+  },
+  {
+    "research_paper_id": "4d1cfa49-e684-4994-bd37-fabdad62c0fd",
+    "paper_authority_score": 0.375,
+    "citation_influence_score": 0.7736009246076515,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "4d2d9a2c-2798-47e8-aa61-6be2ba77c074",
+    "paper_authority_score": 0.3333333333333333,
+    "citation_influence_score": 0.8910240710513744,
+    "author_authority_score": 0.9420031849747178
+  },
+  {
+    "research_paper_id": "4d744a19-57bf-4693-b0ed-f283484f4cf4",
+    "paper_authority_score": 0.9,
+    "citation_influence_score": 0.9538176042510608,
+    "author_authority_score": 0.9810505406381336
+  },
+  {
+    "research_paper_id": "4d7df315-4c8d-4138-8db7-c5d7c240e96a",
+    "paper_authority_score": 0.34146341463414637,
+    "citation_influence_score": 0.7126160543795609,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "4e53769b-b395-4edc-8484-d93facb6bf29",
+    "paper_authority_score": 0.5306122448979592,
+    "citation_influence_score": 0.8304858788867945,
+    "author_authority_score": 0.8769804664418845
+  },
+  {
+    "research_paper_id": "4ec9bf48-87ef-40f4-b45a-c1ce42b1bc16",
+    "paper_authority_score": 0.5833333333333334,
+    "citation_influence_score": 0.8201643988216478,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "4fd0bbc5-ef92-4a27-8b8e-9b9d75287956",
+    "paper_authority_score": 0.6538461538461539,
+    "citation_influence_score": 0.8439609107716002,
+    "author_authority_score": 0.8041368415734498
+  },
+  {
+    "research_paper_id": "50367e37-3b2b-40e5-8cc7-d135f6216e51",
+    "paper_authority_score": 0.34146341463414637,
+    "citation_influence_score": 0.8536327527898949,
+    "author_authority_score": 0.8075953240315068
+  },
+  {
+    "research_paper_id": "50b0e98f-74b7-45f3-b9c6-7759ea0bed7d",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.6229241665967215,
+    "author_authority_score": 0.6429884317533973
+  },
+  {
+    "research_paper_id": "50c7613f-03e0-4645-a1cf-5409c8bdc1a0",
+    "paper_authority_score": 0.08823529411764706,
+    "citation_influence_score": 0.6050066762785613,
+    "author_authority_score": 0.7158727607361655
+  },
+  {
+    "research_paper_id": "50cf2ab8-f0b1-4a3b-9395-693f2635c6e5",
+    "paper_authority_score": 0.2631578947368421,
+    "citation_influence_score": 0.8354877213000841,
+    "author_authority_score": 0.8933411390799795
+  },
+  {
+    "research_paper_id": "50d8c297-3030-46ec-bbcf-7988a59627ad",
+    "paper_authority_score": 0.4146341463414634,
+    "citation_influence_score": 0.7556146671457075,
+    "author_authority_score": 0.7764651625616977
+  },
+  {
+    "research_paper_id": "510dee72-5ed3-4eae-ba91-f5ff9c6524e8",
+    "paper_authority_score": 0.3333333333333333,
+    "citation_influence_score": 0.797677666581907,
+    "author_authority_score": 0.8879616270610171
+  },
+  {
+    "research_paper_id": "51cd93d0-30ca-4c15-9209-53377560932f",
+    "paper_authority_score": 0.7073170731707317,
+    "citation_influence_score": 0.7920299377893276,
+    "author_authority_score": 0.8414748070577783
+  },
+  {
+    "research_paper_id": "51db4023-728c-4d04-8ece-516749feab3c",
+    "paper_authority_score": 0.6666666666666666,
+    "citation_influence_score": 0.8097371345352669,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "51e8adf6-8c7c-4347-a711-3b04768fdb98",
+    "paper_authority_score": 0.5111111111111111,
+    "citation_influence_score": 0.7923128152288144,
+    "author_authority_score": 0.8370258054501803
+  },
+  {
+    "research_paper_id": "51f40829-4ab6-46e4-8ec1-584a60df362d",
+    "paper_authority_score": 0.42105263157894735,
+    "citation_influence_score": 0.8030540283133003,
+    "author_authority_score": 0.9206069973768606
+  },
+  {
+    "research_paper_id": "525ccd96-d6a0-4bed-9d9b-d0d3e3c592c1",
+    "paper_authority_score": 0.8958333333333334,
+    "citation_influence_score": 0.901152300938347,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "529256df-1e4a-4214-be94-85f4049573a2",
+    "paper_authority_score": 0.4,
+    "citation_influence_score": 0.8564984175035253,
+    "author_authority_score": 0.7706729221351836
+  },
+  {
+    "research_paper_id": "52c7a705-8112-472a-837d-1ee6a736730c",
+    "paper_authority_score": 0.04081632653061224,
+    "citation_influence_score": 0.6963803697792036,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "52ca8872-a7cd-440f-ac4b-3fc8932ea66b",
+    "paper_authority_score": 0.8333333333333334,
+    "citation_influence_score": 0.9586726364078201,
+    "author_authority_score": 0.8936101793298257
+  },
+  {
+    "research_paper_id": "531d09a7-a591-46d5-a030-c68470f8bed7",
+    "paper_authority_score": 0.46153846153846156,
+    "citation_influence_score": 0.818049668051797,
+    "author_authority_score": 0.8264513928417155
+  },
+  {
+    "research_paper_id": "53253c38-39fd-443e-bb30-8a21da1e1da5",
+    "paper_authority_score": 0.5365853658536586,
+    "citation_influence_score": 0.7730855983547464,
+    "author_authority_score": 0.6767005532680207
+  },
+  {
+    "research_paper_id": "53488252-9268-4459-bedc-2643b8892a6f",
+    "paper_authority_score": 0.65,
+    "citation_influence_score": 0.913444265830017,
+    "author_authority_score": 0.8302881832617276
+  },
+  {
+    "research_paper_id": "537743a6-cd83-4731-8067-af1c47cc71ba",
+    "paper_authority_score": 0.75,
+    "citation_influence_score": 0.9514513218218864,
+    "author_authority_score": 0.7681609883669906
+  },
+  {
+    "research_paper_id": "53919248-e2dc-490a-821f-3b562bbde88f",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.7656831497658784,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "53937e90-b148-4a03-9e21-ae622b9c253f",
+    "paper_authority_score": 0.15789473684210525,
+    "citation_influence_score": 0.7954884792297197,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "5448457a-622d-405b-89b0-3072e6d25ac4",
+    "paper_authority_score": 0.2647058823529412,
+    "citation_influence_score": 0.6485268604661304,
+    "author_authority_score": 0.797882723897613
+  },
+  {
+    "research_paper_id": "54b23fc0-c4be-48b8-9172-016b997dd69c",
+    "paper_authority_score": 0.9024390243902439,
+    "citation_influence_score": 0.9659124337280542,
+    "author_authority_score": 0.7645458243580349
+  },
+  {
+    "research_paper_id": "55dfc6ba-8214-42e8-99a2-a335fd697935",
+    "paper_authority_score": 0.05263157894736842,
+    "citation_influence_score": 0.7277804355815832,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "560b07d7-fbfa-4c28-bb76-9750e37970a1",
+    "paper_authority_score": 0.9615384615384616,
+    "citation_influence_score": 0.9609076908730764,
+    "author_authority_score": 0.8970793671121344
+  },
+  {
+    "research_paper_id": "56200e4c-4ae2-4d85-9ae8-ec382416d987",
+    "paper_authority_score": 0.7555555555555555,
+    "citation_influence_score": 0.8210927476263276,
+    "author_authority_score": 0.7720475777568028
+  },
+  {
+    "research_paper_id": "567ae363-5136-4373-a04b-883da77ea1a1",
+    "paper_authority_score": 0.5384615384615384,
+    "citation_influence_score": 0.7702807987170374,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "569f55b5-1085-4d5e-9791-37fe539a10e7",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.8123536349518367,
+    "author_authority_score": 0.8041368415734498
+  },
+  {
+    "research_paper_id": "56cb1a66-d84d-45cf-b7ed-40fe0ed52ac7",
+    "paper_authority_score": 0.7894736842105263,
+    "citation_influence_score": 0.8820006531414329,
+    "author_authority_score": 0.9674818502626031
+  },
+  {
+    "research_paper_id": "583c6f40-ab4c-4854-9a6b-d13be097e9e8",
+    "paper_authority_score": 0.8095238095238095,
+    "citation_influence_score": 0.8228755807345582,
+    "author_authority_score": 0.87516251191773
+  },
+  {
+    "research_paper_id": "58598aed-0e5b-426e-9142-a288b5bc8d5b",
+    "paper_authority_score": 0.9473684210526315,
+    "citation_influence_score": 0.9096183394954147,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "587f3197-c6f3-40f5-b95b-707849ac75d9",
+    "paper_authority_score": 0.1836734693877551,
+    "citation_influence_score": 0.7390808155981207,
+    "author_authority_score": 0.782306591494376
+  },
+  {
+    "research_paper_id": "589cfcf5-9c10-4558-b429-36d4c97ec401",
+    "paper_authority_score": 1.0,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.8041368415734498
+  },
+  {
+    "research_paper_id": "594cf816-b772-4b9c-9339-d69e2b4acd73",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.687453583184086,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "5986d1fe-b357-4b59-8418-4e396b45bca0",
+    "paper_authority_score": 0.47058823529411764,
+    "citation_influence_score": 0.6892639183603404,
+    "author_authority_score": 0.7843064750467346
+  },
+  {
+    "research_paper_id": "59bdc4cf-d469-436d-b60f-0b5e6e899b7c",
+    "paper_authority_score": 0.14634146341463414,
+    "citation_influence_score": 0.6872693714399285,
+    "author_authority_score": 0.7902419136038661
+  },
+  {
+    "research_paper_id": "59c49ba4-eab5-47e2-8101-014dd00a8d5c",
+    "paper_authority_score": 0.13333333333333333,
+    "citation_influence_score": 0.7424782331089739,
+    "author_authority_score": 0.7638009666993818
+  },
+  {
+    "research_paper_id": "5a2a6d23-a87f-43fb-bc20-d992bc36c9fa",
+    "paper_authority_score": 0.7368421052631579,
+    "citation_influence_score": 0.9572257022150445,
+    "author_authority_score": 0.8679488760961415
+  },
+  {
+    "research_paper_id": "5a664417-d2a4-4283-8380-5a9a0e52f96d",
+    "paper_authority_score": 0.11345646437994723,
+    "citation_influence_score": 0.6958169791636092,
+    "author_authority_score": 0.7501804767614562
+  },
+  {
+    "research_paper_id": "5a82cbbc-34fb-4fae-94a3-0cc729f9b557",
+    "paper_authority_score": 0.16326530612244897,
+    "citation_influence_score": 0.7343740918443994,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "5a856b09-c93a-482b-b11c-cd96382859b4",
+    "paper_authority_score": 0.2857142857142857,
+    "citation_influence_score": 0.7324203666720083,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "5af0e8dd-db2b-432d-a43d-8868b3cf344d",
+    "paper_authority_score": 0.9411764705882353,
+    "citation_influence_score": 0.8111152464957063,
+    "author_authority_score": 0.8518420841937654
+  },
+  {
+    "research_paper_id": "5b01309d-6dae-4d72-bf93-71f9be0f14bd",
+    "paper_authority_score": 0.7692307692307693,
+    "citation_influence_score": 0.8582104117214581,
+    "author_authority_score": 0.8909539989302161
+  },
+  {
+    "research_paper_id": "5b40caa6-cdce-4853-bbea-6d4bc7a4c9ae",
+    "paper_authority_score": 0.21052631578947367,
+    "citation_influence_score": 0.7130983920440376,
+    "author_authority_score": 0.7906203766747449
+  },
+  {
+    "research_paper_id": "5b5a0030-3929-403f-9cf7-acef93293749",
+    "paper_authority_score": 0.5,
+    "citation_influence_score": 0.8668778876646638,
+    "author_authority_score": 0.8163580784075675
+  },
+  {
+    "research_paper_id": "5b6aed06-2dc1-4b06-af0b-e1f955f3d1f9",
+    "paper_authority_score": 0.8,
+    "citation_influence_score": 0.9077569816953558,
+    "author_authority_score": 0.8928247908700527
+  },
+  {
+    "research_paper_id": "5b7dd758-7a62-46c8-8cd2-beedcb4cf36b",
+    "paper_authority_score": 0.64,
+    "citation_influence_score": 0.7980995847592799,
+    "author_authority_score": 0.8296500141498502
+  },
+  {
+    "research_paper_id": "5bb39652-e0e9-47ee-a063-5a90f0cd2136",
+    "paper_authority_score": 0.30612244897959184,
+    "citation_influence_score": 0.8041368415734498,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "5bc8d2ef-4e30-485a-acdd-33d640cb1099",
+    "paper_authority_score": 0.7111111111111111,
+    "citation_influence_score": 0.8135292680527583,
+    "author_authority_score": 0.8929088486809023
+  },
+  {
+    "research_paper_id": "5c98c042-4a22-4754-9b8a-5bacd03077ca",
+    "paper_authority_score": 0.42857142857142855,
+    "citation_influence_score": 0.9073223581718259,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "5cbff7d9-cc90-42af-836b-57e5a39b5103",
+    "paper_authority_score": 0.3333333333333333,
+    "citation_influence_score": 0.7941005298228812,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "5cc0f9c2-0cbf-47a7-b3f4-5fbd3bceef99",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.7163300821984026,
+    "author_authority_score": 0.7950716787294304
+  },
+  {
+    "research_paper_id": "5ce8efbc-5d48-475e-819e-a4556f502c36",
+    "paper_authority_score": 0.9583333333333334,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.8620030006218768
+  },
+  {
+    "research_paper_id": "5d00678d-9ae3-4d03-9232-a92997366e3b",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.7178862803718757,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "5d2151b7-f23e-4178-9c9e-e391ad12c608",
+    "paper_authority_score": 0.3333333333333333,
+    "citation_influence_score": 0.7207483382743234,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "5d365724-2b81-43e1-9196-05512e6ae9c1",
+    "paper_authority_score": 0.4375,
+    "citation_influence_score": 0.796840115456733,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "5d5804ac-a0ce-4d06-83e5-06ba55c78d99",
+    "paper_authority_score": 0.3076923076923077,
+    "citation_influence_score": 0.7625187228957363,
+    "author_authority_score": 0.7678661154802945
+  },
+  {
+    "research_paper_id": "5ddda80d-6b08-48bb-a446-12494343f41d",
+    "paper_authority_score": 0.42857142857142855,
+    "citation_influence_score": 0.7929613334227493,
+    "author_authority_score": 0.8456031196608321
+  },
+  {
+    "research_paper_id": "5e8e00cf-8eec-4317-92de-a8b0cea6fdd6",
+    "paper_authority_score": 0.926829268292683,
+    "citation_influence_score": 0.9703508022422501,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "5e98fb7a-74fc-49fd-ae76-53170ec4afad",
+    "paper_authority_score": 0.5555555555555556,
+    "citation_influence_score": 0.7952042094370677,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "5ebdd514-6768-41c5-855a-285e0a04ff2b",
+    "paper_authority_score": 0.17647058823529413,
+    "citation_influence_score": 0.6289680745874161,
+    "author_authority_score": 0.674977675231309
+  },
+  {
+    "research_paper_id": "5f16a9c6-8caa-49ae-969d-9687bc384484",
+    "paper_authority_score": 0.5510204081632653,
+    "citation_influence_score": 0.8337728895154058,
+    "author_authority_score": 0.8928600302249361
+  },
+  {
+    "research_paper_id": "5f38907e-498f-49d0-83c6-3e1f90e048f5",
+    "paper_authority_score": 0.45,
+    "citation_influence_score": 0.888567308334952,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "6041b7c2-3a50-4b63-aaec-ec58d4131709",
+    "paper_authority_score": 0.3469387755102041,
+    "citation_influence_score": 0.8043853056625331,
+    "author_authority_score": 0.7236159163553076
+  },
+  {
+    "research_paper_id": "60ae968d-2ec5-4d8e-8412-55c793023b88",
+    "paper_authority_score": 0.8444444444444444,
+    "citation_influence_score": 0.8758042161606313,
+    "author_authority_score": 0.883903917673954
+  },
+  {
+    "research_paper_id": "611bfa6a-5c9b-4014-bb02-e5d293915911",
+    "paper_authority_score": 0.75,
+    "citation_influence_score": 0.8322666518978108,
+    "author_authority_score": 0.8107198838598628
+  },
+  {
+    "research_paper_id": "61d750c1-db78-4c2c-b91d-4ff66d74cff8",
+    "paper_authority_score": 0.045454545454545456,
+    "citation_influence_score": 0.7285397244598685,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "62ca839f-b79c-4e20-adbe-bcd735c19b98",
+    "paper_authority_score": 0.6666666666666666,
+    "citation_influence_score": 0.7681609883669906,
+    "author_authority_score": 0.964686914130134
+  },
+  {
+    "research_paper_id": "6321f9b0-cfa7-4896-a94d-6815abb102e2",
+    "paper_authority_score": 0.6666666666666666,
+    "citation_influence_score": 0.8656153999703923,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "63a18488-b866-4455-a906-83a392a1e97f",
+    "paper_authority_score": 0.45,
+    "citation_influence_score": 0.8163580784075675,
+    "author_authority_score": 0.8668778876646638
+  },
+  {
+    "research_paper_id": "64238adf-c020-4f45-9600-b03937946ea9",
+    "paper_authority_score": 0.8717948717948718,
+    "citation_influence_score": 0.8302881832617276,
+    "author_authority_score": 0.913444265830017
+  },
+  {
+    "research_paper_id": "64aa9f07-6b2b-4c0d-8a43-1248357fc838",
+    "paper_authority_score": 0.673469387755102,
+    "citation_influence_score": 0.8619742813250056,
+    "author_authority_score": 0.7987120029093727
+  },
+  {
+    "research_paper_id": "64ae5298-8f8b-47de-b229-7e5b842c331a",
+    "paper_authority_score": 0.7959183673469388,
+    "citation_influence_score": 0.883903917673954,
+    "author_authority_score": 0.8758042161606313
+  },
+  {
+    "research_paper_id": "64b7f5e5-0db5-4756-9339-089532c032fd",
+    "paper_authority_score": 0.08163265306122448,
+    "citation_influence_score": 0.7214685538365734,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "652331a0-bd89-4d0e-960a-6840705e5718",
+    "paper_authority_score": 0.9111111111111111,
+    "citation_influence_score": 0.8916127142942462,
+    "author_authority_score": 0.8538671255601583
+  },
+  {
+    "research_paper_id": "655a0113-5be6-4576-a562-0614a00a02b1",
+    "paper_authority_score": 0.55,
+    "citation_influence_score": 0.8215342144793228,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "65797c64-66ce-45d6-bb49-27e2342f5697",
+    "paper_authority_score": 0.7,
+    "citation_influence_score": 0.8708452896383578,
+    "author_authority_score": 0.8157922717568247
+  },
+  {
+    "research_paper_id": "65887c09-174c-4a8a-a8f9-4616e962a970",
+    "paper_authority_score": 0.25,
+    "citation_influence_score": 0.879715980482317,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "65db19b6-ec98-4fd7-a877-bc94346bc2d4",
+    "paper_authority_score": 0.25,
+    "citation_influence_score": 0.7000042505441724,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "66e8778f-66a1-4223-85f3-fdfa6ee61db2",
+    "paper_authority_score": 0.2222222222222222,
+    "citation_influence_score": 0.6936305740477542,
+    "author_authority_score": 0.6980574149251461
+  },
+  {
+    "research_paper_id": "6735e4c9-9ccc-4bdd-8383-a504f79d2cf0",
+    "paper_authority_score": 0.7073170731707317,
+    "citation_influence_score": 0.9056277819235018,
+    "author_authority_score": 0.7464625396061388
+  },
+  {
+    "research_paper_id": "67401a75-91d5-456a-8ecc-0a6697cbcb1a",
+    "paper_authority_score": 0.3541666666666667,
+    "citation_influence_score": 0.7836218661800969,
+    "author_authority_score": 0.7194733617478396
+  },
+  {
+    "research_paper_id": "674879ff-411f-411d-8b2e-6b6462026d9f",
+    "paper_authority_score": 0.7916666666666666,
+    "citation_influence_score": 0.8639884214720852,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "6761e746-ebf0-4500-b40f-a0f94a40f250",
+    "paper_authority_score": 1.0,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.8434068967042982
+  },
+  {
+    "research_paper_id": "677a8fe2-ea32-4948-9f2d-d04928e1f9d2",
+    "paper_authority_score": 0.2916666666666667,
+    "citation_influence_score": 0.7685783738791218,
+    "author_authority_score": 0.7415634467431232
+  },
+  {
+    "research_paper_id": "68903cec-e146-4189-9732-99318d59cca2",
+    "paper_authority_score": 0.9555555555555556,
+    "citation_influence_score": 0.9060799140063965,
+    "author_authority_score": 0.871015399888559
+  },
+  {
+    "research_paper_id": "68aaf35a-80f7-471f-b508-7530dc68ac4c",
+    "paper_authority_score": 0.7631578947368421,
+    "citation_influence_score": 0.8673569920574492,
+    "author_authority_score": 0.9126104658116523
+  },
+  {
+    "research_paper_id": "699ae38a-c086-4ea1-8345-f445626e5ab7",
+    "paper_authority_score": 0.32,
+    "citation_influence_score": 0.7704561293501951,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "69abcf82-398d-40c9-ac66-aa2f5c4c9c86",
+    "paper_authority_score": 0.2692307692307692,
+    "citation_influence_score": 0.7551025574248297,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "69b4703a-5a68-41ae-935d-92387b371af2",
+    "paper_authority_score": 0.25,
+    "citation_influence_score": 0.7315944440634042,
+    "author_authority_score": 1.0
+  },
+  {
+    "research_paper_id": "69cba2c2-8efa-419c-a244-556b4e9dd213",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.626288491998902,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "69d81fe8-75ef-4f41-87f0-24e0abb5fe26",
+    "paper_authority_score": 0.3333333333333333,
+    "citation_influence_score": 0.6886346031968694,
+    "author_authority_score": 0.8881602419788396
+  },
+  {
+    "research_paper_id": "6a19af35-52f0-4417-9bbd-2ba775d35374",
+    "paper_authority_score": 0.125,
+    "citation_influence_score": 0.743033752218644,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "6a204417-c3ce-4e80-9c63-65793fb46623",
+    "paper_authority_score": 0.5833333333333334,
+    "citation_influence_score": 0.9430451932609147,
+    "author_authority_score": 0.809721137976634
+  },
+  {
+    "research_paper_id": "6a258d82-4fba-4e5b-8977-bffcda92ee69",
+    "paper_authority_score": 0.7142857142857143,
+    "citation_influence_score": 0.8261041996221153,
+    "author_authority_score": 0.9007676950071974
+  },
+  {
+    "research_paper_id": "6acc0dd0-a140-4b6f-91a0-53e29bd9871b",
+    "paper_authority_score": 0.7894736842105263,
+    "citation_influence_score": 0.9744405273539282,
+    "author_authority_score": 0.8614140800432121
+  },
+  {
+    "research_paper_id": "6adf0a77-33a7-4f0c-a2ff-e047d3d36160",
+    "paper_authority_score": 0.5789473684210527,
+    "citation_influence_score": 0.8157959425388591,
+    "author_authority_score": 0.7130983920440376
+  },
+  {
+    "research_paper_id": "6b2ecbba-f270-4af8-828e-92e5dba9900d",
+    "paper_authority_score": 0.875,
+    "citation_influence_score": 0.8995155216388734,
+    "author_authority_score": 0.8804634567662262
+  },
+  {
+    "research_paper_id": "6c007639-5adb-45a9-a870-f8bd17ddd53b",
+    "paper_authority_score": 0.75,
+    "citation_influence_score": 0.9378844128415801,
+    "author_authority_score": 0.8461141187352792
+  },
+  {
+    "research_paper_id": "6c798cf3-722b-4be2-9f90-535f88ec7b9a",
+    "paper_authority_score": 0.6458333333333334,
+    "citation_influence_score": 0.8411512603249989,
+    "author_authority_score": 0.8258631956423108
+  },
+  {
+    "research_paper_id": "6cc54d9e-a9c3-495a-b244-7a84d27ca165",
+    "paper_authority_score": 0.358974358974359,
+    "citation_influence_score": 0.743486371116227,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "6d5c1f5c-ac12-479e-b8f5-31c3509f621f",
+    "paper_authority_score": 0.8292682926829268,
+    "citation_influence_score": 0.8319594465928083,
+    "author_authority_score": 0.8751204411669875
+  },
+  {
+    "research_paper_id": "6d840ffa-8cec-45d3-b6a9-4a304a605bc3",
+    "paper_authority_score": 0.17073170731707318,
+    "citation_influence_score": 0.7694884848764216,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "6de6de1c-3790-4da5-8dca-f1d76bc03037",
+    "paper_authority_score": 0.7647058823529411,
+    "citation_influence_score": 0.7392768232057082,
+    "author_authority_score": 0.8626178476872651
+  },
+  {
+    "research_paper_id": "6e820926-2c9a-4462-a463-7faa35723786",
+    "paper_authority_score": 0.7619047619047619,
+    "citation_influence_score": 0.8139388309549933,
+    "author_authority_score": 0.9103306573022649
+  },
+  {
+    "research_paper_id": "6ed6b570-6ffd-4150-a8e5-7d5fbd0461d2",
+    "paper_authority_score": 0.6341463414634146,
+    "citation_influence_score": 0.7851127881840801,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "6f2b9933-ebd7-49fd-9d9f-1e5671fa9548",
+    "paper_authority_score": 0.6938775510204082,
+    "citation_influence_score": 0.8644116696318074,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "6f411914-b550-453b-aece-9c21504c009f",
+    "paper_authority_score": 0.0625,
+    "citation_influence_score": 0.7233422517856535,
+    "author_authority_score": 0.7282860631965026
+  },
+  {
+    "research_paper_id": "6f9ecc29-c090-4fc8-bebb-f134abf7fe85",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.6481399559523319,
+    "author_authority_score": 0.7827517376990953
+  },
+  {
+    "research_paper_id": "6fe90e88-ed33-416d-ad31-8c7ab69a80d6",
+    "paper_authority_score": 0.3157894736842105,
+    "citation_influence_score": 0.7265177583044431,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "6feae6bd-4a35-436d-8f4f-46dd3c6211cf",
+    "paper_authority_score": 0.48717948717948717,
+    "citation_influence_score": 0.769366166646534,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "7038dd70-9131-49ab-aa38-93d0b5b69a33",
+    "paper_authority_score": 0.2857142857142857,
+    "citation_influence_score": 0.7622439408806506,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "70b5562c-37d2-4776-81b8-11a6a26e2fc7",
+    "paper_authority_score": 0.9375,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "70d2a7ac-37c0-468d-b24d-2f51c706b8ad",
+    "paper_authority_score": 0.13157894736842105,
+    "citation_influence_score": 0.7074765344149441,
+    "author_authority_score": 0.7313870248640946
+  },
+  {
+    "research_paper_id": "7145bd24-9442-40ed-b8c7-f642741b3c30",
+    "paper_authority_score": 0.15,
+    "citation_influence_score": 0.7299719806459637,
+    "author_authority_score": 0.8632701806778698
+  },
+  {
+    "research_paper_id": "717ffba7-f794-4b74-a590-86670430a341",
+    "paper_authority_score": 0.5,
+    "citation_influence_score": 0.8858473716226596,
+    "author_authority_score": 0.8422690657866594
+  },
+  {
+    "research_paper_id": "7186379d-ba3f-4533-9e68-56d04ff8119f",
+    "paper_authority_score": 0.8,
+    "citation_influence_score": 0.99850881891486,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "7200fe01-f176-4b65-97b7-882bda40a388",
+    "paper_authority_score": 0.926829268292683,
+    "citation_influence_score": 0.8540817419937056,
+    "author_authority_score": 0.9128778975051868
+  },
+  {
+    "research_paper_id": "72501a93-38f4-477d-a311-bd118ceb11db",
+    "paper_authority_score": 0.1111111111111111,
+    "citation_influence_score": 0.7320507539272316,
+    "author_authority_score": 1.0
+  },
+  {
+    "research_paper_id": "7258e98b-84d9-48df-9e71-533a8d057706",
+    "paper_authority_score": 0.7142857142857143,
+    "citation_influence_score": 0.8680271427358488,
+    "author_authority_score": 0.7949961281598148
+  },
+  {
+    "research_paper_id": "727af96f-8d5e-4ba2-935e-2fa39f4009c1",
+    "paper_authority_score": 0.9743589743589743,
+    "citation_influence_score": 0.8914825028531587,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "72bb06f3-eb4c-4291-b812-0c6e676819a4",
+    "paper_authority_score": 0.05,
+    "citation_influence_score": 0.7130580105437391,
+    "author_authority_score": 0.6827909330348747
+  },
+  {
+    "research_paper_id": "72f03995-a340-4c86-b1fc-a905b14cc6a2",
+    "paper_authority_score": 0.20833333333333334,
+    "citation_influence_score": 0.7393907438060017,
+    "author_authority_score": 0.9146830738119253
+  },
+  {
+    "research_paper_id": "739fccf1-37a2-46e4-b656-6fa1efc37af4",
+    "paper_authority_score": 0.5,
+    "citation_influence_score": 0.7849700790096675,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "7420f53f-ae6c-4c5f-a6cd-a1f4bbf7c634",
+    "paper_authority_score": 0.96875,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.9562207877937721
+  },
+  {
+    "research_paper_id": "743a025c-188b-473d-b3d6-3d0bfcbbc3ab",
+    "paper_authority_score": 0.12195121951219512,
+    "citation_influence_score": 0.6797107849473999,
+    "author_authority_score": 0.8211337078731425
+  },
+  {
+    "research_paper_id": "745b5918-63a9-44f0-aaed-74e7625799a2",
+    "paper_authority_score": 0.8421052631578947,
+    "citation_influence_score": 0.8876012508967719,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "747e532e-cba7-4f2c-90e9-6b5a6aca36f5",
+    "paper_authority_score": 0.7619047619047619,
+    "citation_influence_score": 0.8653753286150173,
+    "author_authority_score": 0.8746182289338686
+  },
+  {
+    "research_paper_id": "74d2800b-0180-442a-a85c-5129c21f5c08",
+    "paper_authority_score": 0.3111111111111111,
+    "citation_influence_score": 0.7532079322236387,
+    "author_authority_score": 0.8463311606351952
+  },
+  {
+    "research_paper_id": "74fe3555-fa1f-4fe7-885c-9c628f522513",
+    "paper_authority_score": 0.42857142857142855,
+    "citation_influence_score": 0.9110651196084284,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "7541bd33-da44-4691-b855-cb5ca9f52168",
+    "paper_authority_score": 0.975609756097561,
+    "citation_influence_score": 0.9736118640188101,
+    "author_authority_score": 0.9508801384766188
+  },
+  {
+    "research_paper_id": "754b5657-329c-4e0b-bf43-f5f64e3afbad",
+    "paper_authority_score": 0.5714285714285714,
+    "citation_influence_score": 0.9442631637734132,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "7592522c-674a-4ecc-b820-fc355c35aa74",
+    "paper_authority_score": 0.10416666666666667,
+    "citation_influence_score": 0.6856502110455914,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "75b0b309-1794-4036-82e7-8e01ae6f0fdf",
+    "paper_authority_score": 0.7941176470588235,
+    "citation_influence_score": 0.7417690366114272,
+    "author_authority_score": 0.7198052963995071
+  },
+  {
+    "research_paper_id": "75b212b9-ed49-4d2d-87b3-e4107207980c",
+    "paper_authority_score": 0.24444444444444444,
+    "citation_influence_score": 0.7408949410589103,
+    "author_authority_score": 0.7361806679277324
+  },
+  {
+    "research_paper_id": "75f55a4c-a302-454f-95ef-8e64fcca3dae",
+    "paper_authority_score": 0.7,
+    "citation_influence_score": 0.9349637005252063,
+    "author_authority_score": 0.8997432538063233
+  },
+  {
+    "research_paper_id": "76ac5300-3a63-4760-8727-fe98d236c9b0",
+    "paper_authority_score": 0.2564102564102564,
+    "citation_influence_score": 0.6808481000780751,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "76b4a72a-1930-4b63-9647-844a06d1c895",
+    "paper_authority_score": 0.07894736842105263,
+    "citation_influence_score": 0.699587465001207,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "76c72612-9145-4797-bb91-c7c216fa1e21",
+    "paper_authority_score": 0.9795918367346939,
+    "citation_influence_score": 0.9291364402486872,
+    "author_authority_score": 0.8265012303594416
+  },
+  {
+    "research_paper_id": "76c8f8a5-c23f-485a-982b-0a0bdc6de6da",
+    "paper_authority_score": 0.19047619047619047,
+    "citation_influence_score": 0.7555995612584115,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "779e176c-72c3-455c-89ae-55800844a588",
+    "paper_authority_score": 0.875,
+    "citation_influence_score": 0.9590437178957653,
+    "author_authority_score": 0.8161012528166753
+  },
+  {
+    "research_paper_id": "77b5b1e0-8ad1-48e2-8d2b-acefef3f04df",
+    "paper_authority_score": 0.11873350923482849,
+    "citation_influence_score": 0.6980574149251461,
+    "author_authority_score": 0.6936305740477542
+  },
+  {
+    "research_paper_id": "78325ef6-5c45-4aea-a16b-59e7e224e232",
+    "paper_authority_score": 0.2,
+    "citation_influence_score": 0.7551958724409825,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "78a5982a-58e3-4320-b1ad-b0f1b90b112a",
+    "paper_authority_score": 0.5,
+    "citation_influence_score": 0.6904500894780636,
+    "author_authority_score": 0.7582945067495297
+  },
+  {
+    "research_paper_id": "791a6781-813f-4472-975c-cfffdf315763",
+    "paper_authority_score": 0.35294117647058826,
+    "citation_influence_score": 0.6674387371471748,
+    "author_authority_score": 0.7515472325736036
+  },
+  {
+    "research_paper_id": "795e2ac8-a323-4f3a-8599-7210e35cad9d",
+    "paper_authority_score": 0.4878048780487805,
+    "citation_influence_score": 0.7688038439742049,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "79845ec4-8fa9-4bc5-b701-0ec0445adfd4",
+    "paper_authority_score": 0.38461538461538464,
+    "citation_influence_score": 0.757685929365604,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "79e03388-4b5b-4c92-8ade-dec736f52391",
+    "paper_authority_score": 0.8947368421052632,
+    "citation_influence_score": 0.9825072244914912,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "79ebd884-7ba2-4ba6-b19a-61bdf1f5cb1b",
+    "paper_authority_score": 0.4375,
+    "citation_influence_score": 0.8646856065799428,
+    "author_authority_score": 0.8682713861066366
+  },
+  {
+    "research_paper_id": "7a017081-656c-4ca8-81bb-0ac27a75e2e0",
+    "paper_authority_score": 0.8541666666666666,
+    "citation_influence_score": 0.8732479465401314,
+    "author_authority_score": 0.8398733204516324
+  },
+  {
+    "research_paper_id": "7a752b4b-2e70-46c2-873c-071753f6fcc9",
+    "paper_authority_score": 0.5,
+    "citation_influence_score": 0.8503458002161658,
+    "author_authority_score": 0.7089643834489646
+  },
+  {
+    "research_paper_id": "7a9325e3-1f69-4426-8344-3731468be6ba",
+    "paper_authority_score": 0.3333333333333333,
+    "citation_influence_score": 0.9018566841098281,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "7ab13eee-c178-4372-981e-ada70dadfd1f",
+    "paper_authority_score": 0.34615384615384615,
+    "citation_influence_score": 0.7904005199891012,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "7ac2cb49-68a6-40eb-8fd6-427f76c76626",
+    "paper_authority_score": 0.85,
+    "citation_influence_score": 0.9545633838272306,
+    "author_authority_score": 0.8345751780185596
+  },
+  {
+    "research_paper_id": "7ad6b7a1-f66e-4ac6-a81e-976eddf36c6c",
+    "paper_authority_score": 0.9523809523809523,
+    "citation_influence_score": 0.9810505406381336,
+    "author_authority_score": 0.9538176042510608
+  },
+  {
+    "research_paper_id": "7ae74040-a230-4b3d-91be-41132b84eb15",
+    "paper_authority_score": 0.96875,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "7b8f2f75-9a60-4404-ae9c-ff9e93eb9d3f",
+    "paper_authority_score": 0.14285714285714285,
+    "citation_influence_score": 0.7761939615496499,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "7bd48a62-bc73-48f9-9068-1f845afce69f",
+    "paper_authority_score": 0.4,
+    "citation_influence_score": 0.7200400718163495,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "7c21b0ba-b1f4-4bb7-9564-94bfb3273294",
+    "paper_authority_score": 0.8292682926829268,
+    "citation_influence_score": 0.9432161738659522,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "7c5c05de-2990-4bfc-965a-633531af91f3",
+    "paper_authority_score": 0.5416666666666666,
+    "citation_influence_score": 0.790692688975307,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "7c750b8f-b3ab-4332-aa2c-06de7e8e4395",
+    "paper_authority_score": 0.5238095238095238,
+    "citation_influence_score": 0.7629818509869325,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "7c7c639f-7a20-4b48-bb6b-b1c09da989b8",
+    "paper_authority_score": 0.3,
+    "citation_influence_score": 0.8467859429148632,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "7ccb3711-b40d-4611-b64a-a21631212c45",
+    "paper_authority_score": 1.0,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "7cedeeee-4be6-4ead-8ba1-31c8714f4eba",
+    "paper_authority_score": 0.04,
+    "citation_influence_score": 0.6537739173698989,
+    "author_authority_score": 0.7199073525813283
+  },
+  {
+    "research_paper_id": "7d76c79a-a639-4bb3-9326-1577ffd702fe",
+    "paper_authority_score": 0.6578947368421053,
+    "citation_influence_score": 0.8350828384479922,
+    "author_authority_score": 0.6994854488558326
+  },
+  {
+    "research_paper_id": "7e07cd5b-ea6a-409d-b3a5-af5dae9af055",
+    "paper_authority_score": 0.6,
+    "citation_influence_score": 0.9125731531142645,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "7e30c59f-a1f8-4fa0-b2b3-e7f580b5791e",
+    "paper_authority_score": 0.6153846153846154,
+    "citation_influence_score": 0.7731154765077971,
+    "author_authority_score": 0.8897002511057235
+  },
+  {
+    "research_paper_id": "7e320e1d-f33f-4698-a8f4-1fb5272391ae",
+    "paper_authority_score": 0.8571428571428571,
+    "citation_influence_score": 0.8912213057634314,
+    "author_authority_score": 0.8704320823209463
+  },
+  {
+    "research_paper_id": "7e5b9cf9-09c6-4492-8cad-1b1ced346927",
+    "paper_authority_score": 1.0,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.9540593576604841
+  },
+  {
+    "research_paper_id": "7e662a5d-05aa-4d7c-95b0-e8265e0c16f2",
+    "paper_authority_score": 0.2682926829268293,
+    "citation_influence_score": 0.8044706406557676,
+    "author_authority_score": 0.7057442028602197
+  },
+  {
+    "research_paper_id": "7e95d476-653b-4904-82d0-0c9727a6199d",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.6954285963292834,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "7f788bd7-d668-487f-8d24-a3d2d689aa68",
+    "paper_authority_score": 0.6190476190476191,
+    "citation_influence_score": 0.8177962821058914,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "7f934a54-df70-4645-a520-e91842dca531",
+    "paper_authority_score": 0.34210526315789475,
+    "citation_influence_score": 0.7402692449465167,
+    "author_authority_score": 0.7130983920440376
+  },
+  {
+    "research_paper_id": "80059873-b851-4a13-b704-5097a0a666e3",
+    "paper_authority_score": 0.3333333333333333,
+    "citation_influence_score": 0.7590633953743838,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "80979c4b-d3ee-4eb9-944a-521a6f6a007d",
+    "paper_authority_score": 0.15789473684210525,
+    "citation_influence_score": 0.7085547901264113,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "8166e26b-6650-42ce-8a5d-fff839c2eb16",
+    "paper_authority_score": 0.22448979591836735,
+    "citation_influence_score": 0.7420135932517113,
+    "author_authority_score": 0.8196445249098687
+  },
+  {
+    "research_paper_id": "81722734-8995-43da-bd77-1d537670433f",
+    "paper_authority_score": 0.43902439024390244,
+    "citation_influence_score": 0.7595507301516551,
+    "author_authority_score": 0.8206669213580791
+  },
+  {
+    "research_paper_id": "81c47524-118a-4012-982f-4c5608d10d25",
+    "paper_authority_score": 0.7317073170731707,
+    "citation_influence_score": 0.7977174436128803,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "82386c57-66cd-4cac-a41d-53ef406d48f3",
+    "paper_authority_score": 0.5833333333333334,
+    "citation_influence_score": 0.7987120029093727,
+    "author_authority_score": 0.8619742813250056
+  },
+  {
+    "research_paper_id": "82a28934-9837-4181-a0fa-db455a477bea",
+    "paper_authority_score": 0.4666666666666667,
+    "citation_influence_score": 0.8262115809839619,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "83037a2c-b7bc-4f17-8346-569f47bdaff0",
+    "paper_authority_score": 0.024390243902439025,
+    "citation_influence_score": 0.662439594480887,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "8373f70c-b1a7-4872-bb66-62bab2db3219",
+    "paper_authority_score": 0.08333333333333333,
+    "citation_influence_score": 0.7185224615844223,
+    "author_authority_score": 0.7333056731041279
+  },
+  {
+    "research_paper_id": "83a97d44-4001-4006-a121-69ecc8c70254",
+    "paper_authority_score": 0.09523809523809523,
+    "citation_influence_score": 0.7105938798636836,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "83d3862b-2b57-450e-9105-6f69d34a6761",
+    "paper_authority_score": 0.2,
+    "citation_influence_score": 0.9229924476588336,
+    "author_authority_score": 0.8041456137548839
+  },
+  {
+    "research_paper_id": "83d82891-81c3-4553-b667-3a1f44fdd2ac",
+    "paper_authority_score": 0.16666666666666666,
+    "citation_influence_score": 0.8377317908248475,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "842f69e2-633f-4a82-9ce4-c6c93e0a000d",
+    "paper_authority_score": 0.7291666666666666,
+    "citation_influence_score": 0.8476003705660081,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "848ca948-d995-4d80-aeb6-0440a41f9d00",
+    "paper_authority_score": 0.631578947368421,
+    "citation_influence_score": 0.8286934564093664,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "84c64fc3-fdf2-415c-a486-3657b81e552c",
+    "paper_authority_score": 0.1951219512195122,
+    "citation_influence_score": 0.7022445939310448,
+    "author_authority_score": 0.7134236305710059
+  },
+  {
+    "research_paper_id": "84f2cd5c-e2ce-4f95-a284-5cdaf4a155fe",
+    "paper_authority_score": 0.7058823529411765,
+    "citation_influence_score": 0.7225346858128204,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "85a2da11-066d-4074-8a62-c46f93a83c1f",
+    "paper_authority_score": 0.6,
+    "citation_influence_score": 0.8250851155881963,
+    "author_authority_score": 0.8041456137548839
+  },
+  {
+    "research_paper_id": "8695d339-2324-4df5-b274-c3835dc13196",
+    "paper_authority_score": 1.0,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.8097371345352669
+  },
+  {
+    "research_paper_id": "86bb587e-0734-4a7e-80c9-633f772ca044",
+    "paper_authority_score": 0.04878048780487805,
+    "citation_influence_score": 0.6656212833005011,
+    "author_authority_score": 1.0
+  },
+  {
+    "research_paper_id": "86cb0dd8-dc3b-4f2b-97d3-7d003cfead19",
+    "paper_authority_score": 0.96,
+    "citation_influence_score": 0.9567964053101201,
+    "author_authority_score": 0.913051967828453
+  },
+  {
+    "research_paper_id": "86eee70d-e3d7-4b8e-9001-fcfa8968a3db",
+    "paper_authority_score": 0.3333333333333333,
+    "citation_influence_score": 0.7406250202481439,
+    "author_authority_score": 0.86097238326063
+  },
+  {
+    "research_paper_id": "87262bd7-ec74-4de1-81a3-c47bbd0c87e4",
+    "paper_authority_score": 0.868421052631579,
+    "citation_influence_score": 0.8909499369715647,
+    "author_authority_score": 0.9571821082268973
+  },
+  {
+    "research_paper_id": "8879301e-cea6-460b-9b53-7dd3e6bd449a",
+    "paper_authority_score": 0.9791666666666666,
+    "citation_influence_score": 0.9650588803347409,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "8917695b-95b0-4dd8-9854-7f2fcdaba8b3",
+    "paper_authority_score": 0.05128205128205128,
+    "citation_influence_score": 0.6338121508700193,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "8a17cdd6-54e9-4df0-8ff2-dbcafa73870a",
+    "paper_authority_score": 0.6530612244897959,
+    "citation_influence_score": 0.8599893428911232,
+    "author_authority_score": 0.8857695132109423
+  },
+  {
+    "research_paper_id": "8a6136ac-85f4-480e-88ce-d460bd2a7cfb",
+    "paper_authority_score": 0.8235294117647058,
+    "citation_influence_score": 0.7427718858894624,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "8a70a84b-a23d-439f-9b56-f031441b5a35",
+    "paper_authority_score": 0.42857142857142855,
+    "citation_influence_score": 0.7653477201686264,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "8a985a03-8481-47f2-a0b8-f059312081ae",
+    "paper_authority_score": 0.10256410256410256,
+    "citation_influence_score": 0.6526519600966433,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "8b543782-1966-429f-b85e-9d73d870b91e",
+    "paper_authority_score": 0.08888888888888889,
+    "citation_influence_score": 0.6861205254221734,
+    "author_authority_score": 0.8983778366705678
+  },
+  {
+    "research_paper_id": "8b7bc6f6-404b-4fe6-8e1b-7999515c0909",
+    "paper_authority_score": 0.1875,
+    "citation_influence_score": 0.7444678553146614,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "8bb6563f-fda1-4e86-9190-7ab862e2af57",
+    "paper_authority_score": 0.8571428571428571,
+    "citation_influence_score": 0.8664513970844582,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "8c300d10-18f4-4c9d-b789-c9368cdef096",
+    "paper_authority_score": 0.020833333333333332,
+    "citation_influence_score": 0.6598263161621394,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "8c33648c-3bc0-48ea-8972-a0031d364f19",
+    "paper_authority_score": 0.38095238095238093,
+    "citation_influence_score": 0.7625484458339292,
+    "author_authority_score": 0.8902938009266562
+  },
+  {
+    "research_paper_id": "8c74c172-08ed-449a-b712-e20aee4db09b",
+    "paper_authority_score": 0.6829268292682927,
+    "citation_influence_score": 0.8989031020373771,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "8d0da7b3-d6a9-4a3b-9741-0f7dbb15d35a",
+    "paper_authority_score": 0.6666666666666666,
+    "citation_influence_score": 0.7072353957342559,
+    "author_authority_score": 0.9170737584326975
+  },
+  {
+    "research_paper_id": "8d41b713-ee9b-4666-94b9-d4804e590896",
+    "paper_authority_score": 0.16666666666666666,
+    "citation_influence_score": 0.7159629398108684,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "8d7c1c11-c11d-482b-9b21-8ae1adda5997",
+    "paper_authority_score": 0.06666666666666667,
+    "citation_influence_score": 0.6581381340185052,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "8db38e33-9197-4ae1-a258-ee1db337d192",
+    "paper_authority_score": 0.21052631578947367,
+    "citation_influence_score": 0.7809735657792629,
+    "author_authority_score": 0.8937090517760901
+  },
+  {
+    "research_paper_id": "8ec467ce-34bc-4316-8036-3f4650b68cc6",
+    "paper_authority_score": 0.4583333333333333,
+    "citation_influence_score": 0.7989142438745198,
+    "author_authority_score": 0.8570108178959601
+  },
+  {
+    "research_paper_id": "8ffc21ab-f37c-4cdc-84ca-4580bef52229",
+    "paper_authority_score": 0.7333333333333333,
+    "citation_influence_score": 0.8715463246806918,
+    "author_authority_score": 0.927299957981043
+  },
+  {
+    "research_paper_id": "901b1d8e-cebe-4688-9df2-40fad52f0b24",
+    "paper_authority_score": 0.5777777777777777,
+    "citation_influence_score": 0.7994910913813144,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "902a7721-3927-4049-a3fa-123a94dda99a",
+    "paper_authority_score": 0.6176470588235294,
+    "citation_influence_score": 0.7011047992724369,
+    "author_authority_score": 0.9214711966047867
+  },
+  {
+    "research_paper_id": "905ee26b-8814-42f9-b082-54b0bc6203cf",
+    "paper_authority_score": 0.10526315789473684,
+    "citation_influence_score": 0.7018096601954347,
+    "author_authority_score": 0.6391301695283548
+  },
+  {
+    "research_paper_id": "9211aec9-0e94-4ac6-b3eb-ac0e0489c348",
+    "paper_authority_score": 0.6122448979591837,
+    "citation_influence_score": 0.8408863130152442,
+    "author_authority_score": 0.8589649246319205
+  },
+  {
+    "research_paper_id": "929b9f61-b23d-49ab-b45b-31c9bf70488a",
+    "paper_authority_score": 0.08575197889182058,
+    "citation_influence_score": 0.6851047041632351,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "92a56a28-0dad-4a4f-a52d-020843bee63e",
+    "paper_authority_score": 0.5121951219512195,
+    "citation_influence_score": 0.8790935710969566,
+    "author_authority_score": 0.8049853339033464
+  },
+  {
+    "research_paper_id": "92c0fd16-523a-48ac-a6d2-ac7151b179aa",
+    "paper_authority_score": 0.14285714285714285,
+    "citation_influence_score": 0.7333056731041279,
+    "author_authority_score": 0.7185224615844223
+  },
+  {
+    "research_paper_id": "9313aeff-b30e-4dfb-873e-33a1d0d82616",
+    "paper_authority_score": 0.23076923076923078,
+    "citation_influence_score": 0.6799470368620912,
+    "author_authority_score": 0.858929356090014
+  },
+  {
+    "research_paper_id": "934776ee-a1d0-4bdc-a396-f4b7b7bd9ec2",
+    "paper_authority_score": 0.24390243902439024,
+    "citation_influence_score": 0.7057442028602197,
+    "author_authority_score": 0.8044706406557676
+  },
+  {
+    "research_paper_id": "93624aa4-957c-422e-820b-dda2fef1fb84",
+    "paper_authority_score": 0.4,
+    "citation_influence_score": 0.8166136667925515,
+    "author_authority_score": 0.8608486719118928
+  },
+  {
+    "research_paper_id": "9467271a-9cd4-42fb-bffe-e04731afeaff",
+    "paper_authority_score": 0.9047619047619048,
+    "citation_influence_score": 0.8592715280085549,
+    "author_authority_score": 0.8948476028863547
+  },
+  {
+    "research_paper_id": "95692272-1251-42f8-8e35-4c5066022caa",
+    "paper_authority_score": 0.5625,
+    "citation_influence_score": 0.8967313705772568,
+    "author_authority_score": 0.8653753286150173
+  },
+  {
+    "research_paper_id": "9570a125-71ee-4949-8c9e-bfd8a525a249",
+    "paper_authority_score": 0.02631578947368421,
+    "citation_influence_score": 0.6746687666138336,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "963e2358-7c78-42ff-9f9a-ec35d490528c",
+    "paper_authority_score": 0.1111111111111111,
+    "citation_influence_score": 0.6882427194022318,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "96604177-a5af-492a-9473-db40b83beebc",
+    "paper_authority_score": 0.8076923076923077,
+    "citation_influence_score": 0.8614867745679841,
+    "author_authority_score": 0.8041456137548839
+  },
+  {
+    "research_paper_id": "96685a63-215c-4014-bdc5-3e729bf832e2",
+    "paper_authority_score": 0.9642857142857143,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.7315944440634042
+  },
+  {
+    "research_paper_id": "96aac325-eaf4-45f7-a72c-03bf369407f2",
+    "paper_authority_score": 0.2,
+    "citation_influence_score": 0.9080527804146339,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "9723a630-74fc-4537-a089-67eec0fd7975",
+    "paper_authority_score": 0.1951219512195122,
+    "citation_influence_score": 0.7737496947788567,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "97de35c7-0cf3-4f95-8b87-c62d4f024682",
+    "paper_authority_score": 0.3902439024390244,
+    "citation_influence_score": 0.7385196888398046,
+    "author_authority_score": 0.7824707950015557
+  },
+  {
+    "research_paper_id": "97eae182-906e-46d3-bc7a-6b269033c6c3",
+    "paper_authority_score": 0.8157894736842105,
+    "citation_influence_score": 0.8834460109052531,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "97fd5253-de92-4b85-b683-2b80bde729b6",
+    "paper_authority_score": 0.375,
+    "citation_influence_score": 0.84201855018902,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "98b3cac4-4186-4689-9ef8-a831e38861ea",
+    "paper_authority_score": 0.044444444444444446,
+    "citation_influence_score": 0.6566172454589507,
+    "author_authority_score": 0.7645458243580349
+  },
+  {
+    "research_paper_id": "9942d022-4b82-44b1-b655-df3e39068a61",
+    "paper_authority_score": 0.2926829268292683,
+    "citation_influence_score": 0.711856776189687,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "995ed0da-7ac2-47db-bb28-e69af1bb8109",
+    "paper_authority_score": 0.3673469387755102,
+    "citation_influence_score": 0.8075953240315068,
+    "author_authority_score": 0.8536327527898949
+  },
+  {
+    "research_paper_id": "99824ccc-8644-46d6-bdcc-375ac69c1e7a",
+    "paper_authority_score": 0.6,
+    "citation_influence_score": 0.7411485883860173,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "99e7618b-193e-451e-8f62-d0baafc03aa7",
+    "paper_authority_score": 0.5769230769230769,
+    "citation_influence_score": 0.8264513928417155,
+    "author_authority_score": 0.818049668051797
+  },
+  {
+    "research_paper_id": "9a156891-9bee-4238-a5d2-1b36d1f3e926",
+    "paper_authority_score": 0.7804878048780488,
+    "citation_influence_score": 0.816975642594654,
+    "author_authority_score": 0.9072763633591769
+  },
+  {
+    "research_paper_id": "9a1d89ff-e621-483e-84bc-5304a38825ed",
+    "paper_authority_score": 0.42857142857142855,
+    "citation_influence_score": 0.7626298622871023,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "9ba0def7-d634-4115-b0b6-0b7749d2f067",
+    "paper_authority_score": 0.92,
+    "citation_influence_score": 0.9123393021332736,
+    "author_authority_score": 0.8924646926535393
+  },
+  {
+    "research_paper_id": "9ba15988-21f1-4d19-85c3-72ec134327f6",
+    "paper_authority_score": 0.22727272727272727,
+    "citation_influence_score": 0.7866030664265056,
+    "author_authority_score": 0.8267760337933275
+  },
+  {
+    "research_paper_id": "9c843ed1-357d-4c58-9440-39e42ff853ef",
+    "paper_authority_score": 1.0,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.883694245903928
+  },
+  {
+    "research_paper_id": "9c9363f6-2bf8-4369-b462-85da92fac189",
+    "paper_authority_score": 0.7666666666666667,
+    "citation_influence_score": 0.8737206209007322,
+    "author_authority_score": 0.8846498923590039
+  },
+  {
+    "research_paper_id": "9c99758d-b175-4318-a28a-35e4a334eb8f",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.7551318777530626,
+    "author_authority_score": 0.8182510160837294
+  },
+  {
+    "research_paper_id": "9cdd53f1-d93a-4309-bb31-2ec50d287d81",
+    "paper_authority_score": 0.28125,
+    "citation_influence_score": 0.7762054831258225,
+    "author_authority_score": 0.7647771225034707
+  },
+  {
+    "research_paper_id": "9d2ac637-4371-4834-81a1-4e1c5d5bceac",
+    "paper_authority_score": 0.5641025641025641,
+    "citation_influence_score": 0.7710890672403755,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "9d7e1491-6984-4628-b50e-f772bb529664",
+    "paper_authority_score": 0.8222222222222222,
+    "citation_influence_score": 0.8693191230384936,
+    "author_authority_score": 0.7374221316599789
+  },
+  {
+    "research_paper_id": "9d97de1f-07c1-4081-950b-b1a1baef5022",
+    "paper_authority_score": 0.20408163265306123,
+    "citation_influence_score": 0.741618643195053,
+    "author_authority_score": 0.7902419136038661
+  },
+  {
+    "research_paper_id": "9de5c098-d9dd-4cf7-8760-7ac7ffa7e437",
+    "paper_authority_score": 0.14285714285714285,
+    "citation_influence_score": 0.7036276050166554,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "9e2a5746-6c8c-4d46-b3e6-cc8ff7d9f536",
+    "paper_authority_score": 1.0,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "9e78f3ce-f28c-477a-90d3-3a6b056663e8",
+    "paper_authority_score": 0.9230769230769231,
+    "citation_influence_score": 0.8426828419444358,
+    "author_authority_score": 0.8406209128094809
+  },
+  {
+    "research_paper_id": "9e9ce92f-9a0b-446b-846c-f65faf68bc67",
+    "paper_authority_score": 0.9736842105263158,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.8210879667192004
+  },
+  {
+    "research_paper_id": "9ebc99c8-deff-474f-b6c4-2775ba79f3e3",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.7929788771708218,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "9f11606b-e4df-4969-a19d-827aae0acbcb",
+    "paper_authority_score": 0.7142857142857143,
+    "citation_influence_score": 0.809721137976634,
+    "author_authority_score": 0.8791736909163872
+  },
+  {
+    "research_paper_id": "9f3be5c1-8812-48f0-b7aa-8c4f6a679815",
+    "paper_authority_score": 0.15789473684210525,
+    "citation_influence_score": 0.7608883365687267,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "9f719248-3a91-4cf5-9f2a-0310508b6752",
+    "paper_authority_score": 0.1,
+    "citation_influence_score": 0.7259134246138013,
+    "author_authority_score": 0.771310603509369
+  },
+  {
+    "research_paper_id": "9fca3d0d-c6e4-45db-934a-d8e02f9ae08a",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.5853744520073572,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "a04c011a-775f-4fc6-9f26-1eee486871c2",
+    "paper_authority_score": 0.11764705882352941,
+    "citation_influence_score": 0.6066522908635943,
+    "author_authority_score": 0.6805566211622646
+  },
+  {
+    "research_paper_id": "a1475269-a33d-456c-ba72-38a4269173e3",
+    "paper_authority_score": 0.8888888888888888,
+    "citation_influence_score": 0.8843224302774687,
+    "author_authority_score": 0.8041456137548839
+  },
+  {
+    "research_paper_id": "a1804e97-5ea7-4dbc-ab89-2b668006d73a",
+    "paper_authority_score": 0.8125,
+    "citation_influence_score": 0.9558450128767632,
+    "author_authority_score": 0.8840804941834953
+  },
+  {
+    "research_paper_id": "a2d63942-ea2f-497e-a78b-93a449c2a990",
+    "paper_authority_score": 0.4166666666666667,
+    "citation_influence_score": 0.7755325186582259,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "a2e0d0da-e576-4d55-8ec8-34054265bf90",
+    "paper_authority_score": 0.6888888888888889,
+    "citation_influence_score": 0.8090059920828868,
+    "author_authority_score": 0.9087005672903724
+  },
+  {
+    "research_paper_id": "a33c989e-7f28-4ca5-8ea1-e65c6cfd9f4f",
+    "paper_authority_score": 0.5263157894736842,
+    "citation_influence_score": 0.8127900270141388,
+    "author_authority_score": 0.8041368415734498
+  },
+  {
+    "research_paper_id": "a3a6a5de-ec4f-4911-8995-23e54ef7cd96",
+    "paper_authority_score": 0.8571428571428571,
+    "citation_influence_score": 0.738604420762067,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "a3b2452d-ac9b-4605-94da-9a843e13db31",
+    "paper_authority_score": 0.3333333333333333,
+    "citation_influence_score": 0.7547198298035596,
+    "author_authority_score": 0.7768166394418431
+  },
+  {
+    "research_paper_id": "a3b294c5-c24a-430a-ab87-d56928daa63e",
+    "paper_authority_score": 0.8571428571428571,
+    "citation_influence_score": 0.8246404951193358,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "a3f688bd-ce8d-446c-b37c-a0e0faaa9471",
+    "paper_authority_score": 0.8095238095238095,
+    "citation_influence_score": 0.8753316292445876,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "a4304fa3-bfcb-42e2-b10c-d40ba006a2c8",
+    "paper_authority_score": 1.0,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.8304466562950719
+  },
+  {
+    "research_paper_id": "a43fa75a-5b4b-4501-873d-9d7ff76948cb",
+    "paper_authority_score": 0.9375,
+    "citation_influence_score": 0.9333251938927032,
+    "author_authority_score": 0.8255936670699048
+  },
+  {
+    "research_paper_id": "a47e8210-0c06-4cd2-aa93-e3de0900c1d5",
+    "paper_authority_score": 0.6410256410256411,
+    "citation_influence_score": 0.7746304422695057,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "a4ca461e-987b-4543-b05f-728f95e4e483",
+    "paper_authority_score": 0.23333333333333334,
+    "citation_influence_score": 0.7621186498388905,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "a58a9b58-c1ce-44d9-bd1f-b1fca3de0fc8",
+    "paper_authority_score": 0.625,
+    "citation_influence_score": 0.8092910132623803,
+    "author_authority_score": 0.8541210350037592
+  },
+  {
+    "research_paper_id": "a60d5223-1474-4483-afd5-1c42e131998b",
+    "paper_authority_score": 0.4166666666666667,
+    "citation_influence_score": 0.8933411390799795,
+    "author_authority_score": 0.8354877213000841
+  },
+  {
+    "research_paper_id": "a60e0b6e-e912-4a44-b2b7-15d888ab4f58",
+    "paper_authority_score": 0.6,
+    "citation_influence_score": 0.8011449886685712,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "a654dae7-6104-4ae0-b922-f5646dc81921",
+    "paper_authority_score": 0.2222222222222222,
+    "citation_influence_score": 0.745790167459394,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "a6c100f6-a231-4807-9055-dd160393e8f3",
+    "paper_authority_score": 0.7755102040816326,
+    "citation_influence_score": 0.8822926801143355,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "a6d83ff0-4427-4494-8e62-7f907aecc36e",
+    "paper_authority_score": 0.47619047619047616,
+    "citation_influence_score": 0.7951833382655992,
+    "author_authority_score": 0.7491373531759936
+  },
+  {
+    "research_paper_id": "a6e1b8b0-e316-4d23-a48a-80fc1026b820",
+    "paper_authority_score": 0.8666666666666667,
+    "citation_influence_score": 0.884152415042828,
+    "author_authority_score": 0.8535493102971116
+  },
+  {
+    "research_paper_id": "a6e8efdf-6ec4-46a8-bd6b-8db8182c793b",
+    "paper_authority_score": 0.9166666666666666,
+    "citation_influence_score": 0.872108138174754,
+    "author_authority_score": 0.8445820679151251
+  },
+  {
+    "research_paper_id": "a6fa75f8-ccd6-4354-8098-97de7fc56b3e",
+    "paper_authority_score": 0.5,
+    "citation_influence_score": 0.9236661065465477,
+    "author_authority_score": 0.6426907288435225
+  },
+  {
+    "research_paper_id": "a7126872-2887-41ae-a0fc-98e5ebc76a1e",
+    "paper_authority_score": 0.6585365853658537,
+    "citation_influence_score": 0.789028580269326,
+    "author_authority_score": 0.8495849106782433
+  },
+  {
+    "research_paper_id": "a759cbe6-b00b-45b9-9b62-5c7dbb0ddee4",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.899752431240066,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "a8c560d8-b9bf-451f-a686-a99ce1e9b55d",
+    "paper_authority_score": 0.07692307692307693,
+    "citation_influence_score": 0.6429884317533973,
+    "author_authority_score": 0.7805447309587434
+  },
+  {
+    "research_paper_id": "a943054b-5478-4a97-b023-d3fc32bb541b",
+    "paper_authority_score": 0.9024390243902439,
+    "citation_influence_score": 0.8466102069152853,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "a97405f8-f883-45d6-97cb-cbbbf3df1a14",
+    "paper_authority_score": 0.28205128205128205,
+    "citation_influence_score": 0.6839351133380049,
+    "author_authority_score": 0.6776173810482716
+  },
+  {
+    "research_paper_id": "a9896100-a5bf-4a6f-b95b-2edd796980b6",
+    "paper_authority_score": 0.7948717948717948,
+    "citation_influence_score": 0.8175204513590699,
+    "author_authority_score": 0.9214609919061278
+  },
+  {
+    "research_paper_id": "a98b6d7a-d573-4138-badc-c5c011057ea6",
+    "paper_authority_score": 1.0,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.8043498294862044
+  },
+  {
+    "research_paper_id": "aa498c6d-e19b-446c-9b57-d97d54fb646e",
+    "paper_authority_score": 0.3333333333333333,
+    "citation_influence_score": 0.7795462738310616,
+    "author_authority_score": 0.798793397153843
+  },
+  {
+    "research_paper_id": "aa71fce2-0687-47d2-902e-647d8895ee09",
+    "paper_authority_score": 0.65,
+    "citation_influence_score": 0.8282371024834075,
+    "author_authority_score": 0.8734960257375375
+  },
+  {
+    "research_paper_id": "aaa5f1c6-a302-4727-a976-cc29565acc7a",
+    "paper_authority_score": 0.6153846153846154,
+    "citation_influence_score": 0.8296500141498502,
+    "author_authority_score": 0.7980995847592799
+  },
+  {
+    "research_paper_id": "ab1b2119-6d1a-40b5-97ec-5b4bca8faef3",
+    "paper_authority_score": 0.3684210526315789,
+    "citation_influence_score": 0.8923953595631937,
+    "author_authority_score": 0.846090290424023
+  },
+  {
+    "research_paper_id": "ab28f811-ffc0-4e0f-a677-a01e4bdd6014",
+    "paper_authority_score": 0.6666666666666666,
+    "citation_influence_score": 0.8463311606351952,
+    "author_authority_score": 0.7532079322236387
+  },
+  {
+    "research_paper_id": "ab3d3761-a0e1-4a17-9655-2bd10a872d04",
+    "paper_authority_score": 0.3333333333333333,
+    "citation_influence_score": 0.7122991054744257,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "abdc7573-218f-4630-8e8a-c476bfc25b6b",
+    "paper_authority_score": 0.7272727272727273,
+    "citation_influence_score": 0.9048341205677943,
+    "author_authority_score": 0.8041368415734498
+  },
+  {
+    "research_paper_id": "ac0f49a6-1c9f-4345-951c-49d3b05cffb7",
+    "paper_authority_score": 0.5909090909090909,
+    "citation_influence_score": 0.8956104042046737,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "ac159754-d5e5-4475-bc12-8a246c84690c",
+    "paper_authority_score": 0.9333333333333333,
+    "citation_influence_score": 0.9607855385436868,
+    "author_authority_score": 0.8805918663990422
+  },
+  {
+    "research_paper_id": "ac5cd396-da6a-4515-bcf2-25c15bef24e4",
+    "paper_authority_score": 0.1794871794871795,
+    "citation_influence_score": 0.6638993426438082,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "ac61e6e1-39e9-450a-a6b1-ee7f1d1cf5fa",
+    "paper_authority_score": 0.5,
+    "citation_influence_score": 0.9114245107587731,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "acc1bff3-87ab-48fb-8ea3-1b909d3f7b90",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.7159035073440125,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "acf4ba8f-ceda-4678-988b-d070ecb2a668",
+    "paper_authority_score": 0.38461538461538464,
+    "citation_influence_score": 0.7922756677116306,
+    "author_authority_score": 0.8002141241394025
+  },
+  {
+    "research_paper_id": "ad7bac43-402c-4040-8fd1-cc9e05b65163",
+    "paper_authority_score": 0.6875,
+    "citation_influence_score": 0.8468864407878308,
+    "author_authority_score": 0.7743456724946203
+  },
+  {
+    "research_paper_id": "ada435e8-605f-43d6-a4a7-efb56388c1f3",
+    "paper_authority_score": 0.46938775510204084,
+    "citation_influence_score": 0.8245648987714125,
+    "author_authority_score": 0.8487394882341186
+  },
+  {
+    "research_paper_id": "af1390fa-0a1f-46e2-b325-5a91325b4232",
+    "paper_authority_score": 0.3333333333333333,
+    "citation_influence_score": 0.7239456579805461,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "af670624-1d10-4fad-9e85-0c39e53581ec",
+    "paper_authority_score": 1.0,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.8240199218902083
+  },
+  {
+    "research_paper_id": "af8d07a7-bf2e-4d24-ba58-af1aa7f0a426",
+    "paper_authority_score": 0.9230769230769231,
+    "citation_influence_score": 0.8983105966198913,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "afefa646-3446-49bc-ac4c-046a006fb001",
+    "paper_authority_score": 0.8,
+    "citation_influence_score": 0.8481193572743854,
+    "author_authority_score": 0.868582108055128
+  },
+  {
+    "research_paper_id": "b0447e3d-c952-4666-8374-dde0a483def4",
+    "paper_authority_score": 0.35,
+    "citation_influence_score": 0.7991318258295363,
+    "author_authority_score": 0.8660607974523062
+  },
+  {
+    "research_paper_id": "b04f759e-b7ea-410d-9f56-bc24db19353b",
+    "paper_authority_score": 0.5102040816326531,
+    "citation_influence_score": 0.8277658426480636,
+    "author_authority_score": 0.833605789947014
+  },
+  {
+    "research_paper_id": "b07e546a-5221-46c1-89e2-885a7fea5992",
+    "paper_authority_score": 0.6842105263157895,
+    "citation_influence_score": 0.9494539028353653,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "b08fb7ff-8387-40ca-90e9-80d7a6b4c5cd",
+    "paper_authority_score": 0.36585365853658536,
+    "citation_influence_score": 0.7361806679277324,
+    "author_authority_score": 0.7408949410589103
+  },
+  {
+    "research_paper_id": "b0d4d3d7-dde0-45d4-ab95-7f731fd1fb8c",
+    "paper_authority_score": 0.024390243902439025,
+    "citation_influence_score": 0.7507040715255423,
+    "author_authority_score": 0.644232901954503
+  },
+  {
+    "research_paper_id": "b0ed77cf-9048-4956-a027-2779336eb6fb",
+    "paper_authority_score": 0.6428571428571429,
+    "citation_influence_score": 0.9653793790088441,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "b1001b11-0708-499d-b899-240159a65ff0",
+    "paper_authority_score": 0.6363636363636364,
+    "citation_influence_score": 0.9022013223774006,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "b32c531b-2154-4676-ae29-c138370665af",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.6742117256695515,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "b41622be-a98d-43ac-8021-b7379c0d04cb",
+    "paper_authority_score": 0.7551020408163265,
+    "citation_influence_score": 0.8762420219174042,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "b451091a-623c-4553-a9dc-aa7b22df56d2",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.785919345494702,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "b4691e05-9d43-4932-a943-7b83a995ef39",
+    "paper_authority_score": 0.5853658536585366,
+    "citation_influence_score": 0.8884943601999464,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "b536c9d9-b60f-4a79-916e-38a04aa1ed2a",
+    "paper_authority_score": 0.3157894736842105,
+    "citation_influence_score": 0.836137837932907,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "b62bd194-ecad-4096-9f6b-8629e46cfe8f",
+    "paper_authority_score": 0.20833333333333334,
+    "citation_influence_score": 0.7647771225034707,
+    "author_authority_score": 0.7762054831258225
+  },
+  {
+    "research_paper_id": "b6cbf943-b162-48ec-a17f-dc32c1b9d385",
+    "paper_authority_score": 0.4878048780487805,
+    "citation_influence_score": 0.8707103116983973,
+    "author_authority_score": 0.8071195610157534
+  },
+  {
+    "research_paper_id": "b6f82bc9-82ef-44e7-ae17-00fc9249e869",
+    "paper_authority_score": 0.7692307692307693,
+    "citation_influence_score": 0.812349782103092,
+    "author_authority_score": 0.7651181395702208
+  },
+  {
+    "research_paper_id": "b70aec2f-1757-4bdf-b0a6-b58cd4c010cd",
+    "paper_authority_score": 0.8846153846153846,
+    "citation_influence_score": 0.8916267922803938,
+    "author_authority_score": 0.9941977366834884
+  },
+  {
+    "research_paper_id": "b74be6ea-628c-4279-894c-8567e933c842",
+    "paper_authority_score": 1.0,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.880232363963885
+  },
+  {
+    "research_paper_id": "b75288ac-007b-410e-825c-6474f837cbee",
+    "paper_authority_score": 0.9,
+    "citation_influence_score": 0.9867017317721625,
+    "author_authority_score": 0.8275920787429529
+  },
+  {
+    "research_paper_id": "b8584da2-3490-47d5-bd6b-f97c01cafac5",
+    "paper_authority_score": 0.5897435897435898,
+    "citation_influence_score": 0.772660952209066,
+    "author_authority_score": 0.6391301695283548
+  },
+  {
+    "research_paper_id": "b8955bdc-d61d-4d6a-8894-ba4a4d4cf9e2",
+    "paper_authority_score": 0.7368421052631579,
+    "citation_influence_score": 0.8944991744884929,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "b8e36e9b-40be-4351-8c8b-6f4bf5919049",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.7254950369613248,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "b8f6fde5-5910-4810-86f2-807194577a31",
+    "paper_authority_score": 0.3,
+    "citation_influence_score": 0.7827517376990953,
+    "author_authority_score": 0.6481399559523319
+  },
+  {
+    "research_paper_id": "b8f79f91-e615-4082-a815-a84706a6ba54",
+    "paper_authority_score": 0.23809523809523808,
+    "citation_influence_score": 0.6936655556142819,
+    "author_authority_score": 0.7790198558755432
+  },
+  {
+    "research_paper_id": "b917329e-d83b-4c80-a871-4b225a555665",
+    "paper_authority_score": 0.19230769230769232,
+    "citation_influence_score": 0.7315480987726545,
+    "author_authority_score": 0.6955698180837255
+  },
+  {
+    "research_paper_id": "b9349734-43b5-4b60-9be7-da0e7876b822",
+    "paper_authority_score": 0.6190476190476191,
+    "citation_influence_score": 0.8025826505934638,
+    "author_authority_score": 0.8835772911462931
+  },
+  {
+    "research_paper_id": "bad38b9b-0b17-4972-9b37-78e562894ee8",
+    "paper_authority_score": 0.3125,
+    "citation_influence_score": 0.8338920857659924,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "bb1f9f09-bf33-482f-bd8a-1b8a32b25755",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.6426907288435225,
+    "author_authority_score": 0.9236661065465477
+  },
+  {
+    "research_paper_id": "bbbc5aa7-4d4d-450d-8e21-38ad4ee59c9e",
+    "paper_authority_score": 0.8571428571428571,
+    "citation_influence_score": 0.9735388583915419,
+    "author_authority_score": 0.8041456137548839
+  },
+  {
+    "research_paper_id": "bc5b2503-a7a2-4333-86d2-6677ab614400",
+    "paper_authority_score": 0.8181818181818182,
+    "citation_influence_score": 0.9262681984195582,
+    "author_authority_score": 0.8639915213976808
+  },
+  {
+    "research_paper_id": "bcbd97dd-b0da-4bb5-ace0-5458b022f1b6",
+    "paper_authority_score": 0.3877551020408163,
+    "citation_influence_score": 0.8082457527628155,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "bd4708d5-b642-49c1-a6a1-3f85779accda",
+    "paper_authority_score": 0.2,
+    "citation_influence_score": 0.720339906012166,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "bdc50ab1-0ecd-4408-a4db-b775620ef76a",
+    "paper_authority_score": 0.1875,
+    "citation_influence_score": 0.7314113599611529,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "bdc9edb5-abee-4f74-b228-4efc01504222",
+    "paper_authority_score": 0.7435897435897436,
+    "citation_influence_score": 0.8112930986558282,
+    "author_authority_score": 0.8863394563648598
+  },
+  {
+    "research_paper_id": "bddfd983-c050-4b64-ae06-55ff762e9157",
+    "paper_authority_score": 0.3,
+    "citation_influence_score": 0.7898361650743965,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "be680c95-136d-4afc-a38e-40e7da8d79a5",
+    "paper_authority_score": 0.15384615384615385,
+    "citation_influence_score": 0.6631282788319954,
+    "author_authority_score": 0.720558868979039
+  },
+  {
+    "research_paper_id": "beb86bb6-ce22-459c-b11f-5e9ef6b0c1aa",
+    "paper_authority_score": 1.0,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.9331535278516006
+  },
+  {
+    "research_paper_id": "bfab018a-cc5f-43d6-bf94-a724d7a33b2f",
+    "paper_authority_score": 0.8461538461538461,
+    "citation_influence_score": 0.8212011291470988,
+    "author_authority_score": 0.8686116762917481
+  },
+  {
+    "research_paper_id": "c0545a66-1bc2-4e5a-97ee-c65bfc17a2c7",
+    "paper_authority_score": 0.5,
+    "citation_influence_score": 0.8239977770152238,
+    "author_authority_score": 0.8104073689259151
+  },
+  {
+    "research_paper_id": "c05b5ae9-3b37-4222-8129-48bfa297b5d1",
+    "paper_authority_score": 0.875,
+    "citation_influence_score": 0.8398609947580944,
+    "author_authority_score": 0.9186192377282212
+  },
+  {
+    "research_paper_id": "c08a43fb-afce-4a4c-8248-9922f906d413",
+    "paper_authority_score": 0.4,
+    "citation_influence_score": 0.7092965977048656,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "c0e85c57-f813-448d-a965-6af4791c0540",
+    "paper_authority_score": 0.9090909090909091,
+    "citation_influence_score": 0.951946290828003,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "c109f406-d39c-428d-9266-87c78e861f52",
+    "paper_authority_score": 0.7,
+    "citation_influence_score": 0.8320240621031366,
+    "author_authority_score": 0.8229305476026869
+  },
+  {
+    "research_paper_id": "c14131d0-d214-4bf0-9939-018fc2a0d0f3",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.6903782480947425,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "c183425b-d21e-447a-a701-41215e09149e",
+    "paper_authority_score": 0.14705882352941177,
+    "citation_influence_score": 0.6224306663930117,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "c1c232c4-dad4-4f6e-8a6a-215014ed9c52",
+    "paper_authority_score": 0.75,
+    "citation_influence_score": 0.8524980454844306,
+    "author_authority_score": 0.8039613957620626
+  },
+  {
+    "research_paper_id": "c1edc12f-ae2a-41f2-82aa-aec2fdd981ef",
+    "paper_authority_score": 0.9642857142857143,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.8267711317705514
+  },
+  {
+    "research_paper_id": "c1fb75d7-36dd-469d-a21e-d9f9ddd0e1e6",
+    "paper_authority_score": 0.3170731707317073,
+    "citation_influence_score": 0.7123247333343802,
+    "author_authority_score": 0.8095933528556175
+  },
+  {
+    "research_paper_id": "c3c8e94d-712b-4e7f-ae44-cc241f2dc9f0",
+    "paper_authority_score": 0.9,
+    "citation_influence_score": 0.8739897233059359,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "c45a4001-2448-4ad4-b63d-5a17a48f0267",
+    "paper_authority_score": 0.8367346938775511,
+    "citation_influence_score": 0.8900277977261867,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "c49ce107-6dcd-4a80-9a56-6aa2bc8e94ed",
+    "paper_authority_score": 1.0,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.6656212833005011
+  },
+  {
+    "research_paper_id": "c555f8e7-9cf7-4627-98ff-8e56b4091a5b",
+    "paper_authority_score": 0.25,
+    "citation_influence_score": 0.8441910047830621,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "c5b76299-86ac-474d-a099-e56f67556692",
+    "paper_authority_score": 0.7727272727272727,
+    "citation_influence_score": 0.9256066909751072,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "c5d4e429-404f-4a5d-9a25-12da6187c955",
+    "paper_authority_score": 0.8666666666666667,
+    "citation_influence_score": 0.9431491777870958,
+    "author_authority_score": 0.8817962143973047
+  },
+  {
+    "research_paper_id": "c6095a37-b9cb-438d-bf2c-2b9d683affa5",
+    "paper_authority_score": 0.7317073170731707,
+    "citation_influence_score": 0.9057630120733557,
+    "author_authority_score": 0.866542880301677
+  },
+  {
+    "research_paper_id": "c7d3d40f-34c2-4940-9260-8304c8fb6e41",
+    "paper_authority_score": 0.19047619047619047,
+    "citation_influence_score": 0.6839406136162164,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "c87ffca6-8c1b-4ba5-8cca-184c8d596b66",
+    "paper_authority_score": 0.08,
+    "citation_influence_score": 0.7203845503889238,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "c8ab29df-f5dc-48ab-a140-b6057bdede74",
+    "paper_authority_score": 0.8163265306122449,
+    "citation_influence_score": 0.8841458200605159,
+    "author_authority_score": 0.9354603025184147
+  },
+  {
+    "research_paper_id": "c8ad9cad-34d9-4bbf-ad61-c7c33745c239",
+    "paper_authority_score": 0.375,
+    "citation_influence_score": 0.7884282756770556,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "c8c2b9f3-cc8d-47ca-b52b-4262d017f1cd",
+    "paper_authority_score": 0.11538461538461539,
+    "citation_influence_score": 0.7162825764293075,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "c9d3ddf0-8ddf-421b-87f7-bd593f771251",
+    "paper_authority_score": 0.5263157894736842,
+    "citation_influence_score": 0.8684518984733763,
+    "author_authority_score": 0.7955870119396666
+  },
+  {
+    "research_paper_id": "ca701183-3a8f-446a-8dce-0aca4a14c302",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.6534014421305944,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "caa3b380-b2f7-45fa-ade5-5d212b261eae",
+    "paper_authority_score": 0.0625,
+    "citation_influence_score": 0.6653371482595555,
+    "author_authority_score": 0.7181798251009804
+  },
+  {
+    "research_paper_id": "cad27fd2-fc93-4a7a-b0db-6de7831b39e9",
+    "paper_authority_score": 0.16666666666666666,
+    "citation_influence_score": 0.7495565324525848,
+    "author_authority_score": 0.7195479696408588
+  },
+  {
+    "research_paper_id": "cbe6fe9e-db44-4921-8055-d53fac95cb0b",
+    "paper_authority_score": 0.09564643799472296,
+    "citation_influence_score": 0.6886346031968694,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "ccc55787-2127-44c4-b7cb-bcd1eff4eabc",
+    "paper_authority_score": 0.8333333333333334,
+    "citation_influence_score": 0.9981208857999969,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "cd0efd91-bbc1-44f6-bb45-76edfa17139f",
+    "paper_authority_score": 0.2,
+    "citation_influence_score": 0.7668219847577693,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "cd72cdf8-ae87-461e-90ca-c6d1d1d7f66d",
+    "paper_authority_score": 0.2857142857142857,
+    "citation_influence_score": 0.771310603509369,
+    "author_authority_score": 0.7259134246138013
+  },
+  {
+    "research_paper_id": "cdb76df2-320c-463f-abfe-4e27931d5d48",
+    "paper_authority_score": 0.9473684210526315,
+    "citation_influence_score": 0.9923787464573012,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "cdc19bfc-e0d9-4d80-8d12-50a12ff890c3",
+    "paper_authority_score": 0.2894736842105263,
+    "citation_influence_score": 0.7255407791165043,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "cdc6df9c-48aa-4dcb-9201-e067a2edfd6c",
+    "paper_authority_score": 0.975609756097561,
+    "citation_influence_score": 0.9941977366834884,
+    "author_authority_score": 0.8916267922803938
+  },
+  {
+    "research_paper_id": "ce746064-c89e-4b7a-acbb-04d9bc0740d0",
+    "paper_authority_score": 0.7560975609756098,
+    "citation_influence_score": 0.8043953538556403,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "ce8ec7b1-af4a-4239-9335-506afb5dd79c",
+    "paper_authority_score": 1.0,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.8323029641235271
+  },
+  {
+    "research_paper_id": "ce991a6d-8d4f-4226-94b5-4ee6cecef14c",
+    "paper_authority_score": 0.2631578947368421,
+    "citation_influence_score": 0.7181798251009804,
+    "author_authority_score": 0.700382817838203
+  },
+  {
+    "research_paper_id": "cea219f3-bed1-4061-95b8-789404be612e",
+    "paper_authority_score": 0.6,
+    "citation_influence_score": 0.855546795311129,
+    "author_authority_score": 0.8258631956423108
+  },
+  {
+    "research_paper_id": "ced6e4b4-5074-4a03-b8ff-35e0c771d9a5",
+    "paper_authority_score": 0.32653061224489793,
+    "citation_influence_score": 0.804243400957218,
+    "author_authority_score": 0.8043853056625331
+  },
+  {
+    "research_paper_id": "cfa73c4e-5971-4f3f-b077-902986327e80",
+    "paper_authority_score": 0.8461538461538461,
+    "citation_influence_score": 0.8807065292255939,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "d032e6ae-3711-451c-95d5-fa108ff72007",
+    "paper_authority_score": 0.25,
+    "citation_influence_score": 0.7810128657431994,
+    "author_authority_score": 0.8130748184857021
+  },
+  {
+    "research_paper_id": "d0afed95-1cbf-48fb-b2d2-bf7301ac2bac",
+    "paper_authority_score": 0.6585365853658537,
+    "citation_influence_score": 0.8967685759243571,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "d10a5677-428c-4c67-aa15-0a5b4b1fddf4",
+    "paper_authority_score": 0.05,
+    "citation_influence_score": 0.67584680519539,
+    "author_authority_score": 0.7849003933631593
+  },
+  {
+    "research_paper_id": "d154eac9-9ea5-4c89-a950-c956a2390c8a",
+    "paper_authority_score": 0.125,
+    "citation_influence_score": 0.6986436491982461,
+    "author_authority_score": 0.6983617625001323
+  },
+  {
+    "research_paper_id": "d261d3e8-f737-4776-81ad-c5b6a74819b0",
+    "paper_authority_score": 0.25,
+    "citation_influence_score": 0.7659488353280148,
+    "author_authority_score": 0.8935393606467935
+  },
+  {
+    "research_paper_id": "d2baa121-d1e3-48e3-8b95-713f6c065084",
+    "paper_authority_score": 0.5,
+    "citation_influence_score": 0.8887502466814355,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "d3ee436b-d720-4660-afb2-497c4f0df428",
+    "paper_authority_score": 0.7894736842105263,
+    "citation_influence_score": 0.9134139224292013,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "d40f0f7c-23f4-460c-81f2-42ec43daf352",
+    "paper_authority_score": 0.7352941176470589,
+    "citation_influence_score": 0.7228187281281593,
+    "author_authority_score": 0.8634407524411425
+  },
+  {
+    "research_paper_id": "d4795547-ec70-4aad-9e03-54f9a04fb960",
+    "paper_authority_score": 0.5,
+    "citation_influence_score": 0.8204765952276186,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "d51b5f4d-cd95-46a0-9b5a-e78211bf2b0f",
+    "paper_authority_score": 0.16,
+    "citation_influence_score": 0.7378165888515958,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "d56c0cb2-8e38-4b50-8fdb-94fea4311a02",
+    "paper_authority_score": 0.3170731707317073,
+    "citation_influence_score": 0.8430020287668278,
+    "author_authority_score": 0.7473892397874203
+  },
+  {
+    "research_paper_id": "d5efa981-11cb-478a-98c5-55452a1cef25",
+    "paper_authority_score": 0.95,
+    "citation_influence_score": 0.8936875777038795,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "d61e1236-dbdc-409d-8926-cae9b1869f4b",
+    "paper_authority_score": 0.8536585365853658,
+    "citation_influence_score": 0.8351517331185679,
+    "author_authority_score": 0.8705175750313118
+  },
+  {
+    "research_paper_id": "d6e12f55-0203-4fed-8bf8-840dd6e62cc7",
+    "paper_authority_score": 0.7777777777777778,
+    "citation_influence_score": 0.8470171751527849,
+    "author_authority_score": 0.8041456137548839
+  },
+  {
+    "research_paper_id": "d6f50304-5626-498d-a666-edbcd5628b32",
+    "paper_authority_score": 0.20512820512820512,
+    "citation_influence_score": 0.6719859605705382,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "d71589e1-8e75-46e7-b273-44455347640d",
+    "paper_authority_score": 0.6666666666666666,
+    "citation_influence_score": 0.8031298522496991,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "d82d1da5-1a26-40ad-981f-45aca0df8874",
+    "paper_authority_score": 0.2222222222222222,
+    "citation_influence_score": 0.7356539660229297,
+    "author_authority_score": 0.6483062023724306
+  },
+  {
+    "research_paper_id": "d83a3487-9266-4529-a999-3b73b2fe96ad",
+    "paper_authority_score": 0.6341463414634146,
+    "citation_influence_score": 0.8913670865964722,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "d8aed16a-f1db-4666-ba8d-e711d14c22f7",
+    "paper_authority_score": 0.20588235294117646,
+    "citation_influence_score": 0.6313340366435176,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "d8dd9109-7368-48a7-9497-367a46e7e830",
+    "paper_authority_score": 0.5416666666666666,
+    "citation_influence_score": 0.8078709171638373,
+    "author_authority_score": 0.7161095630447454
+  },
+  {
+    "research_paper_id": "d923907d-aec7-45cc-bd81-37d6c6667672",
+    "paper_authority_score": 0.5121951219512195,
+    "citation_influence_score": 0.7716479407179009,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "d9740909-38c6-4565-807a-5713c60b6035",
+    "paper_authority_score": 0.38235294117647056,
+    "citation_influence_score": 0.6685840587723092,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "d9a69ca9-20d6-4f89-af54-124148ecbac4",
+    "paper_authority_score": 0.41025641025641024,
+    "citation_influence_score": 0.7613024683500148,
+    "author_authority_score": 0.8351220549852031
+  },
+  {
+    "research_paper_id": "d9f557ce-9ceb-4ef6-9295-8658b3f48d70",
+    "paper_authority_score": 0.14285714285714285,
+    "citation_influence_score": 0.8999705606893885,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "d9f668f0-fbd9-4ad3-94a1-69156264e9d5",
+    "paper_authority_score": 0.5263157894736842,
+    "citation_influence_score": 0.9189712232445301,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "da0b013a-a07f-45fa-bb2b-716e5cb719d1",
+    "paper_authority_score": 0.14285714285714285,
+    "citation_influence_score": 0.7516517102026399,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "da1d3b77-d92a-4e70-8f50-7f300b795562",
+    "paper_authority_score": 0.625,
+    "citation_influence_score": 0.9384757166154998,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "da3835be-b85f-48f2-bb09-a7d76c3de3b4",
+    "paper_authority_score": 0.75,
+    "citation_influence_score": 0.9613855275263731,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "da7ced7a-adf3-47af-b728-fb571bee1398",
+    "paper_authority_score": 0.15555555555555556,
+    "citation_influence_score": 0.7136806447300328,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "db78c1b0-c7a1-4258-94a6-58ba0e11b6fd",
+    "paper_authority_score": 0.6923076923076923,
+    "citation_influence_score": 0.8073571674777782,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "dbda1c28-705b-47ab-b353-4439e4d7627c",
+    "paper_authority_score": 0.6097560975609756,
+    "citation_influence_score": 0.7802277009878205,
+    "author_authority_score": 0.9218728121527795
+  },
+  {
+    "research_paper_id": "dbe68219-8b60-4302-b879-7d17f96c1702",
+    "paper_authority_score": 0.125,
+    "citation_influence_score": 0.7187742373525775,
+    "author_authority_score": 0.8626460787661553
+  },
+  {
+    "research_paper_id": "dcbe3c66-7a0a-4a83-be5b-526ebee988f6",
+    "paper_authority_score": 0.42105263157894735,
+    "citation_influence_score": 0.8629314682076449,
+    "author_authority_score": 0.9126687262987259
+  },
+  {
+    "research_paper_id": "dcd04f5b-f702-4b3a-9e19-2e5cc87b66ef",
+    "paper_authority_score": 0.5789473684210527,
+    "citation_influence_score": 0.9334494464557059,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "dd1b5133-37f1-4101-98d1-00976d476b69",
+    "paper_authority_score": 0.038461538461538464,
+    "citation_influence_score": 0.699212803223734,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "dd3e00ba-a8a6-4c8f-84c1-2237ab9e0965",
+    "paper_authority_score": 0.2727272727272727,
+    "citation_influence_score": 0.7950716787294304,
+    "author_authority_score": 0.7163300821984026
+  },
+  {
+    "research_paper_id": "de9ca2c8-bbb4-4c9e-a312-86388f2da5e1",
+    "paper_authority_score": 0.3333333333333333,
+    "citation_influence_score": 0.7697045149598628,
+    "author_authority_score": 0.8888044923281632
+  },
+  {
+    "research_paper_id": "deadbe02-f6ad-4f9f-8d85-a8f789545af4",
+    "paper_authority_score": 0.40816326530612246,
+    "citation_influence_score": 0.8144656174447666,
+    "author_authority_score": 0.7982024778877362
+  },
+  {
+    "research_paper_id": "df674482-0479-487b-a242-70cd4f19baba",
+    "paper_authority_score": 0.43902439024390244,
+    "citation_influence_score": 0.868148132968751,
+    "author_authority_score": 0.8607224530197807
+  },
+  {
+    "research_paper_id": "dfb71fb5-83f5-49be-ad36-3ae75053c77b",
+    "paper_authority_score": 0.5208333333333334,
+    "citation_influence_score": 0.8041543859363179,
+    "author_authority_score": 0.8677784096485995
+  },
+  {
+    "research_paper_id": "dfc75af1-0001-441e-a2f3-9047f0b58fb5",
+    "paper_authority_score": 0.3125,
+    "citation_influence_score": 0.778697161150535,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "dfd7ae08-067b-463d-a080-59aaf749303f",
+    "paper_authority_score": 0.4583333333333333,
+    "citation_influence_score": 0.7786136171634332,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "dfe34a3b-af46-4488-98a4-92a3d4414bf8",
+    "paper_authority_score": 0.29411764705882354,
+    "citation_influence_score": 0.6613080249630815,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "dff06fc1-43bd-4c22-81fc-ca8b4d17088a",
+    "paper_authority_score": 0.6666666666666666,
+    "citation_influence_score": 0.8254888753076228,
+    "author_authority_score": 0.6907343349964971
+  },
+  {
+    "research_paper_id": "e02e2168-4bca-46bf-a803-8d54e51f920c",
+    "paper_authority_score": 0.48,
+    "citation_influence_score": 0.7764266390427484,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "e0b4e307-6205-4e2b-ad93-89b39498460d",
+    "paper_authority_score": 0.14285714285714285,
+    "citation_influence_score": 0.8248723502785194,
+    "author_authority_score": 0.804302921578638
+  },
+  {
+    "research_paper_id": "e0f320ad-0b00-42ce-a7b1-b69f323ee660",
+    "paper_authority_score": 1.0,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "e0f3a321-1c04-430d-8c45-57772a0eaa97",
+    "paper_authority_score": 0.4,
+    "citation_influence_score": 0.7720845688621046,
+    "author_authority_score": 0.9919975035450224
+  },
+  {
+    "research_paper_id": "e157cb43-3af7-4b07-9fd7-6f1023127499",
+    "paper_authority_score": 0.2857142857142857,
+    "citation_influence_score": 0.7519521731570429,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "e158e9f5-8f5c-4b71-86de-970d3d9526a4",
+    "paper_authority_score": 0.8536585365853658,
+    "citation_influence_score": 0.9434064621733824,
+    "author_authority_score": 0.8585179864989716
+  },
+  {
+    "research_paper_id": "e1831992-a55b-47d3-8349-d0ad0355609f",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.8229014894598166,
+    "author_authority_score": 0.7878417673717326
+  },
+  {
+    "research_paper_id": "e1dffe98-09c2-4f77-b849-f77548cc21ae",
+    "paper_authority_score": 0.47619047619047616,
+    "citation_influence_score": 0.7627383075304367,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "e25bc9ef-c55a-4773-9794-71da0f159345",
+    "paper_authority_score": 0.36585365853658536,
+    "citation_influence_score": 0.8548721688549276,
+    "author_authority_score": 0.8041368415734498
+  },
+  {
+    "research_paper_id": "e28904d6-fd86-4783-8130-1fb3198c5a44",
+    "paper_authority_score": 0.75,
+    "citation_influence_score": 0.8524718720745325,
+    "author_authority_score": 0.8646020036075599
+  },
+  {
+    "research_paper_id": "e2fd7542-222f-4074-8e63-9de45b4f09ea",
+    "paper_authority_score": 0.2857142857142857,
+    "citation_influence_score": 0.7730038822412107,
+    "author_authority_score": 0.7707219552959594
+  },
+  {
+    "research_paper_id": "e42f94cc-ddc0-45e5-ae12-444cc7534995",
+    "paper_authority_score": 0.4,
+    "citation_influence_score": 0.9365951106018229,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "e430c53f-66dd-4c03-a3b4-50d0da2a2262",
+    "paper_authority_score": 0.36666666666666664,
+    "citation_influence_score": 0.8056066450718316,
+    "author_authority_score": 0.8695943181815883
+  },
+  {
+    "research_paper_id": "e46d2643-f32c-4cef-891a-9a495c9dc28a",
+    "paper_authority_score": 0.5625,
+    "citation_influence_score": 0.811216204516465,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "e4f7f15c-af9f-4b55-ba30-00cb36ca8395",
+    "paper_authority_score": 0.6875,
+    "citation_influence_score": 0.9122615415597555,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "e501834a-b0c5-4439-8417-85579735b9b0",
+    "paper_authority_score": 1.0,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.8429515571650974
+  },
+  {
+    "research_paper_id": "e50cd6e6-346c-4ffc-ba3b-4ced0c5dc672",
+    "paper_authority_score": 0.28125,
+    "citation_influence_score": 0.7762054831258225,
+    "author_authority_score": 0.7939208479433315
+  },
+  {
+    "research_paper_id": "e51dcb0f-e982-4b4a-b8c7-3e549f79b516",
+    "paper_authority_score": 0.14634146341463414,
+    "citation_influence_score": 0.7645458243580349,
+    "author_authority_score": 0.7707202295492065
+  },
+  {
+    "research_paper_id": "e576bca8-7b95-483b-af11-83adc85c108f",
+    "paper_authority_score": 0.058823529411764705,
+    "citation_influence_score": 0.604530690571001,
+    "author_authority_score": 0.7173195924317737
+  },
+  {
+    "research_paper_id": "e65bb3e5-7b5a-4790-bcc5-237c76a1238b",
+    "paper_authority_score": 0.6666666666666666,
+    "citation_influence_score": 0.7950884361753384,
+    "author_authority_score": 0.8683320274520493
+  },
+  {
+    "research_paper_id": "e6a70557-108c-4715-b0bf-7e8501360b82",
+    "paper_authority_score": 0.9777777777777777,
+    "citation_influence_score": 0.924112633486294,
+    "author_authority_score": 0.8989439784669816
+  },
+  {
+    "research_paper_id": "e73e8543-7be4-4e56-86c6-a7d620fce476",
+    "paper_authority_score": 0.5714285714285714,
+    "citation_influence_score": 0.7897572842052315,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "e73e8e8c-ccf4-4bd7-bffa-f33ab23c68c7",
+    "paper_authority_score": 1.0,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.8173874847807449
+  },
+  {
+    "research_paper_id": "e77abfc1-c1ff-4892-9b4b-28df7ce1fc42",
+    "paper_authority_score": 0.7346938775510204,
+    "citation_influence_score": 0.8697318139300999,
+    "author_authority_score": 0.8097602411574985
+  },
+  {
+    "research_paper_id": "e86fbc84-b028-4905-bc34-d08f90ddc2c8",
+    "paper_authority_score": 0.4230769230769231,
+    "citation_influence_score": 0.8139739961701912,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "e8c13fb5-8ad2-43fc-abda-4dcda6faeba1",
+    "paper_authority_score": 0.8333333333333334,
+    "citation_influence_score": 0.7909896789862908,
+    "author_authority_score": 0.8676892268209554
+  },
+  {
+    "research_paper_id": "e953f84e-a374-4821-b673-32119c280d31",
+    "paper_authority_score": 0.75,
+    "citation_influence_score": 0.8191628029583016,
+    "author_authority_score": 0.8437377142126656
+  },
+  {
+    "research_paper_id": "e98821c6-aa35-481f-b7ef-10df2fc111f8",
+    "paper_authority_score": 0.5882352941176471,
+    "citation_influence_score": 0.7007133521642318,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "e9da639a-53a4-4586-afb0-61f1313ce5a3",
+    "paper_authority_score": 0.7142857142857143,
+    "citation_influence_score": 0.9689907234909734,
+    "author_authority_score": 0.9547406021863821
+  },
+  {
+    "research_paper_id": "e9e7209f-0a14-4868-8019-cb0aa64dc7d3",
+    "paper_authority_score": 0.5,
+    "citation_influence_score": 0.7519917497925122,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "e9f24848-30ab-4880-9dc4-e50bcd1cb7bb",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.6847518433282679,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "ea25f652-3689-4b51-b803-88466ec7b90c",
+    "paper_authority_score": 0.5714285714285714,
+    "citation_influence_score": 0.8153021885718598,
+    "author_authority_score": 0.809721137976634
+  },
+  {
+    "research_paper_id": "ea27c2c2-64e3-4e5d-98f4-a1dac574806b",
+    "paper_authority_score": 0.18421052631578946,
+    "citation_influence_score": 0.7089116611114534,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "ebd03b01-b82b-46b3-b1fe-56bf15718f83",
+    "paper_authority_score": 0.03333333333333333,
+    "citation_influence_score": 0.6767005532680207,
+    "author_authority_score": 0.7730855983547464
+  },
+  {
+    "research_paper_id": "ebf12599-ddb9-4287-a7cc-97daedee985d",
+    "paper_authority_score": 0.42105263157894735,
+    "citation_influence_score": 0.910012914163753,
+    "author_authority_score": 0.9225267554667962
+  },
+  {
+    "research_paper_id": "ec08a70d-e601-46fd-82c8-5da0565b1ba8",
+    "paper_authority_score": 0.1111111111111111,
+    "citation_influence_score": 0.6921899718676799,
+    "author_authority_score": 0.7891501016173031
+  },
+  {
+    "research_paper_id": "ec50960e-2a59-437c-ae20-1bc9b83de132",
+    "paper_authority_score": 0.8775510204081632,
+    "citation_influence_score": 0.8928600302249361,
+    "author_authority_score": 0.8337728895154058
+  },
+  {
+    "research_paper_id": "ecdce81e-0d1f-4e59-9d4d-9493c88e31ae",
+    "paper_authority_score": 0.5609756097560976,
+    "citation_influence_score": 0.7800547423018609,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "ed80420c-4e1d-4bad-bfc6-50436fb6bb61",
+    "paper_authority_score": 0.8048780487804879,
+    "citation_influence_score": 0.8173874847807449,
+    "author_authority_score": 1.0
+  },
+  {
+    "research_paper_id": "ee130ab1-aaad-4a84-9265-7a4fd7a4cc27",
+    "paper_authority_score": 0.7142857142857143,
+    "citation_influence_score": 0.9475608542038132,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "eeac075f-a252-482f-ad38-e3163db8270b",
+    "paper_authority_score": 1.0,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.8095268066756307
+  },
+  {
+    "research_paper_id": "ef166a62-7bdf-4178-b79d-c91c676a7c37",
+    "paper_authority_score": 0.8048780487804879,
+    "citation_influence_score": 0.9345068513021583,
+    "author_authority_score": 0.9802088980141075
+  },
+  {
+    "research_paper_id": "ef94e18f-2529-40da-bf6a-c8696e4aff22",
+    "paper_authority_score": 0.4634146341463415,
+    "citation_influence_score": 0.7677275413655448,
+    "author_authority_score": 0.7703625040886307
+  },
+  {
+    "research_paper_id": "efc96479-83b5-4977-baef-db6ed0baa54e",
+    "paper_authority_score": 0.88,
+    "citation_influence_score": 0.8953588669943365,
+    "author_authority_score": 0.7557523497228065
+  },
+  {
+    "research_paper_id": "f01b3e79-352a-4d8c-a4a2-73709e20211c",
+    "paper_authority_score": 0.3333333333333333,
+    "citation_influence_score": 0.7847744358617198,
+    "author_authority_score": 0.8123225044619979
+  },
+  {
+    "research_paper_id": "f07cca7a-e954-4597-8843-58c83bd6455c",
+    "paper_authority_score": 0.3902439024390244,
+    "citation_influence_score": 0.8616138993542767,
+    "author_authority_score": 0.8916223746750407
+  },
+  {
+    "research_paper_id": "f093b740-0efc-4770-8d22-4f6451a3d067",
+    "paper_authority_score": 0.43333333333333335,
+    "citation_influence_score": 0.8240199218902083,
+    "author_authority_score": 1.0
+  },
+  {
+    "research_paper_id": "f0ee6967-c8e7-4ea2-a912-fe523275031d",
+    "paper_authority_score": 0.05263157894736842,
+    "citation_influence_score": 0.7754511482499513,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "f125baed-d074-485f-b2c0-b55e5a657471",
+    "paper_authority_score": 0.2,
+    "citation_influence_score": 0.7577529513656369,
+    "author_authority_score": 0.8305800811277154
+  },
+  {
+    "research_paper_id": "f14f4bda-7046-4075-986f-a0d0b6ee02b1",
+    "paper_authority_score": 0.9583333333333334,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "f1fec96a-5aa3-4569-8d2e-3ff7ec5b248e",
+    "paper_authority_score": 0.5853658536585366,
+    "citation_influence_score": 0.7801412605294425,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "f241a213-4b84-4704-a141-75beefcadcd3",
+    "paper_authority_score": 0.84,
+    "citation_influence_score": 0.8452833986869567,
+    "author_authority_score": 0.8547351157497225
+  },
+  {
+    "research_paper_id": "f25b5f17-ade6-4221-aa33-b673e11ebead",
+    "paper_authority_score": 0.23684210526315788,
+    "citation_influence_score": 0.713864409686312,
+    "author_authority_score": 0.7577529513656369
+  },
+  {
+    "research_paper_id": "f3a9f1b0-5908-4d2c-983a-fa80e9e22aca",
+    "paper_authority_score": 0.47368421052631576,
+    "citation_influence_score": 0.8672125406178742,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "f3b1ad23-5b92-40d0-b9a6-832e589eda95",
+    "paper_authority_score": 0.041666666666666664,
+    "citation_influence_score": 0.6628904005084005,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "f438ccd9-703f-494a-827a-020ac0a2e7d1",
+    "paper_authority_score": 0.4166666666666667,
+    "citation_influence_score": 0.7950818987710954,
+    "author_authority_score": 0.8555463810129198
+  },
+  {
+    "research_paper_id": "f486ef15-c0fa-49e5-9f4d-3955f3f94630",
+    "paper_authority_score": 0.13636363636363635,
+    "citation_influence_score": 0.7519200933924776,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "f4dd663b-0148-47f2-b0a8-7b5b502f2871",
+    "paper_authority_score": 0.02040816326530612,
+    "citation_influence_score": 0.6837598734459829,
+    "author_authority_score": 0.6909443255108354
+  },
+  {
+    "research_paper_id": "f50605a8-462f-426a-9826-3c4fa9cbe241",
+    "paper_authority_score": 0.6222222222222222,
+    "citation_influence_score": 0.8065683204228032,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "f560a1a5-6991-48cf-851d-3323e34cf388",
+    "paper_authority_score": 0.9591836734693877,
+    "citation_influence_score": 0.9218728121527795,
+    "author_authority_score": 0.7802277009878205
+  },
+  {
+    "research_paper_id": "f58f343e-e8bc-445a-8cf5-e5ea7d42ef58",
+    "paper_authority_score": 0.4897959183673469,
+    "citation_influence_score": 0.8258631956423108,
+    "author_authority_score": 0.851554744980917
+  },
+  {
+    "research_paper_id": "f5dbe538-4c99-4c06-a8f8-8eff4a0d42bb",
+    "paper_authority_score": 0.6842105263157895,
+    "citation_influence_score": 0.8937090517760901,
+    "author_authority_score": 0.7809735657792629
+  },
+  {
+    "research_paper_id": "f6122780-d9ff-47dd-82e3-d7a47ad5cf44",
+    "paper_authority_score": 0.8947368421052632,
+    "citation_influence_score": 0.9862429408988117,
+    "author_authority_score": 0.8673855565789701
+  },
+  {
+    "research_paper_id": "f63ef465-284f-4beb-a754-cb1f7db9d3c7",
+    "paper_authority_score": 0.8636363636363636,
+    "citation_influence_score": 0.9463619619912209,
+    "author_authority_score": 0.8366147702199693
+  },
+  {
+    "research_paper_id": "f6537c1b-5ee6-4d47-9f89-b9a9e682f3e3",
+    "paper_authority_score": 0.8823529411764706,
+    "citation_influence_score": 0.7982538549113284,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "f71af6cd-4329-46d2-880a-734a48034ee2",
+    "paper_authority_score": 0.7105263157894737,
+    "citation_influence_score": 0.8489168593978228,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "f75b840c-887d-40bc-b2a1-54f2fe55e2d5",
+    "paper_authority_score": 0.9,
+    "citation_influence_score": 0.9762258118220644,
+    "author_authority_score": 0.8306420002538006
+  },
+  {
+    "research_paper_id": "f79acdd4-37c4-4fd1-adf7-b9f0429681f0",
+    "paper_authority_score": 0.15384615384615385,
+    "citation_influence_score": 0.7180115844035441,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "f7fb58d5-91a2-4ebd-9e51-2d72a1264456",
+    "paper_authority_score": 0.9387755102040817,
+    "citation_influence_score": 0.9126104658116523,
+    "author_authority_score": 0.8673569920574492
+  },
+  {
+    "research_paper_id": "f80afc86-eee7-4481-b600-f6d6b0c9202e",
+    "paper_authority_score": 0.25,
+    "citation_influence_score": 0.8056971111177139,
+    "author_authority_score": 0.8041368415734498
+  },
+  {
+    "research_paper_id": "f85e0d96-409f-4b1d-9663-eab48892483f",
+    "paper_authority_score": 1.0,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.8041456137548839
+  },
+  {
+    "research_paper_id": "f8e556cb-7e46-471d-85a9-5b44a7a0b217",
+    "paper_authority_score": 0.12244897959183673,
+    "citation_influence_score": 0.7304737634919135,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "f930dc11-11cd-4f75-8cd2-6ba9662abe9d",
+    "paper_authority_score": 0.5,
+    "citation_influence_score": 0.925613985839045,
+    "author_authority_score": 0.8422705225979799
+  },
+  {
+    "research_paper_id": "f95c8320-5534-4466-b84c-813580cd7f23",
+    "paper_authority_score": 0.2,
+    "citation_influence_score": 0.7476367145975344,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "f9688f62-a03e-4bc4-9947-a7b2f96d20e8",
+    "paper_authority_score": 0.5365853658536586,
+    "citation_influence_score": 0.8836759026319132,
+    "author_authority_score": 0.8088502066567064
+  },
+  {
+    "research_paper_id": "fac6da9d-65c4-4203-9e67-cbb264010e49",
+    "paper_authority_score": 0.95,
+    "citation_influence_score": 0.9914528971350286,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "fb087a11-b615-4936-a41d-1ac40158857b",
+    "paper_authority_score": 0.4473684210526316,
+    "citation_influence_score": 0.8058162818703747,
+    "author_authority_score": 0.8416239785166373
+  },
+  {
+    "research_paper_id": "fb41bede-648e-4ef3-9506-b0f73ee551d1",
+    "paper_authority_score": 0.6923076923076923,
+    "citation_influence_score": 0.8491500819299489,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "fb57aabf-6683-4d88-8844-8bb476d754ef",
+    "paper_authority_score": 0.25,
+    "citation_influence_score": 0.8416255003712019,
+    "author_authority_score": 0.8733388160496824
+  },
+  {
+    "research_paper_id": "fbe95ab4-19b0-4e6d-afcd-71296e119173",
+    "paper_authority_score": 0.35,
+    "citation_influence_score": 0.8520943501231829,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "fc3138e0-41ec-4a32-a0c7-52fb1a2f86bd",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.632770019782053,
+    "author_authority_score": 0.7555189117486055
+  },
+  {
+    "research_paper_id": "fc5881dc-a200-48cb-9224-698898c7d709",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.7600720354651074,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "fc5d6b69-c1ef-4898-bf2e-1076db73f7e1",
+    "paper_authority_score": 0.38095238095238093,
+    "citation_influence_score": 0.7849003933631593,
+    "author_authority_score": 0.67584680519539
+  },
+  {
+    "research_paper_id": "fc5eaae5-92b0-44f9-902e-5dde0cc61e72",
+    "paper_authority_score": 0.4117647058823529,
+    "citation_influence_score": 0.6822703955048206,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "fc6411fa-fe43-428a-b84a-8159566367b9",
+    "paper_authority_score": 0.22916666666666666,
+    "citation_influence_score": 0.7464919991391762,
+    "author_authority_score": 0.7025722467351821
+  },
+  {
+    "research_paper_id": "fc6ca78e-6996-4e32-a3f8-fa946e17cdd8",
+    "paper_authority_score": 0.5714285714285714,
+    "citation_influence_score": 0.8037859499506754,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "fc7d0927-b7fb-4834-a8a4-3900c7d406b1",
+    "paper_authority_score": 0.0,
+    "citation_influence_score": 0.6713384908920389,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "fd67fab2-68b4-401c-8525-91fe39d60af6",
+    "paper_authority_score": 0.8205128205128205,
+    "citation_influence_score": 0.8196621321177884,
+    "author_authority_score": 0.8558623566387029
+  },
+  {
+    "research_paper_id": "fd74ad83-a864-4665-8a65-278cc03323b2",
+    "paper_authority_score": 1.0,
+    "citation_influence_score": 1.0,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "fd956797-208c-4e9e-afcf-4a1d86e9bb63",
+    "paper_authority_score": 0.23809523809523808,
+    "citation_influence_score": 0.7643026670832972,
+    "author_authority_score": 0.8714782136225504
+  },
+  {
+    "research_paper_id": "fe094db8-78e9-4731-8a39-32f78fd4f38d",
+    "paper_authority_score": 0.8421052631578947,
+    "citation_influence_score": 0.9335776388402937,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "fe604912-fde5-47b0-863e-3193ab7c7078",
+    "paper_authority_score": 0.7083333333333334,
+    "citation_influence_score": 0.8470003711979289,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "fece80db-ef8a-4978-a687-3b1ea38a660a",
+    "paper_authority_score": 0.6764705882352942,
+    "citation_influence_score": 0.715598108460237,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "fed57156-2ff2-4284-8148-5b3a046de6d8",
+    "paper_authority_score": 0.2857142857142857,
+    "citation_influence_score": 0.910301641261026,
+    "author_authority_score": 0.8039613957620626
+  },
+  {
+    "research_paper_id": "fee95415-7ee1-4118-8704-585de6922b37",
+    "paper_authority_score": 0.09090909090909091,
+    "citation_influence_score": 0.7485093978726529,
+    "author_authority_score": 0.8041543859363179
+  },
+  {
+    "research_paper_id": "ff04724d-2270-45fa-a145-bfbd3673668c",
+    "paper_authority_score": 0.6052631578947368,
+    "citation_influence_score": 0.8260254117492679,
+    "author_authority_score": 0.8792639115860293
+  }
+]

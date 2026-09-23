@@ -85,8 +85,9 @@ class EntityRecord:
 
     ``citation_score`` must already be an offline, field/year/type-normalised
     feature. Raw ``incoming_citation_count`` is intentionally not ranked here.
-    Academic authority fields are retained only to make their exclusion rules
-    explicit.
+    Paper-level author authority is retained as a display factor, but it is not
+    part of the publication ranking formula. Academic-level authority remains
+    metadata and is excluded from ranking.
     """
 
     entity_id: str
@@ -96,6 +97,7 @@ class EntityRecord:
     citation_score: float | None = None
     paper_authority_score: float | None = None
     paper_authority_reproducible: bool = False
+    author_authority_score: float | None = None
     journal_authenticity_score: float | None = None
     journal_authenticity_reproducible: bool = False
     academic_authority_score: float | None = None
@@ -109,6 +111,7 @@ class EntityRecord:
         for name in (
             "citation_score",
             "paper_authority_score",
+            "author_authority_score",
             "journal_authenticity_score",
             "academic_authority_score",
         ):
@@ -563,6 +566,7 @@ class RankingService:
                 if entity.paper_authority_reproducible and entity.paper_authority_score is not None
                 else 0.0
             )
+            author_authority = entity.author_authority_score or 0.0
             recency = _recency(entity.publication_date, plan.as_of, profile.publication_half_life_years)
             components = {
                 "retrieval": candidate.retrieval_score,
@@ -570,6 +574,8 @@ class RankingService:
                 "citation": citation,
                 "recency": recency,
                 "paper_authority": authority,
+                # Exposed for the API breakdown only; no profile weights it.
+                "author_authority": author_authority,
             }
             score = (
                 profile.publication_retrieval_weight * components["retrieval"]
@@ -628,6 +634,9 @@ class EvidencePack:
     status: str
     items: tuple[EvidenceItem, ...]
     ranked_entity_ids: tuple[str, ...]
+    # Bounded display/routing context supplied by the application. It is not
+    # validated evidence and must never be treated as factual support by itself.
+    ranked_papers: tuple[Mapping[str, object], ...] = ()
 
 
 class EvidencePackBuilder:

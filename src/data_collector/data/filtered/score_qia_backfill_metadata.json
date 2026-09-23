@@ -1,0 +1,3832 @@
+{
+  "format_version": 1,
+  "factor": "author_authority_score",
+  "status_values": [
+    "observed",
+    "imputed",
+    "unavailable"
+  ],
+  "imputation_method": "For each paper without observed leave-one-out authority, remove that paper from the snapshot, recalculate I for the remaining papers, calculate each academic's mean of their top five available I values, then take the median of available academic authorities.",
+  "summary": {
+    "total_papers": 759,
+    "status_count": {
+      "observed": 415,
+      "imputed": 344,
+      "unavailable": 0
+    },
+    "median_prior_used": 0.8041543859363179,
+    "imputation_prior_distribution": {
+      "min": 0.8037047371787109,
+      "p25": 0.8041543859363179,
+      "median": 0.8041543859363179,
+      "p75": 0.8041543859363179,
+      "p90": 0.8041543859363179,
+      "max": 0.8097371345352669
+    },
+    "author_authority_distribution": {
+      "min": 0.6340337672970949,
+      "p25": 0.8041543859363179,
+      "median": 0.8041543859363179,
+      "p75": 0.8431792269346978,
+      "p90": 0.8904258405273682,
+      "max": 1.0
+    }
+  },
+  "papers": [
+    {
+      "research_paper_id": "00c13deb-ceeb-4926-ba0e-a4c638a85ea3",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "00f1adf1-ae91-4257-b555-fe626397eaaf",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "014c6a39-e4c6-4886-9579-925a7d51b2e7",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "015572b3-3ea6-4c0e-9939-a1379d7223cc",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "022a7d6c-4e85-45fc-906c-54b8dc56f8b6",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "023aada1-eb34-4bc3-86e4-e8123c4dfcfd",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "025b34aa-238d-469c-bcd5-c579ae601130",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "028c7f1f-8649-472d-b43b-71a9ea275aad",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "028ef5b5-767f-4fcf-b80e-7c9c29630d55",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8043143533098756
+    },
+    {
+      "research_paper_id": "02c14e54-b931-4c24-b280-d710ca5594b4",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "02df8e32-29f7-4bef-b93c-b7cfd9a5d37f",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "02e5a543-869e-43d5-9776-2a52ba699026",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "02e8c468-48f1-4532-a5d3-34cda1e25042",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "049f8881-fe96-4575-9ce9-f256a5362fd4",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "04c9e969-f19a-46e9-8b90-0d2fda6bd42b",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "04e70919-d668-4f5c-b29a-b9b097cca47c",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "056493e1-cc32-41e5-986e-92ad473d625e",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "057e8111-490f-4fc7-915d-ebb4c0568e12",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "05dbf6bd-76d9-4cf0-9fa9-6eb96f3dd59d",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "05e67d98-10f9-4546-b88f-67094918d195",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "0759fdf8-d94e-44de-a204-72e67de37129",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "07b4e269-32f2-44d1-a95c-86a94bf3f5cc",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8042343696230967
+    },
+    {
+      "research_paper_id": "07cc28fc-002d-4a84-a5f9-e2a12d7d42a6",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "082240ef-deb3-442e-be09-d246dc439dff",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "084389ba-51a3-4d88-8f4b-4ff5e2ba2b11",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "08a1172d-b71b-44ce-a8d4-a02c41ee1366",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "08ae1a3e-6234-4b9e-b0ff-ab3cbd8b96cc",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "08eac3ff-7a03-4d17-b7cd-81dc23281018",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "09254322-4d73-4948-8611-19678d39ffa4",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "0946f97c-a7f7-45d2-bf4e-c7e2ae3d8a1a",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "0a29e3b5-6e37-4509-8448-12e74a32e145",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "0a625fc2-81af-4ded-842c-64ad1baf2d9f",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "0a92624f-2f36-46cd-ae8d-488eead837fd",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "0aa6ab94-b65e-4b4b-823f-fdfd68a68278",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "0ac65795-0f71-496f-952d-a994f7ecdb07",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "0b17054d-0055-46c9-94de-f5a1b9c67e8c",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "0bbbb24a-2705-41a2-a794-608ec19bcafa",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "0bcc5bcd-e034-46b2-863e-a94b0e5ff9a4",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "0cd90117-afc5-40b5-b170-19758663594d",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "0cda635d-aa61-4d6c-9019-b838bff1aebd",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "0d5f06b7-445a-402c-beb8-0d005c6231b4",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "0d7091f1-542c-49d2-9a9a-2da2ed6a6332",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "0d9dc8cb-7c56-4a2d-8a3a-db6010657558",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "0e396466-105a-4f9e-b63e-a00384d619e5",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "0e5bcef8-c736-419f-9bbf-d532fbf277bb",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "0e8126f8-73d6-4397-b0d7-9083ab403ae0",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "0ebabc9b-6b40-485b-aa87-054d06c1f985",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "0ecdea1a-1125-43e2-8443-7e6de8c5491e",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "0f4b1ce2-c84e-4781-8a3f-2aa3e1395ad4",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041456137548839
+    },
+    {
+      "research_paper_id": "0f90b707-80e9-4bc5-9728-7166d39df30f",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "0fa4beb9-1d67-4c36-8fb8-c4797c19ca85",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "0fd963ee-6a8b-4afd-a1a8-0c7f91b8e766",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "10222017-3c2a-460a-80e9-3868fe71f039",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "1072bcf7-5359-47b7-a7cd-f638c7298ed5",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "107bb47b-5300-4d8b-a5a9-1eac12bd5df9",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "10d21b68-a0e9-4f78-85cb-747a8750fa4f",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "10ed0f40-aca3-4ac0-bfe8-df59f57a03d1",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "1112d5f7-5634-4a21-910e-36ad045a72f8",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "11614406-4945-431e-9cb4-769341cb39e0",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "1189d786-45a3-45eb-b620-3afe7155bf4c",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "11a417ac-cda3-49c7-b9ad-bc28cdf8a80b",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "1235a747-f31c-4ffb-8c19-8c75e4d64d30",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "125dd78a-f834-40ab-a05b-c9bc990c214d",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "12821020-cca8-477c-a812-ca2debb93141",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "12925502-b70a-4f3c-9ca3-9ea7d261fc43",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041368415734498
+    },
+    {
+      "research_paper_id": "12a02189-7106-4946-ac22-2a9cc1318040",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "1383e5ec-436a-4f06-8b79-09e0b6db3615",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "13952adc-00e1-485f-8b36-266854f0ff64",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "13ccde9d-ba3e-4599-b335-d74a896aa227",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "13fccc58-d234-49da-93d2-f791f53c6d39",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "142462b8-275e-444b-9fed-5d521277f48a",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "1456af1e-5561-4162-8bea-7847ee3e3548",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "14974f14-2874-43c4-af59-4d3fb35de594",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "14e4a2c2-e876-452c-b0c3-f9d38aae2189",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "151efdba-2c67-4c0d-8946-4337f32c55a2",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "15709a3c-e8aa-4e03-a615-edd1d787a87e",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "15875f07-822d-486b-b0ef-6d450c5a6c4b",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "15937ac8-37db-4a85-b467-acf799e51e84",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "15b8c7e6-e8e5-4378-93b8-a8ea474cdab7",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "15ddf096-6cec-497c-8f4f-60f63527bf1d",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "162ff034-4831-476f-8b81-51adcbb76186",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "1635f943-ff42-49a5-ad75-65aee5ba4277",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "16406798-95ee-4ca7-b991-0031a4009c22",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "167a46d3-460d-41db-b624-eb44cffce8c5",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "179af5e9-7a7b-4041-8f76-28aa07e2a33b",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "179f2e89-b868-4d53-be34-38e5b3af0059",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "17c522b0-a1b3-4c55-9767-116a0c2a5650",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8037047371787109
+    },
+    {
+      "research_paper_id": "17e9a302-9ed8-4e83-980b-eba2c76c9a4c",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "18a4b243-89fc-4ff8-b9fc-665e53517a0b",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "19268426-ff06-4921-8171-60abdc7f216a",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "192affda-6d1a-4e02-9097-cee41b056b2c",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "1941f93d-4a70-4bac-9801-33a71ee8c82d",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "1975a357-0c14-4c39-be6a-9c1d63e4c984",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "1a78cf9d-aa88-4b46-8d9d-aecbf440d6a5",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "1aa3b75e-4c06-40c3-828c-2de861d0110e",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "1c561e07-55a7-462d-a19f-21d75c6efa47",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "1c634107-24a1-49c2-9b0c-4c578a09c72f",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "1cfac66c-3cfb-4b84-a9d4-dc4cb6e9a255",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "1d1e521f-9c63-4cba-9d77-2aa19c923f9b",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "1e2a7aef-cc50-4dd0-ab92-15c13b22eaad",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "1e604f2b-9889-4ae1-afc7-a204ceb4c4ac",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "1ed11c4f-e64c-4b28-9e67-1b5815e76e37",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "1eed3d5f-6d18-47db-8e82-92d1c412f64f",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "1f40ef2c-a24d-4192-9b20-87a58943df41",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "1f4db87a-76a7-432b-bdf2-4803f85dc513",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "1f65398f-64d4-4975-8a27-cc2fa48466a6",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "2044c9c9-381f-448e-99aa-e8250a1d45d5",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "206346f3-0391-41ac-bc64-4ff3f2af2a81",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "209e191a-9cde-46a8-9337-e9232cd224a1",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "20caef28-4dc2-4d37-909e-fac2e7d92408",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "2258b969-5ef7-4d08-a64e-d9a8023d7ac6",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "225d4f9c-ef2c-4b3c-bba0-f44f9c34d2c6",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "22d2e0e3-ea44-4de5-bc84-72230e5e984b",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "231936fb-b3ca-4e23-8033-d07a7fd78862",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "231dd422-79ed-459e-aba1-6477d606ccaa",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "234fda15-f025-4694-ba2d-5f5b32bfe9f3",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "23cd86ee-460f-4468-a593-95be7e11c68f",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "24465366-f867-49d1-b041-8fa894e2efc7",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "24fddbcb-531d-422e-a0c0-56a28f15d0bd",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "256b6b93-3e31-4485-93bc-edac152916cd",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "25786d5d-6959-49a2-8035-c3afb6e182d8",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "25accdc2-fc59-4df3-811c-c5fddcf2a897",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "25c3e5de-01b3-4843-b8ea-29cf897eda49",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "26c99466-75c0-49de-9061-a06731110b5f",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "2788aa98-dbf9-4e7e-801a-72b86194e847",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "27b27565-8f7a-47af-bd7c-d750e49120ec",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "27b314d0-d675-47ca-8e07-83cca5328ac1",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "27bcee75-fb22-422d-a620-8591d448537b",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "28294691-bb99-4c47-8e04-463be324ca9d",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041456137548839
+    },
+    {
+      "research_paper_id": "28c8eaac-4d88-484c-bd39-5ddc9eb8135c",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "28e5e120-7ecf-493a-bc92-32a1bae51c64",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "2918edc0-e797-46e5-ad8d-dfd47fb893d1",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "2931dcf9-3703-4c64-9b1d-4a2442580caf",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "29fc96d0-ff54-4d26-ad08-4d04656c7d05",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "2a3431fb-cb74-407e-8256-dbdeebb3b02b",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "2a5fb84a-5fce-4765-8aae-c050c00feb34",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "2ad3e974-8b6e-40b2-bb27-10b301884ebd",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "2ae1b076-2811-4058-965f-57b18fe5d146",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "2b2d09fa-c532-4691-9785-2603b4c2e5ef",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "2b3c4c53-4550-4a22-b550-8ef2fc8163c8",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "2b47b268-5205-4925-9597-d825047726f7",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "2b78ea8f-0c03-4a9e-98d0-ae59f968f2ec",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "2b9edf95-9a82-4181-8562-02b413f19aac",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "2bc6d833-d2c1-43ee-bc52-228f78815051",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "2bd5df45-2cde-41d0-afd8-3a582bf81a92",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "2c2038dd-a3ba-4702-832e-83942e7fd88e",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "2c840f99-0008-4b42-babc-c76f1a005ff7",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "2cb79997-d495-4b16-adbc-06b4c6df460f",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "2d865f76-bc82-4669-ae44-cb24a7298c6c",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "2e0501ea-91be-4eb5-8708-06cb14ecf890",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "2e81802a-3c03-4d0b-aadd-73ba5fc16bbc",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "2e9c6d32-d562-468c-80ec-46b96418dad3",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "2f14bb8a-0679-4595-bdc0-1088abd936e6",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "2fe059f3-cb3c-4ad4-8b48-021920bedd7c",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "2fef5bf4-4e8c-4e43-ba42-cf4f805d043f",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "303cc72e-517f-4ed5-b226-37b090f28966",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "3106a13f-ae87-421e-8227-42115c1b7be5",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "312424e9-1c64-4a88-bf6a-f445a7279b7e",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "31c935eb-4545-46ef-a7d0-70e73c1b5bf7",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "31fba472-62b0-4fe8-878e-709000fbc1a5",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "32468eb5-92f8-42b0-b4a7-4e95cf03398c",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "32dcb8b7-4e65-4988-9c44-c5484e8d4dee",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "332afc49-c004-44f1-a50c-5ed8b388c9e8",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "3339be11-7f59-4277-8f99-34522d63b1fc",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "335584ea-8a4d-4500-8657-1b3cdd3d97c2",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "336b734b-6f8d-4d5a-a9bc-9857804f33a1",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "33ef0e25-1879-47dd-86d9-c07f0acc7378",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "34976f32-0cac-4aa1-a718-e645895663a2",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "357eef9d-976c-494f-a1ed-ecd5fd643612",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "35e39448-72b6-44e7-a343-818efb083b86",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8042343696230967
+    },
+    {
+      "research_paper_id": "363de267-7f2c-4c57-82e1-9d7d0dbf721a",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "3651eb08-5629-4c6c-8ae0-35e88e48f9a3",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "367ed80c-c962-4907-b5e6-6f50d17b58cd",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "3718ad63-fb2d-47f7-a9df-f11b75370b7c",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "3720d937-8ead-467b-bc6c-14c854665f8b",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "378a9042-13e5-456f-a7ac-3adc27bcf679",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "380307a6-8fa3-4710-a6e0-885b4d20061c",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "3926da0c-b742-405c-9b45-fb2cfc5fe2a9",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "39c19675-d5c8-473a-a23b-c09a3b504812",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "39cd6ad2-2a91-4c56-824c-749e7e4cb9c4",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "39d25e0e-4af7-40a2-ad2e-983a856891ce",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041368415734498
+    },
+    {
+      "research_paper_id": "3aded94f-ebc3-4feb-9a5f-46f286304984",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "3b7e9d07-0d4a-421b-9047-b3724e4d9619",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "3c2763bd-c364-4b72-a9f7-36113dff832c",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "3ce5eea0-61e2-4455-9941-0ef83343247c",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "3d0a826d-0a2d-4fa8-b6d9-e493f6b692fb",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "3d7be53a-25d1-45f6-b1ea-3b8a157b085d",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "3d7f9432-4d6d-45aa-a3fd-6f82c4bf88f9",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "3d87895d-d852-4587-9bf8-04115a15b638",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "3dfa7c87-234f-4b68-8103-d4db3b0d7c85",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "3e274a3d-0779-45f5-b3ec-56379ee70c1d",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "3ea68469-4af4-4b7b-ad48-63be73c1592c",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "3ea72714-c3e1-49c1-b683-eb65ce5b4e07",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "3ed23f5d-21f6-43e3-81e5-87eaf2a566ad",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "3fb7141b-281b-455d-a799-2e5eae96d43c",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "3fc07be0-8c3d-4f5b-8ff8-e70d298b930c",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "3fc2dfb1-549f-4a52-9639-cc1e0b085211",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "4004feda-dfff-48b6-af46-ca86693ff5ab",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "400b9c5b-e3c5-4a09-9df7-3577ef65920d",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "4022df5d-be87-49e2-8771-4355c19122db",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "412d5bd0-11f4-4463-9fe9-e14164a5f2b5",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "41c12360-a2f2-453d-9055-7d89e6d685ae",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "42080009-67f6-456f-9bb4-fae8c1d81056",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "426a3054-a0f5-43bd-b82f-b4fa0418c3b3",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "4274fb59-e035-47c0-9a77-dc973f045d67",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "4282a454-38dc-4092-af16-b33130dbe4ac",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "42945279-7f66-406e-853b-a73debd701a1",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "43d6e775-348a-47da-a754-5a278098f0ea",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "44992c75-6bec-4781-bd5c-e43eb0f7a87e",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "450dec73-deee-49a8-8de4-6420198a7215",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "45a59b8a-ecc5-416d-9db5-29380f196bed",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8037859499506754
+    },
+    {
+      "research_paper_id": "465fcf61-e3b0-4984-8c34-f7d75effc888",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "466748a4-33f1-464d-a802-c8c9f33516a4",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "467bd79e-cb83-4357-830f-ee7f7dc64c1c",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "46e2f003-762d-4746-a6bb-222206da359c",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "481b684c-91fc-4b18-98f4-d08378e10711",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "48487138-7272-43b1-a412-5d78ec5f816e",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "48608dab-30aa-4454-8a26-a7139cc36125",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "48ac3217-c0a4-42ed-9ca0-524d32b02238",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "4903b95d-77cb-4aa8-a4ce-b64075e5da10",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "4a0a23c4-ac61-4fb0-ab61-548d0a90c37b",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "4a1d1b21-ac11-4f2b-a32f-d4ab5ed8d23b",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "4a823112-baae-46b7-acf1-5e53b80fbf42",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "4ac2b3e2-d4df-4daf-940b-5615247d9da7",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "4ae06e1f-574b-4766-b194-c32da9acc5d5",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "4b33c29f-71cf-4f90-89c9-aa1b1b57b9a4",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "4ba78839-a6ec-4665-8d97-d571aeec231b",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "4bd801f6-c575-4c4d-a41d-ce73145feb2a",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "4d1846ee-b3fe-490c-bb67-ec861f2c30c8",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "4d1cfa49-e684-4994-bd37-fabdad62c0fd",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "4d2d9a2c-2798-47e8-aa61-6be2ba77c074",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "4d744a19-57bf-4693-b0ed-f283484f4cf4",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "4d7df315-4c8d-4138-8db7-c5d7c240e96a",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "4e53769b-b395-4edc-8484-d93facb6bf29",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "4ec9bf48-87ef-40f4-b45a-c1ce42b1bc16",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "4fd0bbc5-ef92-4a27-8b8e-9b9d75287956",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041368415734498
+    },
+    {
+      "research_paper_id": "50367e37-3b2b-40e5-8cc7-d135f6216e51",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "50b0e98f-74b7-45f3-b9c6-7759ea0bed7d",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "50c7613f-03e0-4645-a1cf-5409c8bdc1a0",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "50cf2ab8-f0b1-4a3b-9395-693f2635c6e5",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "50d8c297-3030-46ec-bbcf-7988a59627ad",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "510dee72-5ed3-4eae-ba91-f5ff9c6524e8",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "51cd93d0-30ca-4c15-9209-53377560932f",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "51db4023-728c-4d04-8ece-516749feab3c",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "51e8adf6-8c7c-4347-a711-3b04768fdb98",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "51f40829-4ab6-46e4-8ec1-584a60df362d",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "525ccd96-d6a0-4bed-9d9b-d0d3e3c592c1",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "529256df-1e4a-4214-be94-85f4049573a2",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "52c7a705-8112-472a-837d-1ee6a736730c",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "52ca8872-a7cd-440f-ac4b-3fc8932ea66b",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "531d09a7-a591-46d5-a030-c68470f8bed7",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "53253c38-39fd-443e-bb30-8a21da1e1da5",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "53488252-9268-4459-bedc-2643b8892a6f",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "537743a6-cd83-4731-8067-af1c47cc71ba",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "53919248-e2dc-490a-821f-3b562bbde88f",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "53937e90-b148-4a03-9e21-ae622b9c253f",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "5448457a-622d-405b-89b0-3072e6d25ac4",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "54b23fc0-c4be-48b8-9172-016b997dd69c",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "55dfc6ba-8214-42e8-99a2-a335fd697935",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "560b07d7-fbfa-4c28-bb76-9750e37970a1",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "56200e4c-4ae2-4d85-9ae8-ec382416d987",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "567ae363-5136-4373-a04b-883da77ea1a1",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "569f55b5-1085-4d5e-9791-37fe539a10e7",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041368415734498
+    },
+    {
+      "research_paper_id": "56cb1a66-d84d-45cf-b7ed-40fe0ed52ac7",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "583c6f40-ab4c-4854-9a6b-d13be097e9e8",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "58598aed-0e5b-426e-9142-a288b5bc8d5b",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "587f3197-c6f3-40f5-b95b-707849ac75d9",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "589cfcf5-9c10-4558-b429-36d4c97ec401",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041368415734498
+    },
+    {
+      "research_paper_id": "594cf816-b772-4b9c-9339-d69e2b4acd73",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "5986d1fe-b357-4b59-8418-4e396b45bca0",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "59bdc4cf-d469-436d-b60f-0b5e6e899b7c",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "59c49ba4-eab5-47e2-8101-014dd00a8d5c",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "5a2a6d23-a87f-43fb-bc20-d992bc36c9fa",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "5a664417-d2a4-4283-8380-5a9a0e52f96d",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "5a82cbbc-34fb-4fae-94a3-0cc729f9b557",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "5a856b09-c93a-482b-b11c-cd96382859b4",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "5af0e8dd-db2b-432d-a43d-8868b3cf344d",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "5b01309d-6dae-4d72-bf93-71f9be0f14bd",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "5b40caa6-cdce-4853-bbea-6d4bc7a4c9ae",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "5b5a0030-3929-403f-9cf7-acef93293749",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "5b6aed06-2dc1-4b06-af0b-e1f955f3d1f9",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "5b7dd758-7a62-46c8-8cd2-beedcb4cf36b",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "5bb39652-e0e9-47ee-a063-5a90f0cd2136",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "5bc8d2ef-4e30-485a-acdd-33d640cb1099",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "5c98c042-4a22-4754-9b8a-5bacd03077ca",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "5cbff7d9-cc90-42af-836b-57e5a39b5103",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "5cc0f9c2-0cbf-47a7-b3f4-5fbd3bceef99",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "5ce8efbc-5d48-475e-819e-a4556f502c36",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "5d00678d-9ae3-4d03-9232-a92997366e3b",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "5d2151b7-f23e-4178-9c9e-e391ad12c608",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "5d365724-2b81-43e1-9196-05512e6ae9c1",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "5d5804ac-a0ce-4d06-83e5-06ba55c78d99",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "5ddda80d-6b08-48bb-a446-12494343f41d",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "5e8e00cf-8eec-4317-92de-a8b0cea6fdd6",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "5e98fb7a-74fc-49fd-ae76-53170ec4afad",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "5ebdd514-6768-41c5-855a-285e0a04ff2b",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "5f16a9c6-8caa-49ae-969d-9687bc384484",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "5f38907e-498f-49d0-83c6-3e1f90e048f5",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "6041b7c2-3a50-4b63-aaec-ec58d4131709",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "60ae968d-2ec5-4d8e-8412-55c793023b88",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "611bfa6a-5c9b-4014-bb02-e5d293915911",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "61d750c1-db78-4c2c-b91d-4ff66d74cff8",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "62ca839f-b79c-4e20-adbe-bcd735c19b98",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "6321f9b0-cfa7-4896-a94d-6815abb102e2",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "63a18488-b866-4455-a906-83a392a1e97f",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "64238adf-c020-4f45-9600-b03937946ea9",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "64aa9f07-6b2b-4c0d-8a43-1248357fc838",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "64ae5298-8f8b-47de-b229-7e5b842c331a",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "64b7f5e5-0db5-4756-9339-089532c032fd",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "652331a0-bd89-4d0e-960a-6840705e5718",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "655a0113-5be6-4576-a562-0614a00a02b1",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "65797c64-66ce-45d6-bb49-27e2342f5697",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "65887c09-174c-4a8a-a8f9-4616e962a970",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "65db19b6-ec98-4fd7-a877-bc94346bc2d4",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "66e8778f-66a1-4223-85f3-fdfa6ee61db2",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "6735e4c9-9ccc-4bdd-8383-a504f79d2cf0",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "67401a75-91d5-456a-8ecc-0a6697cbcb1a",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "674879ff-411f-411d-8b2e-6b6462026d9f",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "6761e746-ebf0-4500-b40f-a0f94a40f250",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "677a8fe2-ea32-4948-9f2d-d04928e1f9d2",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "68903cec-e146-4189-9732-99318d59cca2",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "68aaf35a-80f7-471f-b508-7530dc68ac4c",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "699ae38a-c086-4ea1-8345-f445626e5ab7",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "69abcf82-398d-40c9-ac66-aa2f5c4c9c86",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "69b4703a-5a68-41ae-935d-92387b371af2",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "69cba2c2-8efa-419c-a244-556b4e9dd213",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "69d81fe8-75ef-4f41-87f0-24e0abb5fe26",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "6a19af35-52f0-4417-9bbd-2ba775d35374",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "6a204417-c3ce-4e80-9c63-65793fb46623",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "6a258d82-4fba-4e5b-8977-bffcda92ee69",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "6acc0dd0-a140-4b6f-91a0-53e29bd9871b",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "6adf0a77-33a7-4f0c-a2ff-e047d3d36160",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "6b2ecbba-f270-4af8-828e-92e5dba9900d",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "6c007639-5adb-45a9-a870-f8bd17ddd53b",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "6c798cf3-722b-4be2-9f90-535f88ec7b9a",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "6cc54d9e-a9c3-495a-b244-7a84d27ca165",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "6d5c1f5c-ac12-479e-b8f5-31c3509f621f",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "6d840ffa-8cec-45d3-b6a9-4a304a605bc3",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "6de6de1c-3790-4da5-8dca-f1d76bc03037",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "6e820926-2c9a-4462-a463-7faa35723786",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "6ed6b570-6ffd-4150-a8e5-7d5fbd0461d2",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "6f2b9933-ebd7-49fd-9d9f-1e5671fa9548",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "6f411914-b550-453b-aece-9c21504c009f",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "6f9ecc29-c090-4fc8-bebb-f134abf7fe85",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "6fe90e88-ed33-416d-ad31-8c7ab69a80d6",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "6feae6bd-4a35-436d-8f4f-46dd3c6211cf",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "7038dd70-9131-49ab-aa38-93d0b5b69a33",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "70b5562c-37d2-4776-81b8-11a6a26e2fc7",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "70d2a7ac-37c0-468d-b24d-2f51c706b8ad",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "7145bd24-9442-40ed-b8c7-f642741b3c30",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "717ffba7-f794-4b74-a590-86670430a341",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "7186379d-ba3f-4533-9e68-56d04ff8119f",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "7200fe01-f176-4b65-97b7-882bda40a388",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "72501a93-38f4-477d-a311-bd118ceb11db",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "7258e98b-84d9-48df-9e71-533a8d057706",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "727af96f-8d5e-4ba2-935e-2fa39f4009c1",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "72bb06f3-eb4c-4291-b812-0c6e676819a4",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "72f03995-a340-4c86-b1fc-a905b14cc6a2",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "739fccf1-37a2-46e4-b656-6fa1efc37af4",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "7420f53f-ae6c-4c5f-a6cd-a1f4bbf7c634",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "743a025c-188b-473d-b3d6-3d0bfcbbc3ab",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "745b5918-63a9-44f0-aaed-74e7625799a2",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "747e532e-cba7-4f2c-90e9-6b5a6aca36f5",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "74d2800b-0180-442a-a85c-5129c21f5c08",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "74fe3555-fa1f-4fe7-885c-9c628f522513",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "7541bd33-da44-4691-b855-cb5ca9f52168",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "754b5657-329c-4e0b-bf43-f5f64e3afbad",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "7592522c-674a-4ecc-b820-fc355c35aa74",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "75b0b309-1794-4036-82e7-8e01ae6f0fdf",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "75b212b9-ed49-4d2d-87b3-e4107207980c",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "75f55a4c-a302-454f-95ef-8e64fcca3dae",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "76ac5300-3a63-4760-8727-fe98d236c9b0",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "76b4a72a-1930-4b63-9647-844a06d1c895",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "76c72612-9145-4797-bb91-c7c216fa1e21",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "76c8f8a5-c23f-485a-982b-0a0bdc6de6da",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "779e176c-72c3-455c-89ae-55800844a588",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "77b5b1e0-8ad1-48e2-8d2b-acefef3f04df",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "78325ef6-5c45-4aea-a16b-59e7e224e232",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "78a5982a-58e3-4320-b1ad-b0f1b90b112a",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "791a6781-813f-4472-975c-cfffdf315763",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "795e2ac8-a323-4f3a-8599-7210e35cad9d",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "79845ec4-8fa9-4bc5-b701-0ec0445adfd4",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "79e03388-4b5b-4c92-8ade-dec736f52391",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "79ebd884-7ba2-4ba6-b19a-61bdf1f5cb1b",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "7a017081-656c-4ca8-81bb-0ac27a75e2e0",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "7a752b4b-2e70-46c2-873c-071753f6fcc9",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "7a9325e3-1f69-4426-8344-3731468be6ba",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "7ab13eee-c178-4372-981e-ada70dadfd1f",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "7ac2cb49-68a6-40eb-8fd6-427f76c76626",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "7ad6b7a1-f66e-4ac6-a81e-976eddf36c6c",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "7ae74040-a230-4b3d-91be-41132b84eb15",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "7b8f2f75-9a60-4404-ae9c-ff9e93eb9d3f",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "7bd48a62-bc73-48f9-9068-1f845afce69f",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "7c21b0ba-b1f4-4bb7-9564-94bfb3273294",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "7c5c05de-2990-4bfc-965a-633531af91f3",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "7c750b8f-b3ab-4332-aa2c-06de7e8e4395",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "7c7c639f-7a20-4b48-bb6b-b1c09da989b8",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "7ccb3711-b40d-4611-b64a-a21631212c45",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "7cedeeee-4be6-4ead-8ba1-31c8714f4eba",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "7d76c79a-a639-4bb3-9326-1577ffd702fe",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "7e07cd5b-ea6a-409d-b3a5-af5dae9af055",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "7e30c59f-a1f8-4fa0-b2b3-e7f580b5791e",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "7e320e1d-f33f-4698-a8f4-1fb5272391ae",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "7e5b9cf9-09c6-4492-8cad-1b1ced346927",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "7e662a5d-05aa-4d7c-95b0-e8265e0c16f2",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "7e95d476-653b-4904-82d0-0c9727a6199d",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "7f788bd7-d668-487f-8d24-a3d2d689aa68",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "7f934a54-df70-4645-a520-e91842dca531",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "80059873-b851-4a13-b704-5097a0a666e3",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "80979c4b-d3ee-4eb9-944a-521a6f6a007d",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "8166e26b-6650-42ce-8a5d-fff839c2eb16",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "81722734-8995-43da-bd77-1d537670433f",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "81c47524-118a-4012-982f-4c5608d10d25",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "82386c57-66cd-4cac-a41d-53ef406d48f3",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "82a28934-9837-4181-a0fa-db455a477bea",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "83037a2c-b7bc-4f17-8346-569f47bdaff0",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "8373f70c-b1a7-4872-bb66-62bab2db3219",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "83a97d44-4001-4006-a121-69ecc8c70254",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "83d3862b-2b57-450e-9105-6f69d34a6761",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041456137548839
+    },
+    {
+      "research_paper_id": "83d82891-81c3-4553-b667-3a1f44fdd2ac",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "842f69e2-633f-4a82-9ce4-c6c93e0a000d",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "848ca948-d995-4d80-aeb6-0440a41f9d00",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "84c64fc3-fdf2-415c-a486-3657b81e552c",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "84f2cd5c-e2ce-4f95-a284-5cdaf4a155fe",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "85a2da11-066d-4074-8a62-c46f93a83c1f",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041456137548839
+    },
+    {
+      "research_paper_id": "8695d339-2324-4df5-b274-c3835dc13196",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8097371345352669
+    },
+    {
+      "research_paper_id": "86bb587e-0734-4a7e-80c9-633f772ca044",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "86cb0dd8-dc3b-4f2b-97d3-7d003cfead19",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "86eee70d-e3d7-4b8e-9001-fcfa8968a3db",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "87262bd7-ec74-4de1-81a3-c47bbd0c87e4",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "8879301e-cea6-460b-9b53-7dd3e6bd449a",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "8917695b-95b0-4dd8-9854-7f2fcdaba8b3",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "8a17cdd6-54e9-4df0-8ff2-dbcafa73870a",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "8a6136ac-85f4-480e-88ce-d460bd2a7cfb",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "8a70a84b-a23d-439f-9b56-f031441b5a35",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "8a985a03-8481-47f2-a0b8-f059312081ae",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "8b543782-1966-429f-b85e-9d73d870b91e",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "8b7bc6f6-404b-4fe6-8e1b-7999515c0909",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "8bb6563f-fda1-4e86-9190-7ab862e2af57",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "8c300d10-18f4-4c9d-b789-c9368cdef096",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "8c33648c-3bc0-48ea-8972-a0031d364f19",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "8c74c172-08ed-449a-b712-e20aee4db09b",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "8d0da7b3-d6a9-4a3b-9741-0f7dbb15d35a",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "8d41b713-ee9b-4666-94b9-d4804e590896",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "8d7c1c11-c11d-482b-9b21-8ae1adda5997",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "8db38e33-9197-4ae1-a258-ee1db337d192",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "8ec467ce-34bc-4316-8036-3f4650b68cc6",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "8ffc21ab-f37c-4cdc-84ca-4580bef52229",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "901b1d8e-cebe-4688-9df2-40fad52f0b24",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "902a7721-3927-4049-a3fa-123a94dda99a",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "905ee26b-8814-42f9-b082-54b0bc6203cf",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "9211aec9-0e94-4ac6-b3eb-ac0e0489c348",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "929b9f61-b23d-49ab-b45b-31c9bf70488a",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "92a56a28-0dad-4a4f-a52d-020843bee63e",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "92c0fd16-523a-48ac-a6d2-ac7151b179aa",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "9313aeff-b30e-4dfb-873e-33a1d0d82616",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "934776ee-a1d0-4bdc-a396-f4b7b7bd9ec2",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "93624aa4-957c-422e-820b-dda2fef1fb84",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "9467271a-9cd4-42fb-bffe-e04731afeaff",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "95692272-1251-42f8-8e35-4c5066022caa",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "9570a125-71ee-4949-8c9e-bfd8a525a249",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "963e2358-7c78-42ff-9f9a-ec35d490528c",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "96604177-a5af-492a-9473-db40b83beebc",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041456137548839
+    },
+    {
+      "research_paper_id": "96685a63-215c-4014-bdc5-3e729bf832e2",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "96aac325-eaf4-45f7-a72c-03bf369407f2",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "9723a630-74fc-4537-a089-67eec0fd7975",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "97de35c7-0cf3-4f95-8b87-c62d4f024682",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "97eae182-906e-46d3-bc7a-6b269033c6c3",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "97fd5253-de92-4b85-b683-2b80bde729b6",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "98b3cac4-4186-4689-9ef8-a831e38861ea",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "9942d022-4b82-44b1-b655-df3e39068a61",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "995ed0da-7ac2-47db-bb28-e69af1bb8109",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "99824ccc-8644-46d6-bdcc-375ac69c1e7a",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "99e7618b-193e-451e-8f62-d0baafc03aa7",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "9a156891-9bee-4238-a5d2-1b36d1f3e926",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "9a1d89ff-e621-483e-84bc-5304a38825ed",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "9ba0def7-d634-4115-b0b6-0b7749d2f067",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "9ba15988-21f1-4d19-85c3-72ec134327f6",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "9c843ed1-357d-4c58-9440-39e42ff853ef",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "9c9363f6-2bf8-4369-b462-85da92fac189",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "9c99758d-b175-4318-a28a-35e4a334eb8f",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "9cdd53f1-d93a-4309-bb31-2ec50d287d81",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "9d2ac637-4371-4834-81a1-4e1c5d5bceac",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "9d7e1491-6984-4628-b50e-f772bb529664",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "9d97de1f-07c1-4081-950b-b1a1baef5022",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "9de5c098-d9dd-4cf7-8760-7ac7ffa7e437",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "9e2a5746-6c8c-4d46-b3e6-cc8ff7d9f536",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "9e78f3ce-f28c-477a-90d3-3a6b056663e8",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "9e9ce92f-9a0b-446b-846c-f65faf68bc67",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "9ebc99c8-deff-474f-b6c4-2775ba79f3e3",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "9f11606b-e4df-4969-a19d-827aae0acbcb",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "9f3be5c1-8812-48f0-b7aa-8c4f6a679815",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "9f719248-3a91-4cf5-9f2a-0310508b6752",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "9fca3d0d-c6e4-45db-934a-d8e02f9ae08a",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "a04c011a-775f-4fc6-9f26-1eee486871c2",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "a1475269-a33d-456c-ba72-38a4269173e3",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041456137548839
+    },
+    {
+      "research_paper_id": "a1804e97-5ea7-4dbc-ab89-2b668006d73a",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "a2d63942-ea2f-497e-a78b-93a449c2a990",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "a2e0d0da-e576-4d55-8ec8-34054265bf90",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "a33c989e-7f28-4ca5-8ea1-e65c6cfd9f4f",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041368415734498
+    },
+    {
+      "research_paper_id": "a3a6a5de-ec4f-4911-8995-23e54ef7cd96",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "a3b2452d-ac9b-4605-94da-9a843e13db31",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "a3b294c5-c24a-430a-ab87-d56928daa63e",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "a3f688bd-ce8d-446c-b37c-a0e0faaa9471",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "a4304fa3-bfcb-42e2-b10c-d40ba006a2c8",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "a43fa75a-5b4b-4501-873d-9d7ff76948cb",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "a47e8210-0c06-4cd2-aa93-e3de0900c1d5",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "a4ca461e-987b-4543-b05f-728f95e4e483",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "a58a9b58-c1ce-44d9-bd1f-b1fca3de0fc8",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "a60d5223-1474-4483-afd5-1c42e131998b",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "a60e0b6e-e912-4a44-b2b7-15d888ab4f58",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "a654dae7-6104-4ae0-b922-f5646dc81921",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "a6c100f6-a231-4807-9055-dd160393e8f3",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "a6d83ff0-4427-4494-8e62-7f907aecc36e",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "a6e1b8b0-e316-4d23-a48a-80fc1026b820",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "a6e8efdf-6ec4-46a8-bd6b-8db8182c793b",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "a6fa75f8-ccd6-4354-8098-97de7fc56b3e",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "a7126872-2887-41ae-a0fc-98e5ebc76a1e",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "a759cbe6-b00b-45b9-9b62-5c7dbb0ddee4",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "a8c560d8-b9bf-451f-a686-a99ce1e9b55d",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "a943054b-5478-4a97-b023-d3fc32bb541b",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "a97405f8-f883-45d6-97cb-cbbbf3df1a14",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "a9896100-a5bf-4a6f-b95b-2edd796980b6",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "a98b6d7a-d573-4138-badc-c5c011057ea6",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8043498294862044
+    },
+    {
+      "research_paper_id": "aa498c6d-e19b-446c-9b57-d97d54fb646e",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "aa71fce2-0687-47d2-902e-647d8895ee09",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "aaa5f1c6-a302-4727-a976-cc29565acc7a",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "ab1b2119-6d1a-40b5-97ec-5b4bca8faef3",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "ab28f811-ffc0-4e0f-a677-a01e4bdd6014",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "ab3d3761-a0e1-4a17-9655-2bd10a872d04",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "abdc7573-218f-4630-8e8a-c476bfc25b6b",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041368415734498
+    },
+    {
+      "research_paper_id": "ac0f49a6-1c9f-4345-951c-49d3b05cffb7",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "ac159754-d5e5-4475-bc12-8a246c84690c",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "ac5cd396-da6a-4515-bcf2-25c15bef24e4",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "ac61e6e1-39e9-450a-a6b1-ee7f1d1cf5fa",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "acc1bff3-87ab-48fb-8ea3-1b909d3f7b90",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "acf4ba8f-ceda-4678-988b-d070ecb2a668",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "ad7bac43-402c-4040-8fd1-cc9e05b65163",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "ada435e8-605f-43d6-a4a7-efb56388c1f3",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "af1390fa-0a1f-46e2-b325-5a91325b4232",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "af670624-1d10-4fad-9e85-0c39e53581ec",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "af8d07a7-bf2e-4d24-ba58-af1aa7f0a426",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "afefa646-3446-49bc-ac4c-046a006fb001",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "b0447e3d-c952-4666-8374-dde0a483def4",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "b04f759e-b7ea-410d-9f56-bc24db19353b",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "b07e546a-5221-46c1-89e2-885a7fea5992",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "b08fb7ff-8387-40ca-90e9-80d7a6b4c5cd",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "b0d4d3d7-dde0-45d4-ab95-7f731fd1fb8c",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "b0ed77cf-9048-4956-a027-2779336eb6fb",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "b1001b11-0708-499d-b899-240159a65ff0",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "b32c531b-2154-4676-ae29-c138370665af",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "b41622be-a98d-43ac-8021-b7379c0d04cb",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "b451091a-623c-4553-a9dc-aa7b22df56d2",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "b4691e05-9d43-4932-a943-7b83a995ef39",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "b536c9d9-b60f-4a79-916e-38a04aa1ed2a",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "b62bd194-ecad-4096-9f6b-8629e46cfe8f",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "b6cbf943-b162-48ec-a17f-dc32c1b9d385",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "b6f82bc9-82ef-44e7-ae17-00fc9249e869",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "b70aec2f-1757-4bdf-b0a6-b58cd4c010cd",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "b74be6ea-628c-4279-894c-8567e933c842",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "b75288ac-007b-410e-825c-6474f837cbee",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "b8584da2-3490-47d5-bd6b-f97c01cafac5",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "b8955bdc-d61d-4d6a-8894-ba4a4d4cf9e2",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "b8e36e9b-40be-4351-8c8b-6f4bf5919049",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "b8f6fde5-5910-4810-86f2-807194577a31",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "b8f79f91-e615-4082-a815-a84706a6ba54",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "b917329e-d83b-4c80-a871-4b225a555665",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "b9349734-43b5-4b60-9be7-da0e7876b822",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "bad38b9b-0b17-4972-9b37-78e562894ee8",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "bb1f9f09-bf33-482f-bd8a-1b8a32b25755",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "bbbc5aa7-4d4d-450d-8e21-38ad4ee59c9e",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041456137548839
+    },
+    {
+      "research_paper_id": "bc5b2503-a7a2-4333-86d2-6677ab614400",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "bcbd97dd-b0da-4bb5-ace0-5458b022f1b6",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "bd4708d5-b642-49c1-a6a1-3f85779accda",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "bdc50ab1-0ecd-4408-a4db-b775620ef76a",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "bdc9edb5-abee-4f74-b228-4efc01504222",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "bddfd983-c050-4b64-ae06-55ff762e9157",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "be680c95-136d-4afc-a38e-40e7da8d79a5",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "beb86bb6-ce22-459c-b11f-5e9ef6b0c1aa",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "bfab018a-cc5f-43d6-bf94-a724d7a33b2f",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "c0545a66-1bc2-4e5a-97ee-c65bfc17a2c7",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "c05b5ae9-3b37-4222-8129-48bfa297b5d1",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "c08a43fb-afce-4a4c-8248-9922f906d413",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "c0e85c57-f813-448d-a965-6af4791c0540",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "c109f406-d39c-428d-9266-87c78e861f52",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "c14131d0-d214-4bf0-9939-018fc2a0d0f3",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "c183425b-d21e-447a-a701-41215e09149e",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "c1c232c4-dad4-4f6e-8a6a-215014ed9c52",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8039613957620626
+    },
+    {
+      "research_paper_id": "c1edc12f-ae2a-41f2-82aa-aec2fdd981ef",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "c1fb75d7-36dd-469d-a21e-d9f9ddd0e1e6",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "c3c8e94d-712b-4e7f-ae44-cc241f2dc9f0",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "c45a4001-2448-4ad4-b63d-5a17a48f0267",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "c49ce107-6dcd-4a80-9a56-6aa2bc8e94ed",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "c555f8e7-9cf7-4627-98ff-8e56b4091a5b",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "c5b76299-86ac-474d-a099-e56f67556692",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "c5d4e429-404f-4a5d-9a25-12da6187c955",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "c6095a37-b9cb-438d-bf2c-2b9d683affa5",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "c7d3d40f-34c2-4940-9260-8304c8fb6e41",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "c87ffca6-8c1b-4ba5-8cca-184c8d596b66",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "c8ab29df-f5dc-48ab-a140-b6057bdede74",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "c8ad9cad-34d9-4bbf-ad61-c7c33745c239",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "c8c2b9f3-cc8d-47ca-b52b-4262d017f1cd",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "c9d3ddf0-8ddf-421b-87f7-bd593f771251",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "ca701183-3a8f-446a-8dce-0aca4a14c302",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "caa3b380-b2f7-45fa-ade5-5d212b261eae",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "cad27fd2-fc93-4a7a-b0db-6de7831b39e9",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "cbe6fe9e-db44-4921-8055-d53fac95cb0b",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "ccc55787-2127-44c4-b7cb-bcd1eff4eabc",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "cd0efd91-bbc1-44f6-bb45-76edfa17139f",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "cd72cdf8-ae87-461e-90ca-c6d1d1d7f66d",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "cdb76df2-320c-463f-abfe-4e27931d5d48",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "cdc19bfc-e0d9-4d80-8d12-50a12ff890c3",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "cdc6df9c-48aa-4dcb-9201-e067a2edfd6c",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "ce746064-c89e-4b7a-acbb-04d9bc0740d0",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "ce8ec7b1-af4a-4239-9335-506afb5dd79c",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "ce991a6d-8d4f-4226-94b5-4ee6cecef14c",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "cea219f3-bed1-4061-95b8-789404be612e",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "ced6e4b4-5074-4a03-b8ff-35e0c771d9a5",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "cfa73c4e-5971-4f3f-b077-902986327e80",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "d032e6ae-3711-451c-95d5-fa108ff72007",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "d0afed95-1cbf-48fb-b2d2-bf7301ac2bac",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "d10a5677-428c-4c67-aa15-0a5b4b1fddf4",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "d154eac9-9ea5-4c89-a950-c956a2390c8a",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "d261d3e8-f737-4776-81ad-c5b6a74819b0",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "d2baa121-d1e3-48e3-8b95-713f6c065084",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "d3ee436b-d720-4660-afb2-497c4f0df428",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "d40f0f7c-23f4-460c-81f2-42ec43daf352",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "d4795547-ec70-4aad-9e03-54f9a04fb960",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "d51b5f4d-cd95-46a0-9b5a-e78211bf2b0f",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "d56c0cb2-8e38-4b50-8fdb-94fea4311a02",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "d5efa981-11cb-478a-98c5-55452a1cef25",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "d61e1236-dbdc-409d-8926-cae9b1869f4b",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "d6e12f55-0203-4fed-8bf8-840dd6e62cc7",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041456137548839
+    },
+    {
+      "research_paper_id": "d6f50304-5626-498d-a666-edbcd5628b32",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "d71589e1-8e75-46e7-b273-44455347640d",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "d82d1da5-1a26-40ad-981f-45aca0df8874",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "d83a3487-9266-4529-a999-3b73b2fe96ad",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "d8aed16a-f1db-4666-ba8d-e711d14c22f7",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "d8dd9109-7368-48a7-9497-367a46e7e830",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "d923907d-aec7-45cc-bd81-37d6c6667672",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "d9740909-38c6-4565-807a-5713c60b6035",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "d9a69ca9-20d6-4f89-af54-124148ecbac4",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "d9f557ce-9ceb-4ef6-9295-8658b3f48d70",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "d9f668f0-fbd9-4ad3-94a1-69156264e9d5",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "da0b013a-a07f-45fa-bb2b-716e5cb719d1",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "da1d3b77-d92a-4e70-8f50-7f300b795562",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "da3835be-b85f-48f2-bb09-a7d76c3de3b4",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "da7ced7a-adf3-47af-b728-fb571bee1398",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "db78c1b0-c7a1-4258-94a6-58ba0e11b6fd",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "dbda1c28-705b-47ab-b353-4439e4d7627c",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "dbe68219-8b60-4302-b879-7d17f96c1702",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "dcbe3c66-7a0a-4a83-be5b-526ebee988f6",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "dcd04f5b-f702-4b3a-9e19-2e5cc87b66ef",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "dd1b5133-37f1-4101-98d1-00976d476b69",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "dd3e00ba-a8a6-4c8f-84c1-2237ab9e0965",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "de9ca2c8-bbb4-4c9e-a312-86388f2da5e1",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "deadbe02-f6ad-4f9f-8d85-a8f789545af4",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "df674482-0479-487b-a242-70cd4f19baba",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "dfb71fb5-83f5-49be-ad36-3ae75053c77b",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "dfc75af1-0001-441e-a2f3-9047f0b58fb5",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "dfd7ae08-067b-463d-a080-59aaf749303f",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "dfe34a3b-af46-4488-98a4-92a3d4414bf8",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "dff06fc1-43bd-4c22-81fc-ca8b4d17088a",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "e02e2168-4bca-46bf-a803-8d54e51f920c",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "e0b4e307-6205-4e2b-ad93-89b39498460d",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "e0f320ad-0b00-42ce-a7b1-b69f323ee660",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "e0f3a321-1c04-430d-8c45-57772a0eaa97",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "e157cb43-3af7-4b07-9fd7-6f1023127499",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "e158e9f5-8f5c-4b71-86de-970d3d9526a4",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "e1831992-a55b-47d3-8349-d0ad0355609f",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "e1dffe98-09c2-4f77-b849-f77548cc21ae",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "e25bc9ef-c55a-4773-9794-71da0f159345",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041368415734498
+    },
+    {
+      "research_paper_id": "e28904d6-fd86-4783-8130-1fb3198c5a44",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "e2fd7542-222f-4074-8e63-9de45b4f09ea",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "e42f94cc-ddc0-45e5-ae12-444cc7534995",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "e430c53f-66dd-4c03-a3b4-50d0da2a2262",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "e46d2643-f32c-4cef-891a-9a495c9dc28a",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "e4f7f15c-af9f-4b55-ba30-00cb36ca8395",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "e501834a-b0c5-4439-8417-85579735b9b0",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "e50cd6e6-346c-4ffc-ba3b-4ced0c5dc672",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "e51dcb0f-e982-4b4a-b8c7-3e549f79b516",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "e576bca8-7b95-483b-af11-83adc85c108f",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "e65bb3e5-7b5a-4790-bcc5-237c76a1238b",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "e6a70557-108c-4715-b0bf-7e8501360b82",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "e73e8543-7be4-4e56-86c6-a7d620fce476",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "e73e8e8c-ccf4-4bd7-bffa-f33ab23c68c7",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "e77abfc1-c1ff-4892-9b4b-28df7ce1fc42",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "e86fbc84-b028-4905-bc34-d08f90ddc2c8",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "e8c13fb5-8ad2-43fc-abda-4dcda6faeba1",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "e953f84e-a374-4821-b673-32119c280d31",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "e98821c6-aa35-481f-b7ef-10df2fc111f8",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "e9da639a-53a4-4586-afb0-61f1313ce5a3",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "e9e7209f-0a14-4868-8019-cb0aa64dc7d3",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "e9f24848-30ab-4880-9dc4-e50bcd1cb7bb",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "ea25f652-3689-4b51-b803-88466ec7b90c",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "ea27c2c2-64e3-4e5d-98f4-a1dac574806b",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "ebd03b01-b82b-46b3-b1fe-56bf15718f83",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "ebf12599-ddb9-4287-a7cc-97daedee985d",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "ec08a70d-e601-46fd-82c8-5da0565b1ba8",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "ec50960e-2a59-437c-ae20-1bc9b83de132",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "ecdce81e-0d1f-4e59-9d4d-9493c88e31ae",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "ed80420c-4e1d-4bad-bfc6-50436fb6bb61",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "ee130ab1-aaad-4a84-9265-7a4fd7a4cc27",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "eeac075f-a252-482f-ad38-e3163db8270b",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8095268066756307
+    },
+    {
+      "research_paper_id": "ef166a62-7bdf-4178-b79d-c91c676a7c37",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "ef94e18f-2529-40da-bf6a-c8696e4aff22",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "efc96479-83b5-4977-baef-db6ed0baa54e",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "f01b3e79-352a-4d8c-a4a2-73709e20211c",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "f07cca7a-e954-4597-8843-58c83bd6455c",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "f093b740-0efc-4770-8d22-4f6451a3d067",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "f0ee6967-c8e7-4ea2-a912-fe523275031d",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "f125baed-d074-485f-b2c0-b55e5a657471",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "f14f4bda-7046-4075-986f-a0d0b6ee02b1",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "f1fec96a-5aa3-4569-8d2e-3ff7ec5b248e",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "f241a213-4b84-4704-a141-75beefcadcd3",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "f25b5f17-ade6-4221-aa33-b673e11ebead",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "f3a9f1b0-5908-4d2c-983a-fa80e9e22aca",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "f3b1ad23-5b92-40d0-b9a6-832e589eda95",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "f438ccd9-703f-494a-827a-020ac0a2e7d1",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "f486ef15-c0fa-49e5-9f4d-3955f3f94630",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "f4dd663b-0148-47f2-b0a8-7b5b502f2871",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "f50605a8-462f-426a-9826-3c4fa9cbe241",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "f560a1a5-6991-48cf-851d-3323e34cf388",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "f58f343e-e8bc-445a-8cf5-e5ea7d42ef58",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "f5dbe538-4c99-4c06-a8f8-8eff4a0d42bb",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "f6122780-d9ff-47dd-82e3-d7a47ad5cf44",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "f63ef465-284f-4beb-a754-cb1f7db9d3c7",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "f6537c1b-5ee6-4d47-9f89-b9a9e682f3e3",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "f71af6cd-4329-46d2-880a-734a48034ee2",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "f75b840c-887d-40bc-b2a1-54f2fe55e2d5",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "f79acdd4-37c4-4fd1-adf7-b9f0429681f0",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "f7fb58d5-91a2-4ebd-9e51-2d72a1264456",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "f80afc86-eee7-4481-b600-f6d6b0c9202e",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041368415734498
+    },
+    {
+      "research_paper_id": "f85e0d96-409f-4b1d-9663-eab48892483f",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041456137548839
+    },
+    {
+      "research_paper_id": "f8e556cb-7e46-471d-85a9-5b44a7a0b217",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "f930dc11-11cd-4f75-8cd2-6ba9662abe9d",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "f95c8320-5534-4466-b84c-813580cd7f23",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "f9688f62-a03e-4bc4-9947-a7b2f96d20e8",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "fac6da9d-65c4-4203-9e67-cbb264010e49",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "fb087a11-b615-4936-a41d-1ac40158857b",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "fb41bede-648e-4ef3-9506-b0f73ee551d1",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "fb57aabf-6683-4d88-8844-8bb476d754ef",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "fbe95ab4-19b0-4e6d-afcd-71296e119173",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "fc3138e0-41ec-4a32-a0c7-52fb1a2f86bd",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "fc5881dc-a200-48cb-9224-698898c7d709",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "fc5d6b69-c1ef-4898-bf2e-1076db73f7e1",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "fc5eaae5-92b0-44f9-902e-5dde0cc61e72",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "fc6411fa-fe43-428a-b84a-8159566367b9",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "fc6ca78e-6996-4e32-a3f8-fa946e17cdd8",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "fc7d0927-b7fb-4834-a8a4-3900c7d406b1",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "fd67fab2-68b4-401c-8525-91fe39d60af6",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "fd74ad83-a864-4665-8a65-278cc03323b2",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "fd956797-208c-4e9e-afcf-4a1d86e9bb63",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    },
+    {
+      "research_paper_id": "fe094db8-78e9-4731-8a39-32f78fd4f38d",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "fe604912-fde5-47b0-863e-3193ab7c7078",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "fece80db-ef8a-4978-a687-3b1ea38a660a",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "fed57156-2ff2-4284-8148-5b3a046de6d8",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8039613957620626
+    },
+    {
+      "research_paper_id": "fee95415-7ee1-4118-8704-585de6922b37",
+      "author_authority_status": "imputed",
+      "author_authority_imputation_prior": 0.8041543859363179
+    },
+    {
+      "research_paper_id": "ff04724d-2270-45fa-a145-bfbd3673668c",
+      "author_authority_status": "observed",
+      "author_authority_imputation_prior": null
+    }
+  ]
+}

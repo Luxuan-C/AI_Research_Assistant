@@ -15,6 +15,14 @@ export default function Ask() {
         ).values(),
       )
     : [];
+  const displayFactor = (value, available) =>
+    available && Number.isFinite(value) ? value.toFixed(3) : "unavailable";
+  const sourceOriginLabel = (origin) => ({
+    internal: "Validated internal evidence",
+    external_url_context: "External paper URL context",
+    external_google_search: "External scholarly/web discovery",
+    internal_database_record: "Internal database record",
+  }[origin] || "Source");
 
   const handleSubmit = async () => {
     if (!question.trim()) return;
@@ -48,7 +56,7 @@ export default function Ask() {
                 <strong>{paper.title}</strong>
                 <div>Final score: {paper.final_score.toFixed(3)}</div>
                 <div style={{ color: "var(--text-muted)", fontSize: "13px" }}>
-                  H: {paper.score_breakdown.H_hybrid_relevance.toFixed(3)} | Q: {paper.score_breakdown.Q_quality.toFixed(3)} | I: {paper.score_breakdown.I_citation_influence.toFixed(3)} | T: {paper.score_breakdown.T_temporal_validity.toFixed(3)} | A: {paper.score_breakdown.A_author_authority.toFixed(3)}
+                  H: {paper.score_breakdown.H_hybrid_relevance.toFixed(3)} | Q: {displayFactor(paper.score_breakdown.Q_quality, paper.factor_availability?.Q)} | I: {displayFactor(paper.score_breakdown.I_citation_influence, paper.factor_availability?.I)} | T: {paper.score_breakdown.T_temporal_validity.toFixed(3)} | A: {displayFactor(paper.score_breakdown.A_author_authority, paper.factor_availability?.A)}
                 </div>
                 <div style={{ color: "var(--text-muted)", fontSize: "13px" }}>
                   Evidence: {paper.evidence.source_type}; confidence {paper.evidence.confidence.toFixed(2)}
@@ -61,6 +69,11 @@ export default function Ask() {
             {uniqueCitations.map((c) => (
               <li key={`${c.source_title}-${c.source_url}`}>
                 <a href={c.source_url} target="_blank" rel="noreferrer">{c.source_title}</a>
+                {c.source_origin && (
+                  <small style={{ display: "block", color: "var(--text-muted)" }}>
+                    {sourceOriginLabel(c.source_origin)}
+                  </small>
+                )}
               </li>
             ))}
           </ul>

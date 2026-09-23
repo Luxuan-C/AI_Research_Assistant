@@ -70,6 +70,19 @@ during Supabase requests. Research retrieval and ranking fixtures under
 `tests/` are test-only; the HTTP research-data routes do not import frontend or
 Python mock datasets.
 
+Ask keeps deterministic retrieval and ranking authoritative, then makes at
+most one optional Gemini synthesis request through the existing generation
+port. Configure `GEMINI_API_KEY` on the backend and optionally set
+`GEMINI_MODEL` (default `gemini-3.8-flash`). The process starts without a key;
+Ask then returns its existing ranked-paper fallback with a non-sensitive
+`generation_status`. The current application does not ingest validated internal
+excerpts, so when ranked papers are available the Gemini adapter uses at most
+three validated paper URLs with URL Context and Google Search grounding. It
+returns a generated answer only when provider citation annotations map to
+sources. External sources are provenance-tagged and never enter the ranking or
+receive paper factors. A successful Ask still returns the unchanged ranked
+papers alongside the answer.
+
 ## Application profile integration
 
 `application.search_papers` accepts a `RetrievalRankingPipeline` and
@@ -87,9 +100,10 @@ reintroducing a second repository or retrieval pipeline.
 
 The HTTP profile endpoint hydrates its requested academic by ID through the same
 bounded repository and seed-driven graph adapter. It does not scan the academic
-table to locate one profile. Where no validated evidence is available, profile
-and ask responses return `insufficient_information`; the API does not install a
-fake generator or label fixed prose as an evidence-backed summary.
+table to locate one profile. Profile summaries still fail closed when validated
+evidence is unavailable. Ask can use the optional Gemini grounding path described
+above, but missing provider configuration, provider errors, or absent grounded
+citations preserve the ranked-paper fallback.
 
 ## Supabase smoke test
 

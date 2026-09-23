@@ -14,7 +14,8 @@ Query → Retrieval → Fusion → Graph Expansion → Ranking → Evidence Pack
 ```
 
 The graph stage enriches retrieved seeds; it does not replace search. Generation
-is only appropriate when the evidence pack is sufficient and validated.
+is downstream of ranking and requires validated internal evidence or citations
+returned by an enabled external grounding tool.
 
 ## Retrieval and graph coverage
 
@@ -55,9 +56,21 @@ ordered results. Publisher authority or prestige is not a ranking signal.
   graph stage executes.
 - The live schema does not expose `academic.research_interests` or
   `academic.areas_of_expertise`; the API does not fabricate those fields.
-- No production validated-evidence provider or generator is currently wired.
-  Ask and profile summaries therefore fail closed with
-  `insufficient_information` while still returning ranked paper/source metadata.
+- Ask uses the existing `GenerationPort` through a Gemini adapter. It makes at
+  most one Interactions API request after deterministic ranking. When validated
+  internal excerpts are absent, it can supply up to three validated ranked-paper
+  URLs to URL Context and enable Google Search grounding in that same request.
+  It accepts a generated answer only when response annotations map to sources;
+  otherwise it retains the ranked-paper fallback.
+- The live application currently has no validated internal excerpt ingestion.
+  Gemini therefore treats paper titles and factor/rank metadata as discovery
+  context only. URL Context and Google Search sources are labeled external and
+  do not receive H/Q/I/T/A values or affect paper ranking.
+- `GEMINI_API_KEY` is optional at startup; `GEMINI_MODEL` can override the
+  default `gemini-3.8-flash`. Missing configuration, provider failures, and
+  missing grounded citations preserve the existing `insufficient_information`
+  fallback and expose a non-sensitive `generation_status`. Researcher profile
+  summaries continue to fail closed without validated evidence.
 
 The API constructs its shared client and services without table reads at
 startup. Table projections are loaded lazily, bounded to 4,000 rows per table,

@@ -1,6 +1,11 @@
 """Public retrieval, bounded GraphRAG, ranking, and evidence contracts."""
 
-from .orchestration import Answer, AnswerOrchestrator, InsufficientInformation
+from .orchestration import (
+    Answer,
+    AnswerOrchestrator,
+    GenerationFailure,
+    InsufficientInformation,
+)
 from .paper_ranking import (
     PUBLICATION,
     RESEARCHER,
@@ -46,6 +51,7 @@ __all__ = [
     "FusedCandidate",
     "FusionService",
     "GenerationPort",
+    "GenerationFailure",
     "GraphBudget",
     "GraphEdge",
     "GraphExpansionPort",

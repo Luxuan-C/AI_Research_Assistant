@@ -11,7 +11,7 @@ from __future__ import annotations
 from collections import Counter, OrderedDict
 from dataclasses import dataclass, replace
 from datetime import date
-from math import log, log1p
+from math import log
 import os
 import re
 from threading import Event, RLock
@@ -53,6 +53,8 @@ TABLE_COLUMNS: Mapping[str, tuple[str, ...]] = {
         "id",
         "paper_authority_score",
         "academic_authority_score",
+        "citation_influence_score",
+        "author_authority_score",
         "journal_authenticity_score",
         "research_paper_id",
         "academic_ids",
@@ -832,9 +834,18 @@ class SupabaseSchemaRelationshipGraph:
                             prefetched_relationships += 1
             frontier = next_frontier
 
+        paper_scores_by_id = (
+            _score_by_paper(self.repository.rows("score"))
+            if loaded["research_paper"]
+            else {}
+        )
+
         entities: list[EntityRecord] = []
         entities.extend(_academic_entity(row) for row in loaded["academic"].values())
-        entities.extend(_paper_entity(row) for row in loaded["research_paper"].values())
+        entities.extend(
+            _paper_entity(row, paper_scores_by_id.get(paper_id))
+            for paper_id, row in loaded["research_paper"].items()
+        )
         for table in ("university", "faculty", "discipline", "field", "journal"):
             entities.extend(
                 _metadata_entity(table, row)
@@ -1061,19 +1072,6 @@ def _score_value(row: Mapping[str, Any] | None, field: str) -> float | None:
     return score
 
 
-def _normalize_citation_score(value: object) -> float:
-    if value in (None, ""):
-        return 0.0
-    try:
-        raw = float(value)
-    except (TypeError, ValueError):
-        return 0.0
-    if raw <= 0.0:
-        return 0.0
-    truncated = max(1.0, min(1_000_000.0, raw))
-    return min(1.0, log1p(raw) / log1p(truncated))
-
-
 def _aggregate_score(values: Sequence[float]) -> float | None:
     if not values:
         return None
@@ -1092,6 +1090,8 @@ def _score_by_paper(
         for field in (
             "paper_authority_score",
             "academic_authority_score",
+            "citation_influence_score",
+            "author_authority_score",
             "journal_authenticity_score",
         ):
             score = _score_value(row, field)
@@ -1135,9 +1135,10 @@ def _paper_entity(
         kind=PUBLICATION,
         label=str(row.get("name") or row["id"]),
         publication_date=_parse_date(row.get("publication_date")),
-        citation_score=_normalize_citation_score(row.get("incoming_citation_count")),
+        citation_score=_score_value(score_row, "citation_influence_score"),
         paper_authority_score=paper_authority_score,
         paper_authority_reproducible=paper_authority_score is not None,
+        author_authority_score=_score_value(score_row, "author_authority_score"),
         journal_authenticity_score=journal_authenticity_score,
         journal_authenticity_reproducible=journal_authenticity_score is not None,
         academic_authority_score=_score_value(score_row, "academic_authority_score"),

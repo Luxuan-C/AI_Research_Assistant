@@ -13,6 +13,11 @@ from academic_profiles import (
     ProfileCitation,
 )
 from ranking import (
+    Answer,
+    AnswerOrchestrator,
+    GenerationFailure,
+    GenerationPort,
+    InsufficientInformation,
     PUBLICATION,
     RESEARCHER,
     EntityRecord,
@@ -24,6 +29,12 @@ from ranking import (
     RankedEntity,
     RankingService,
     RetrievalRankingPipeline,
+)
+from ranking.gemini_generation import (
+    GenerationOutput,
+    GeminiGenerationAdapter,
+    normalize_doi,
+    validate_public_https_url,
 )
 from ranking.supabase_retrieval import (
     SupabaseReadRepository,
@@ -138,7 +149,10 @@ class PublicationResult:
     source_url: str | None
     score: float
     score_breakdown: Mapping[str, float]
+    factor_availability: Mapping[str, bool]
     evidence_ids: tuple[str, ...]
+    source_urls: tuple[str, ...] = ()
+    entity_id: str | None = None
 
 
 @dataclass(frozen=True, slots=True)
@@ -146,6 +160,11 @@ class PublicationSearchResult:
     publications: tuple[PublicationResult, ...]
     truncated: bool
     evidence_status: str
+    answer: str | None = None
+    citations: tuple[Mapping[str, Any], ...] = ()
+    generation_status: str = "insufficient_evidence"
+    generation_provider: str | None = "gemini"
+    external_sources: tuple[Mapping[str, Any], ...] = ()
 
 
 @dataclass(frozen=True, slots=True)
@@ -182,12 +201,19 @@ class ResearchApplication:
         graph: SupabaseSchemaRelationshipGraph,
         pipeline: RetrievalRankingPipeline,
         planner: QueryPlanner | None = None,
+        generation: GenerationPort | None = None,
     ) -> None:
         self.repository = repository
         self.retrieval = retrieval
         self.graph = graph
         self.pipeline = pipeline
         self.planner = planner or QueryPlanner()
+        self.generation = generation or GeminiGenerationAdapter.from_environment()
+        self.answer_orchestrator = AnswerOrchestrator(
+            retrieval_ranking=pipeline,
+            evidence_builder=EvidencePackBuilder(),
+            generation=self.generation,
+        )
 
     @classmethod
     def from_supabase_client(
@@ -196,6 +222,7 @@ class ResearchApplication:
         *,
         row_limit: int = DEFAULT_API_ROW_LIMIT,
         cache_ttl_seconds: float = DEFAULT_CACHE_TTL_SECONDS,
+        generation: GenerationPort | None = None,
     ) -> "ResearchApplication":
         repository = SupabaseReadRepository(
             client,
@@ -215,6 +242,7 @@ class ResearchApplication:
             retrieval=retrieval,
             graph=graph,
             pipeline=pipeline,
+            generation=generation,
         )
 
     def search_researchers(
@@ -384,14 +412,76 @@ class ResearchApplication:
             )
             for ranked in ranked_publications
         )
-        evidence = EvidencePackBuilder().build(result.ranked, {})
+        ranked_paper_context = tuple(
+            {
+                "paper_id": paper.raw_id,
+                "entity_id": paper.entity_id,
+                "title": paper.title,
+                "year": paper.publication_date.year if paper.publication_date else None,
+                "doi": normalize_doi(paper.doi),
+                "rank": paper.rank,
+                "final_score": paper.score,
+                "factor_scores": {
+                    "H_hybrid_relevance": paper.score_breakdown.get("retrieval"),
+                    "Q_quality": paper.score_breakdown.get("paper_authority"),
+                    "I_citation_influence": paper.score_breakdown.get("citation"),
+                    "T_temporal_validity": paper.score_breakdown.get("recency"),
+                    "A_author_authority": paper.score_breakdown.get("author_authority"),
+                },
+                "factor_availability": dict(paper.factor_availability),
+                "source_urls": paper.source_urls,
+            }
+            for paper in publications
+        )
+        answer_result = self.answer_orchestrator.answer_ranked(
+            plan,
+            result,
+            {},
+            ranked_papers=ranked_paper_context,
+        )
+        answer_text: str | None = None
+        citations: tuple[Mapping[str, Any], ...] = ()
+        external_sources: tuple[Mapping[str, Any], ...] = ()
+        if isinstance(answer_result, GenerationFailure):
+            generation_status = "provider_error"
+        elif isinstance(answer_result, InsufficientInformation):
+            generation_status = (
+                "insufficient_evidence"
+                if not ranked_paper_context and not answer_result.evidence.items
+                else getattr(self.generation, "unavailable_status", None)
+                or "insufficient_evidence"
+            )
+        elif isinstance(answer_result, Answer):
+            generated = answer_result.answer
+            if isinstance(generated, GenerationOutput):
+                generation_status = generated.status
+                if generated.status == "generated":
+                    answer_text = generated.answer
+                    citations = tuple(
+                        _generation_citation_payload(item)
+                        for item in generated.citations
+                    )
+                    external_sources = tuple(
+                        _generation_citation_payload(item)
+                        for item in generated.external_sources
+                    )
+            else:
+                generation_status = "insufficient_evidence"
+        else:
+            generation_status = "insufficient_evidence"
+
         return PublicationSearchResult(
             publications,
             result.expansion.truncated
             or len(result.fused) >= plan.seed_limit
             or len(result.fused) > len(ranked_publications)
             or self.repository.possibly_truncated(("research_paper",)),
-            evidence.status,
+            answer_result.evidence.status,
+            answer=answer_text,
+            citations=citations,
+            generation_status=generation_status,
+            generation_provider=getattr(self.generation, "provider", "generation"),
+            external_sources=external_sources,
         )
 
     def get_academic_profile(
@@ -562,6 +652,27 @@ def _publication_source_url(row: Mapping[str, Any], entity: EntityRecord) -> str
     )
 
 
+def _publication_source_urls(
+    row: Mapping[str, Any],
+    entity: EntityRecord,
+) -> tuple[str, ...]:
+    """Validated URL Context candidates in the requested source preference."""
+
+    candidates: list[str] = []
+    for value in (row.get("open_access_url"), row.get("primary_url")):
+        validated = validate_public_https_url(value)
+        if validated and validated not in candidates:
+            candidates.append(validated)
+    doi_url = normalize_doi(row.get("doi"))
+    if doi_url and doi_url not in candidates:
+        candidates.append(doi_url)
+    for value in entity.source_urls:
+        validated = validate_public_https_url(value)
+        if validated and validated not in candidates:
+            candidates.append(validated)
+    return tuple(candidates)
+
+
 def _publication_result(
     ranked: RankedEntity,
     row: Mapping[str, Any],
@@ -595,5 +706,23 @@ def _publication_from_entity(
         source_url=_publication_source_url(row, entity),
         score=score,
         score_breakdown=dict(score_breakdown or {}),
+        factor_availability={
+            "Q": entity.paper_authority_score is not None,
+            "I": entity.citation_score is not None,
+            "A": entity.author_authority_score is not None,
+        },
         evidence_ids=evidence_ids,
+        source_urls=_publication_source_urls(row, entity),
+        entity_id=entity.entity_id,
     )
+
+
+def _generation_citation_payload(citation: object) -> Mapping[str, Any]:
+    return {
+        "source_title": getattr(citation, "source_title", "External source"),
+        "source_url": getattr(citation, "source_url", ""),
+        "evidence": getattr(citation, "evidence", ""),
+        "source_origin": getattr(citation, "source_origin", "internal"),
+        "evidence_id": getattr(citation, "evidence_id", None),
+        "paper_id": getattr(citation, "paper_id", None),
+    }

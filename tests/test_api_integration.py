@@ -1,10 +1,12 @@
 from io import BytesIO
 import json
 import unittest
+from types import SimpleNamespace
 from unittest.mock import patch
 
 from api_server import ApiHandler, create_live_application
 from application import ResearchApplication
+from ranking.gemini_generation import GeminiGenerationAdapter
 from test_supabase_retrieval import FakeSupabaseClient
 
 
@@ -57,6 +59,13 @@ def paper_row(identifier, title, *, keywords=(), academics=()):
 
 
 class ApiIntegrationTests(unittest.TestCase):
+    def setUp(self):
+        self.gemini_environment = patch.dict("os.environ", {"GEMINI_API_KEY": ""})
+        self.gemini_environment.start()
+
+    def tearDown(self):
+        self.gemini_environment.stop()
+
     @staticmethod
     def get(application, path):
         captured = []
@@ -224,7 +233,11 @@ class ApiIntegrationTests(unittest.TestCase):
                 )
             )
         )
-        application = ResearchApplication.from_supabase_client(client, row_limit=2_000)
+        application = ResearchApplication.from_supabase_client(
+            client,
+            row_limit=2_000,
+            generation=GeminiGenerationAdapter(api_key=None),
+        )
 
         status, payload = self.post(
             application,
@@ -235,6 +248,7 @@ class ApiIntegrationTests(unittest.TestCase):
         self.assertEqual(status, 200)
         self.assertEqual([paper["id"] for paper in payload["papers"]], ["p1", "p2"])
         self.assertEqual(payload["status"], "insufficient_information")
+        self.assertEqual(payload["generation_status"], "provider_unavailable")
         self.assertEqual(payload["evidence_status"], "insufficient_evidence")
         self.assertIn("validated evidence", payload["answer"])
         self.assertNotIn("Supabase found", payload["answer"])
@@ -242,6 +256,145 @@ class ApiIntegrationTests(unittest.TestCase):
             payload["papers"][0]["score_breakdown"]["H_hybrid_relevance"],
             0.0,
         )
+
+    def test_ask_gemini_keeps_ranked_papers_and_warm_requests_reuse_supabase_cache(self):
+        client = FakeSupabaseClient(
+            application_rows(
+                papers=(
+                    paper_row("p1", "Robotics Evidence Paper", keywords=("robotics",)),
+                    paper_row("p2", "Robotics Methods Paper", keywords=("robotics",)),
+                )
+            )
+        )
+        annotation = SimpleNamespace(
+            type="url_citation",
+            title="Grounded scholarly source",
+            url="https://journals.example.org/robotics-review",
+        )
+        interaction = SimpleNamespace(
+            steps=[
+                SimpleNamespace(
+                    type="model_output",
+                    content=[
+                        SimpleNamespace(
+                            type="text",
+                            text="Grounded synthesis from a scholarly source.",
+                            annotations=[annotation],
+                        )
+                    ],
+                )
+            ]
+        )
+
+        class Interactions:
+            def __init__(self):
+                self.calls = []
+
+            def create(self, **kwargs):
+                self.calls.append(kwargs)
+                return interaction
+
+        interactions = Interactions()
+        generation = GeminiGenerationAdapter(
+            api_key="test-key",
+            client=SimpleNamespace(interactions=interactions),
+        )
+        application = ResearchApplication.from_supabase_client(
+            client,
+            row_limit=2_000,
+            generation=generation,
+        )
+
+        first_status, first_payload = self.post(
+            application, "/api/ask", {"question": "robotics"}
+        )
+        first_reads = dict(client.executions)
+        second_status, second_payload = self.post(
+            application, "/api/ask", {"question": "robotics"}
+        )
+
+        self.assertEqual((first_status, second_status), (200, 200))
+        self.assertEqual(first_payload["generation_status"], "generated")
+        self.assertEqual(first_payload["citations"][0]["source_origin"], "external_google_search")
+        self.assertEqual(
+            [paper["id"] for paper in first_payload["papers"]],
+            [paper["id"] for paper in second_payload["papers"]],
+        )
+        self.assertEqual(
+            [paper["final_score"] for paper in first_payload["papers"]],
+            [paper["final_score"] for paper in second_payload["papers"]],
+        )
+        self.assertEqual(dict(client.executions), first_reads)
+        self.assertEqual(len(interactions.calls), 2)
+        self.assertEqual(interactions.calls[0]["tools"], [{"type": "url_context"}, {"type": "google_search"}])
+
+    def test_ask_provider_failure_is_non_sensitive_and_preserves_ranked_fallback(self):
+        client = FakeSupabaseClient(
+            application_rows(
+                papers=(paper_row("p1", "Robotics Paper", keywords=("robotics",)),)
+            )
+        )
+
+        class FailingGeneration:
+            provider = "gemini"
+            supports_external_grounding = True
+            unavailable_status = None
+
+            def synthesize(self, question, evidence):
+                raise RuntimeError("sensitive provider detail should not escape")
+
+        application = ResearchApplication.from_supabase_client(
+            client,
+            row_limit=2_000,
+            generation=FailingGeneration(),
+        )
+
+        status, payload = self.post(application, "/api/ask", {"question": "robotics"})
+
+        self.assertEqual(status, 200)
+        self.assertEqual(payload["generation_status"], "provider_error")
+        self.assertEqual(payload["status"], "insufficient_information")
+        self.assertEqual([paper["id"] for paper in payload["papers"]], ["p1"])
+        self.assertNotIn("sensitive provider detail", json.dumps(payload))
+
+    def test_ask_serializes_persisted_qia_and_preserves_unavailable_a(self):
+        client = FakeSupabaseClient(
+            application_rows(
+                papers=(
+                    paper_row("p1", "Robotics Systems", keywords=("robotics",)),
+                    paper_row("p2", "Robotics Methods", keywords=("robotics",)),
+                )
+            )
+        )
+        client.data["score"] = [
+            {
+                "id": "s1",
+                "research_paper_id": "p1",
+                "paper_authority_score": 0.72,
+                "citation_influence_score": 0.81,
+                "author_authority_score": 0.44,
+                "academic_authority_score": 0.99,
+            },
+            {
+                "id": "s2",
+                "research_paper_id": "p2",
+                "paper_authority_score": 0.32,
+                "citation_influence_score": 0.27,
+                "author_authority_score": None,
+            },
+        ]
+        application = ResearchApplication.from_supabase_client(client, row_limit=2_000)
+
+        status, payload = self.post(application, "/api/ask", {"question": "robotics"})
+
+        by_id = {paper["id"]: paper for paper in payload["papers"]}
+        self.assertEqual(status, 200)
+        self.assertEqual(by_id["p1"]["score_breakdown"]["Q_quality"], 0.72)
+        self.assertEqual(by_id["p1"]["score_breakdown"]["I_citation_influence"], 0.81)
+        self.assertEqual(by_id["p1"]["score_breakdown"]["A_author_authority"], 0.44)
+        self.assertEqual(by_id["p1"]["factor_availability"], {"Q": True, "I": True, "A": True})
+        self.assertEqual(by_id["p2"]["score_breakdown"]["A_author_authority"], None)
+        self.assertEqual(by_id["p2"]["factor_availability"]["A"], False)
 
     def test_profile_hydrates_requested_id_through_bounded_repository(self):
         client = FakeSupabaseClient(

@@ -11,6 +11,7 @@ from ranking.supabase_config import (
 )
 from ranking.supabase_retrieval import (
     READABLE_TABLES,
+    TABLE_COLUMNS,
     SupabaseReadError,
     SupabaseReadRepository,
     SupabaseRetrievalPort,
@@ -233,9 +234,20 @@ class SupabaseBoundaryTests(unittest.TestCase):
         self.assertTrue(channels["lexical"])
         self.assertEqual(channels["lexical"][0].entity.entity_id, "research_paper:p1")
         paper = next(hit.entity for hit in channels["lexical"] if hit.entity.kind == "publication")
-        self.assertGreater(paper.citation_score, 0.0)
-        self.assertLessEqual(paper.citation_score, 1.0)
+        self.assertIsNone(paper.citation_score)
+        self.assertIsNone(paper.author_authority_score)
         self.assertIsNone(paper.paper_authority_score)
+
+    def test_score_projection_reads_qia_without_publisher_authority(self):
+        score_columns = TABLE_COLUMNS["score"]
+
+        self.assertIn("paper_authority_score", score_columns)
+        self.assertIn("citation_influence_score", score_columns)
+        self.assertIn("author_authority_score", score_columns)
+        self.assertIn("academic_authority_score", score_columns)
+        self.assertIn("journal_authenticity_score", score_columns)
+        self.assertNotIn("publisher_authority_score", score_columns)
+        self.assertNotIn("publisher_id", score_columns)
 
     def test_score_table_values_are_normalized_and_aggregated_into_entity_records(self):
         rows = supabase_rows()
@@ -249,6 +261,8 @@ class SupabaseBoundaryTests(unittest.TestCase):
                         "research_paper_id": "p1",
                         "academic_ids": ["a1"],
                         "paper_authority_score": 0.8,
+                        "citation_influence_score": 0.65,
+                        "author_authority_score": 0.4,
                         "academic_authority_score": 0.7,
                         "journal_authenticity_score": 0.9,
                     },
@@ -257,6 +271,8 @@ class SupabaseBoundaryTests(unittest.TestCase):
                         "research_paper_id": "p2",
                         "academic_ids": ["a1"],
                         "paper_authority_score": 0.4,
+                        "citation_influence_score": 0.35,
+                        "author_authority_score": None,
                         "academic_authority_score": 0.7,
                         "journal_authenticity_score": 0.5,
                     },
@@ -267,14 +283,16 @@ class SupabaseBoundaryTests(unittest.TestCase):
         plan = QueryPlanner().plan("assistive robotics", as_of=date(2026, 9, 9))
 
         paper = next(hit.entity for hit in retrieval.retrieve(plan)["lexical"] if hit.entity.kind == "publication")
+        score_reads_after_publication_corpus = client.executions["score"]
         academic = next(hit.entity for hit in retrieval.retrieve(plan)["lexical"] if hit.entity.kind == "researcher")
 
-        self.assertGreater(paper.citation_score, 0.0)
-        self.assertLessEqual(paper.citation_score, 1.0)
+        self.assertEqual(paper.citation_score, 0.65)
         self.assertEqual(paper.paper_authority_score, 0.8)
+        self.assertEqual(paper.author_authority_score, 0.4)
         self.assertEqual(paper.academic_authority_score, 0.7)
         self.assertEqual(paper.journal_authenticity_score, 0.9)
         self.assertEqual(academic.academic_authority_score, 0.7)
+        self.assertEqual(client.executions["score"], score_reads_after_publication_corpus)
 
     def test_pagination_retrieves_a_matching_academic_beyond_the_first_server_page(self):
         academics = [
@@ -387,6 +405,47 @@ class SupabaseBoundaryTests(unittest.TestCase):
                 for table in SupabaseSchemaRelationshipGraph.GRAPH_TABLES
             )
         )
+
+    def test_graph_expansion_preserves_cached_qia_for_related_papers(self):
+        rows = supabase_rows()
+        rows["score"] = [
+            {
+                "id": "s1",
+                "research_paper_id": "p1",
+                "paper_authority_score": 0.8,
+                "citation_influence_score": 0.65,
+                "author_authority_score": 0.4,
+            },
+            {
+                "id": "s2",
+                "research_paper_id": "p2",
+                "paper_authority_score": 0.4,
+                "citation_influence_score": 0.35,
+                "author_authority_score": None,
+            },
+        ]
+        client = FakeSupabaseClient(rows)
+        repository = SupabaseReadRepository(client)
+        retrieval = SupabaseRetrievalPort(repository)
+        plan = QueryPlanner().plan(
+            "assistive robotics",
+            as_of=date(2026, 9, 9),
+            target_kinds=("publication",),
+        )
+        fused = FusionService().fuse(retrieval.retrieve(plan))
+        score_reads_before_expansion = client.executions["score"]
+
+        expansion = SupabaseSchemaRelationshipGraph(repository).expand(plan, fused)
+
+        seed = expansion.entities["research_paper:p1"]
+        related = expansion.entities["research_paper:p2"]
+        self.assertEqual(seed.paper_authority_score, 0.8)
+        self.assertEqual(seed.citation_score, 0.65)
+        self.assertEqual(seed.author_authority_score, 0.4)
+        self.assertEqual(related.paper_authority_score, 0.4)
+        self.assertEqual(related.citation_score, 0.35)
+        self.assertIsNone(related.author_authority_score)
+        self.assertEqual(client.executions["score"], score_reads_before_expansion)
 
     def test_repository_cache_expires_and_refetches_without_unbounded_staleness(self):
         now = [100.0]

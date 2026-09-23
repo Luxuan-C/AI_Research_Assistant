@@ -54,6 +54,14 @@ def researcher_payload(researcher: ResearcherResult) -> dict[str, Any]:
 
 def paper_payload(paper: PublicationResult) -> dict[str, Any]:
     ranking = getattr(paper, "score_breakdown", {})
+    availability = getattr(paper, "factor_availability", {})
+
+    def factor_value(name: str, component: str) -> float | None:
+        value = ranking.get(component)
+        if not availability.get(name) or value is None:
+            return None
+        return round(value, 6)
+
     evidence = {
         "confidence": 0.0,
         "source_url": paper.source_url,
@@ -70,12 +78,17 @@ def paper_payload(paper: PublicationResult) -> dict[str, Any]:
         "final_score": round(paper.score, 6),
         "score_breakdown": {
             "H_hybrid_relevance": round(ranking.get("retrieval", paper.score), 6),
-            "Q_quality": round(ranking.get("paper_authority", 0.0), 6),
-            "I_citation_influence": round(ranking.get("citation", 0.0), 6),
+            "Q_quality": factor_value("Q", "paper_authority"),
+            "I_citation_influence": factor_value("I", "citation"),
             "T_temporal_validity": round(ranking.get("recency", 0.0), 6),
             "N_innovation": 0.0,
-            "A_author_authority": round(ranking.get("author_authority", 0.0), 6),
+            "A_author_authority": factor_value("A", "author_authority"),
             "G_graph_enrichment": round(ranking.get("graph", 0.0), 6),
+        },
+        "factor_availability": {
+            "Q": bool(availability.get("Q")),
+            "I": bool(availability.get("I")),
+            "A": bool(availability.get("A")),
         },
         "evidence": evidence,
     }
@@ -180,16 +193,19 @@ class ApiHandler(BaseHTTPRequestHandler):
                 return
             result = self._application().search_publications(question)
             papers = [paper_payload(item) for item in result.publications]
-            citations = [
+            ranked_record_citations = [
                 {
                     "source_title": paper["title"],
                     "source_url": paper["url"],
                     "evidence": paper["evidence"],
+                    "source_origin": "internal_database_record",
                 }
                 for paper in papers
                 if paper["url"]
             ]
-            answer = (
+            generated = result.generation_status == "generated" and bool(result.answer)
+            citations = list(result.citations) if generated else ranked_record_citations
+            answer = result.answer if generated else (
                 "Ranked research papers were found, but validated evidence is not "
                 "available to synthesize a reliable answer."
                 if papers
@@ -201,8 +217,11 @@ class ApiHandler(BaseHTTPRequestHandler):
                     "answer": answer,
                     "citations": citations,
                     "papers": papers,
-                    "status": "insufficient_information",
+                    "status": "generated" if generated else "insufficient_information",
                     "evidence_status": result.evidence_status,
+                    "generation_status": result.generation_status,
+                    "generation_provider": result.generation_provider,
+                    "external_sources": list(result.external_sources),
                     "truncated": result.truncated,
                 },
             )

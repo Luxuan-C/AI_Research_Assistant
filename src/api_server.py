@@ -1,6 +1,17 @@
 """Local HTTP API over the unified live Supabase ranking application."""
 
 from __future__ import annotations
+from pathlib import Path
+from dotenv import load_dotenv
+_env_path = Path(__file__).resolve().parent.parent / ".env"
+print("DEBUG env path:", _env_path)
+print("DEBUG env exists:", _env_path.exists())
+_loaded = load_dotenv(_env_path)
+print("DEBUG load_dotenv returned:", _loaded)
+
+import os
+print("DEBUG keys seen:", sorted(os.environ.keys() & {"GEMINI_API_KEY", "GEMINI_MODEL", "SUPABASE_KEY", "SUPABASE_URL"}))
+print("DEBUG gemini value set:", bool(os.environ.get("GEMINI_API_KEY")))
 
 import json
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer

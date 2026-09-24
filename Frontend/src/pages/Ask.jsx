@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { askQuestion } from "../api/client";
+import FactorRadar from "../components/FactorRadar";
 
 export default function Ask() {
   const [question, setQuestion] = useState("");
@@ -55,8 +56,11 @@ export default function Ask() {
               <li key={paper.id} style={{ marginBottom: "16px" }}>
                 <strong>{paper.title}</strong>
                 <div>Final score: {paper.final_score.toFixed(3)}</div>
-                <div style={{ color: "var(--text-muted)", fontSize: "13px" }}>
-                  H: {paper.score_breakdown.H_hybrid_relevance.toFixed(3)} | Q: {displayFactor(paper.score_breakdown.Q_quality, paper.factor_availability?.Q)} | I: {displayFactor(paper.score_breakdown.I_citation_influence, paper.factor_availability?.I)} | T: {paper.score_breakdown.T_temporal_validity.toFixed(3)} | A: {displayFactor(paper.score_breakdown.A_author_authority, paper.factor_availability?.A)}
+                <div style={{ display: "flex", alignItems: "center", gap: "16px", margin: "8px 0" }}>
+                  <FactorRadar
+                    scoreBreakdown={paper.score_breakdown}
+                    factorAvailability={paper.factor_availability}
+                  />
                 </div>
                 <div style={{ color: "var(--text-muted)", fontSize: "13px" }}>
                   Evidence: {paper.evidence.source_type}; confidence {paper.evidence.confidence.toFixed(2)}
